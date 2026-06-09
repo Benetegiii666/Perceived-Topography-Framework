@@ -224,6 +224,27 @@ This is more granular than the earlier 4-layer model (`Reality → Information S
 
 **Status:** Pressure only. Not an architectural promotion. But this is the most refined candidate hierarchy FL_007 has produced.
 
+## Research Question: Visibility Alignment Hypothesis (2026-06-09)
+
+**Question:** Can an optimizer be made safer or more effective primarily through visibility design, while holding goals constant?
+
+**Prediction:** For a fixed goal and optimizer, increasing visibility of important gradients will improve behavioral outcomes.
+
+**Counter-Prediction:** If behavior does not improve when important gradients become visible, the role of visibility in the framework may be overstated.
+
+**Test domains:**
+
+| Domain | Fixed Goal | Visibility Intervention | Expected Outcome |
+|--------|-----------|------------------------|-----------------|
+| Marketing | Maximize campaign ROI | Add lost-deal and churn data to knowledge platform | More balanced campaign strategy |
+| Organizations | Meet quarterly targets | Add long-term retention metrics to executive dashboard | Reduced short-termism |
+| AI agents | Maximize engagement | Add trust/churn/support signals to context | Sustainable vs aggressive engagement |
+| AI assistants | Complete user task | Add user history and preference context | More relevant, personalized responses |
+
+**Why this matters:** This is the framework's most direct testable claim. If visibility design alone — without changing goals, incentives, or the optimizer — produces measurably better outcomes, the information surface layer earns its architectural place empirically, not just theoretically.
+
+**Status:** Research question. Requires experimental validation. The agent governance example (Agent A vs Agent B) provides the clearest thought experiment, but has not been tested with real systems.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
