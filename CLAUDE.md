@@ -25,6 +25,20 @@ Every new insight MUST be classified before being added:
 
 Only after classification should the insight be placed.
 
+## Core Protocol: Nothing Becomes Doctrine Alone
+No single insight — no matter how brilliant — changes the concept architecture by itself.
+
+Architecture changes **only** when:
+1. **Multiple discoveries converge** toward the same revision.
+2. **A fault line is resolved** through sustained analysis.
+
+This exists because the strongest repositories eventually become victims of their newest insight. The latest idea feels brilliant and suddenly everything gets rewritten. This protocol resists that.
+
+A discovery does not change architecture. An aha moment does not change architecture. A paper draft does not change architecture. Only convergence or resolution does.
+
+## CURRENT_STATE.md
+`01_CONCEPT_ARCHITECTURE/CURRENT_STATE.md` is the "living constitution" — the canonical snapshot of what the framework currently believes. Not history, not evolution, not discussion. Just: if someone joined the project today, what do we currently believe? This file is regenerated with every significant architecture update.
+
 ## Folder README Maintenance
 Each folder has a `README.md` that lists its contents. When adding or removing files from any folder, update that folder's README to reflect the change.
 

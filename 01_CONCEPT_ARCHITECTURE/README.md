@@ -14,6 +14,7 @@ If a discovery or insight conflicts with the architecture defined here:
 - Open a fault line in `04_FAULT_LINES/`.
 
 ## Contents
+- `CURRENT_STATE.md` — The "living constitution" — canonical snapshot of what we currently believe
 - `CORE_THESIS.md` — The central argument of the framework
 - `SUPPORTING_THESES.md` — Secondary claims that extend the core thesis
 - `DEFINITIONS.md` — Precise definitions of all framework terms

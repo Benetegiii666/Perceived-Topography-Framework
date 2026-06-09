@@ -33,6 +33,15 @@ If a discovery conflicts with the concept architecture:
 
 Fault lines are where breakthroughs come from. Most researchers keep conclusions. Almost nobody systematically preserves contradictions. Future insights will emerge from unresolved tensions.
 
+### Nothing Becomes Doctrine Alone
+
+No single insight changes the concept architecture by itself. Architecture changes **only** when:
+
+1. **Multiple discoveries converge** toward the same revision.
+2. **A fault line is resolved** through sustained analysis.
+
+The strongest repositories eventually become victims of their newest insight. This protocol resists that.
+
 ## Folder Hierarchy
 
 | Priority | Folder | Purpose |
