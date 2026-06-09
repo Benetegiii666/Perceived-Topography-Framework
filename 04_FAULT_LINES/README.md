@@ -23,3 +23,4 @@ Contains contradictions, unresolved tensions, and conflicts between discoveries 
 - `FL_004_Governance_vs_Topography.md`
 - `FL_005_Path_or_Gradient.md`
 - `FL_006_Retrieval_vs_Perception.md`
+- `FL_007_Interface_Layer.md`

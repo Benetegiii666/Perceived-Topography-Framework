@@ -13,3 +13,4 @@ Houses nascent ideas that are not yet mature enough for the concept architecture
 - `EC_001_Perception_Construction.md`
 - `EC_002_Topography_vs_Field_Theory.md`
 - `EC_003_Agentic_Retrieval_and_State.md`
+- `EC_004_Information_Surfaces.md`
