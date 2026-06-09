@@ -245,9 +245,32 @@ This is more granular than the earlier 4-layer model (`Reality → Information S
 
 **Status:** Research question. Requires experimental validation. The agent governance example (Agent A vs Agent B) provides the clearest thought experiment, but has not been tested with real systems.
 
+## Pressure Note: Goal-Driven Gradient Selection (2026-06-09)
+
+Visibility alone may not determine behavior. Goals may influence which *visible* gradients are considered relevant and therefore incorporated into perception construction.
+
+**Example:** A VP told "maximize revenue" and a VP told "maximize customer lifetime value" may look at the same dashboard (identical visibility) and attend to different metrics. The goal acts as a filter on visible gradients — a form of attention allocation that sits between visibility and perception.
+
+A richer goal specification naturally generates information needs, which guide retrieval and attention. This suggests the relationship between goals and visibility may be bidirectional:
+- Visibility shapes what the optimizer can perceive (framework's current claim)
+- Goals shape what the optimizer *does* perceive among what's visible (pressure against the Visibility Alignment Hypothesis)
+
+**Pressure Question:** Does behavior depend more strongly on visibility or on goal-driven selection among visible gradients?
+
+If goal-driven selection dominates, then the Visibility Alignment Hypothesis ("increasing visibility improves outcomes") needs qualification: visibility improves outcomes *only when the goal specification is rich enough to make the new gradients relevant*.
+
+**Connections:**
+- Visibility Alignment Hypothesis (direct pressure)
+- EC_003 (Agentic Retrieval — goal-driven retrieval is goal-driven gradient selection)
+- FL_008 (Selection of Information Surfaces — goals may be one of the selection principles)
+- Concept-based retrieval, goal interpretation
+
+**Status:** Pressure only. No promotion.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
 - Does this layer exist in all systems or only in complex ones?
 - If the agent can reshape its information surfaces, is that a form of reshaping its own topography?
 - Is "visibility" the more fundamental concept underlying information surfaces?
+- Does goal specification act as a filter between visibility and perception construction?
