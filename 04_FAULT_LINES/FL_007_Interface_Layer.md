@@ -193,6 +193,37 @@ This analysis passes the falsifiability test. If someone can produce a failure t
 
 ...that would be evidence against the multi-layer model. This is the kind of testable prediction CA_005 has been asking for.
 
+## Relationship Between Topography and Information Surfaces (2026-06-09)
+
+Information Surfaces may not simply be *part of* Topography. They may **mediate** Topography by determining which real gradients become visible to an optimizer.
+
+**Candidate chain (5-layer):**
+
+```
+Reality
+    → Real Gradients
+        → Information Surfaces
+            → Visible Gradients
+                → Perceived Gradients
+                    → Behavior
+```
+
+**Working distinctions:**
+
+| Term | Definition |
+|------|-----------|
+| Real Gradient | Pressure that exists in reality |
+| Information Surface | Mechanism/interface that reveals or hides gradients |
+| Visible Gradient | Gradient exposed through an information surface |
+| Perceived Gradient | Optimizer's interpreted model of the gradient |
+| Behavior | Emergent response to perceived gradients |
+
+This is more granular than the earlier 4-layer model (`Reality → Information Surfaces → Perception Construction → Behavior`). It decomposes the process into five steps and distinguishes between what an information surface *exposes* (visible gradient) and what the optimizer *makes of it* (perceived gradient).
+
+**Key implication:** Topography produces real gradients. Information surfaces don't create gradients — they **filter** them. The surface determines which real gradients become visible. Perception construction determines which visible gradients become perceived. Optimization determines which perceived gradients drive behavior.
+
+**Status:** Pressure only. Not an architectural promotion. But this is the most refined candidate hierarchy FL_007 has produced.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
