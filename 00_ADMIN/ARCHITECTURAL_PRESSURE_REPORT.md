@@ -60,6 +60,18 @@ The term "visible" appears repeatedly across independent areas of the framework:
 
 This test would move "visibility" from "interesting recurring word" to either "candidate layer" or "confirmed property." Do not promote before testing.
 
+## Emerging Pressure Candidate: Objective vs Constructed Gradients
+
+Some gradients appear directly measurable (churn rate, latency, cost). Others may depend on interpretation (trust, strategic importance, reputation).
+
+**Pressure Question:** Are all gradients properties of reality, or are some gradients themselves constructed through perception?
+
+**Why this matters:** The 5-layer candidate chain (`Reality → Real Gradients → Information Surfaces → Visible Gradients → Perceived Gradients → Behavior`) currently assumes gradients originate in reality. But if some gradients are themselves constructed — if "trust" as a gradient doesn't exist until someone defines and measures it — then the boundary between "real gradient" and "perceived gradient" blurs.
+
+**Watch reason:** Could explain why actors sharing the same visibility may still disagree on *what matters*. Two executives seeing the same dashboard may weight "trust" differently not because they perceive it differently, but because one treats it as a real gradient and the other treats it as a constructed metric.
+
+**Status:** Pressure only. No promotion. If this survives, it may challenge the clean separation between the reality and perception layers — which would be a new fault line.
+
 ## Unresolved (No Active Pressure)
 
 - FL_004: Governance vs Topography — open, no new evidence
