@@ -274,3 +274,53 @@ Most AI governance conversations focus exclusively on goal design (alignment, re
 ### Why This Example Matters
 
 This is the framework's clearest AI governance example. It demonstrates that the alignment problem is partly an information surface design problem — not just a reward specification problem. It connects directly to ST-4 (Alignment as Environment Design) and provides a concrete instance of FL_007's 5-layer chain in an AI context.
+
+---
+
+## Decision Support vs Information Retrieval
+
+**Illustrates:** Practical application pattern — how the framework changes system design
+
+### Observation
+
+The practical application of the framework is not maximizing visibility. It is improving decisions through the interaction of three design levers:
+
+1. **Goal Specification** — What is the optimizer trying to achieve?
+2. **Attention Direction** — Which visible gradients should receive focus?
+3. **Visibility Design** — Which gradients from reality are made observable?
+
+These three levers interact. Visibility without goal-aligned attention produces noise. Attention without adequate visibility produces blind spots. Goals without visibility design produce misalignment between intent and action.
+
+### Key Principle
+
+Traditional systems retrieve information:
+> *"Here are documents relevant to your query."*
+
+Framework-informed systems surface gradients capable of changing a decision:
+> *"Here is information that, if seen, would alter what you do next."*
+
+The difference is not volume or relevance. It is **decision impact**. A framework-informed system asks: does this information create a visible gradient strong enough to shift the optimizer's perceived landscape?
+
+### Comparison
+
+| Dimension | Information Retrieval | Decision Support (Framework) |
+|-----------|----------------------|------------------------------|
+| Goal | Return relevant information | Surface decision-changing gradients |
+| Success metric | Recall, precision, relevance | Decision quality, outcome improvement |
+| Design question | "What matches the query?" | "What would change the decision?" |
+| Failure mode | Irrelevant results | Missing gradient that would have mattered |
+| Information surface | Optimized for coverage | Optimized for gradient visibility |
+
+### Example
+
+A marketer asks a knowledge platform: "Show me campaign performance data."
+
+**Information retrieval** returns: campaign metrics, historical performance, benchmarks.
+
+**Decision support** returns: campaign metrics, historical performance, benchmarks — *plus* the three customer complaints that would change the campaign direction if seen, the competitor move that invalidates the current strategy, and the churn signal that makes the current target audience questionable.
+
+The second system doesn't just answer the question. It surfaces gradients the marketer didn't know to ask about — gradients capable of changing the decision.
+
+### Why This Matters
+
+This is the framework's prescriptive contribution to product design. It reframes the purpose of retrieval, dashboards, and AI assistants from "deliver information" to "surface decision-changing gradients." That reframe is actionable — it changes what you build, how you evaluate it, and what success looks like.
