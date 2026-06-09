@@ -14,3 +14,4 @@ Houses nascent ideas that are not yet mature enough for the concept architecture
 - `EC_002_Topography_vs_Field_Theory.md`
 - `EC_003_Agentic_Retrieval_and_State.md`
 - `EC_004_Information_Surfaces.md`
+- `EC_005_Topography_Mapping_vs_Navigation.md`
