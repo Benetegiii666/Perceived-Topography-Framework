@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-09 — Seed Material Ingestion: Archive + Structured Extraction
+- Created `99_ARCHIVE/ChatGPT_Seed_Material/` with 4 seed artifacts (SEED_001 through SEED_004)
+- Populated concept architecture (CORE_THESIS, SUPPORTING_THESES, DEFINITIONS, HIERARCHY, OPEN_QUESTIONS) with v0.1 baseline
+- Enriched all 7 discoveries (D001-D007) from one-liners to full entries with observations, implications, cross-references
+- Enriched all 7 aha moments (AHA_001-AHA_007) with quotes, significance, cross-references
+- Enriched all 5 original fault lines (FL_001-FL_005) with tension descriptions and current positions
+- Preserved THE ORIGIN SENTENCE in AHA_001 and SEED_003
+- Wrote EXTRACTION_REPORT.md documenting what was mined and what was intentionally left out
+- Key finding: seed definition already contained "constructed" — perception construction was latent from v0.1
+
 ## 2026-06-09 — Second Classification Cycle: D002 deepened, FL007 resolution criteria, CA005, EC004 expanded
 - DISCOVERY_002 deepened: KPI gaming reframed as information surface corruption → distorted perception → distorted behavior
 - FL_007 updated with three resolution criteria (Subset, Mechanism, Fundamental Layer)
