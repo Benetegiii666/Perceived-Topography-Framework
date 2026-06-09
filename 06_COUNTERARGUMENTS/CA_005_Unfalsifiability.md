@@ -47,11 +47,25 @@ A stronger framework says: *If information surfaces are independently variable, 
 
 **Standing test:** Every time the framework is extended, ask — does this extension generate a new falsifiable prediction, or does it merely accommodate another observation after the fact?
 
-### First Successful Falsifiability Candidate (2026-06-09)
+### First Operational Falsifiability Test (2026-06-09)
 
-FL_007's failure mode analysis produced the framework's first testable structural prediction: all behavioral failures should be classifiable as Hidden Risk (visibility failure), Misread Signal (perception failure), or Attention Failure (optimization failure). If a failure is found that does not fit these three categories — or that requires collapsing two layers to explain — the multi-layer model is weakened.
+The Hidden Risk / Misread Signal / Attention Failure framework (FL_007) introduces distinct, testable failure modes associated with different layers of the architecture. This shifts the framework from merely explanatory to **diagnostic** — it now makes predictions about failure classification and intervention effectiveness.
 
-This is progress. The framework is generating predictions that could be disproven.
+**Observation:** The failure mode analysis assigns each failure to a specific layer, predicts a specific intervention, and implies that misdiagnosis (targeting the wrong layer) will fail.
+
+**The framework now predicts:**
+1. All behavioral failures can be classified as Hidden Risk (visibility), Misread Signal (perception), or Attention Failure (optimization)
+2. The correct intervention depends on which layer failed
+3. Interventions targeted at the wrong layer will not systematically improve outcomes
+
+**Potential Disconfirmation Conditions:**
+1. A behavioral failure that **cannot be classified** into any of the three failure modes
+2. A behavioral failure that **requires collapsing multiple layers** into one to explain
+3. Evidence that **interventions targeted at the identified layer do not systematically improve outcomes** compared to interventions targeted at other layers
+
+Condition #3 is the strongest test. If fixing visibility doesn't help Hidden Risk cases, or if fixing perception construction doesn't help Misread Signal cases, the layer assignments are wrong — and the multi-layer model loses its diagnostic value.
+
+**Status:** First concrete response to CA_005. The framework has moved from "what would disprove this?" (theoretical) to "here is a specific test that could disprove this" (operational). This does not close CA_005 — it remains a standing challenge — but it demonstrates the framework can generate falsifiable predictions.
 
 ## Why This Matters
 
