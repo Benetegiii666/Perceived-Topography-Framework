@@ -45,6 +45,28 @@ Every session begins by reading and updating `00_ADMIN/ARCHITECTURAL_PRESSURE_RE
 
 This prevents wandering and keeps research focused on the highest-value questions.
 
+## Session Handoff System (Claude ↔ ChatGPT Workflow)
+
+The OpenAI co-author does not have persistent GitHub access. Claude maintains the repo and generates a clean perception surface for each session.
+
+### Workflow
+1. **Before session:** Claude regenerates `00_ADMIN/SESSION_START.md` from CURRENT_STATE.md and ARCHITECTURAL_PRESSURE_REPORT.md. Benet pastes it into ChatGPT.
+2. **During session:** ChatGPT works from that state. When filing is needed, co-author says **"Repository Action Required"** and describes classification + content.
+3. **After session:** Co-author produces a handoff note. Benet gives it to Claude. Claude files it into `00_ADMIN/SESSION_LOG/SESSION_YYYY-MM-DD.md`, updates the repo, and regenerates SESSION_START.md for the next session.
+
+### Key Files
+- `00_ADMIN/SESSION_START.md` — Paste into ChatGPT at session start. Short, self-contained.
+- `00_ADMIN/SESSION_HANDOFF_TEMPLATE.md` — Template for end-of-session handoff notes.
+- `00_ADMIN/SESSION_LOG/SESSION_YYYY-MM-DD.md` — Archived session handoffs.
+
+### Regeneration Checklist (for Claude)
+When regenerating SESSION_START.md:
+1. Read CURRENT_STATE.md — update the architecture summary
+2. Read ARCHITECTURAL_PRESSURE_REPORT.md — update the pressure areas
+3. Count current items (discoveries, fault lines, etc.) — update the counts
+4. Check which fault lines and emerging concepts are most active — update the reading order
+5. Leave "Current Session Goal" blank for human to fill in
+
 ## CURRENT_STATE.md
 `01_CONCEPT_ARCHITECTURE/CURRENT_STATE.md` is the "living constitution" — the canonical snapshot of what the framework currently believes. Not history, not evolution, not discussion. Just: if someone joined the project today, what do we currently believe? This file is regenerated with every significant architecture update.
 
