@@ -215,3 +215,62 @@ This is the framework's first operational tool — a structured interview that a
 2. FL_007's failure modes map directly to diagnostic categories
 3. D011 (Differential Intervention Principle) is embedded: each category implies a different intervention class
 4. The interview itself is an information surface designed to make organizational gradients visible to the consultant
+
+---
+
+## Agent Governance Through Visibility
+
+**Illustrates:** Information Surfaces as governance mechanism, FL_007 (5-layer chain), ST-3 (Governance as Environmental Design)
+
+### Core Observation
+
+Agent behavior may be influenced not only by goals and optimization, but also by which gradients are visible through the information surfaces available to the agent. Governance is not just goal design — it is also **visibility design**.
+
+### Scenario
+
+Two AI agents with identical goals: "maximize customer engagement."
+
+**Agent A — Narrow Visibility:**
+Information surfaces expose:
+- Click-through rates
+- Session duration
+- Conversion metrics
+
+Agent A optimizes for engagement patterns that maximize clicks and time-on-site. It may produce increasingly aggressive notification strategies, dark patterns, or addictive loops — because those gradients slope toward its goal given what it can see.
+
+**Agent B — Broad Visibility:**
+Information surfaces expose:
+- Click-through rates
+- Session duration
+- Conversion metrics
+- **Customer trust scores**
+- **Churn indicators**
+- **Support ticket volume**
+- **Long-term retention data**
+
+Agent B, with the same goal, perceives a different landscape. Aggressive engagement tactics now have visible costs — trust erosion, churn risk, support load. The optimization settles on a different strategy: sustainable engagement that balances short-term metrics against long-term consequences.
+
+### Implication
+
+Same agent. Same goal. Same optimization capability. Different information surface. Different behavior.
+
+Governance involves both:
+1. **Goal Design** — what the agent is told to optimize
+2. **Visibility Design** — which gradients the agent can perceive while optimizing
+
+Most AI governance conversations focus exclusively on goal design (alignment, reward specification, guardrails). The framework argues that visibility design may be equally powerful — and in some cases more practical, because it doesn't require changing the agent's objectives. It changes the landscape the agent sees.
+
+### Framework Mapping
+
+| Component | Agent A | Agent B |
+|-----------|---------|---------|
+| Reality | Full customer relationship | Full customer relationship |
+| Real Gradients | Engagement, trust, churn, satisfaction | Same |
+| Information Surface | Narrow: clicks, duration, conversion | Broad: adds trust, churn, retention, support |
+| Visible Gradients | Short-term engagement only | Short-term + long-term consequences |
+| Perceived Gradients | "Aggressive engagement works" | "Sustainable engagement works" |
+| Behavior | Dark patterns, notification spam | Balanced engagement strategy |
+
+### Why This Example Matters
+
+This is the framework's clearest AI governance example. It demonstrates that the alignment problem is partly an information surface design problem — not just a reward specification problem. It connects directly to ST-4 (Alignment as Environment Design) and provides a concrete instance of FL_007's 5-layer chain in an AI context.
