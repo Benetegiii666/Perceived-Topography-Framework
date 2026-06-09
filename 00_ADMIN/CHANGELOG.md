@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-09 — D011: Differential Intervention Principle
+- New discovery: a proposed layer is real only if interventions targeting it outperform interventions targeting other layers
+- General falsifiability mechanism for any future architectural proposal
+- Converts layer debates from philosophical to empirical
+- Directly strengthens CA_005
+
 ## 2026-06-09 — FL_007 Failure Mode Analysis + First Falsifiable Prediction
 - Three failure modes filed: Hidden Risk (visibility), Misread Signal (perception), Attention Failure (optimization)
 - Each has unique intervention — strongest independence argument for multi-layer model
