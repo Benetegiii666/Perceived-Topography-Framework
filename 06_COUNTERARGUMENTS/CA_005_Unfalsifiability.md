@@ -47,6 +47,12 @@ A stronger framework says: *If information surfaces are independently variable, 
 
 **Standing test:** Every time the framework is extended, ask — does this extension generate a new falsifiable prediction, or does it merely accommodate another observation after the fact?
 
+### First Successful Falsifiability Candidate (2026-06-09)
+
+FL_007's failure mode analysis produced the framework's first testable structural prediction: all behavioral failures should be classifiable as Hidden Risk (visibility failure), Misread Signal (perception failure), or Attention Failure (optimization failure). If a failure is found that does not fit these three categories — or that requires collapsing two layers to explain — the multi-layer model is weakened.
+
+This is progress. The framework is generating predictions that could be disproven.
+
 ## Why This Matters
 
 Good theories survive attacks. The framework should be able to articulate what would kill it. If it cannot, that is itself a fault line.

@@ -29,7 +29,7 @@
 
 | Change | Trigger | Status |
 |--------|---------|--------|
-| FL_007: Add Information Surfaces layer | Three possible outcomes (Subset, Mechanism, Fundamental) | **Outcome A weakened** — independence test shows IS and PC vary independently. Solution space narrowing to B or C. |
+| FL_007: Add Information Surfaces layer | Three possible outcomes (Subset, Mechanism, Fundamental) | **Outcome A weakened.** Independence test + failure mode analysis both show layers are separable. Failure modes provide first falsifiable structural prediction. Solution space narrowing to B or C. |
 | Perception → Perception Construction | FL_003 + FL_006 + FL_007 convergence | Accumulating evidence but not resolved |
 
 ## Convergence Watch

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-09 — FL_007 Failure Mode Analysis + First Falsifiable Prediction
+- Three failure modes filed: Hidden Risk (visibility), Misread Signal (perception), Attention Failure (optimization)
+- Each has unique intervention — strongest independence argument for multi-layer model
+- CA_005 updated: first successful falsifiability candidate — a failure that doesn't fit the three categories would weaken the model
+- Pressure report updated: FL_007 receives additional evidence
+
 ## 2026-06-09 — CA_005 Recursion Warning + FL_007 Visibility Pressure Note
 - CA_005 updated: recursion can disguise unfalsifiability. Standing test added — every extension must generate a falsifiable prediction, not just accommodate an observation.
 - FL_007 pressure note: "visibility" may be the primitive underlying information surfaces. Seed material already contained "visible." D009 pattern may be repeating.

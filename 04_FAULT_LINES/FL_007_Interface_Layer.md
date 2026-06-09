@@ -141,6 +141,58 @@ Each layer can distort independently:
 
 **Status:** Supporting analysis. Not a discovery. Not an architectural promotion. Needs further pressure testing. But this feels close to the center of the framework — it may be where future work concentrates.
 
+## Failure Mode Analysis (2026-06-09)
+
+Three independently testable failure modes, each with a unique intervention:
+
+### 1. Hidden Risk
+| Layer | State |
+|-------|-------|
+| Gradient | Exists |
+| Visibility | Absent |
+| Perception | N/A (nothing to perceive) |
+| Behavior | Unaffected — risk is real but unobserved |
+
+**Intervention:** Increase visibility. Add sensors, dashboards, retrieval paths. Make the gradient observable.
+
+**Example:** A company has rising customer churn (gradient exists) but the executive dashboard doesn't show churn data (visibility absent). Leadership takes no action.
+
+### 2. Misread Signal
+| Layer | State |
+|-------|-------|
+| Gradient | Exists |
+| Visibility | Present |
+| Perception | Incorrect |
+| Behavior | Responds to wrong model |
+
+**Intervention:** Improve interpretation and model construction. Better training, analytical tools, context, or framing.
+
+**Example:** Churn data is on the dashboard (visible), but leadership interprets a seasonal dip as a one-time anomaly rather than a structural trend. They respond to the wrong model.
+
+### 3. Attention Failure
+| Layer | State |
+|-------|-------|
+| Gradient | Exists |
+| Visibility | Present |
+| Perception | Correct |
+| Behavior | Unchanged |
+
+**Intervention:** Modify optimization pressures, incentives, or governance. The optimizer sees the problem correctly but other gradients (quarterly earnings, competitor response) exert stronger pressure.
+
+**Example:** Leadership sees the churn trend, understands it correctly, but prioritizes a product launch because the incentive structure rewards growth over retention.
+
+### Implication
+
+The existence of three distinct failure modes — each with a unique intervention — suggests that Gradient, Visibility, Perception, and Optimization represent **separable components** rather than different names for the same phenomenon. This is the strongest independence argument FL_007 has produced so far.
+
+### Falsifiability Gate (CA_005)
+
+This analysis passes the falsifiability test. If someone can produce a failure that:
+- Does not fit one of these three categories, OR
+- Requires collapsing two of the layers together to explain
+
+...that would be evidence against the multi-layer model. This is the kind of testable prediction CA_005 has been asking for.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
