@@ -83,6 +83,20 @@ If Outcome C survives scrutiny, this is a genuinely new branch of the framework.
 
 **Recommended approach:** Do not resolve prematurely. Test each outcome against the examples in EC_004 and see which one breaks first.
 
+## Independent Variability Test (2026-06-09)
+
+**Test:** If Information Surfaces and Perception Construction are the same thing, they should not vary independently. If they can vary independently, they are separable — and separability is evidence for a distinct layer.
+
+**Evidence:**
+
+1. **Same information surface, different perceptions.** Two analysts look at the same KPI dashboard (identical information surface). One sees a growth trend; the other sees a plateau masked by seasonality. The information surface is constant; perception construction varies.
+
+2. **Same perception capability, different outcomes when information surfaces change.** The same analyst, using the same analytical methods, produces a different assessment when the dashboard is redesigned to show raw data instead of smoothed averages. Perception construction capability is constant; the information surface changed, and behavior followed.
+
+**Implication:** Information Surfaces and Perception Construction appear **separable rather than identical**. They can vary independently of each other. This weakens Outcome A (Subset) and strengthens the case for Outcome B (Mechanism) or Outcome C (Fundamental Layer).
+
+**Status:** This is the first successful independence test for FL_007. It does not resolve the fault line — but it narrows the solution space by weakening one of the three outcomes.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)

@@ -12,7 +12,7 @@
 |-----------|-------------------|------------|
 | Perception | FL_003 (layer vs mechanism), FL_006 (retrieval), FL_007 (information surfaces) | High — may split into Perception Construction |
 | Retrieval | FL_006, FL_007, EC_003 | High — may become central mechanism, not peripheral |
-| Information Surfaces | FL_007, EC_004 | High — candidate for new architectural layer |
+| Information Surfaces | FL_007, EC_004, **independence test passed** | **Very High** — candidate for new architectural layer; Outcome A (Subset) weakened by variability evidence |
 | Topography definition | FL_002 (fundamental vs derived), CA_002 (just incentives) | Medium — core concept under external challenge |
 
 ## Stable
@@ -29,14 +29,14 @@
 
 | Change | Trigger | Status |
 |--------|---------|--------|
-| FL_007: Add Information Surfaces layer | Three possible outcomes (Subset, Mechanism, Fundamental) | Open — priority research target |
+| FL_007: Add Information Surfaces layer | Three possible outcomes (Subset, Mechanism, Fundamental) | **Outcome A weakened** — independence test shows IS and PC vary independently. Solution space narrowing to B or C. |
 | Perception → Perception Construction | FL_003 + FL_006 + FL_007 convergence | Accumulating evidence but not resolved |
 
 ## Convergence Watch
 
 | Pattern | Evidence | Assessment |
 |---------|----------|------------|
-| FL_006 + FL_007 + EC_003 + EC_004 + **D010** | All point toward retrieval/information surfaces as perception construction mechanism. **D010 adds the unifying problem: context continuity.** | **CONVERGENCE APPROACHING** — five independent lines of evidence now align. Protocol #4 threshold is close. Next session should formally evaluate whether this cluster resolves FL_007. |
+| FL_006 + FL_007 + EC_003 + EC_004 + D010 + **FL_007 independence test** | All point toward retrieval/information surfaces as perception construction mechanism. D010 adds context continuity. **FL_007 independence test shows IS and PC are separable — Outcome A weakened.** | **CONVERGENCE STRENGTHENED** — six signals now align, plus the solution space has narrowed (Outcome A weakening). Protocol #4 threshold is very close. Next session: discriminate between Outcome B and Outcome C. |
 | D009 + archive review | Language contains latent mechanisms | Too early to call — needs systematic review |
 
 ## Unresolved (No Active Pressure)
