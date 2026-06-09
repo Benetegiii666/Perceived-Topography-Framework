@@ -6,6 +6,14 @@
 - Converts layer debates from philosophical to empirical
 - Directly strengthens CA_005
 
+## 2026-06-09 — Six Aha Moments Filed (AHA_008–AHA_013)
+- AHA_008: Theory Ahead of Language — "constructed" existed before Perception Construction was articulated
+- AHA_009: Visibility Is Not Attention — magician example as cleanest independence test
+- AHA_010: Retrieval Is Gradient Selection — retrieval reframed from document matching to gradient surfacing
+- AHA_011: VP Is Human Analog — same Goal → Visibility → Behavior structure for humans and agents
+- AHA_012: Governance Is Visibility Design — governance as ensuring important gradients become visible
+- AHA_013: Framework Became Testable — the biggest one. CA_005 became a research instrument, not just a critique.
+
 ## 2026-06-09 — FL_007 Failure Mode Analysis + First Falsifiable Prediction
 - Three failure modes filed: Hidden Risk (visibility), Misread Signal (perception), Attention Failure (optimization)
 - Each has unique intervention — strongest independence argument for multi-layer model

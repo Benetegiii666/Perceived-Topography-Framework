@@ -14,3 +14,9 @@ Records conceptual breakthroughs and reframes — moments where understanding sh
 - `AHA_005_Marble_and_Slope.md`
 - `AHA_006_Governance_Shapes_Terrain.md`
 - `AHA_007_Map_Sensor_Navigator.md`
+- `AHA_008_Theory_Ahead_of_Language.md`
+- `AHA_009_Visibility_Is_Not_Attention.md`
+- `AHA_010_Retrieval_Is_Gradient_Selection.md`
+- `AHA_011_VP_Is_Human_Analog.md`
+- `AHA_012_Governance_Is_Visibility_Design.md`
+- `AHA_013_Framework_Became_Testable.md`
