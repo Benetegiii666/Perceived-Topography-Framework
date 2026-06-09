@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-06-09 — D010: Context Continuity Problem — Convergence Approaching
+- DISCOVERY_010: Context continuity (memory, RAG, transfer docs, git) all solve the same problem — preserving perception across time
+- Convergence watch upgraded: FL_006 + FL_007 + EC_003 + EC_004 + D010 = five independent lines of evidence
+- Pressure report updated: Protocol #4 threshold is close. Next session should formally evaluate.
+
 ## 2026-06-09 — D009 + Architectural Pressure Report
 - DISCOVERY_009: Language Precedes Structure — "constructed" was in seed material but only recognized as mechanism later
 - Created `00_ADMIN/ARCHITECTURAL_PRESSURE_REPORT.md` — session-opening protocol for tracking pressure, stability, convergence

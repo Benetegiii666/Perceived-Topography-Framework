@@ -16,3 +16,4 @@ Captures observations and findings as they occur. Discoveries are raw material â
 - `DISCOVERY_007_Perception_Construction.md`
 - `DISCOVERY_008_Repository_as_Instance.md`
 - `DISCOVERY_009_Language_Precedes_Structure.md`
+- `DISCOVERY_010_Context_Continuity_Problem.md`

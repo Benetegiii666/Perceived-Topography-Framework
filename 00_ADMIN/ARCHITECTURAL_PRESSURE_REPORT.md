@@ -36,7 +36,7 @@
 
 | Pattern | Evidence | Assessment |
 |---------|----------|------------|
-| FL_006 + FL_007 + EC_003 + EC_004 | All point toward retrieval/information surfaces as perception construction mechanism | Approaching convergence — if one more discovery aligns, Protocol #4 threshold may be met |
+| FL_006 + FL_007 + EC_003 + EC_004 + **D010** | All point toward retrieval/information surfaces as perception construction mechanism. **D010 adds the unifying problem: context continuity.** | **CONVERGENCE APPROACHING** — five independent lines of evidence now align. Protocol #4 threshold is close. Next session should formally evaluate whether this cluster resolves FL_007. |
 | D009 + archive review | Language contains latent mechanisms | Too early to call — needs systematic review |
 
 ## Unresolved (No Active Pressure)
