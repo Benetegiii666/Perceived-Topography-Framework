@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-09 — Second Classification Cycle: D002 deepened, FL007 resolution criteria, CA005, EC004 expanded
+- DISCOVERY_002 deepened: KPI gaming reframed as information surface corruption → distorted perception → distorted behavior
+- FL_007 updated with three resolution criteria (Subset, Mechanism, Fundamental Layer)
+- CA_005: Unfalsifiability — standing counterargument with five candidate falsifiers
+- EC_004 expanded with reality→surface mapping table and additional domain examples
+
 ## 2026-06-09 — First Classification Cycle: D008, FL007, EC004
 - DISCOVERY_008: Repository as Instance — the repo itself exhibits framework behavior (reflexivity)
 - FL_007: Interface Layer — retrieval is neither agent nor environment, may be a third layer ("Information Surfaces")

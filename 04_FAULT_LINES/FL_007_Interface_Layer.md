@@ -52,6 +52,37 @@ The "Information Surfaces" layer is where retrieval, sensors, memory, tool calls
 - Feeds `EC_003_Agentic_Retrieval_and_State.md` — retrieval is an information surface
 - Feeds `EC_004_Information_Surfaces.md` — the new emerging concept
 
+## Resolution Criteria — Three Possible Futures
+
+This fault line resolves in one of three ways:
+
+### Outcome A — Subset
+Information Surfaces turns out to be a subset of Perception. The framework remains mostly unchanged. Information surfaces are a useful label for a class of perceptual inputs but do not warrant their own architectural layer.
+
+### Outcome B — Mechanism
+Information Surfaces becomes the mechanism by which Perception is constructed. Moderate architectural change. The layer exists but is subordinate to Perception Construction.
+
+### Outcome C — Fundamental Layer
+Information Surfaces becomes a fundamental, independent layer. Major architectural change:
+
+```
+Reality
+    ↓
+Information Surfaces
+    ↓
+Perception Construction
+    ↓
+Optimization
+    ↓
+Interaction
+    ↓
+Emergent Behavior
+```
+
+If Outcome C survives scrutiny, this is a genuinely new branch of the framework.
+
+**Recommended approach:** Do not resolve prematurely. Test each outcome against the examples in EC_004 and see which one breaks first.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)

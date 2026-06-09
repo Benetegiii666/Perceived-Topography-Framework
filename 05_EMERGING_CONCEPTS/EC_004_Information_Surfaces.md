@@ -21,6 +21,21 @@ They are neither agent nor environment. They are the **interface** through which
 
 ## Examples
 
+| Reality | Information Surface |
+|---------|-------------------|
+| Customer sentiment | Dashboard |
+| Market behavior | Stock ticker |
+| Corporate health | KPI report |
+| Scientific truth | Journal publication |
+| Physical world | Human senses |
+| Enterprise data | RAG system |
+| Live system state | API call |
+| Student understanding | Assessment scores |
+| Codebase health | CI/CD pipeline |
+| Public opinion | Polling data |
+
+### By Domain
+
 | Domain | Information Surfaces |
 |--------|---------------------|
 | Human biology | Eyes, ears, proprioception, interoception |
@@ -28,6 +43,8 @@ They are neither agent nor environment. They are the **interface** through which
 | Organizations | Dashboards, reports, KPIs, meeting structures, Slack channels |
 | Markets | Price signals, news media, analyst reports, social sentiment |
 | Research | Literature databases, peer review, citation networks |
+| Politics | Polling, media coverage, constituent feedback channels |
+| Education | Grades, assessments, participation metrics |
 
 ## Why This Might Be Important
 
