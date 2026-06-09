@@ -97,8 +97,25 @@ If Outcome C survives scrutiny, this is a genuinely new branch of the framework.
 
 **Status:** This is the first successful independence test for FL_007. It does not resolve the fault line — but it narrows the solution space by weakening one of the three outcomes.
 
+## Pressure Note: Visibility as Primitive (2026-06-09)
+
+The recurring concept across governance, retrieval, memory, dashboards, and sensors may be **visibility** rather than information itself. Every example has the same shape:
+
+- Dashboard *visibility*
+- Retrieval *visibility*
+- Memory *visibility*
+- Transfer-document *visibility*
+- Sensor *visibility*
+
+The question keeps becoming: **What becomes visible to the optimizer?** — not "What exists?"
+
+This is pressure only. Not a discovery. Not a concept promotion. But "visible" appeared in the seed material's definition of topography ("the topography *visible* from its position") and may be another instance of D009 (language precedes structure). If "visibility" turns out to be the primitive, the layer might be better named than "Information Surfaces."
+
+Note: Information surfaces can exist without governance (nature has them — senses, weather). But governance may not be able to operate without information surfaces (governance requires visibility). This suggests information surfaces may be **more primitive than governance** — not downstream of it.
+
 ## Open Questions
-- Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate.
+- Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
 - Does this layer exist in all systems or only in complex ones?
 - If the agent can reshape its information surfaces, is that a form of reshaping its own topography?
+- Is "visibility" the more fundamental concept underlying information surfaces?

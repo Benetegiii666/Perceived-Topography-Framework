@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-06-09 — CA_005 Recursion Warning + FL_007 Visibility Pressure Note
+- CA_005 updated: recursion can disguise unfalsifiability. Standing test added — every extension must generate a falsifiable prediction, not just accommodate an observation.
+- FL_007 pressure note: "visibility" may be the primitive underlying information surfaces. Seed material already contained "visible." D009 pattern may be repeating.
+- Co-author's key distinction: recursion is not a bug (many real systems are recursive). The danger is recursive *explanations* that prevent falsification.
+
 ## 2026-06-09 — FL_008: Selection of Information Surfaces
 - New fault line: framework explains how surfaces influence perception but not how surfaces are selected
 - Triggered by marketing knowledge platform example (Scenario A vs B — who decides?)

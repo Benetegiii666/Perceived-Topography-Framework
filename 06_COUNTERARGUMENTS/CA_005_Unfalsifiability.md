@@ -29,6 +29,24 @@ This is not a rhetorical question. It requires concrete answers. Some candidates
 
 5. **Topography collapses into incentives** — If every topographic explanation can be restated purely in terms of incentives with no loss of explanatory power, the framework adds no value over existing incentive theory (see CA_002).
 
+## Recursion Warning (2026-06-09)
+
+As the framework becomes more general, recursive explanations become increasingly easy to generate. Example: surface selection is governance → governance shapes topography → topography is mediated through information surfaces → surfaces require selection → loop.
+
+**The risk is not recursion itself.** Many real systems are recursive (science studies science, markets price expectations about markets, governments create rules for changing rules). Recursion is often unavoidable in complex systems.
+
+**The risk is that recursion disguises unfalsifiability.** If every observation is "that's the framework," every contradiction is "that's also the framework," and every exception is "that's a special case of the framework" — then the framework cannot be wrong, and if it cannot be wrong, it cannot be useful.
+
+### The Dividing Line
+
+Does the framework make **predictions**? Or does it merely explain things after they happen?
+
+A weak framework says: *Information surfaces matter.* Everything can be made to fit that. Not useful.
+
+A stronger framework says: *If information surfaces are independently variable, then changing the information surface while holding goals and optimizer constant should produce predictable changes in behavior.* That's testable. That's useful.
+
+**Standing test:** Every time the framework is extended, ask — does this extension generate a new falsifiable prediction, or does it merely accommodate another observation after the fact?
+
 ## Why This Matters
 
 Good theories survive attacks. The framework should be able to articulate what would kill it. If it cannot, that is itself a fault line.
