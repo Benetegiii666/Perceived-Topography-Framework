@@ -1,5 +1,6 @@
 # AHA_010: Retrieval Is Really Gradient Selection
 
+**Status:** Candidate — not yet promoted
 **Date:** 2026-06-09
 
 ## The Moment

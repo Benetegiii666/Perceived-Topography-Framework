@@ -1,5 +1,6 @@
 # AHA_011: The Marketing VP Is the Human Analog of the Agent Problem
 
+**Status:** Candidate — not yet promoted
 **Date:** 2026-06-09
 
 ## The Moment

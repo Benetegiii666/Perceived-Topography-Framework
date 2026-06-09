@@ -3,6 +3,12 @@
 ## Purpose
 Records conceptual breakthroughs and reframes — moments where understanding shifted. These are distinct from discoveries (observations) in that they represent a change in how we see the problem.
 
+## Status Levels
+- **Candidate** — Filed but not yet validated through subsequent work. May be reclassified or withdrawn.
+- **Promoted** — Validated through pressure testing, convergence, or demonstrated impact on the framework.
+
+AHA_001–AHA_007 (from seed material) are treated as promoted — they have demonstrated lasting impact. AHA_008+ begin as candidates until validated.
+
 ## Naming Convention
 `AHA_NNN_Short_Description.md`
 

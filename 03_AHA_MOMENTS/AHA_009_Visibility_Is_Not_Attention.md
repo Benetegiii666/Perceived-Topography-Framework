@@ -1,5 +1,6 @@
 # AHA_009: Visibility Is Not Attention
 
+**Status:** Candidate — not yet promoted
 **Date:** 2026-06-09
 
 ## The Moment

@@ -1,5 +1,6 @@
 # AHA_008: The Theory Was Ahead of Its Own Language
 
+**Status:** Candidate — not yet promoted
 **Date:** 2026-06-09
 
 ## The Moment
