@@ -72,6 +72,35 @@ Some gradients appear directly measurable (churn rate, latency, cost). Others ma
 
 **Status:** Pressure only. No promotion. If this survives, it may challenge the clean separation between the reality and perception layers — which would be a new fault line.
 
+## Emerging Pressure Candidate: Attention as Mediating Mechanism
+
+Visibility may determine what *can* be seen, while attention determines which visible gradients receive cognitive or computational resources. These may be distinct mechanisms.
+
+**Examples:**
+- Magic tricks: full visibility, misdirected attention → hidden gradient in plain sight
+- Dashboard prioritization: all metrics visible, attention drawn to red/green indicators
+- Goal-directed retrieval: available context filtered by goal relevance
+- Agentic retrieval: tool selection as attention allocation
+- Human decision-making: cognitive load limits which visible gradients get processed
+
+**Pressure Question:** Does attention represent a distinct mechanism between visibility and perception?
+
+**Candidate chain (6-layer):**
+
+```
+Reality → Gradients → Information Surfaces → Visible Gradients → Attention → Perceived Gradients → Behavior
+```
+
+**Relationship to goal-driven gradient selection:** The FL_007 pressure note on goal-driven selection may be describing attention — goals shape which visible gradients receive resources. If so, "attention" may be the mechanism that connects goal specification to perception construction.
+
+**Independence test needed:** Can attention vary while visibility remains constant?
+- If **yes** (e.g., magic trick — full visibility, misdirected attention): attention is a distinct mechanism
+- If **no**: attention is a property of perception construction, not a separate layer
+
+**Caution:** Each additional layer must pass the D011 test (Differential Intervention Principle). A 6-layer model is more explanatory but also more complex. Complexity must earn its place through differential intervention effectiveness.
+
+**Status:** Pressure only. No architectural promotion. Requires independence tests.
+
 ## Unresolved (No Active Pressure)
 
 - FL_004: Governance vs Topography — open, no new evidence
