@@ -36,6 +36,15 @@ This exists because the strongest repositories eventually become victims of thei
 
 A discovery does not change architecture. An aha moment does not change architecture. A paper draft does not change architecture. Only convergence or resolution does.
 
+## Session Protocol: Architectural Pressure Report
+Every session begins by reading and updating `00_ADMIN/ARCHITECTURAL_PRESSURE_REPORT.md`. This answers:
+- What changed since last session?
+- What is under pressure?
+- What has converged?
+- What remains unresolved?
+
+This prevents wandering and keeps research focused on the highest-value questions.
+
 ## CURRENT_STATE.md
 `01_CONCEPT_ARCHITECTURE/CURRENT_STATE.md` is the "living constitution" — the canonical snapshot of what the framework currently believes. Not history, not evolution, not discussion. Just: if someone joined the project today, what do we currently believe? This file is regenerated with every significant architecture update.
 

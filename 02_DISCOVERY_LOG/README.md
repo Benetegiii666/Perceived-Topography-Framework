@@ -15,3 +15,4 @@ Captures observations and findings as they occur. Discoveries are raw material â
 - `DISCOVERY_006_AI_as_Example.md`
 - `DISCOVERY_007_Perception_Construction.md`
 - `DISCOVERY_008_Repository_as_Instance.md`
+- `DISCOVERY_009_Language_Precedes_Structure.md`

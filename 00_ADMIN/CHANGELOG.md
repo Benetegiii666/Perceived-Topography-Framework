@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-09 — D009 + Architectural Pressure Report
+- DISCOVERY_009: Language Precedes Structure — "constructed" was in seed material but only recognized as mechanism later
+- Created `00_ADMIN/ARCHITECTURAL_PRESSURE_REPORT.md` — session-opening protocol for tracking pressure, stability, convergence
+- Added Open Question #8: are there more latent mechanisms hiding as nouns in the archive?
+- Added session protocol to CLAUDE.md: every session begins with the pressure report
+
 ## 2026-06-09 — Seed Material Ingestion: Archive + Structured Extraction
 - Created `99_ARCHIVE/ChatGPT_Seed_Material/` with 4 seed artifacts (SEED_001 through SEED_004)
 - Populated concept architecture (CORE_THESIS, SUPPORTING_THESES, DEFINITIONS, HIERARCHY, OPEN_QUESTIONS) with v0.1 baseline
