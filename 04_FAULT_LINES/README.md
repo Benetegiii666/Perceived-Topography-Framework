@@ -24,3 +24,4 @@ Contains contradictions, unresolved tensions, and conflicts between discoveries 
 - `FL_005_Path_or_Gradient.md`
 - `FL_006_Retrieval_vs_Perception.md`
 - `FL_007_Interface_Layer.md`
+- `FL_008_Selection_of_Information_Surfaces.md`

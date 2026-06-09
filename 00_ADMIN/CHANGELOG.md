@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-09 — FL_008: Selection of Information Surfaces
+- New fault line: framework explains how surfaces influence perception but not how surfaces are selected
+- Triggered by marketing knowledge platform example (Scenario A vs B — who decides?)
+- Four candidate selection principles identified: relevance, success prediction, uncertainty reduction, decision impact
+- Key architectural implication: if selection is governance, the framework becomes recursive (governance curates surfaces that shape perception of governance)
+
 ## 2026-06-09 — FL_007 Independence Test: Outcome A Weakened
 - FL_007 updated with Independent Variability Test: same surface → different perceptions; same capability → different outcomes when surface changes
 - Information Surfaces and Perception Construction shown to be separable (vary independently)
