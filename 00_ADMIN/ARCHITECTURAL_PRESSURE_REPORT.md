@@ -39,6 +39,27 @@
 | FL_006 + FL_007 + EC_003 + EC_004 + D010 + **FL_007 independence test** | All point toward retrieval/information surfaces as perception construction mechanism. D010 adds context continuity. **FL_007 independence test shows IS and PC are separable — Outcome A weakened.** | **CONVERGENCE STRENGTHENED** — six signals now align, plus the solution space has narrowed (Outcome A weakening). Protocol #4 threshold is very close. Next session: discriminate between Outcome B and Outcome C. |
 | D009 + archive review | Language contains latent mechanisms | Too early to call — needs systematic review |
 
+## Emerging Pressure Candidate: Visibility
+
+The term "visible" appears repeatedly across independent areas of the framework:
+
+- Retrieval
+- Memory
+- Dashboards
+- Transfer Documents
+- Agentic Retrieval
+- Marketing Knowledge Platforms
+
+**Relationship to D009:** Follows the pattern: Adjective → Recurring Pressure → Mechanism Candidate → Architectural Component. "Constructed" followed this path. "Visible" may be next.
+
+**Current Status:** Pressure only. No architectural promotion. No discovery. No emerging concept.
+
+**Independence Test Needed:** Can visibility vary while information surfaces remain constant?
+- If **yes**: visibility may be a distinct mechanism (e.g., two people with access to the same dashboard but different training see different things — the surface is constant, visibility varies)
+- If **no**: visibility is a property of information surfaces, not a separate concept
+
+This test would move "visibility" from "interesting recurring word" to either "candidate layer" or "confirmed property." Do not promote before testing.
+
 ## Unresolved (No Active Pressure)
 
 - FL_004: Governance vs Topography — open, no new evidence
