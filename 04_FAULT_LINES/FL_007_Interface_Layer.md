@@ -113,6 +113,34 @@ This is pressure only. Not a discovery. Not a concept promotion. But "visible" a
 
 Note: Information surfaces can exist without governance (nature has them — senses, weather). But governance may not be able to operate without information surfaces (governance requires visibility). This suggests information surfaces may be **more primitive than governance** — not downstream of it.
 
+## Supporting Analysis: Gradient vs Visibility Distinction (2026-06-09)
+
+Gradients and visibility appear similar because behavior responds primarily to perceived gradients. But they may be three distinct things:
+
+| Concept | Definition | Layer |
+|---------|-----------|-------|
+| **Gradient** | Pressure that exists in reality | Reality / Topography |
+| **Visibility** | Whether that pressure is observable | Information Surface |
+| **Perceived Gradient** | The optimizer's model of which pressures matter | Perception Construction |
+
+**Implication:** Behavior may be driven more directly by perceived gradients than by either gradients or visibility alone. The chain is:
+
+```
+Reality → Gradient → Visibility → Perceived Gradient → Behavior
+```
+
+This suggests three layers interacting, not two:
+1. A gradient exists (reality)
+2. The gradient is or isn't visible (information surface / visibility)
+3. The optimizer constructs a model of which visible gradients matter (perception construction)
+
+Each layer can distort independently:
+- A real gradient can be invisible (hidden risk)
+- A visible gradient can be misperceived (misread signal)
+- A perceived gradient can be absent despite reality and visibility (attention failure)
+
+**Status:** Supporting analysis. Not a discovery. Not an architectural promotion. Needs further pressure testing. But this feels close to the center of the framework — it may be where future work concentrates.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
