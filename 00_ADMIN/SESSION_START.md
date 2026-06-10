@@ -92,6 +92,8 @@ Reality → Real Gradients → Information Surfaces → Visible Gradients → Pe
 
 Pressure-test:
 - Attention
+- Interpretation
+- Context
 - Goal-Driven Gradient Selection
 - Visibility Alignment
 
@@ -101,6 +103,8 @@ Determine whether these represent:
 (c) different descriptions of the same phenomenon.
 
 Apply D011: What differential interventions would distinguish them?
+
+Explore whether context contributes to interpretation in a way that explains why identical visible gradients can produce different perceived gradients.
 
 ---
 

@@ -26,3 +26,5 @@ AHA_001–AHA_007 (from seed material) are treated as promoted — they have dem
 - `AHA_011_VP_Is_Human_Analog.md`
 - `AHA_012_Governance_Is_Visibility_Design.md`
 - `AHA_013_Framework_Became_Testable.md`
+- `AHA_014_Retrieval_as_Context_Construction.md`
+- `AHA_015_Context_Layers_Shape_Interpretation.md`

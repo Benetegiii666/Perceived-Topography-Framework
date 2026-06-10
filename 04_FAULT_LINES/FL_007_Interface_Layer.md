@@ -267,6 +267,32 @@ If goal-driven selection dominates, then the Visibility Alignment Hypothesis ("i
 
 **Status:** Pressure only. No promotion.
 
+## Pressure Note: Context as Contributor to Interpretation (2026-06-10)
+
+Two optimizers exposed to the same visible gradients may construct different perceived gradients because they bring different **contextual knowledge** to the interpretation process.
+
+**Example:** Both VPs observe the same data: churn rising, complaints increasing, revenue flat.
+
+- VP A (product background) interprets: **Product Quality Problem**
+- VP B (marketing background) interprets: **Marketing Messaging Problem**
+
+Visibility is identical. Interpretation differs. The difference is the context each VP brings — prior experience, domain knowledge, mental models.
+
+**Candidate sub-chain:**
+
+```
+Visible Gradient → Context → Interpretation → Perceived Gradient
+```
+
+**Pressure Question:** Does context represent:
+- (a) An independent mechanism between visibility and perception?
+- (b) A contributor to interpretation (a sub-process within perception construction)?
+- (c) A property of perception construction (not separable)?
+
+**D011 test:** If context is independent (a), then "change the context" should be a different intervention from "improve visibility" or "change the goal," and it should be differentially effective for interpretation failures specifically.
+
+**Status:** Pressure only. No promotion. Requires D011 evaluation.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
