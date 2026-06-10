@@ -88,17 +88,19 @@ Reality → Real Gradients → Information Surfaces → Visible Gradients → Pe
 ## Current Session Goal
 <!-- Human fills in before pasting -->
 
-**Pressure-test the nature of gradients.**
+**Investigate the transformation between Visible Gradients and Perceived Gradients.**
 
-Investigate whether gradients are objective properties of reality, constructed properties of perception, or a mixture of both.
-
-Determine how this impacts:
-- Visibility Alignment
+Pressure-test:
+- Attention
 - Goal-Driven Gradient Selection
-- Retrieval Architecture
-- Agent Governance
+- Visibility Alignment
 
-Evaluate whether gradient classification produces differential interventions (D011).
+Determine whether these represent:
+(a) independent mechanisms,
+(b) components of a larger mechanism, or
+(c) different descriptions of the same phenomenon.
+
+Apply D011: What differential interventions would distinguish them?
 
 ---
 
