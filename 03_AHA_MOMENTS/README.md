@@ -28,3 +28,4 @@ AHA_001–AHA_007 (from seed material) are treated as promoted — they have dem
 - `AHA_013_Framework_Became_Testable.md`
 - `AHA_014_Retrieval_as_Context_Construction.md`
 - `AHA_015_Context_Layers_Shape_Interpretation.md`
+- `AHA_016_Diagnostic_Over_Prescriptive.md`
