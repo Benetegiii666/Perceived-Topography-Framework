@@ -8,13 +8,16 @@ This is a **theory-building repository**, not a paper-writing project. The paper
 2. **`04_FAULT_LINES/`** — Where breakthroughs come from. Systematically preserved contradictions.
 3. **`05_EMERGING_CONCEPTS/EC_003_Agentic_Retrieval_and_State.md`** — Watch file. Strong intuition that retrieval explains how perception is constructed. Could become foundational.
 
-## Core Protocol: Conflict Resolution
+## Protocol #1 — Concept Architecture is Sovereign
 If a discovery conflicts with the concept architecture:
 - **Do NOT change the paper.**
 - **Do NOT change the discovery.**
 - **Open a fault line in `04_FAULT_LINES/`.**
 
-## Core Protocol: Classification-First
+## Protocol #2 — Fault Lines Preserve Contradictions
+Contradictions are never silently resolved. When two ideas conflict, both are preserved and a fault line is opened. Fault lines are where breakthroughs come from.
+
+## Protocol #3 — Classification-First
 Every new insight MUST be classified before being added:
 1. Discovery — A new observation or finding → `02_DISCOVERY_LOG/`
 2. Aha Moment — A conceptual breakthrough or reframe → `03_AHA_MOMENTS/`
@@ -23,9 +26,9 @@ Every new insight MUST be classified before being added:
 5. Definition Change — A refinement to core terminology → update `01_CONCEPT_ARCHITECTURE/DEFINITIONS.md`
 6. Counterargument — A challenge to the framework → `06_COUNTERARGUMENTS/`
 
-Only after classification should the insight be placed.
+Only after classification should the insight be placed. New aha moments and discoveries begin as **candidates** until promoted.
 
-## Core Protocol: Nothing Becomes Doctrine Alone
+## Protocol #4 — Nothing Becomes Doctrine Alone
 No single insight — no matter how brilliant — changes the concept architecture by itself.
 
 Architecture changes **only** when:
@@ -35,6 +38,13 @@ Architecture changes **only** when:
 This exists because the strongest repositories eventually become victims of their newest insight. The latest idea feels brilliant and suddenly everything gets rewritten. This protocol resists that.
 
 A discovery does not change architecture. An aha moment does not change architecture. A paper draft does not change architecture. Only convergence or resolution does.
+
+## Protocol #5 — Optimize for Framework Failure, Not Confirmation
+When evaluating real-world evidence, do **not** begin by asking "Which category does this fit?" Begin by asking **"Is there a plausible explanation that does not fit the current categories?"**
+
+For any investigated failure, always ask "None of the Above?" first. Unclassifiable failures are more valuable than clean classifications — they may indicate missing categories, missing mechanisms, incorrect architecture, or previously unseen phenomena.
+
+This prevents category lock-in, protects against unfalsifiability (CA_005), and preserves the framework's ability to evolve when reality disagrees. See `00_ADMIN/RP_001_Optimize_for_Failure.md` for full detail.
 
 ## Session Protocol: Architectural Pressure Report
 Every session begins by reading and updating `00_ADMIN/ARCHITECTURAL_PRESSURE_REPORT.md`. This answers:

@@ -109,10 +109,11 @@ Explore whether context contributes to interpretation in a way that explains why
 ---
 
 ## Repository Protocols
-- **Concept Architecture is sovereign.** Everything else supports or challenges it.
-- **Fault Lines preserve contradictions.** Never silently resolve conflicts.
-- **Classification-first.** Every insight classified (Discovery, Aha Moment, Fault Line, Emerging Concept, Definition Change, Counterargument) before placement. Aha moments and discoveries begin as **candidates** until promoted.
-- **Nothing becomes doctrine alone.** Architecture changes only through (a) multiple discoveries converging or (b) a fault line being resolved.
+1. **#1 — Concept Architecture is sovereign.** Everything else supports or challenges it.
+2. **#2 — Fault Lines preserve contradictions.** Never silently resolve conflicts.
+3. **#3 — Classification-first.** Every insight classified before placement. New items begin as **candidates** until promoted.
+4. **#4 — Nothing becomes doctrine alone.** Architecture changes only through (a) multiple discoveries converging or (b) a fault line being resolved.
+5. **#5 — Optimize for framework failure, not confirmation.** When evaluating evidence, ask "does this NOT fit?" before asking which category it fits. Unclassifiable failures are more valuable than clean classifications.
 - **Differential Intervention Principle (D011).** Every proposed layer must predict that targeted interventions outperform untargeted ones.
 - **Architectural Pressure Report** opens every session.
 
