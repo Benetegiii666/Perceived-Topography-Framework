@@ -324,3 +324,46 @@ The second system doesn't just answer the question. It surfaces gradients the ma
 ### Why This Matters
 
 This is the framework's prescriptive contribution to product design. It reframes the purpose of retrieval, dashboards, and AI assistants from "deliver information" to "surface decision-changing gradients." That reframe is actionable — it changes what you build, how you evaluate it, and what success looks like.
+
+---
+
+## Decision Ecosystem Mapping
+
+**Illustrates:** Translating framework concepts into stakeholder interviews, retrieval architecture, and agent design
+
+### Observation
+
+Goal, Context, Attention, and Interpretation each imply different stakeholder interview questions, different governance responsibilities, and different system interventions. They are not interchangeable — each maps to a distinct design activity.
+
+### Practical Mapping
+
+| Component | Core Question | Example Governance Responsibility | System Design Activity |
+|-----------|--------------|----------------------------------|----------------------|
+| **Goal** | What matters? | Outcome definition | Objective specification, reward design |
+| **Context** | What do we know? | Context layer construction | Knowledge base curation, memory systems, retrieval architecture |
+| **Attention** | What receives focus? | Dashboard/UI/briefing design | Prioritization, salience design, notification strategy |
+| **Interpretation** | What does it mean? | Explanation and decision support | Framing, annotation, comparative analysis, model explanation |
+
+### Stakeholder Interview Application
+
+Each component generates a different class of interview question:
+
+- **Goal questions:** "What outcome are you optimizing for? How do you define success? What would change if you achieved it?"
+- **Context questions:** "What background knowledge do you bring to this decision? What prior experience shapes how you read this data?"
+- **Attention questions:** "What do you look at first? What do you skip? What would make you stop and re-examine?"
+- **Interpretation questions:** "What does this data tell you? Where do your colleagues disagree about what it means? What alternative explanations exist?"
+
+### Agent Design Application
+
+For AI agent/assistant design, the same mapping applies:
+
+| Component | Design Decision |
+|-----------|----------------|
+| Goal | What is the agent's objective specification? |
+| Context | What context is constructed before retrieval? What memory/state is available? |
+| Attention | Which retrieved results are prioritized? How is salience determined? |
+| Interpretation | How does the agent frame its output? What explanations accompany recommendations? |
+
+### Why This Matters
+
+This is the framework's most direct translation into design methodology. It converts the theoretical question "what happens between visible gradients and perceived gradients?" into four concrete design activities, each with its own stakeholder, governance responsibility, and system component. A team using this mapping knows which questions to ask, who owns which layer, and where to intervene when decisions go wrong.
