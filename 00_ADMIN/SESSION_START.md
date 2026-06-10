@@ -88,7 +88,17 @@ Reality → Real Gradients → Information Surfaces → Visible Gradients → Pe
 ## Current Session Goal
 <!-- Human fills in before pasting -->
 
-[FILL IN: What is the focus of this session?]
+**Pressure-test the nature of gradients.**
+
+Investigate whether gradients are objective properties of reality, constructed properties of perception, or a mixture of both.
+
+Determine how this impacts:
+- Visibility Alignment
+- Goal-Driven Gradient Selection
+- Retrieval Architecture
+- Agent Governance
+
+Evaluate whether gradient classification produces differential interventions (D011).
 
 ---
 
