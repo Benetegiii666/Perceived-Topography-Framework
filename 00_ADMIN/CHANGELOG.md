@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-11 — Layer Separation: Major Course Correction
+- FL_010: Theory / Topography Engineering / Architecture / Implementation formally separated as distinct layers
+- D015: Topography Engineering Dimensions — 6 candidates (Visibility, Accessibility, Representation, Confidence, Connectivity, Goal Relevance) + 2 modifiers
+- CA_006: Architecture vs Theory Conflation — standing counterargument to prevent layer mixing
+- CB_001: Claude Reduction Branch archived — Claim → Decision → Outcome bedrock preserved as research artifact
+- OP_001: Decision Topography Discovery — operational interview framework replacing artifact inventory approach
+- Cross-layer leaks identified: Goal and Policy appear at multiple layers
+- Governance gap flagged as potential fifth layer
+- Key realization: the framework was mixing four concerns into one, causing contributors to argue at different layers without realizing it
+
 ## 2026-06-09 — D011: Differential Intervention Principle
 - New discovery: a proposed layer is real only if interventions targeting it outperform interventions targeting other layers
 - General falsifiability mechanism for any future architectural proposal

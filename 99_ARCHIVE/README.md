@@ -23,3 +23,8 @@ Original drafts from the OpenAI co-author sessions that launched the framework. 
 - `SEED_003_Aha_Moments_v0.1.md` — Seven foundational aha moments including the origin sentence
 - `SEED_004_Fault_Lines_v0.1.md` — First five fault lines with initial status assessments
 - `EXTRACTION_REPORT.md` — Structured extraction of what was mined from seed material into the active repo
+
+### Reduction Branches/
+Research artifacts from analytical exercises. Preserved as intellectual lineage, not as framework doctrine.
+
+- `CB_001_Claude_Reduction_Branch.md` — Claude's D011-style reduction to Claim → Decision → Outcome bedrock. Valuable analysis; not final architecture.

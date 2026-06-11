@@ -12,3 +12,4 @@ Contains challenges to the framework from outside perspectives. Unlike fault lin
 - `CA_003_Perception_Is_Subjective.md`
 - `CA_004_Agency_Still_Matters.md`
 - `CA_005_Unfalsifiability.md` — Standing item: what observations would disprove this framework?
+- `CA_006_Architecture_vs_Theory_Conflation.md` — Standing concern: don't mix theoretical primitives with architectural objects

@@ -26,3 +26,4 @@ Contains contradictions, unresolved tensions, and conflicts between discoveries 
 - `FL_007_Interface_Layer.md`
 - `FL_008_Selection_of_Information_Surfaces.md`
 - `FL_009_Optimizer_Architecture.md`
+- `FL_010_Layer_Separation.md`

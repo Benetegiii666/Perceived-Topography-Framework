@@ -13,3 +13,4 @@ Project governance, goals, and change tracking. The operational backbone of the 
 - `RP_001_Optimize_for_Failure.md` — Research protocol: seek disconfirmation before confirmation
 - `SESSION_LOG/` — Archived session handoff notes (one per session)
   - `SESSION_2026-06-09.md` — Initialization session
+  - `SESSION_2026-06-11.md` — Layer separation session

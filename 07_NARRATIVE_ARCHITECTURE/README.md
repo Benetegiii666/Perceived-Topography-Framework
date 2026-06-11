@@ -10,3 +10,4 @@ Designs how the theory will be communicated. This is the bridge between theory-b
 - `EXAMPLES.md` — Concrete examples from organizations, AI, and decision-making
 - `DISCOVERY_SEQUENCE.md` — The order in which ideas should be revealed
 - `NB_001_From_Fear_of_Agents_to_Governance_of_Perceived_Topography.md` — Narrative bridge: how the project moved from agent fear to governance of perceived topography
+- `OP_001_Decision_Topography_Discovery.md` — Operational tool: interview framework for mapping decision topography
