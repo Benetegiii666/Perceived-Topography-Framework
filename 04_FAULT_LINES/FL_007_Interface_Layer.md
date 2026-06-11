@@ -293,6 +293,29 @@ Visible Gradient → Context → Interpretation → Perceived Gradient
 
 **Status:** Pressure only. No promotion. Requires D011 evaluation.
 
+## Pressure Note: Concepts as Behavioral Gradients for Agents (2026-06-10)
+
+Concepts are not passive categories when used by agents. They become **navigable structures** that influence what agents retrieve, notice, interpret, and recommend. In framework terms, well-structured concepts function as gradients — they exert behavioral pull on the optimizer.
+
+**Key Risk:** Well-structured concepts may exert more behavioral pull than poorly structured but more important concepts. The structure of the concept layer becomes a form of topography that the agent navigates.
+
+**Example:** If competitor analysis assets are clean, well-tagged, and richly linked, while customer-pain assets are messy, scattered, and poorly labeled — an agent may over-index on competitive positioning and under-index on customer reality. Not because competitive positioning matters more, but because the gradient is steeper. The landscape is easier to traverse in that direction.
+
+**Implication:** Concept governance must account for:
+- Over-weighting risk (clean concepts attract disproportionate attention)
+- Under-weighting risk (messy but important concepts get ignored)
+- Counterbalancing concepts (deliberately strengthening weak-but-important areas)
+- Authoritative sources (which assets are canonical for a given concept)
+- Allowed agent uses (what an agent should and should not do with a concept)
+
+**Hard Principle:**
+
+> Do not create first-class concepts merely because humans recognize them. Create them only if you are willing for agents to navigate by them.
+
+**Connection to D014:** If concepts are active structures (D014), then concept quality directly shapes agent behavior. Concept governance is a form of information surface governance — and potentially one of the most operationally important forms.
+
+**Status:** Pressure note. Not promotion. Requires operational validation.
+
 ## Open Questions
 - Is "Information Surfaces" the right term? Alternatives: interface layer, epistemic membrane, perception substrate, **visibility layer**.
 - Can an agent modify its own information surfaces? (Humans build tools. AI agents select tools.)
