@@ -20,6 +20,13 @@
 - CA_005 updated: first successful falsifiability candidate — a failure that doesn't fit the three categories would weaken the model
 - Pressure report updated: FL_007 receives additional evidence
 
+## 2026-06-10 — FL_009: Optimizer Architecture
+- New fault line: decomposition of the optimizer side of the framework
+- D011 applied to six candidate components: Goal, Policy, Interpretation survive; Evaluation, Navigation, Sufficiency collapse
+- Candidate optimizer model: Behavior = f(Goal, Policy, Interpretation, Perceived Topography)
+- Collapsed components strengthen falsifiability by reducing degrees of freedom
+- Framework now has active decomposition on both sides: environment (FL_007) and optimizer (FL_009)
+
 ## 2026-06-09 — CA_005 Recursion Warning + FL_007 Visibility Pressure Note
 - CA_005 updated: recursion can disguise unfalsifiability. Standing test added — every extension must generate a falsifiable prediction, not just accommodate an observation.
 - FL_007 pressure note: "visibility" may be the primitive underlying information surfaces. Seed material already contained "visible." D009 pattern may be repeating.

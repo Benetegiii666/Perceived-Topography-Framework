@@ -31,6 +31,7 @@
 |--------|---------|--------|
 | FL_007: Add Information Surfaces layer | Three possible outcomes (Subset, Mechanism, Fundamental) | **Outcome A weakened.** Independence test + failure mode analysis both show layers are separable. Failure modes provide first falsifiable structural prediction. Solution space narrowing to B or C. |
 | Perception → Perception Construction | FL_003 + FL_006 + FL_007 convergence | Accumulating evidence but not resolved |
+| FL_009: Optimizer Architecture | Optimizer decomposition via D011 | **Three primitives survive (Goal, Policy, Interpretation). Three candidates collapsed (Evaluation, Navigation, Sufficiency).** Optimizer is no longer a black box. Candidate model: Behavior = f(Goal, Policy, Interpretation, Perceived Topography). |
 
 ## Convergence Watch
 
@@ -38,6 +39,7 @@
 |---------|----------|------------|
 | FL_006 + FL_007 + EC_003 + EC_004 + D010 + **FL_007 independence test** | All point toward retrieval/information surfaces as perception construction mechanism. D010 adds context continuity. **FL_007 independence test shows IS and PC are separable — Outcome A weakened.** | **CONVERGENCE STRENGTHENED** — six signals now align, plus the solution space has narrowed (Outcome A weakening). Protocol #4 threshold is very close. Next session: discriminate between Outcome B and Outcome C. |
 | D009 + archive review | Language contains latent mechanisms | Too early to call — needs systematic review |
+| FL_009 optimizer decomposition | Goal, Policy, Interpretation survive D011; Evaluation, Navigation, Sufficiency collapse | **NEW FRONT** — optimizer side now under active decomposition. If the three-primitive model holds, the full framework becomes: Perceived Topography (environment side) + Goal/Policy/Interpretation (optimizer side) → Behavior. |
 
 ## Emerging Pressure Candidate: Visibility
 
