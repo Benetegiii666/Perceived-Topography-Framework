@@ -108,6 +108,32 @@ Explore whether context contributes to interpretation in a way that explains why
 
 ---
 
+## Research Roadmap Checklist
+
+See `00_ADMIN/RESEARCH_ROADMAP.md` for full detail.
+
+**PHASE 1 — Stabilize The Theory**
+- [ ] 1.1 Lock Layer Separation (FL_011)
+- [ ] 1.2 Resolve Cross-Layer Leaks — Goal and Policy (D016)
+
+**PHASE 2 — Find The Topography Dimensions** ← MOST IMPORTANT
+- [ ] 2.1 Candidate Dimension Review (D017)
+- [ ] 2.2 D011 Pairwise Reduction
+- [ ] 2.3 Optimizer Failure Mapping (FL_012)
+
+**PHASE 3 — Define Optimizer Motion** ← WHERE THE GOLD IS
+- [ ] 3.1 Attraction Model (FL_013)
+- [ ] 3.2 Investigation Dynamics (FL_014)
+- [ ] 3.3 Sufficiency as Emergent Behavior (FL_015)
+
+**PHASE 4 — Validate Architecture**
+- [ ] 4.1 Reasoning Architecture traces to theory (CA_007)
+- [ ] 4.2 Discovery Framework traces to dimensions (OP_002)
+
+**PHASE 5 — Stop.** No new dimensions. No new primitives. No new layers. No new entities.
+
+---
+
 ## Repository Protocols
 1. **#1 — Concept Architecture is sovereign.** Everything else supports or challenges it.
 2. **#2 — Fault Lines preserve contradictions.** Never silently resolve conflicts.
