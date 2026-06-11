@@ -20,3 +20,4 @@ Captures observations and findings as they occur. Discoveries are raw material â
 - `DISCOVERY_011_Differential_Intervention_Principle.md`
 - `DISCOVERY_012_Failure_Classification_Differential_Interventions.md`
 - `DISCOVERY_013_Information_Ecosystem_Mapping_Precedes_Construction.md`
+- `DISCOVERY_014_Concepts_as_Active_Structures.md`
