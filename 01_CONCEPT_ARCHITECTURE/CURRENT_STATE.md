@@ -17,9 +17,12 @@ Optimizer
     ├── Goal           — What am I trying to achieve?
     ├── Policy         — What constraints govern behavior?
     └── Interpretation — What does this information mean?
+          ├── Signal Meaning
+          ├── Causal Explanation
+          └── Action Model
 ```
 
-Collapsed candidates: Evaluation (→ Policy + Interpretation), Navigation (→ Goal + Policy + Interpretation), Sufficiency (→ judgment/gate).
+Collapsed candidates: Evaluation (→ Policy + Interpretation), Navigation (→ Goal + Policy + Interpretation), Sufficiency (→ judgment/gate). Action Model classified as Interpretation subtype (not a fourth primitive).
 
 ## Information Topography (Phase 2 — Complete)
 
@@ -76,9 +79,16 @@ Expectation → Action → Outcome → Prediction Error → Investigation → Ev
 
 **Four update targets:** Interpretation, Policy, Goal, Action Model.
 
-**Reusable unit:** Model Update Object (preserves reasoning chain + applicability boundary + confidence).
+**Reusable unit:** Model Update Object (Phase 4.2 — Complete):
+- Core Learning Payload (11 required fields including Premise Stack)
+- Observability Envelope (trust, audit, lifecycle)
+- Human-Ready View (usability, not authoritative)
 
-**Adaptive loop closure:** Optimizer → Motion → Outcome → Prediction Error → Learning → Modified Optimizer.
+**Premise Stack:** Artifact-backed basis for prior expectations. Topography-shaping artifacts, not topography dimensions.
+
+**8 retrieval/use rules.** 10 identified bad-update failure modes.
+
+**Adaptive loop closure:** Optimizer → Motion → Outcome → Prediction Error → Learning → Model Update Object → Modified Optimizer.
 
 ## Layer Separation (FL_010)
 
@@ -94,8 +104,7 @@ The framework operates at four distinct layers:
 ## What Has NOT Been Decided
 
 - Whether Decision Space and Capability are primitives, derived, or collapsible
-- Action Model classification (optimizer subcomponent? derived? architecture-layer?)
-- Model Update Object exact structure (Phase 4.2 — next)
+- Whether Phase 4.3 (Model Update Lifecycle/Governance) is needed or is implementation-layer work
 - Phase 4 validation: Do reasoning architecture objects trace to theory?
 - Phase 4 validation: Do discovery questions trace to dimensions?
 

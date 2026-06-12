@@ -112,19 +112,20 @@
 
 ---
 
-### Task 4.2 — Model Update Objects — **NEXT**
+### Task 4.2 — Model Update Objects — **COMPLETE**
 
-**Question:** What exact structure should a Model Update Object have so future optimizers can retrieve, evaluate, and apply it correctly?
+- [x] Required fields defined (11 Core Learning Payload fields) ✓
+- [x] Observability Envelope defined (trust, audit, lifecycle) ✓
+- [x] Human-Ready View defined (usability, non-authoritative) ✓
+- [x] Premise Stack defined as artifact-backed basis for prior expectations ✓
+- [x] Applicability boundaries formalized (field + retrieval rules) ✓
+- [x] Confidence handling specified (low/moderate/high force levels) ✓
+- [x] 8 retrieval/use rules defined ✓
+- [x] 10 failure modes identified ✓
+- [x] Action Model classified as Interpretation subtype (not fourth primitive) ✓
+- [x] Cross-domain validation: Marketing, Product, Operations, AI, Hiring ✓
 
-**Done When:**
-- [ ] Required fields defined
-- [ ] Optional fields defined
-- [ ] Applicability boundaries formalized
-- [ ] Confidence handling specified
-- [ ] Retrieval/use rules for future optimizers
-- [ ] Failure modes of bad model updates identified
-
-**Deliverable:** TBD
+**Deliverable:** `01_CONCEPT_ARCHITECTURE/MODEL_UPDATE_OBJECTS.md` — **COMPLETE**
 
 ---
 

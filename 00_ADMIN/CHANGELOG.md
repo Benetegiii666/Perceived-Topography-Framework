@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-11 — Phase 4.2 Complete: Model Update Objects
+- Model Update Object defined: Core Learning Payload (11 fields) + Observability Envelope + Human-Ready View
+- Premise Stack introduced: artifact-backed basis for prior expectations; topography-shaping artifacts, not dimensions
+- Action Model classified as Interpretation subtype — optimizer primitives stable at 3 (Goal, Policy, Interpretation)
+- 8 retrieval/use rules defined (premise-matching, boundary gating, confidence force levels)
+- 10 bad-update failure modes identified (folklore, premise-blind, overgeneralized, stale, etc.)
+- Cross-domain validation: Marketing, Product, Operations, AI Agent, Hiring — all survived
+- Created `01_CONCEPT_ARCHITECTURE/MODEL_UPDATE_OBJECTS.md`
+
 ## 2026-06-11 — Phase 4.1 Complete: Learning Events — Adaptive Loop Closed
 - Learning defined: evidence-supported optimizer modification triggered by prediction error
 - Learning vs Reaction distinction established (reaction = overcorrection without investigation)

@@ -126,8 +126,8 @@ See `00_ADMIN/RESEARCH_ROADMAP.md` for full detail.
 - [x] 3.3 Sufficiency as Emergent Behavior (FL_015) ✅
 
 **PHASE 4 — Validate Architecture** ← ACTIVE
-- [x] 4.1 Learning Events ✅ (evidence-supported optimizer modification; 4 update targets; adaptive loop closed)
-- [ ] 4.2 Model Update Object structure
+- [x] 4.1 Learning Events ✅
+- [x] 4.2 Model Update Objects ✅ (3-layer structure, Premise Stack, 8 rules, 10 failure modes, cross-domain)
 - [ ] 4.3 Reasoning Architecture traces to theory (CA_007)
 - [ ] 4.4 Discovery Framework traces to dimensions (OP_002)
 
