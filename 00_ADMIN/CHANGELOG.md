@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-06-12 — Section 16 (Implications) Drafted
+- 14 implications: safety as topography design, distributed alignment, enterprise reasoning, knowledge transitions, governance force, sufficiency-first products, better collaboration, state-transition evaluation, postmortem-to-MUO, agent memory with model change, interaction-layer research, start-small guidance
+- Deepest implication: AI systems should be adaptive reasoning participants, not just output generators
+
 ## 2026-06-12 — Section 15 (Related Work and Intellectual Lineage) Drafted
 - 15 influence categories credited: bounded rationality, organizational learning, sensemaking, affordances, reward shaping, RAG, AI safety, knowledge management, decision provenance, HCI, case-based reasoning, uncertainty/abstention
 - "Blend, not grapes" posture: framework is synthesis, not invention
