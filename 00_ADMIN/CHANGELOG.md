@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-12 — Section 11 (Discovery Framework) Drafted
+- Discovery as conversion of messy intent into structured reasoning state
+- Runtime loop: Retrieve → Infer → Propose → Confirm → Generate → Preserve → Learn
+- Strawman-first, low-friction principle: do the work before asking the user to do it
+- Discovery Pattern Updates: system learns which interaction patterns work better
+- Discovery connected to safety: initial framing shapes optimizer state, which shapes motion
+- 16 subsections from why-discovery-matters through operational-loop completion
+- Completes the framework's operational loop: all seven components now connected
+
 ## 2026-06-12 — Section 10 (Reasoning Architecture: Preserving State Transitions) Drafted
 - Central claim: unit of organizational reasoning is optimizer state transition, not document
 - Six minimum viable reasoning objects defined with examples
