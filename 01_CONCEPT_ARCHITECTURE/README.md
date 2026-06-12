@@ -21,6 +21,7 @@ If a discovery or insight conflicts with the architecture defined here:
 - `LEARNING.md` — **Phase 4.1 Complete** — Learning as evidence-supported optimizer modification
 - `MODEL_UPDATE_OBJECTS.md` — **Phase 4.2 Complete** — Three-layer structure, Premise Stack, retrieval rules, failure modes
 - `REASONING_ARCHITECTURE.md` — **Phase 4.3 Complete** — Six minimum viable reasoning objects; state-transition-centered, not document-centered
+- `DISCOVERY_FRAMEWORK.md` — **Phase 4.4 Complete** — Initial Discovery + Runtime Discovery + Discovery Pattern Learning
 - `CORE_THESIS.md` — The central argument of the framework
 - `SUPPORTING_THESES.md` — Secondary claims that extend the core thesis
 - `DEFINITIONS.md` — Precise definitions of all framework terms

@@ -2,7 +2,7 @@
 
 > If someone joined the project today, what do we currently believe?
 
-**Last updated:** 2026-06-11
+**Last updated:** 2026-06-12
 
 ---
 
@@ -104,6 +104,23 @@ Documents are source artifacts (evidence, premises, references). Reasoning objec
 
 Supporting concerns (required but not standalone): Information Surface Context, Sufficiency Rationale, Observability, Human-Ready View, Applicability Boundary, Confidence.
 
+## Discovery Framework (Phase 4.4 — Complete)
+
+> Discovery converts human intent into reasoning state.
+
+**Two modes:**
+- **Initial Discovery** — maps an existing reasoning environment (interviews, workshops, artifact review)
+- **Runtime Discovery** — converts new work into reasoning objects with minimal human burden
+
+**Runtime Discovery Loop:** Retrieve → Infer → Propose → Confirm → Generate → Preserve → Learn
+
+**Key principles:**
+- Strawman-first: propose direction from existing artifacts before asking questions
+- Low-friction: do the reasoning work before asking the user to do it
+- Ask only where uncertainty materially affects the result
+
+**Discovery Pattern Learning:** The system learns which interaction patterns produce lower friction, better reasoning objects, better artifacts, and better outcomes. Captured as specialized Model Update Objects (Discovery Pattern Updates).
+
 ## Layer Separation (FL_010)
 
 The framework operates at four distinct layers:
@@ -118,7 +135,7 @@ The framework operates at four distinct layers:
 ## What Has NOT Been Decided
 
 - Whether Decision Space and Capability are primitives, derived, or collapsible
-- Phase 4.4 validation: Do discovery questions trace to dimensions and reasoning objects?
+- Phase 5 decision: paper, reference implementation, validation plan, product concept, consulting methodology, or combination?
 
 ## Active Fault Lines
 
