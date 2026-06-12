@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-06-12 — Section 4 (Optimizers: Goal, Policy, Interpretation) Drafted
+- Defines optimizer as functional abstraction (not mechanistic or moral claim)
+- Three primitives: Goal (direction), Policy (constraint), Interpretation (meaning)
+- Goal Relevance explained as relational, not standalone dimension
+- Policy framed as boundary condition requiring force in perceived topography (not just text)
+- Action Model placed under Interpretation (not a fourth primitive)
+- Optimizer State = Goal + Policy + Interpretation
+- Safety implications: moralized frame vs optimizer frame for diagnosing agent failures
+- 7 subsections including primitive discipline and safety connection
+- New citation anchors: Dennett intentional stance, Russell/Norvig agents
+
 ## 2026-06-12 — SVG Specifications Created
 - 5 diagram specifications with style system, color palette, accessibility
 - Diagrams: Fear vs Topography, Context vs Reasoning State, Box vs Topography Safety, Core Loop, Runtime Discovery
