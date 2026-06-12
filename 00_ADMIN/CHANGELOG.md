@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-12 — Section 5 (Information Topography) Drafted
+- Five dimensions: Visibility, Accessibility, Representation, Confidence, Connectivity
+- Each dimension defined with question, failure examples, and behavioral implications
+- Goal Relevance explained as relational (not a dimension)
+- Policy explained as boundary condition expressed through topography (not a dimension)
+- Topography connected to affordances (Gibson, Norman) without claiming equivalence
+- Healthcare campaign example applied through all five dimensions
+- Safety diagnosis: topography turns vague failure into specific design intervention
+- 12 subsections covering dimensions, affordances, example, safety, and transition to motion
+
 ## 2026-06-12 — Section 4 (Optimizers: Goal, Policy, Interpretation) Drafted
 - Defines optimizer as functional abstraction (not mechanistic or moral claim)
 - Three primitives: Goal (direction), Policy (constraint), Interpretation (meaning)
