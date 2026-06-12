@@ -120,8 +120,8 @@ See `00_ADMIN/RESEARCH_ROADMAP.md` for full detail.
 - [x] Five dimensions: Visibility, Accessibility, Representation, Confidence, Connectivity
 - [x] Goal Relevance = derived/relational
 
-**PHASE 3 — Define Optimizer Motion** ← ACTIVE
-- [ ] 3.1 Attraction Model (FL_013)
+**PHASE 3 — Define Optimizer Motion** ✅ COMPLETE
+- [x] 3.1 Attraction: Action (Goal Relevance + Confidence), Exploration (+ Gap + Connectivity) ✅
 - [x] 3.2 Investigation Dynamics (FL_014) ✅
 - [x] 3.3 Sufficiency as Emergent Behavior (FL_015) ✅
 

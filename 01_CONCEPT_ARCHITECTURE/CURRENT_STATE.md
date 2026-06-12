@@ -47,16 +47,24 @@ Information Topography (Visibility, Accessibility, Representation, Confidence, C
 Behavior (Attention, Exploration, Investigation, Action)
 ```
 
-## Motion (Phase 3 — In Progress)
+## Optimizer Motion (Phase 3 — Complete)
 
-| Motion Type | Status |
-|------------|--------|
-| Attention | Identified — not yet formally defined |
-| Exploration | Identified — not yet formally defined |
-| Investigation | **Resolved** (FL_014) — trigger = goal-relevant observation + confidence gap; connectivity guides search |
-| Action | Identified — not yet formally defined |
+```
+Attraction → Investigation → Sufficiency → Action
+```
 
-**Sufficiency** (FL_015 — Resolved): Action Stability. Independent of Confidence. Optimizer acts when additional information is unlikely to change the selected action.
+**Attraction** (FL_013 — Resolved):
+- Action Attraction = Goal Relevance + Confidence
+- Exploration Attraction = Goal Relevance + Confidence Gap + Connectivity
+
+**Investigation** (FL_014 — Resolved):
+- Trigger = Goal-Relevant Observation + Confidence Gap
+- Connectivity guides explanatory search
+- Three termination conditions
+
+**Sufficiency** (FL_015 — Resolved):
+- Action Stability — independent of Confidence
+- Act when additional information is unlikely to change the selected action
 
 ## Learning (Emerging)
 
@@ -79,7 +87,6 @@ The framework operates at four distinct layers:
 
 ## What Has NOT Been Decided
 
-- Phase 3.1: How do dimensions combine to create gradient strength (Attraction)?
 - Whether Decision Space and Capability are primitives, derived, or collapsible
 - Whether Learning vs Reaction is a clean distinction
 - Structure of reusable model updates for organizational/agent memory

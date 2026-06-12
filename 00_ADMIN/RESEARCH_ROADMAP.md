@@ -54,20 +54,18 @@
 
 ---
 
-## PHASE 3 — Define Optimizer Motion
+## PHASE 3 — Define Optimizer Motion — **COMPLETE**
 
-**This is where the gold probably lives. Not the dimensions. The movement.**
+**Result:** Motion model = Attraction → Investigation → Sufficiency → Action. Filed in `01_CONCEPT_ARCHITECTURE/OPTIMIZER_MOTION.md`.
 
 ### Task 3.1 — Define Attraction
 
-**Question:** Why does an optimizer pursue one signal over another?
+- [x] Two attraction modes identified: Action Attraction and Exploration Attraction ✓
+- [x] Action Attraction = Goal Relevance + Confidence ✓
+- [x] Exploration Attraction = Goal Relevance + Confidence Gap + Connectivity ✓
+- [x] Goal Relevance alone and Confidence alone both failed — combination required ✓
 
-**Example:** High Visibility / Low Confidence vs Medium Visibility / High Confidence — what wins?
-
-**Done When:**
-- [ ] We can describe how dimensions combine to create gradient strength
-
-**Deliverable:** `FL_013_Optimizer_Attraction_Model.md`
+**Deliverable:** `FL_013_Optimizer_Attraction_Model.md` — **COMPLETE**
 
 ---
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-11 — MILESTONE: Phase 3 Complete — Optimizer Motion Model Resolved
+- FL_013 RESOLVED: Attraction — two modes (Action: Goal Relevance + Confidence; Exploration: + Confidence Gap + Connectivity)
+- Phase 3 fully complete: Attraction → Investigation → Sufficiency → Action
+- Created `01_CONCEPT_ARCHITECTURE/OPTIMIZER_MOTION.md` — Phase 3 foundational document
+- CURRENT_STATE.md updated with complete motion model
+- Roadmap Phase 3 marked complete. Phase 4 now active.
+- Phases 1, 2, 3 all complete. Three of five roadmap phases done.
+
 ## 2026-06-11 — MILESTONE: Phases 1 + 2 Complete, Framework Baseline Established
 - PHASE 1 COMPLETE: Optimizer Theory — Goal, Policy, Interpretation as foundational primitives
 - PHASE 2 COMPLETE: Information Topography — Visibility, Accessibility, Representation, Confidence, Connectivity as primary dimensions; Goal Relevance confirmed as derived
