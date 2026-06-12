@@ -6,7 +6,7 @@
 
 Narrative Paper v1
 Concept Architecture v0.1 frozen
-Drafting phase: Sections 1-14 complete
+Drafting phase: Sections 1-15 complete
 
 ---
 
@@ -3631,9 +3631,207 @@ This section intentionally:
 
 ---
 
-# 15. Related Work
+# 15. Related Work and Intellectual Lineage
 
-*[To be drafted — see RELATED_WORK_LEDGER.md]*
+The Perceived Topography Framework is a synthesis. It does not claim to invent bounded decision-making, organizational learning, sensemaking, affordances, reward shaping, retrieval-augmented generation, grounding, AI governance, decision provenance, or human-AI collaboration.
+
+Its contribution is the blend.
+
+The framework combines several established traditions around a specific problem:
+
+> How can systems represent, preserve, and update the reasoning state through which humans and agents perceive, decide, act, and learn?
+
+The posture is simple:
+
+> The framework does not claim ownership over the ingredients. It claims responsibility for the mix.
+
+---
+
+## 15.1 Bounded Rationality and Satisficing
+
+The framework's treatment of sufficiency is directly indebted to Herbert Simon's work on bounded rationality and satisficing. [SIMON1955] [SIMON_SATISFICING] [BOUNDED_RATIONALITY_SURVEY]
+
+The framework uses this lineage in three ways: it treats agents and organizations as bounded; it distinguishes confidence from sufficiency; and it treats investigation as bounded search.
+
+The framework's term **sufficiency** should be read as downstream of bounded rationality. The contribution is placing sufficiency inside a human-agent reasoning architecture where it can be preserved, audited, and updated.
+
+---
+
+## 15.2 Organizational Decision-Making
+
+The framework draws from organizational decision theory, treating organizations as bounded decision systems. [MARCH_SIMON_ORGS] [CYERT_MARCH] [ORGANIZATIONAL_DECISION_MAKING]
+
+The six-object Reasoning Architecture is an attempt to make organizational decision processes durable and reusable inside AI-mediated workflows.
+
+---
+
+## 15.3 Behavioral Theory of the Firm
+
+Cyert and March's behavioral theory is relevant to learning, search, aspiration gaps, and adaptation. [CYERT_MARCH] [BEHAVIORAL_THEORY_OF_THE_FIRM]
+
+The framework shares the view that organizations adapt through feedback, search, and changed routines rather than through perfect optimization. The Model Update Object is designed to preserve the transition from expectation to outcome to explanation to update.
+
+---
+
+## 15.4 Organizational Learning
+
+The distinction between reaction and learning is indebted to organizational learning theory, especially single-loop and double-loop learning. [ARGYRIS_SCHON] [DOUBLE_LOOP_LEARNING] [ORGANIZATIONAL_LEARNING]
+
+A reaction changes behavior after an outcome. Learning changes the model that produced the behavior. The framework's contribution is to formalize the minimum reasoning objects needed for human-agent systems to preserve this distinction.
+
+---
+
+## 15.5 Sensemaking
+
+The framework's concept of Interpretation is closely related to sensemaking. [WEICK_SENSEMAKING] [SENSEMAKING]
+
+Actors do not respond to objective reality directly. They interpret ambiguous signals, construct meaning, and act from that constructed understanding. The framework places this concern inside the optimizer primitive **Interpretation**, which includes Signal Meaning, Causal Explanation, and Action Model.
+
+---
+
+## 15.6 Affordances and Action Possibilities
+
+The framework's language of topography and gradients is influenced by affordance theory. [GIBSON_AFFORDANCES] [NORMAN_AFFORDANCES] [AFFORDANCE_THEORY]
+
+The framework extends affordance intuitions into human-agent systems. A tool permission, approval gate, visible warning, citation requirement, dashboard, policy check, or Model Update Object changes the action environment. The framework's term **topography** is broader than affordance — it includes information visibility, accessibility, representation, confidence, and connectivity.
+
+---
+
+## 15.7 Reward Shaping and Environment Design
+
+The framework's use of **gradient** is related to reward shaping but is not equivalent to formal RL reward functions. [NG_REWARD_SHAPING] [REINFORCEMENT_LEARNING_REWARD_DESIGN]
+
+The framework uses a broader, systems-level notion of gradient: directional pressures created by goals, information, confidence, constraints, tool access, action costs, evidence requirements, prior learning, and human oversight. Topography-first safety asks designers to shape these pressures so grounded behavior becomes the easiest sufficient path.
+
+---
+
+## 15.8 Retrieval-Augmented Generation and Grounding
+
+The framework is closely related to RAG and evidence-backed answering. [RAG_FOUNDATIONAL] [GROUNDING_CITATION_GENERATION] [DEEPMIND_GOPHERCITE] [RAG_EVALUATION]
+
+The framework treats grounding as part of the Confidence and Sufficiency problem. But it argues grounding alone is not enough — a source may support a claim while the system still lacks the goal, policy, premise stack, decision state, sufficiency rationale, and model update needed for organizational reasoning.
+
+The framework is complementary to RAG, not a replacement.
+
+---
+
+## 15.9 AI Safety, Alignment, and Agentic Misalignment
+
+The framework is motivated by concerns about agentic AI systems. [ANTHROPIC_AGENTIC_MISALIGNMENT] [OPENAI_PREPAREDNESS] [DEEPMIND_FRONTIER_SAFETY] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY]
+
+The framework contributes a complementary diagnostic lens. It does not replace alignment research, capability evaluations, or deployment safeguards. It reframes one applied layer of safety: the designed topography through which agent behavior emerges.
+
+The safety claim: containment is necessary but incomplete. Safer systems require both better boundaries and better landscapes.
+
+---
+
+## 15.10 Anti-Anthropomorphism
+
+The paper's opening argument is influenced by work cautioning against anthropomorphic descriptions of model behavior. [DEEPMIND_ROLE_PLAY] [AI_ANTHROPOMORPHISM]
+
+The optimizer frame preserves seriousness about risk while improving diagnostic precision. It avoids both errors: dismissing risk because the system is "just predicting tokens," and over-ascribing human-like inner life to behavior explainable through system dynamics.
+
+---
+
+## 15.11 Knowledge Management and Organizational Memory
+
+The framework is related to knowledge management. [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT]
+
+The distinction: Knowledge management preserves artifacts. Reasoning architecture preserves state transitions. The two are complementary.
+
+---
+
+## 15.12 Decision Provenance and Design Rationale
+
+The framework overlaps with decision provenance and design rationale research. [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS]
+
+The six reasoning objects can be understood as a provenance structure for adaptive reasoning — preserving not only lineage of artifacts, but lineage of belief, action, and learning.
+
+---
+
+## 15.13 Human-AI Collaboration
+
+The Discovery Framework is related to HCI, mixed-initiative systems, and human-in-the-loop AI. [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES]
+
+The framework's contribution is connecting interaction design directly to reasoning-object creation. Discovery is not only a better conversation. It is the front door to Reasoning Architecture.
+
+---
+
+## 15.14 Case-Based Reasoning
+
+The framework has affinities with case-based reasoning. [CASE_BASED_REASONING]
+
+A Model Update Object performs a related function to a case: it allows prior experience to shape future reasoning. The difference is that a Model Update Object is organized around model change, not merely prior example similarity. It helps prevent shallow analogy.
+
+---
+
+## 15.15 Uncertainty and Abstention
+
+The framework's treatment of hallucination and escalation is related to uncertainty calibration and abstention research. [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
+
+The contribution is placing abstention, clarification, and escalation inside optimizer motion as possible actions produced by sufficiency judgment. This links uncertainty calibration to topography design.
+
+---
+
+## 15.16 What the Framework Adds
+
+The framework's contribution is integrative. It combines ideas from several traditions into a single architecture for human-agent systems.
+
+The specific synthesis:
+
+> Human-agent systems should preserve optimizer state transitions as reusable reasoning objects.
+
+That synthesis produces the paper's main constructs: Optimizer State, Information Topography, Optimizer Motion, Learning Event, Model Update Object, Reasoning Architecture, Discovery Framework.
+
+The framework is a bridge among its influences, not a replacement for them.
+
+---
+
+## 15.17 Boundaries of the Contribution
+
+The framework is not a theory of consciousness, a mechanistic account of neural networks, a complete theory of cognition, a replacement for AI alignment, a replacement for RAG, a universal ontology, or a guarantee that structured reasoning produces better outcomes.
+
+It is a practical framework for designing human-agent systems that preserve and reuse reasoning state.
+
+Its usefulness should be evaluated where repeated decisions, policy constraints, uncertainty, and learning matter: campaign strategy, customer communication, incident response, policy-sensitive generation, sales enablement, product decisions, compliance review, agentic tool use, research synthesis, cross-functional planning.
+
+It may be unnecessary for simple, low-stakes, one-off tasks. This boundary matters because over-applying the framework would recreate the burden it is meant to reduce.
+
+---
+
+## 15.18 Citation Posture
+
+Because the framework is synthetic, the paper should over-cite by design.
+
+Citation is not defensive decoration. It is intellectual honesty.
+
+> If a concept has a recognizable ancestor, cite it.
+
+The framework should not ask the reader to believe that these ideas appeared from nowhere. Its credibility depends on showing the lineage clearly, then demonstrating the value of the synthesis.
+
+---
+
+## 15.19 Transition to Implications
+
+If the blend is useful, then human-agent system design should shift in several ways:
+
+> From context retrieval to reasoning-state preservation. From output evaluation to state-transition evaluation. From containment-only safety to topography-shaped safety. From postmortems to Model Update Objects. From blank-form prompting to adaptive discovery. From static governance to learning governance. From AI as content generator to AI as reasoning-state partner.
+
+---
+
+### Citation Debt — Section 15
+
+**Used:** [SIMON1955] [SIMON_SATISFICING] [BOUNDED_RATIONALITY_SURVEY] [MARCH_SIMON_ORGS] [CYERT_MARCH] [ORGANIZATIONAL_DECISION_MAKING] [BEHAVIORAL_THEORY_OF_THE_FIRM] [ARGYRIS_SCHON] [DOUBLE_LOOP_LEARNING] [ORGANIZATIONAL_LEARNING] [WEICK_SENSEMAKING] [SENSEMAKING] [GIBSON_AFFORDANCES] [NORMAN_AFFORDANCES] [AFFORDANCE_THEORY] [NG_REWARD_SHAPING] [REINFORCEMENT_LEARNING_REWARD_DESIGN] [RAG_FOUNDATIONAL] [GROUNDING_CITATION_GENERATION] [DEEPMIND_GOPHERCITE] [RAG_EVALUATION] [ANTHROPIC_AGENTIC_MISALIGNMENT] [OPENAI_PREPAREDNESS] [DEEPMIND_FRONTIER_SAFETY] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY] [DEEPMIND_ROLE_PLAY] [AI_ANTHROPOMORPHISM] [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT] [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS] [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES] [CASE_BASED_REASONING] [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
+
+### Draft Notes — Section 15
+
+This section intentionally:
+- Frames the framework as synthesis, not invention
+- Credits all major influences explicitly
+- Uses the "blend, not grapes" posture
+- Clarifies what the framework adds and does not claim
+- Reinforces over-citation policy
+- Transitions to implications
 
 ---
 

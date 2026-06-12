@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-06-12 — Section 15 (Related Work and Intellectual Lineage) Drafted
+- 15 influence categories credited: bounded rationality, organizational learning, sensemaking, affordances, reward shaping, RAG, AI safety, knowledge management, decision provenance, HCI, case-based reasoning, uncertainty/abstention
+- "Blend, not grapes" posture: framework is synthesis, not invention
+- Boundaries of contribution explicitly stated
+- Over-citation policy reinforced
+- 19 subsections from influences through contribution boundaries
+
 ## 2026-06-12 — Section 14 (Validation and Falsifiability) Drafted
 - Six testable claims with clear failure conditions
 - Seven validation levels: conceptual, operational, comparative, adversarial, longitudinal, human, outcome
