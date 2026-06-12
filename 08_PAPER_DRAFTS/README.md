@@ -20,7 +20,7 @@ Concept Architecture v0.1 is frozen. No new theory expansion unless contradictio
 - `PAPER_v0.2.md` — Second draft with revisions
 - `PAPER_v1.0.md` — Submission-ready version
 
-### Supporting (to be created as needed)
-- `TERMS_OF_ART.md` — Standalone terms reference
-- `SVG_SPECIFICATIONS.md` — Diagram specifications
-- `RELATED_WORK.md` — Literature and citation tracking
+### Supporting
+- `RELATED_WORK_LEDGER.md` — 11 influence categories with citation targets, section mappings, and framework connections
+- `TERMS_OF_ART.md` — Standalone terms reference (to be created)
+- `SVG_SPECIFICATIONS.md` — Diagram specifications (to be created)

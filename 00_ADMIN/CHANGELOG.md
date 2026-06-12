@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-06-12 — Citation Strategy and Related Work Ledger
+- Created `08_PAPER_DRAFTS/RELATED_WORK_LEDGER.md` — 11 influence categories with citation targets
+- Added Intellectual Lineage and Citation Posture section to PAPER_ARCHITECTURE.md
+- Citation policy: intentionally over-cite; use placeholders during drafting; section-level citation debt checklists
+- Key framing: "The contribution is not inventing the grapes. The contribution is the blend."
+- Influences: Simon, March, Cyert, Argyris/Schon, Weick, Gibson, Norman, Ng/Russell, Anthropic, OpenAI, DeepMind, RAG literature
+
 ## 2026-06-12 — Phase 6 Initiated: Narrative Paper v1
 - Concept Architecture v0.1 frozen. No new theory expansion unless contradiction emerges.
 - Created `08_PAPER_DRAFTS/PAPER_ARCHITECTURE.md` — 17-section argument arc

@@ -193,6 +193,27 @@ Messy human intent → Retrieve → Infer → Propose → Confirm → Generate �
 
 ---
 
+## Intellectual Lineage and Citation Posture
+
+The paper must be intentionally over-cited. The framework should not claim originality for foundational ideas already developed in adjacent literatures.
+
+> The Perceived Topography Framework is not presented as an invention from first principles. It draws from and recombines several established lines of thought: bounded rationality and satisficing, organizational decision theory, organizational learning, sensemaking, affordance theory, reward shaping, retrieval-augmented generation, grounding, and frontier AI safety. Its contribution is to integrate these ideas into a reasoning-state architecture for human-agent systems.
+
+> The goal is not to claim ownership over the underlying traditions, but to show that their combination clarifies a practical design problem: how to shape the environments through which human-agent systems perceive, decide, act, and learn.
+
+The contribution is not inventing the grapes. The contribution is the blend.
+
+**See:** `RELATED_WORK_LEDGER.md` for the full influence tracking ledger with citation targets and section mappings.
+
+### Citation Policy
+
+- If a concept has a recognizable ancestor in another literature, cite it
+- Use placeholder tags during drafting (e.g., `[SIMON1955]`, `[WEICK_SENSEMAKING]`)
+- Every paper section should end with a citation debt checklist
+- Do not wait until final draft to add citations
+
+---
+
 ## Guardrails
 
 **Allowed work:** Clarify language, compress concepts, define terms, choose examples, add citations, design diagrams, write narrative sections, identify validation methods.
