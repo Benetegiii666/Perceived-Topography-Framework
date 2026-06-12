@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — Phase 4.3 Complete: Reasoning Architecture Validation
+- Central thesis: unit of organizational reasoning is optimizer state transition, not document
+- Six minimum viable reasoning objects defined and validated
+- Two candidates demoted to supporting concerns
+- Document/reasoning-object relationship formalized
+- Validated against AI agent customer communication scenario
+- Created `01_CONCEPT_ARCHITECTURE/REASONING_ARCHITECTURE.md`
+
 ## 2026-06-11 — Phase 4.2 Complete: Model Update Objects
 - Model Update Object defined: Core Learning Payload (11 fields) + Observability Envelope + Human-Ready View
 - Premise Stack introduced: artifact-backed basis for prior expectations; topography-shaping artifacts, not dimensions
