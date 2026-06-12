@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-12 — Section 12 (Running Example: Adaptive Campaign Reasoning Studio) Drafted
+- Full end-to-end example: messy intent → retrieval → inference → strawman → confirmation → generation → preservation → outcome → learning → model update → discovery pattern update → next campaign starts smarter
+- Healthcare RPM campaign traced through every framework component
+- Seven claims demonstrated: context insufficient, reasoning state improves generation, discovery reduces burden, learning requires prediction error, model updates prevent folklore, discovery learns, topography changes future behavior
+- 15 subsections showing framework in complete operation
+
 ## 2026-06-12 — Section 11 (Discovery Framework) Drafted
 - Discovery as conversion of messy intent into structured reasoning state
 - Runtime loop: Retrieve → Infer → Propose → Confirm → Generate → Preserve → Learn
