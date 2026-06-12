@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-12 — Section 13 (Implementation Bridge) Drafted
+- Staged architecture: Context Layer → Reasoning-State Layer → Learning Layer → Adaptive Workflow Studio
+- System components, data model sketch, retrieval requirements
+- Implementation maturity model (Stage 0-4)
+- Human review as architectural requirement, not bolt-on
+- Implementation risks with mitigations (8 identified)
+- MVP defined around healthcare campaign workflow
+- "What not to build first" guidance
+- 14 subsections from modest claims through validation transition
+
 ## 2026-06-12 — Section 12 (Running Example: Adaptive Campaign Reasoning Studio) Drafted
 - Full end-to-end example: messy intent → retrieval → inference → strawman → confirmation → generation → preservation → outcome → learning → model update → discovery pattern update → next campaign starts smarter
 - Healthcare RPM campaign traced through every framework component
