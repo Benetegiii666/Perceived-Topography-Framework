@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — Section 7 (Hallucination and Harmful Action) Drafted
+- Hallucination and harmful action as related failures sharing premature-sufficiency structure
+- Shared failure grammar: goal pressure + weak grounding/constraint + misplaced confidence + low-friction path
+- Healthcare claims example (unsupported claim) and operations example (unsafe restart)
+- "I don't know" and "I should not act yet" as essential action affordances, not friction
+- Evaluation should inspect reasoning state, not just outputs
+- 9 subsections bridging reliability engineering and safety engineering
+
 ## 2026-06-12 — Section 6 (Gradients and Motion) Drafted
 - Motion sequence: Attraction → Investigation → Sufficiency → Action
 - Gradients defined as directional pressures (not formal mathematical gradients)
