@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — Section 10 (Reasoning Architecture: Preserving State Transitions) Drafted
+- Central claim: unit of organizational reasoning is optimizer state transition, not document
+- Six minimum viable reasoning objects defined with examples
+- Supporting concerns kept inside objects (not promoted to standalone)
+- Healthcare campaign and agent safety examples traced through all six objects
+- Reasoning architecture distinguished from knowledge management and agent memory
+- 15 subsections from documents-not-enough through discovery transition
+
 ## 2026-06-12 — Section 9 (Model Update Objects: Making Learning Durable) Drafted
 - Three-layer structure: Core Learning Payload (11 fields), Observability Envelope, Human-Ready View
 - Each field mapped to the specific failure mode it prevents
