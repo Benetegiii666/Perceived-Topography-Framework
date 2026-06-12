@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — Section 14 (Validation and Falsifiability) Drafted
+- Six testable claims with clear failure conditions
+- Seven validation levels: conceptual, operational, comparative, adversarial, longitudinal, human, outcome
+- Each reasoning object and topography dimension evaluated separately
+- Healthcare campaign and agent safety MVP test designs
+- Framework commits to updating itself through its own learning loop
+- 15 subsections from claims through self-updating governance
+
 ## 2026-06-12 — Section 13 (Implementation Bridge) Drafted
 - Staged architecture: Context Layer → Reasoning-State Layer → Learning Layer → Adaptive Workflow Studio
 - System components, data model sketch, retrieval requirements
