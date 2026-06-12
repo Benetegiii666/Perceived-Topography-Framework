@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-06-12 — SVG Specifications Created
+- 5 diagram specifications with style system, color palette, accessibility
+- Diagrams: Fear vs Topography, Context vs Reasoning State, Box vs Topography Safety, Core Loop, Runtime Discovery
+- Created `paper_assets/svg/` directory
+
 ## 2026-06-12 — Section 3 (Context Is Not Reasoning State) Drafted
 - Core argument: context layers retrieve information but not the reasoning state that makes information meaningful
 - Introduces context vs reasoning state distinction, documents vs state transitions, knowledge reuse vs reasoning reuse
