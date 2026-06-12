@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — Section 9 (Model Update Objects: Making Learning Durable) Drafted
+- Three-layer structure: Core Learning Payload (11 fields), Observability Envelope, Human-Ready View
+- Each field mapped to the specific failure mode it prevents
+- Full healthcare campaign Model Update Object example
+- 10 bad-update failure modes catalogued
+- Model Update Objects reshape future topography — changes optimizer motion
+- 9 subsections from documentation insufficiency through topography reshaping
+
 ## 2026-06-12 — Section 8 (Learning: When Reality Pushes Back) Drafted
 - Learning defined: evidence-supported model update triggered by prediction error
 - Full learning sequence: Expectation → Action → Outcome → Prediction Error → Investigation → Explanation → Model Update
