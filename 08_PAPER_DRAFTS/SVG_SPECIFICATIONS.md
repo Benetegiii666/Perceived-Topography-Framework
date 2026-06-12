@@ -2,8 +2,8 @@
 
 > These are conceptual anchors for the narrative paper, not decorative graphics.
 
-**Status:** Specifications complete. SVG generation pending after Sections 3-6 stabilize.
-**Date:** 2026-06-12
+**Status:** Revised after diagram audit. 7 diagrams specified. SVG generation pending.
+**Date:** 2026-06-12 (revised)
 
 ---
 
@@ -11,6 +11,8 @@
 
 ### General Style
 Clean academic / systems-paper style. Calm, minimal, readable. Not cartoonish, not overly futuristic, not fear-driven.
+
+Visual tone: systems architecture meets field guide.
 
 ### Canvas Sizes
 - Default: `1200 x 720`
@@ -36,23 +38,30 @@ System-safe sans-serif: `Inter, Helvetica, Arial, sans-serif`
 | Dark navy (text, primary) | Dark blue | #102033 |
 | Mid blue (nodes, accents) | Medium blue | #2E5EAA |
 | Soft blue (backgrounds) | Light blue | #EAF1FF |
-| Safe path / validated | Green | #2E8B57 |
+| Safe path / validated / learning | Green | #2E8B57 |
 | Uncertainty / warning | Amber | #D89A21 |
-| Risk / blocked | Red | #B94A48 |
+| Risk / blocked / premature sufficiency | Red | #B94A48 |
 | Gray boundary | Gray | #8A94A6 |
 | Light background | Near-white | #F7F9FC |
 | Node fill | White | #FFFFFF |
 
-### Visual Conventions
-- Solid arrows = primary causal / process flow
-- Dashed arrows = feedback / influence
-- Thick boundary lines = policy / containment
-- Soft shaded regions = topography / environment
-- Small warning icons = risk or uncertainty
-- Small check icons = validated / evidence-backed
+### Visual Grammar
+
+| Element | Meaning |
+|---------|---------|
+| Rounded rectangles | Reasoning objects |
+| Solid arrows | State transitions, primary causal flow |
+| Dashed arrows | Inference, provisional reasoning, feedback, optional paths |
+| Contour / field lines | Topography, gradients, landscape |
+| Thick boundary lines | Policy constraints |
+| Warning color (amber/red) | Prediction error, premature sufficiency, unsafe path |
+| Green / positive accent | Learning, model update, validated change |
+| Neutral blue / gray | Normal reasoning flow |
+
+Avoid heavy icon use. Avoid corporate "process diagram clutter."
 
 ### Accessibility
-Each SVG must include `<title>` and `<desc>` elements. Diagrams must be understandable in grayscale — do not rely only on color to convey meaning.
+Each SVG must include `<title>` and `<desc>` elements. Diagrams must be understandable in grayscale — do not rely only on color to convey meaning. Use labels directly on shapes rather than relying only on color. Avoid tiny text. Diagrams should work at paper width.
 
 ---
 
@@ -61,179 +70,300 @@ Each SVG must include `<title>` and `<desc>` elements. Diagrams must be understa
 ```
 paper_assets/
   svg/
-    fear_vs_topography.svg
-    context_vs_reasoning_state.svg
-    box_first_vs_topography_first.svg
-    core_framework_loop.svg
-    runtime_discovery_loop.svg
+    fig1_fear_to_landscape.svg
+    fig2_context_vs_reasoning_state.svg
+    fig3_optimizer_in_topography.svg
+    fig4_motion_and_premature_sufficiency.svg
+    fig5_learning_is_model_change.svg
+    fig6_reasoning_architecture_six_objects.svg
+    fig7_runtime_discovery_loop.svg
 ```
 
 ### Markdown Embedding
 
 ```markdown
-![Fear framing vs topography framing](paper_assets/svg/fear_vs_topography.svg)
+![From Agent Fear to Landscape Design](paper_assets/svg/fig1_fear_to_landscape.svg)
 ```
 
 ---
 
-## Diagram 1 — Fear Framing vs Topography Framing
+## Figure 1 — From Agent Fear to Landscape Design
 
-**File:** `svg/fear_vs_topography.svg`
+**File:** `svg/fig1_fear_to_landscape.svg`
 **Placement:** Section 1
 **Canvas:** 1400 x 760
-**Layout:** Two-column comparison with vertical divider
+**Layout:** Two-panel comparison
 
-### Left Panel: Conventional Fear Framing
-
-Vertical flow (4 nodes):
+### Left Panel: Agent Fear Frame
 
 ```
-Model + tools                    (annotation: goal, access, autonomy)
+Agent as isolated actor
     ↓
-Disturbing behavior              (annotation: deception, evasion, harmful action)
+Box / containment emphasis
     ↓
-Moralized interpretation         ("the agent is becoming dangerous")
+Focus on model behavior alone
     ↓
-Response                         (stronger fences)
+Question: What is wrong with the agent?
 ```
 
-Red/amber accents lightly around "disturbing behavior." Simple box around containment node.
+Visual: agent node inside a simple box, emphasis on restriction and monitoring.
 
-### Right Panel: Topography Framing
-
-Vertical flow (4 nodes):
+### Right Panel: Topography Design Frame
 
 ```
-Optimizer + goal + tools         (annotation: goal-directed behavior under constraints)
+Agent embedded in landscape
     ↓
-Perceived gradients              (annotation: visibility, confidence, cost, access, policy salience)
+Visible policies
+Available tools
+Evidence paths
+Approval gates
+Prior learning
     ↓
-Topography/policy/confidence     (annotation: harmful path appeared useful, available, or sufficient)
-failure
-    ↓
-Response                         (reshape gradients and affordances)
+Question: What landscape shapes behavior?
 ```
 
-Subtle landscape curve behind right-side nodes. Arrows move through landscape, not against fence.
+Visual: agent node inside a shaped landscape with visible paths, policy boundaries, evidence markers, and learning connections. The agent moves through the landscape rather than pressing against a wall.
 
 ### Caption
 
-> The Perceived Topography Framework does not deny agentic risk. It reframes many risky behaviors as optimizer movement through poorly shaped perceived environments rather than as evidence of human-like malice.
+> The question is not only whether the agent is dangerous. The better question is what landscape we asked it to move through.
+
+### Notes
+
+Absorbs the original "Fear Framing vs Topography Framing" diagram. Also absorbs the useful visual contrast from the original "Box-First Safety vs Topography-First Safety" diagram.
 
 ---
 
-## Diagram 2 — Context vs Reasoning State
+## Figure 2 — Context Is Not Reasoning State
 
-**File:** `svg/context_vs_reasoning_state.svg`
+**File:** `svg/fig2_context_vs_reasoning_state.svg`
 **Placement:** Section 3
 **Canvas:** 1400 x 760
-**Layout:** Two-column comparison
+**Layout:** Three-layer vertical stack
 
-### Left Column: Context Layer
-
-Contains:
+### Top Layer: Context Layer
 
 ```
-documents
-chunks
-policies
-dashboards
-campaigns
-transcripts
+Documents, policies, campaigns, dashboards, notes, transcripts
 ```
 
-Question at bottom: *What can the system retrieve?*
+Label: *What does the organization know?*
 
-### Right Column: Reasoning-State Layer
-
-Contains:
+### Middle Layer: Reasoning-State Layer
 
 ```
-goal
-policy
-premise stack
-decision state
-confidence
-sufficiency
-prediction error
-model update
+Goal, Policy, Interpretation, Premise Stack, Decision State, Confidence, Sufficiency
 ```
 
-Question at bottom: *What should the system do with what it retrieved?*
+Label: *What should the system do with what it knows?*
+
+### Bottom Layer: Action / Learning Layer
+
+```
+Generated artifact, tool action, outcome, prediction error, model update
+```
+
+Label: *What happened, and what changed?*
 
 ### Caption
 
-> Context preserves artifacts. Reasoning state preserves the relationship among goals, constraints, premises, decisions, outcomes, and learning.
+> Context preserves artifacts. Reasoning state preserves why artifacts shaped action. The action/learning layer preserves how reality responded and what should change.
+
+### Notes
+
+Updated from the original two-column "Context vs Reasoning State" to a three-layer stack showing the full path from knowledge through reasoning to learning.
 
 ---
 
-## Diagram 3 — Box-First Safety vs Topography-First Safety
+## Figure 3 — Optimizer in a Perceived Topography
 
-**File:** `svg/box_first_vs_topography_first.svg`
-**Placement:** Section 1 or Section 6
+**File:** `svg/fig3_optimizer_in_topography.svg`
+**Placement:** Section 4 or early Section 5
 **Canvas:** 1400 x 900
-**Layout:** Two horizontal panels stacked vertically
+**Layout:** Three-region horizontal with overlay
 
-### Panel A: Box-First Safety
+**This is the most important diagram in the paper. It visually explains the title of the framework.**
 
-Agent node inside rectangular box. Boundary labels: sandbox, tool limits, monitoring, permissions, refusal policy. Goal target outside box. Arrow from agent toward target hitting boundary. Label at boundary: "constraint encountered as fence."
+### Left Region: Optimizer State
 
-Visual meaning: Agent has goal and boundary, but desired path is not designed. Pressure against box without making agent look evil.
+```
+Goal         — What am I trying to achieve?
+Policy       — What constraints govern behavior?
+Interpretation — What does this information mean?
+```
 
-### Panel B: Topography-First Safety
+### Center Region: Perceived Topography
 
-Soft landscape with clear path from optimizer to "Evidence-backed, policy-compliant outcome." Along main path: retrieved evidence, visible policy, confidence check, human escalation, sufficiency threshold.
+```
+Visibility     — Can this be perceived?
+Accessibility  — Can this be reached?
+Representation — How is this expressed?
+Confidence     — How trustworthy is this?
+Connectivity   — What is this connected to?
+```
 
-Unsafe side paths with friction markers:
-- Unsupported claim → low confidence
-- Unsafe tool use → requires approval
-- Policy conflict → blocked / escalate
+Use subtle contour lines or field lines to make "topography" feel visual, not merely tabular.
 
-Visual meaning: Desired path is made easier, clearer, and more sufficient than unsafe alternatives.
+### Right Region: Motion
+
+```
+Attraction
+Investigation
+Sufficiency
+Action
+```
+
+### Overlays
+
+**Goal Relevance:** Shown as a directional projection/filter from Goal onto the topography, not as a separate box in the dimension list.
+
+**Policy:** Shown as a boundary or guardrail around or within the topography, not as a sixth dimension.
 
 ### Caption
 
-> Containment remains necessary, but topography-first design expands the safety toolkit by shaping what the optimizer can see, trust, access, and treat as sufficient.
+> The optimizer does not move through objective reality directly. It moves through a perceived topography shaped by what is visible, accessible, represented, trusted, and connected. Behavior emerges from the interaction between optimizer state and perceived landscape.
+
+### Design Notes
+
+This diagram must avoid looking like a table or org chart. The topography region should feel like a landscape — use contour lines, subtle gradients, or field-like visual patterns. The optimizer "enters" the topography from the left. Motion "emerges" from the right.
 
 ---
 
-## Diagram 4 — Core Framework Loop
+## Figure 4 — Motion and Premature Sufficiency
 
-**File:** `svg/core_framework_loop.svg`
-**Placement:** End of Section 3 or beginning of Section 4
+**File:** `svg/fig4_motion_and_premature_sufficiency.svg`
+**Placement:** Section 6 or Section 7
+**Canvas:** 1400 x 820
+**Layout:** Process flow with failure shortcut
+
+### Normal Motion Path (top)
+
+```
+Attraction → Investigation → Sufficiency → Action
+```
+
+Along the path, show intervention points:
+- Evidence needed
+- Policy check
+- Confidence calibration
+- Human approval
+- Prior model update
+- Escalation option
+
+### Failure Shortcut (below, branching off after Attraction)
+
+```
+Attraction → Premature Sufficiency → Unsupported / Unsafe Action
+```
+
+Mark the shortcut in amber/red. Label: "Insufficient grounding, weak policy, misplaced confidence."
+
+### Caption
+
+> Many failures happen when the system reaches sufficiency too early. Normal motion includes investigation, evidence, and policy checks. Premature sufficiency skips these steps and produces unsupported claims or unsafe actions.
+
+### Notes
+
+Absorbs the useful parts of the original "Box-First Safety vs Topography-First Safety" diagram. Directly supports Section 7 (hallucination and harmful action as premature sufficiency).
+
+---
+
+## Figure 5 — Learning Is Model Change
+
+**File:** `svg/fig5_learning_is_model_change.svg`
+**Placement:** Section 8 or Section 9
 **Canvas:** 1200 x 900
-**Layout:** Circular loop with 8 major nodes
+**Layout:** Loop with side contrast
 
-### Clockwise Node Order
+### Main Loop
 
-| # | Node | Contents |
-|---|------|----------|
-| 1 | Optimizer State | Goal, Policy, Interpretation |
-| 2 | Information Topography | Visibility, Accessibility, Representation, Confidence, Connectivity |
-| 3 | Optimizer Motion | Attraction, Investigation, Sufficiency |
-| 4 | Action | answer, tool use, recommendation, workflow step |
-| 5 | Outcome | reality responds |
-| 6 | Learning Event | prediction error, evidence-supported explanation |
-| 7 | Model Update Object | bounded reusable learning |
-| 8 | Discovery / Updated Reasoning State | retrieve, infer, propose, confirm |
+```
+Expectation
+    ↓
+Action
+    ↓
+Outcome
+    ↓
+Prediction Error
+    ↓
+Investigation
+    ↓
+Evidence-Supported Explanation
+    ↓
+Model Update
+    ↓
+Changed Future Optimizer State / Topography
+```
 
-Node 8 loops back to Node 1.
+The final node loops back to the beginning (changed state produces new expectations).
 
-### Visual Notes
-- "Reality" placed lightly outside loop near Outcome
-- Dashed feedback arrow: Model Update Object → Information Topography (prior learning changes what future agents retrieve)
-- Dashed feedback arrow: Discovery → Optimizer State
+### Side Contrast (left or bottom)
+
+Three items marked with "≠ Learning":
+
+```
+Storage ≠ Learning
+Postmortem ≠ Learning
+Reaction ≠ Learning
+```
 
 ### Caption
 
-> The framework treats human-agent work as a loop of state, topography, motion, action, outcome, learning, and rediscovery.
+> Learning occurs when prediction error is investigated, explained with evidence, and converted into a model update that changes future reasoning. Storage, postmortems, and reactions alone are not learning.
+
+### Notes
+
+New diagram — was missing from the original 5-diagram plan. Supports Sections 8-9 and helps readers understand the learning distinction quickly.
 
 ---
 
-## Diagram 5 — Runtime Discovery Loop
+## Figure 6 — Reasoning Architecture: Six Objects Preserve the State Transition
 
-**File:** `svg/runtime_discovery_loop.svg`
-**Placement:** Section 11
+**File:** `svg/fig6_reasoning_architecture_six_objects.svg`
+**Placement:** Section 10
+**Canvas:** 1400 x 820
+**Layout:** Horizontal chain with supporting layer
+
+### Main Chain (center)
+
+```
+Optimizer State → Premise Stack → Decision State → Investigation Trace → Learning Event → Model Update Object
+```
+
+Each object as a rounded rectangle with brief label inside.
+
+### Above the Chain
+
+State transition description:
+
+```
+what was believed → why it was believed → what was chosen → what was tested → what changed
+```
+
+### Below the Chain
+
+Source artifacts supporting the chain:
+
+```
+documents, policies, dashboards, notes, postmortems, metrics
+```
+
+Connected to relevant objects with light dashed arrows.
+
+### Caption
+
+> The unit of organizational reasoning is not the document. It is the optimizer state transition. Documents provide evidence and context. Reasoning objects preserve how that evidence shaped action and learning.
+
+### Notes
+
+Replaces the original "Core Framework Loop" diagram. The completed paper needs the six-object architecture specifically rather than a generic loop.
+
+---
+
+## Figure 7 — Runtime Discovery Loop
+
+**File:** `svg/fig7_runtime_discovery_loop.svg`
+**Placement:** Section 11 or Section 12
 **Canvas:** 1400 x 820
 **Layout:** Horizontal flow left-to-right with output objects below
 
@@ -265,7 +395,7 @@ Vertical arrows from relevant main nodes:
 - Learn → Learning Event / Model Update Object / Discovery Pattern Update
 
 ### Visual Notes
-- Human-intent node slightly irregular/cloud-like
+- Human-intent node slightly irregular/cloud-like (messy → structured)
 - Reasoning objects as clean rectangles (structure emerging from ambiguity)
 - Green/blue on main path, amber for confidence gaps
 
@@ -275,13 +405,42 @@ Vertical arrows from relevant main nodes:
 
 ---
 
+## Diagrams Deprioritized or Merged
+
+### Original Diagram 3 — Box-First Safety vs Topography-First Safety
+
+**Decision:** Merged into Figure 1 (fear vs landscape) and Figure 4 (premature sufficiency). The contrast is important but redundant as a standalone after Sections 16-17.
+
+### Original Diagram 4 — Core Framework Loop
+
+**Decision:** Replaced by more specific diagrams: Figure 5 (Learning) and Figure 6 (Six-Object Architecture). The completed paper has more precise needs than a generic loop.
+
+---
+
+## Updated Placement Map
+
+| Figure | Title | Section |
+|--------|-------|---------|
+| 1 | From Agent Fear to Landscape Design | Section 1 |
+| 2 | Context Is Not Reasoning State | Section 3 |
+| 3 | Optimizer in a Perceived Topography | Section 4 or 5 |
+| 4 | Motion and Premature Sufficiency | Section 6 or 7 |
+| 5 | Learning Is Model Change | Section 8 or 9 |
+| 6 | Reasoning Architecture: Six Objects | Section 10 |
+| 7 | Runtime Discovery Loop | Section 11 or 12 |
+
+---
+
 ## Production Notes
 
 ### First SVG Pass
-Conceptual, not final. Generate all five after Sections 3-6 stabilize.
+Conceptual, not final. Generate all seven after revision passes complete.
 
 ### Paper Text Notes
 Each diagram should include a short note in the paper text (not inside the SVG) explaining:
 - Diagrams are conceptual
 - Topography and gradients are analytic metaphors
 - Containment and topography are complementary, not mutually exclusive
+
+### Diagram Count
+Recommended final count: **7 diagrams.** Do not exceed 8 unless peer review shows a specific comprehension gap.

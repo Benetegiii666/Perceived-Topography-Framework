@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — SVG Audit: Revised from 5 to 7 Diagrams
+- Revised SVG plan from 5 to 7 diagrams after completing all 17 sections
+- Added: Figure 3 (Optimizer in Perceived Topography — most important missing diagram), Figure 5 (Learning Is Model Change), Figure 6 (Six-Object Reasoning Architecture)
+- Merged: Box-First Safety into Figures 1+4; Core Framework Loop replaced by Figures 5+6
+- Updated visual grammar (rounded rectangles, contour lines, failure shortcuts)
+- Updated file naming to fig1-fig7 convention
+- Placement map updated for all 7 figures
+
 ## 2026-06-12 — AHA Audit Complete + 6 Paper Patches Applied
 - AHA audit completed across all 17 AHA moments
 - 6 promoted explicitly into paper: AHA_001 (origin sentence), AHA_003 (KPI gaming bridge), AHA_005 (marble/slope), AHA_010 (retrieval=gradient selection), AHA_013 (testability), AHA_016 (diagnostic over prescriptive)
