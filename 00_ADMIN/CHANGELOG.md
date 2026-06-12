@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-12 — Section 6 (Gradients and Motion) Drafted
+- Motion sequence: Attraction → Investigation → Sufficiency → Action
+- Gradients defined as directional pressures (not formal mathematical gradients)
+- Two attraction modes: Action Attraction (confidence) and Exploration Attraction (confidence gap)
+- Investigation as goal-directed uncertainty reduction with task spawning
+- Sufficiency distinguished from Confidence (low confidence + high sufficiency and vice versa)
+- Motion applied to hallucination, unsafe tool use, and constraint circumvention as safety diagnosis
+- Healthcare campaign example traced through full motion sequence
+- 10 subsections covering gradients, attraction, investigation, sufficiency, action, safety, design
+
 ## 2026-06-12 — Section 5 (Information Topography) Drafted
 - Five dimensions: Visibility, Accessibility, Representation, Confidence, Connectivity
 - Each dimension defined with question, failure examples, and behavioral implications
