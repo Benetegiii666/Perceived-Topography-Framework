@@ -7,97 +7,50 @@
 
 ---
 
-## PHASE 1 — Stabilize The Theory
+## PHASE 1 — Stabilize The Theory — **COMPLETE**
 
 **Goal:** Determine whether the optimizer/topography theory is coherent enough to serve as a foundation.
 
+**Result:** Optimizer converged on Goal + Policy + Interpretation. Layer separation holds. Filed in `01_CONCEPT_ARCHITECTURE/OPTIMIZER_THEORY.md`.
+
 ### Task 1.1 — Lock Layer Separation
 
-**Question:** Do Theory, Topography Engineering, Architecture, and Implementation remain independent layers?
-
-**Current Status:** Strongly supported.
-
-**Done When:**
-- [ ] Each layer answers a distinct question
-- [ ] D011-style independence survives
-- [ ] No new layers added without surviving pressure testing
-
-**Deliverable:** `FL_011_Layer_Separation_Finalization.md`
-
----
+- [x] Each layer answers a distinct question ✓
+- [x] D011-style independence survives ✓
+- [x] No new layers added without surviving pressure testing ✓
 
 ### Task 1.2 — Resolve Cross-Layer Leaks
 
-**Question:** Are Goal and Policy the same thing across layers?
-
-**Current Status:** Open. Flagged in FL_010.
-
-**Done When:** For each of Goal and Policy, we can explain:
-- [ ] Theory meaning
-- [ ] Topography Engineering meaning
-- [ ] Architecture meaning
-- [ ] No contradictions between meanings
-
-**Deliverable:** `D016_Cross_Layer_Entity_Analysis.md`
+- [x] Goal: Theory = optimizer primitive; Engineering = dimension anchor; Architecture = reasoning object ✓
+- [x] Policy: Theory = optimizer primitive; Engineering = constraint dimension; Architecture = governance object ✓
+- [x] Same concept at different abstraction levels — not naming collisions ✓
 
 ---
 
-## PHASE 2 — Find The Topography Dimensions
+## PHASE 2 — Find The Topography Dimensions — **COMPLETE**
 
-**This is now the most important work. Everything else depends on it.**
+**Result:** Five primary dimensions converged: Visibility, Accessibility, Representation, Confidence, Connectivity. Goal Relevance confirmed as derived (relational). Filed in `01_CONCEPT_ARCHITECTURE/INFORMATION_TOPOGRAPHY.md`.
 
 ### Task 2.1 — Candidate Dimension Review
 
-**Current candidates:**
-
-| Dimensions | Modifiers | Constraint Candidate |
-|-----------|-----------|---------------------|
-| Visibility | Contradiction | Policy |
-| Accessibility | Recency | |
-| Representation | | |
-| Confidence | | |
-| Connectivity | | |
-| Goal Relevance | | |
-
-**Done When:**
-- [ ] Candidate list agreed
-- [ ] No new dimensions introduced without strong justification
-
-**Deliverable:** `D017_Topography_Dimension_Candidate_Set.md`
-
----
+- [x] Candidate list agreed: Visibility, Accessibility, Representation, Confidence, Connectivity ✓
+- [x] Goal Relevance reclassified as derived/relational ✓
+- [x] No new dimensions introduced without strong justification ✓
 
 ### Task 2.2 — D011 Reduction
 
-Run pairwise attacks:
-- Can Visibility exist without Accessibility?
-- Can Accessibility exist without Visibility?
-- Can Confidence exist without Representation?
-- Can Connectivity exist without Goal Relevance?
-- (all pairs)
-
-**Done When:**
-- [ ] Every surviving dimension demonstrates independence
-- [ ] Every collapsed dimension is removed
-
-**Deliverable:** AHA Candidate — Irreducible Topography Dimensions
-
----
+- [x] Visibility/Accessibility separation tested — independent ✓
+- [x] Confidence/Representation separation tested — independent ✓
+- [x] Connectivity independence tested ✓
+- [x] Goal Relevance collapsed to derived ✓
 
 ### Task 2.3 — Optimizer Failure Mapping
 
-**Question:** Can optimizer failures be mapped to dimension failures?
-
-| Failure | Dimension |
-|---------|-----------|
-| Missed Opportunity | Visibility Failure |
-| Bad Trust Decision | Confidence Failure |
-| Failure To Connect Signals | Connectivity Failure |
-
-**Done When:**
-- [ ] 80%+ of realistic failures map cleanly
-
-**Deliverable:** `FL_012_Topography_Failure_Taxonomy.md`
+- [x] Visibility Failure = Missed Opportunity ✓
+- [x] Confidence Failure = Bad Trust Decision ✓
+- [x] Connectivity Failure = Failure to Connect Signals ✓
+- [x] Accessibility Failure = Known but Unreachable ✓
+- [x] Representation Failure = Misinterpretation from Poor Expression ✓
 
 ---
 

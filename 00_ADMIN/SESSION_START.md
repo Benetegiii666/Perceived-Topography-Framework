@@ -112,19 +112,18 @@ Explore whether context contributes to interpretation in a way that explains why
 
 See `00_ADMIN/RESEARCH_ROADMAP.md` for full detail.
 
-**PHASE 1 — Stabilize The Theory**
-- [ ] 1.1 Lock Layer Separation (FL_011)
-- [ ] 1.2 Resolve Cross-Layer Leaks — Goal and Policy (D016)
+**PHASE 1 — Stabilize The Theory** ✅ COMPLETE
+- [x] Optimizer: Goal + Policy + Interpretation
+- [x] Layer Separation: Theory / Engineering / Architecture / Implementation
 
-**PHASE 2 — Find The Topography Dimensions** ← MOST IMPORTANT
-- [ ] 2.1 Candidate Dimension Review (D017)
-- [ ] 2.2 D011 Pairwise Reduction
-- [ ] 2.3 Optimizer Failure Mapping (FL_012)
+**PHASE 2 — Find The Topography Dimensions** ✅ COMPLETE
+- [x] Five dimensions: Visibility, Accessibility, Representation, Confidence, Connectivity
+- [x] Goal Relevance = derived/relational
 
-**PHASE 3 — Define Optimizer Motion** ← WHERE THE GOLD IS
+**PHASE 3 — Define Optimizer Motion** ← ACTIVE
 - [ ] 3.1 Attraction Model (FL_013)
-- [ ] 3.2 Investigation Dynamics (FL_014)
-- [ ] 3.3 Sufficiency as Emergent Behavior (FL_015)
+- [x] 3.2 Investigation Dynamics (FL_014) ✅
+- [x] 3.3 Sufficiency as Emergent Behavior (FL_015) ✅
 
 **PHASE 4 — Validate Architecture**
 - [ ] 4.1 Reasoning Architecture traces to theory (CA_007)

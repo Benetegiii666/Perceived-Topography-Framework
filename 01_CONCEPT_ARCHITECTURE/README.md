@@ -15,6 +15,8 @@ If a discovery or insight conflicts with the architecture defined here:
 
 ## Contents
 - `CURRENT_STATE.md` — The "living constitution" — canonical snapshot of what we currently believe
+- `OPTIMIZER_THEORY.md` — **Phase 1 Complete** — Goal, Policy, Interpretation as optimizer primitives
+- `INFORMATION_TOPOGRAPHY.md` — **Phase 2 Complete** — Visibility, Accessibility, Representation, Confidence, Connectivity
 - `CORE_THESIS.md` — The central argument of the framework
 - `SUPPORTING_THESES.md` — Secondary claims that extend the core thesis
 - `DEFINITIONS.md` — Precise definitions of all framework terms

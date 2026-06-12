@@ -2,45 +2,96 @@
 
 > If someone joined the project today, what do we currently believe?
 
-**Last updated:** 2026-06-09
+**Last updated:** 2026-06-11
 
 ---
 
 ## Core Claim
 
-Behavior is not primarily a product of individual choice or incentive design. It emerges from the **perceived topography** of the environment — the landscape of possibilities, constraints, and gradients that agents perceive around them.
+Agents are optimizers. Behavior emerges from the interaction between optimizer primitives and perceived information topography — not from intelligence, intent, or instruction alone.
 
-## Key Propositions (Under Development)
+## Optimizer Architecture (Phase 1 — Complete)
 
-The concept architecture is in its initial phase. The following represent the working direction, not settled doctrine:
+```
+Optimizer
+    ├── Goal           — What am I trying to achieve?
+    ├── Policy         — What constraints govern behavior?
+    └── Interpretation — What does this information mean?
+```
 
-1. **Topography shapes behavior** — Environmental structure creates gradients that make certain behaviors more probable than others.
-2. **Perception mediates topography** — Agents do not respond to objective topography. They respond to their *perceived* topography.
-3. **Governance shapes terrain** — Organizational governance, rules, and structures are mechanisms that reshape the topography.
-4. **Behavior is emergent** — Behavior emerges from the interaction between agent and perceived landscape, not from direct instruction.
-5. **AI systems exhibit the same dynamics** — AI agents navigating context windows, retrieval systems, and prompt architectures demonstrate topographic behavior patterns.
+Collapsed candidates: Evaluation (→ Policy + Interpretation), Navigation (→ Goal + Policy + Interpretation), Sufficiency (→ judgment/gate).
 
-## Active Fault Lines
+## Information Topography (Phase 2 — Complete)
 
-These are unresolved tensions in the framework. They are not bugs — they are the pressure points where the next breakthroughs will come from:
+Five primary dimensions describing how information environments create gradients:
 
-- **FL_001:** Is behavior emergent or chosen?
-- **FL_002:** Is topography a fundamental concept or a metaphor?
-- **FL_003:** Is perception a layer or a mechanism?
-- **FL_004:** What is the boundary between governance and topography?
-- **FL_005:** Do agents follow paths or gradients?
-- **FL_006:** What is the relationship between retrieval and perception construction?
+```
+Visibility     — Can this be perceived?
+Accessibility  — Can this be reached?
+Representation — How is this expressed?
+Confidence     — How trustworthy is this?
+Connectivity   — What is this connected to?
+```
 
-## Watch Item
+**Goal Relevance** is derived (relational), not a dimension. It emerges from Signal relative to Goal.
 
-**EC_003 — Agentic Retrieval and State:** Growing suspicion that the current model (Topography → Perception → Optimization) may need to become (Topography → Perception *Construction* → Optimization). If so, retrieval becomes a central mechanism, not a side topic. FL_006 is the pressure test.
+**Information Surfaces** are the structures through which optimizers encounter topography — containing all five dimensions.
+
+## The Full Equation
+
+```
+Optimizer (Goal, Policy, Interpretation)
+    +
+Information Topography (Visibility, Accessibility, Representation, Confidence, Connectivity)
+    =
+Behavior (Attention, Exploration, Investigation, Action)
+```
+
+## Motion (Phase 3 — In Progress)
+
+| Motion Type | Status |
+|------------|--------|
+| Attention | Identified — not yet formally defined |
+| Exploration | Identified — not yet formally defined |
+| Investigation | **Resolved** (FL_014) — trigger = goal-relevant observation + confidence gap; connectivity guides search |
+| Action | Identified — not yet formally defined |
+
+**Sufficiency** (FL_015 — Resolved): Action Stability. Independent of Confidence. Optimizer acts when additional information is unlikely to change the selected action.
+
+## Learning (Emerging)
+
+```
+Expectation → Action → Outcome → Prediction Error → Investigation → Evidence-Supported Explanation → Model Update
+```
+
+Learning is evidence-supported model update, not outcome or postmortem (D016).
+
+## Layer Separation (FL_010)
+
+The framework operates at four distinct layers:
+
+| Layer | Question |
+|-------|----------|
+| Theory | Why does behavior happen? |
+| Topography Engineering | What environmental properties create gradients? |
+| Architecture | How should reasoning be structured for retrieval? |
+| Implementation | What do we build? |
 
 ## What Has NOT Been Decided
 
-- Whether the framework is descriptive (explaining what happens) or prescriptive (recommending what should happen)
-- The precise relationship between perception construction and retrieval
-- Whether the topography metaphor is load-bearing or illustrative
-- How agency interacts with topographic determinism
+- Phase 3.1: How do dimensions combine to create gradient strength (Attraction)?
+- Whether Decision Space and Capability are primitives, derived, or collapsible
+- Whether Learning vs Reaction is a clean distinction
+- Structure of reusable model updates for organizational/agent memory
+- Phase 4 validation: Do reasoning architecture objects trace to theory?
+- Phase 4 validation: Do discovery questions trace to dimensions?
+- Cross-layer leaks: How Goal and Policy relate across Theory/Engineering/Architecture layers
+
+## Active Fault Lines
+
+- FL_007: Interface Layer (under continued pressure)
+- FL_009: Optimizer Architecture (resolved to Goal/Policy/Interpretation — monitoring)
+- FL_010: Layer Separation (soft boundary between Theory and Engineering)
 
 ---
 

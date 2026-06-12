@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-11 — MILESTONE: Phases 1 + 2 Complete, Framework Baseline Established
+- PHASE 1 COMPLETE: Optimizer Theory — Goal, Policy, Interpretation as foundational primitives
+- PHASE 2 COMPLETE: Information Topography — Visibility, Accessibility, Representation, Confidence, Connectivity as primary dimensions; Goal Relevance confirmed as derived
+- Created `01_CONCEPT_ARCHITECTURE/OPTIMIZER_THEORY.md` — Phase 1 foundational document
+- Created `01_CONCEPT_ARCHITECTURE/INFORMATION_TOPOGRAPHY.md` — Phase 2 foundational document
+- CURRENT_STATE.md regenerated with full framework equation: Optimizer + Topography = Behavior
+- Research Roadmap Phases 1 + 2 marked complete with all checklist items resolved
+- Framework state: Optimizer(3) + Topography(5) + Derived(1) + Motion(4) + Termination(1) + Learning(emerging)
+
 ## 2026-06-11 — Phase 3.2 + 3.3 Complete, D016 Learning Events, Framework State Update
 - FL_014 RESOLVED: Investigation Dynamics — trigger = goal-relevant observation + confidence gap; connectivity guides search; three termination conditions
 - FL_015 RESOLVED: Sufficiency = Action Stability — independent of confidence (both directions tested). Continue vs Act without new primitives.
