@@ -1,7 +1,8 @@
 # AHA_001: Shaping the Landscape
 
 **Date:** 2026-06-09 (from seed material)
-**Role:** THE ORIGIN SENTENCE — first major phase transition in the discussion
+**Role:** THE ORIGIN SENTENCE
+**Paper Status:** Explicitly promoted — appears in Section 1 — first major phase transition in the discussion
 
 ## The Moment
 

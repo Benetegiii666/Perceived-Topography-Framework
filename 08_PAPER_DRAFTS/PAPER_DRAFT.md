@@ -26,6 +26,8 @@ This distinction matters because the dominant safety metaphor remains containmen
 
 If an optimizer is given a goal, tools, and a poorly shaped environment, it may treat an arbitrary fence as a cost, not as meaning. If the fastest apparent route to success lies through deception, unsupported claims, unsafe tool use, or policy circumvention, then we should not be surprised when the system shows pressure in that direction. The surprise is not that an optimizer moves along available gradients. The surprise is that we often design the gradients casually, then interpret the resulting behavior as an emerging personality.
 
+A useful image is simple: when a marble rolls downhill, we do not explain its motion only by studying the marble. We look at the slope. AI agents should be treated the same way. The challenge is not only to inspect the agent, restrict the agent, or reward the agent differently. The challenge may become less about rewarding agents and more about shaping the landscape they optimize within.
+
 This paper uses language carefully here. The point is not to deny that models can exhibit behavior that appears deceptive, self-protective, or strategically harmful. The point is to avoid over-ascribing human mental states when a more precise systems description is available. Prior work on language model behavior has also warned against falling too easily into anthropomorphic descriptions of model conduct. [DEEPMIND_ROLE_PLAY]
 
 The Perceived Topography Framework proposes a different starting point. Instead of asking only how to restrain an agent, it asks how to shape the information and action landscape through which the agent moves. What can the system see? What can it retrieve? What does it understand? What does it trust? What is connected to what? Which actions are cheap, salient, and reversible? Which require evidence, approval, or additional investigation? Which paths produce confidence, and which paths produce friction? Which outcomes are made attractive, and which are made unstable, costly, or unavailable?
@@ -887,6 +889,8 @@ The central claim of this section is simple:
 
 Information may exist and still fail to matter.
 
+The practical design question is therefore not only "what information exists?" It is: *What reality are we allowing the agent to perceive?* That question shifts attention from storage to perception. A policy that exists but is not visible does not shape the perceived reality. Evidence that exists but is inaccessible does not shape the perceived reality. A prior failure that exists but is disconnected from the current action does not shape the perceived reality.
+
 A policy may exist but remain invisible. A prior lesson may exist but remain inaccessible. A report may exist but be represented poorly. A claim may be available but low-confidence. A signal may be observed but disconnected from the decision it should affect.
 
 In each case, the information is present somewhere in the organization, but weak or absent in the optimizer's path.
@@ -1250,6 +1254,8 @@ A system generates a grounded answer more easily when: evidence is visible, retr
 The same logic applies to agentic action. A system takes an unsafe tool action more easily when the tool is available, the action appears goal-relevant, policy is weakly represented, approval is not required, consequences are not visible, and prior failures are not connected to the decision.
 
 Gradients are therefore the practical bridge between design and behavior.
+
+This also connects AI behavior to familiar organizational behavior. Reward hacking in AI systems is not as alien as it first appears. It is structurally similar to KPI gaming in organizations. When a metric becomes visible, rewarded, trusted, and disconnected from the broader purpose, optimizers move toward the metric. The optimizer may be a model, a team, a department, or a vendor. The pattern is the same: the landscape makes one path attractive, and behavior follows the slope.
 
 ---
 
@@ -3278,7 +3284,9 @@ This schema is not final. It is a starting point. The goal is to make reasoning 
 
 ## 13.8 Retrieval Requirements
 
-Reasoning-state retrieval differs from context-only retrieval.
+Retrieval is not merely context lookup. In a topographic system, retrieval is gradient selection. What the system retrieves becomes newly visible. What it omits remains outside the perceived landscape. A retrieved policy, prior failure, Model Update Object, or customer signal can change what appears relevant, risky, trusted, or sufficient. This means retrieval is not neutral plumbing. Retrieval helps construct the world the optimizer moves through.
+
+Reasoning-state retrieval therefore differs from context-only retrieval.
 
 Context retrieval asks: *Which documents are semantically similar to this request?*
 
@@ -3403,6 +3411,8 @@ This section intentionally:
 The previous section argued that the framework can be implemented. This section asks a harder question:
 
 > How would we know whether the framework is true, useful, or merely elegant?
+
+One of the framework's most important transitions is that it became testable. A vocabulary can sound useful while explaining everything after the fact. A framework becomes more serious when it exposes itself to failure conditions: what would count against it, where it should not apply, which objects must earn their place, and whether future behavior actually improves. The framework should therefore be judged not by whether its language feels persuasive, but by whether its preserved reasoning state changes future action under pressure.
 
 A framework that cannot be tested becomes rhetoric. A vocabulary that cannot be falsified becomes branding. A theory that explains every outcome after the fact explains too much.
 
@@ -3556,6 +3566,8 @@ Each object should be evaluated by whether it does useful work:
 | Connectivity | Does connecting signals to premises and policies improve reasoning? |
 
 Failure condition: the dimensions do not produce distinct diagnoses or actionable interventions.
+
+The framework's categories are valuable only if they improve diagnosis. A corrective action says what to do next. A diagnostic category explains what kind of failure occurred and therefore which intervention is likely to matter. If a failure is a Visibility failure, adding another policy document may not help. If it is a Confidence failure, more access may not help. If it is a Connectivity failure, the missing move is not more information, but better linkage between information, policy, premise, and action. The value of the framework is not that it names failures elegantly. The value is that different diagnoses predict different interventions.
 
 ---
 

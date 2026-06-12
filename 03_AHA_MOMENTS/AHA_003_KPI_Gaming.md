@@ -1,5 +1,6 @@
 # AHA_003: Reward Hacking IS KPI Gaming
 
+**Paper Status:** Explicitly promoted — reward hacking/KPI gaming bridge appears in Section 6
 **Date:** 2026-06-09 (from seed material)
 
 ## The Moment

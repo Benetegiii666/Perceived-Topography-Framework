@@ -1,6 +1,6 @@
 # AHA_008: The Theory Was Ahead of Its Own Language
 
-**Status:** Candidate — not yet promoted
+**Status:** Retired from paper scope — preserved in repo as research artifact
 **Date:** 2026-06-09
 
 ## The Moment

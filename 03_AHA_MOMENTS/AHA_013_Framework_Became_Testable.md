@@ -1,6 +1,7 @@
 # AHA_013: The Framework Became Testable
 
-**Status:** Candidate — not yet promoted
+**Status:** Promoted — explicitly in paper
+**Paper Status:** Appears in Section 14 opening
 **Date:** 2026-06-09
 
 ## The Moment

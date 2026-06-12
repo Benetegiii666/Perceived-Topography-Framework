@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-12 — AHA Audit Complete + 6 Paper Patches Applied
+- AHA audit completed across all 17 AHA moments
+- 6 promoted explicitly into paper: AHA_001 (origin sentence), AHA_003 (KPI gaming bridge), AHA_005 (marble/slope), AHA_010 (retrieval=gradient selection), AHA_013 (testability), AHA_016 (diagnostic over prescriptive)
+- 2 retired from paper scope: AHA_008 (theory ahead of language), AHA_017 (real-world test)
+- 2 held as optional: AHA_007 (map/sensor/navigator — SVG only), AHA_009 (visibility ≠ attention)
+- 7 kept implicit (already well-represented in paper structure)
+- 6 targeted patches inserted: Section 1 (marble + origin sentence), Section 5 (perceived reality question), Section 6 (KPI gaming bridge), Section 13.8 (retrieval = gradient selection), Section 14 opening (testability), Section 14.12 (diagnostic value)
+- Principle: AHA moments function as reframes, section bridges, or design principles — not slogans
+
 ## 2026-06-12 — MILESTONE: Section 17 (Conclusion) Drafted — Paper v0.1 COMPLETE
 - All 17 sections drafted
 - Conclusion returns to opening fear frame and lands four aha moments

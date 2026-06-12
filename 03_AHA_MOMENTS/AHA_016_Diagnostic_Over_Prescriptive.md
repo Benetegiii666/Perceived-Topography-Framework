@@ -1,6 +1,7 @@
 # AHA_016: Diagnostic Categories Are More Valuable Than Corrective Actions
 
-**Status:** Candidate — not yet promoted
+**Status:** Promoted — explicitly in paper
+**Paper Status:** Appears in Section 14.12
 **Date:** 2026-06-10
 
 ## The Moment

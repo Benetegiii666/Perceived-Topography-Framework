@@ -1,6 +1,6 @@
 # AHA_009: Visibility Is Not Attention
 
-**Status:** Candidate — not yet promoted
+**Status:** Held — attention not promoted as formal primitive
 **Date:** 2026-06-09
 
 ## The Moment

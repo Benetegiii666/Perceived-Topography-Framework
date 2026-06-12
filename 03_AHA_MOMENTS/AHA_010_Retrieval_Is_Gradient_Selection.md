@@ -1,6 +1,7 @@
 # AHA_010: Retrieval Is Really Gradient Selection
 
-**Status:** Candidate — not yet promoted
+**Status:** Promoted — explicitly in paper
+**Paper Status:** Appears in Section 13.8 (Retrieval Requirements)
 **Date:** 2026-06-09
 
 ## The Moment

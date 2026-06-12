@@ -1,5 +1,6 @@
 # AHA_005: Stop Looking at the Marble. Look at the Slope.
 
+**Paper Status:** Explicitly promoted — marble metaphor appears in Section 1
 **Date:** 2026-06-09 (from seed material)
 
 ## The Moment

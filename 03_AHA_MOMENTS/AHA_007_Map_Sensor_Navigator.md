@@ -1,5 +1,6 @@
 # AHA_007: Map, Sensor, Navigator
 
+**Paper Status:** Held — may be used in SVG notes or speaker notes, not main prose
 **Date:** 2026-06-09 (from seed material)
 
 ## The Moment

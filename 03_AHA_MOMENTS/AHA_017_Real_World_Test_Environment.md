@@ -1,6 +1,6 @@
 # AHA_017: The Framework Has Entered a Real-World Test Environment
 
-**Status:** Candidate — not yet promoted
+**Status:** Retired from paper scope — project-specific, preserved in repo
 **Date:** 2026-06-10
 
 ## The Moment
