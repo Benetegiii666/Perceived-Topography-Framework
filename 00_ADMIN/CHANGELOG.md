@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-12 — Section 8 (Learning: When Reality Pushes Back) Drafted
+- Learning defined: evidence-supported model update triggered by prediction error
+- Full learning sequence: Expectation → Action → Outcome → Prediction Error → Investigation → Explanation → Model Update
+- Sharp distinctions: reaction ≠ learning, postmortem ≠ learning, outcome ≠ learning
+- Three update targets: Goal, Policy, Interpretation (including Action Model)
+- Healthcare campaign example traced through complete learning sequence
+- Agent safety example: ticket resolution ≠ communication readiness
+- Learning reshapes future topography — prior lessons change the landscape
+- 13 subsections closing the adaptive loop
+
 ## 2026-06-12 — Section 7 (Hallucination and Harmful Action) Drafted
 - Hallucination and harmful action as related failures sharing premature-sufficiency structure
 - Shared failure grammar: goal pressure + weak grounding/constraint + misplaced confidence + low-friction path
