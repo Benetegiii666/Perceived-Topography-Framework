@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-12 — Section 2 (A Note on Terms) Drafted
+- 25 terms defined with framework-specific usage and intellectual lineage citations
+- Terms include: optimizer, agent, goal, policy, interpretation, reasoning state, topography, perceived topography, information surface, gradient, visibility, accessibility, representation, confidence, connectivity, attraction, investigation, sufficiency, action, prediction error, learning, premise stack, model update object, discovery, alignment, governance, hallucination
+- 10 citation placeholders used (Simon, Weick, Ng, Argyris/Schon, Cyert/March, DeepMind, RAG)
+- Each term clarifies what it IS and what it IS NOT in this framework
+
 ## 2026-06-12 — PAPER_DRAFT.md Created, Section 1 Drafted
 - Created `08_PAPER_DRAFTS/PAPER_DRAFT.md` with full 17-section skeleton
 - Section 1 (Introduction: From Agent Fear to Topography Design) drafted — ~2,500 words
