@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — Section 3 (Context Is Not Reasoning State) Drafted
+- Core argument: context layers retrieve information but not the reasoning state that makes information meaningful
+- Introduces context vs reasoning state distinction, documents vs state transitions, knowledge reuse vs reasoning reuse
+- Establishes "the organization appears to have memory but behaves as if it does not"
+- Healthcare campaign example shows reasoning-state system inferring and proposing vs context-only system retrieving
+- Bridges to safety: reasoning state enables more precise failure diagnosis than rule-violation checking
+- Sets up the six reasoning architecture objects
+
 ## 2026-06-12 — Section 2 (A Note on Terms) Drafted
 - 25 terms defined with framework-specific usage and intellectual lineage citations
 - Terms include: optimizer, agent, goal, policy, interpretation, reasoning state, topography, perceived topography, information surface, gradient, visibility, accessibility, representation, confidence, connectivity, attraction, investigation, sufficiency, action, prediction error, learning, premise stack, model update object, discovery, alignment, governance, hallucination
