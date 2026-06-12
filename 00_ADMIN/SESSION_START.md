@@ -128,7 +128,7 @@ See `00_ADMIN/RESEARCH_ROADMAP.md` for full detail.
 **PHASE 4 — Validate Architecture** ← ACTIVE
 - [x] 4.1 Learning Events ✅
 - [x] 4.2 Model Update Objects ✅ (3-layer structure, Premise Stack, 8 rules, 10 failure modes, cross-domain)
-- [ ] 4.3 Reasoning Architecture traces to theory (CA_007)
+- [x] 4.3 Reasoning Architecture Validation ✅ (6 objects, state-transition-centered, validated)
 - [ ] 4.4 Discovery Framework traces to dimensions (OP_002)
 
 **PHASE 5 — Stop.** No new dimensions. No new primitives. No new layers. No new entities.

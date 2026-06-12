@@ -90,6 +90,20 @@ Expectation → Action → Outcome → Prediction Error → Investigation → Ev
 
 **Adaptive loop closure:** Optimizer → Motion → Outcome → Prediction Error → Learning → Model Update Object → Modified Optimizer.
 
+## Reasoning Architecture (Phase 4.3 — Complete)
+
+**Central thesis:** The unit of organizational reasoning is not the document — it is the optimizer state transition.
+
+Six minimum viable objects:
+
+```
+Optimizer State → Premise Stack → Decision State → Investigation Trace → Learning Event → Model Update Object → Modified Optimizer State
+```
+
+Documents are source artifacts (evidence, premises, references). Reasoning objects preserve state transitions built from those documents. Each object prevents a distinct failure mode.
+
+Supporting concerns (required but not standalone): Information Surface Context, Sufficiency Rationale, Observability, Human-Ready View, Applicability Boundary, Confidence.
+
 ## Layer Separation (FL_010)
 
 The framework operates at four distinct layers:
@@ -104,9 +118,7 @@ The framework operates at four distinct layers:
 ## What Has NOT Been Decided
 
 - Whether Decision Space and Capability are primitives, derived, or collapsible
-- Whether Phase 4.3 (Model Update Lifecycle/Governance) is needed or is implementation-layer work
-- Phase 4 validation: Do reasoning architecture objects trace to theory?
-- Phase 4 validation: Do discovery questions trace to dimensions?
+- Phase 4.4 validation: Do discovery questions trace to dimensions and reasoning objects?
 
 ## Active Fault Lines
 

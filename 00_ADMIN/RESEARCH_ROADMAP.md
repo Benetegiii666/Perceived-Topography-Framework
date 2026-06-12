@@ -129,20 +129,20 @@
 
 ---
 
-### Task 4.3 — Reasoning Architecture Validation
+### Task 4.3 — Reasoning Architecture Validation — **COMPLETE**
 
-Return to: Working Theory, Evidence, Decision, Outcome, Uncertainty.
+- [x] Central thesis: unit of reasoning is optimizer state transition, not document ✓
+- [x] Six minimum viable objects defined (Optimizer State, Premise Stack, Decision State, Investigation Trace, Learning Event, Model Update Object) ✓
+- [x] Two candidates demoted to supporting concerns (Information Surface Snapshot → context, Sufficiency Rationale → field) ✓
+- [x] Each object prevents a distinct failure ✓
+- [x] Document/reasoning-object relationship formalized (documents = source artifacts, reasoning objects = state transitions) ✓
+- [x] Validated against AI agent customer communication scenario ✓
 
-**Question:** Do these emerge naturally from the theory?
-
-**Done When:**
-- [ ] Each object traces back to Optimizer Theory + Topography Dimensions
-
-**Deliverable:** `CA_007_Reasoning_Architecture_Validation.md`
+**Deliverable:** `01_CONCEPT_ARCHITECTURE/REASONING_ARCHITECTURE.md` — **COMPLETE**
 
 ---
 
-### Task 4.2 — Validate Discovery Framework
+### Task 4.4 — Validate Discovery Framework
 
 **Question:** Do interview questions naturally emerge from theory?
 
