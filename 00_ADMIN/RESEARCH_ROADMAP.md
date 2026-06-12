@@ -190,4 +190,25 @@ If we achieve that, this phase is complete and worthy of filing as a major miles
 3. No new layers without pressure testing
 4. No new entities without tracing back to theory
 5. If a rabbit hole opens, file it and move on — don't chase it
-6. Phase 3 is the priority target — dimensions without motion is taxonomy, not theory
+
+---
+
+## PHASE 6 — Narrative Paper v1 — **ACTIVE**
+
+**Concept Architecture v0.1 frozen.** No new theory expansion unless contradiction emerges during drafting.
+
+**Working title:** The Perceived Topography Framework: A Reasoning-State Architecture for Human-Agent Systems
+
+### Deliverables
+
+- [x] PAPER_ARCHITECTURE.md — 17-section argument arc ✓
+- [ ] PAPER_DRAFT.md — Section-by-section narrative
+- [ ] SVG_SPECIFICATIONS.md — Four diagram specifications
+- [ ] RELATED_WORK.md — Literature and citations
+- [ ] Final paper assembly
+
+### Guardrails
+
+**Allowed:** Clarify language, compress concepts, define terms, choose examples, add citations, design diagrams, write narrative sections, identify validation methods.
+
+**NOT allowed without explicit approval:** New primitives, new topography dimensions, new optimizer phases, new foundational architecture documents, major theory expansion.

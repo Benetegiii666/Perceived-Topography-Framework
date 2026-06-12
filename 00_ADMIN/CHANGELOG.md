@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-12 — Phase 6 Initiated: Narrative Paper v1
+- Concept Architecture v0.1 frozen. No new theory expansion unless contradiction emerges.
+- Created `08_PAPER_DRAFTS/PAPER_ARCHITECTURE.md` — 17-section argument arc
+- Working title: "The Perceived Topography Framework: A Reasoning-State Architecture for Human-Agent Systems"
+- Full A Note on Terms section drafted (20 defined terms)
+- 5 citation anchors identified (Anthropic, OpenAI, DeepMind)
+- 4 SVG diagrams specified
+- Paper guardrails established: language/examples/citations allowed; new primitives/dimensions/phases not allowed
+
 ## 2026-06-12 — MILESTONE: Phase 4 Complete + Phase 5 Stop Gate Reached
 - Phase 4.4 COMPLETE: Discovery Framework Validation
 - Discovery reframed as adaptive process: Retrieve → Infer → Propose → Confirm → Generate → Preserve → Learn
