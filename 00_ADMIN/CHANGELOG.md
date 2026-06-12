@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-06-12 — MILESTONE: Section 17 (Conclusion) Drafted — Paper v0.1 COMPLETE
+- All 17 sections drafted
+- Conclusion returns to opening fear frame and lands four aha moments
+- Framework commits to remaining testable — "a model of adaptation must adapt"
+- Final claim: "Agents are not evil. They are optimizers moving through landscapes. If we want better motion, we must build better landscapes."
+- Paper v0.1 draft is complete. Next: review, revision, citation resolution, SVG generation.
+
 ## 2026-06-12 — Section 16 (Implications) Drafted
 - 14 implications: safety as topography design, distributed alignment, enterprise reasoning, knowledge transitions, governance force, sufficiency-first products, better collaboration, state-transition evaluation, postmortem-to-MUO, agent memory with model change, interaction-layer research, start-small guidance
 - Deepest implication: AI systems should be adaptive reasoning participants, not just output generators
