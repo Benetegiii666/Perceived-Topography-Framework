@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-12 — PAPER_DRAFT.md Created, Section 1 Drafted
+- Created `08_PAPER_DRAFTS/PAPER_DRAFT.md` with full 17-section skeleton
+- Section 1 (Introduction: From Agent Fear to Topography Design) drafted — ~2,500 words
+- Opens with agentic misalignment observations, reframes as optimizer/topography, introduces containment+topography dual safety model, connects hallucination and harmful action through premature sufficiency, introduces healthcare running example, sets up reasoning-state need
+- 5 citation placeholders used, 6 additional identified as needed
+
 ## 2026-06-12 — Citation Strategy and Related Work Ledger
 - Created `08_PAPER_DRAFTS/RELATED_WORK_LEDGER.md` — 11 influence categories with citation targets
 - Added Intellectual Lineage and Citation Posture section to PAPER_ARCHITECTURE.md
