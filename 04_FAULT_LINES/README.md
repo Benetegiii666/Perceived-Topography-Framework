@@ -27,3 +27,5 @@ Contains contradictions, unresolved tensions, and conflicts between discoveries 
 - `FL_008_Selection_of_Information_Surfaces.md`
 - `FL_009_Optimizer_Architecture.md`
 - `FL_010_Layer_Separation.md`
+- `FL_014_Optimizer_Investigation_Dynamics.md` — **RESOLVED:** Goal-relevant observation + confidence gap = trigger
+- `FL_015_Sufficiency_as_Emergent_Behavior.md` — **RESOLVED:** Sufficiency = action stability, independent of confidence

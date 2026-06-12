@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-11 — Phase 3.2 + 3.3 Complete, D016 Learning Events, Framework State Update
+- FL_014 RESOLVED: Investigation Dynamics — trigger = goal-relevant observation + confidence gap; connectivity guides search; three termination conditions
+- FL_015 RESOLVED: Sufficiency = Action Stability — independent of confidence (both directions tested). Continue vs Act without new primitives.
+- D016 (Candidate): Learning Events — learning is evidence-supported model update, not outcome or postmortem. Full flow: Expectation → Action → Outcome → Prediction Error → Investigation → Explanation → Model Update.
+- Under Investigation: Decision Space (strong candidate, may be derived), Capability (distinct from Policy: "Can I?" vs "May I?")
+- Framework state snapshot added to pressure report: Optimizer (3) + Topography (5) + Derived (1) + Motion (4) + Termination (1) + Learning (emerging)
+- Research Roadmap tasks 3.2 and 3.3 marked complete
+
 ## 2026-06-11 — Layer Separation: Major Course Correction
 - FL_010: Theory / Topography Engineering / Architecture / Implementation formally separated as distinct layers
 - D015: Topography Engineering Dimensions — 6 candidates (Visibility, Accessibility, Representation, Confidence, Connectivity, Goal Relevance) + 2 modifiers

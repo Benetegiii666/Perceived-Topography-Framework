@@ -123,9 +123,11 @@ Run pairwise attacks:
 **Question:** What causes an optimizer to stop, look deeper, spawn a task, request more evidence?
 
 **Done When:**
-- [ ] We can describe investigation triggers
+- [x] We can describe investigation triggers ✓ Goal-Relevant Observation + Confidence Gap = Trigger
+- [x] Connectivity guides explanatory search ✓
+- [x] Three termination conditions identified ✓
 
-**Deliverable:** `FL_014_Optimizer_Investigation_Dynamics.md`
+**Deliverable:** `FL_014_Optimizer_Investigation_Dynamics.md` — **COMPLETE**
 
 ---
 
@@ -134,9 +136,11 @@ Run pairwise attacks:
 **Question:** When does an optimizer stop searching?
 
 **Done When:**
-- [ ] We can explain Continue Searching vs Act Now without introducing new primitives
+- [x] We can explain Continue Searching vs Act Now without introducing new primitives ✓
+- [x] Sufficiency defined as Action Stability ✓
+- [x] Confidence and Sufficiency shown to be independent (both directions tested) ✓
 
-**Deliverable:** `FL_015_Sufficiency_as_Emergent_Behavior.md`
+**Deliverable:** `FL_015_Sufficiency_as_Emergent_Behavior.md` — **COMPLETE**
 
 ---
 
@@ -154,6 +158,8 @@ Return to: Working Theory, Evidence, Decision, Outcome, Uncertainty.
 - [ ] Each object traces back to Optimizer Theory + Topography Dimensions
 
 **Deliverable:** `CA_007_Reasoning_Architecture_Validation.md`
+
+**Progress:** D016 (Learning Events) discovered during this phase — learning defined as evidence-supported model update, not outcome or postmortem. Learning flow: Expectation → Action → Outcome → Prediction Error → Investigation → Evidence-Supported Explanation → Model Update. Under continued investigation.
 
 ---
 

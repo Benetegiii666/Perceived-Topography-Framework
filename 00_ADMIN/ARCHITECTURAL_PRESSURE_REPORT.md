@@ -103,6 +103,30 @@ Reality → Gradients → Information Surfaces → Visible Gradients → Attenti
 
 **Status:** Pressure only. No architectural promotion. Requires independence tests.
 
+## Recently Resolved
+
+| Fault Line | Resolution | Date |
+|-----------|-----------|------|
+| FL_014: Investigation Dynamics | Goal-Relevant Observation + Confidence Gap = Trigger. Connectivity guides search. Sufficiency terminates. | 2026-06-11 |
+| FL_015: Sufficiency | Action Stability — sufficiency is independent of confidence. Low confidence + high sufficiency exists. | 2026-06-11 |
+
+## Under Investigation (Not Yet Filed as Fault Lines)
+
+**Decision Space:** Strong candidate, not accepted. Action stability appears to depend on available actions. May be derived: `Decision Space = f(Goal, Policy, Environment, Capability)`. Do not elevate to architecture yet.
+
+**Capability:** Under investigation. Appears distinct from Policy. Policy = "May I?" Capability = "Can I?" Further testing required before architectural promotion.
+
+## Current Framework State Snapshot
+
+```
+Optimizer: Goal, Policy, Interpretation
+Topography: Visibility, Accessibility, Representation, Confidence, Connectivity
+Derived: Goal Relevance
+Motion: Attention, Exploration, Investigation, Action
+Termination: Sufficiency
+Learning (Emerging): Expectation → Outcome → Prediction Error → Investigation → Model Update
+```
+
 ## Unresolved (No Active Pressure)
 
 - FL_004: Governance vs Topography — open, no new evidence
@@ -113,9 +137,9 @@ Reality → Gradients → Information Surfaces → Visible Gradients → Attenti
 
 ## Session Recommendations
 
-1. **Priority:** FL_007 — test the three outcomes against EC_004's examples
-2. **Second:** Populate remaining counterarguments (CA_001, CA_003, CA_004) — the framework needs more external pressure
-3. **Third:** Systematic archive review per D009 — look for latent mechanisms in seed language
+1. **Priority:** Phase 4.1 continuation — pressure test Learning vs Reaction distinction; determine structure of reusable model update
+2. **Second:** Decision Space and Capability — determine if these are primitives, derived, or collapsible
+3. **Third:** Follow Research Roadmap (`00_ADMIN/RESEARCH_ROADMAP.md`) — Phases 1-2 checklist items remain open
 
 ---
 
