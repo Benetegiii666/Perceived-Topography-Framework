@@ -95,11 +95,40 @@
 
 ---
 
-## PHASE 4 — Validate Architecture
+## PHASE 4 — Validate Architecture — **ACTIVE**
 
-**Only after theory is stable.**
+**Only after theory is stable.** Theory is stable (Phases 1-3 complete).
 
-### Task 4.1 — Revisit Reasoning Architecture
+### Task 4.1 — Learning Events — **COMPLETE**
+
+- [x] Learning defined: evidence-supported optimizer modification triggered by prediction error ✓
+- [x] Learning vs Reaction distinction established ✓
+- [x] Four update targets identified: Interpretation, Policy, Goal, Action Model ✓
+- [x] Capability and Decision Space tested — did not force new update targets ✓
+- [x] Model Update Object proposed as reusable unit of learning ✓
+- [x] Adaptive loop closed: Optimizer → Motion → Outcome → Error → Learning → Modified Optimizer ✓
+
+**Deliverable:** `01_CONCEPT_ARCHITECTURE/LEARNING.md` — **COMPLETE**
+
+---
+
+### Task 4.2 — Model Update Objects — **NEXT**
+
+**Question:** What exact structure should a Model Update Object have so future optimizers can retrieve, evaluate, and apply it correctly?
+
+**Done When:**
+- [ ] Required fields defined
+- [ ] Optional fields defined
+- [ ] Applicability boundaries formalized
+- [ ] Confidence handling specified
+- [ ] Retrieval/use rules for future optimizers
+- [ ] Failure modes of bad model updates identified
+
+**Deliverable:** TBD
+
+---
+
+### Task 4.3 — Reasoning Architecture Validation
 
 Return to: Working Theory, Evidence, Decision, Outcome, Uncertainty.
 
@@ -109,8 +138,6 @@ Return to: Working Theory, Evidence, Decision, Outcome, Uncertainty.
 - [ ] Each object traces back to Optimizer Theory + Topography Dimensions
 
 **Deliverable:** `CA_007_Reasoning_Architecture_Validation.md`
-
-**Progress:** D016 (Learning Events) discovered during this phase — learning defined as evidence-supported model update, not outcome or postmortem. Learning flow: Expectation → Action → Outcome → Prediction Error → Investigation → Evidence-Supported Explanation → Model Update. Under continued investigation.
 
 ---
 

@@ -125,9 +125,11 @@ See `00_ADMIN/RESEARCH_ROADMAP.md` for full detail.
 - [x] 3.2 Investigation Dynamics (FL_014) ✅
 - [x] 3.3 Sufficiency as Emergent Behavior (FL_015) ✅
 
-**PHASE 4 — Validate Architecture**
-- [ ] 4.1 Reasoning Architecture traces to theory (CA_007)
-- [ ] 4.2 Discovery Framework traces to dimensions (OP_002)
+**PHASE 4 — Validate Architecture** ← ACTIVE
+- [x] 4.1 Learning Events ✅ (evidence-supported optimizer modification; 4 update targets; adaptive loop closed)
+- [ ] 4.2 Model Update Object structure
+- [ ] 4.3 Reasoning Architecture traces to theory (CA_007)
+- [ ] 4.4 Discovery Framework traces to dimensions (OP_002)
 
 **PHASE 5 — Stop.** No new dimensions. No new primitives. No new layers. No new entities.
 

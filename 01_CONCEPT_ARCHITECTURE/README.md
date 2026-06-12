@@ -18,6 +18,7 @@ If a discovery or insight conflicts with the architecture defined here:
 - `OPTIMIZER_THEORY.md` — **Phase 1 Complete** — Goal, Policy, Interpretation as optimizer primitives
 - `INFORMATION_TOPOGRAPHY.md` — **Phase 2 Complete** — Visibility, Accessibility, Representation, Confidence, Connectivity
 - `OPTIMIZER_MOTION.md` — **Phase 3 Complete** — Attraction → Investigation → Sufficiency → Action
+- `LEARNING.md` — **Phase 4.1 Complete** — Learning as evidence-supported optimizer modification; Model Update Objects
 - `CORE_THESIS.md` — The central argument of the framework
 - `SUPPORTING_THESES.md` — Secondary claims that extend the core thesis
 - `DEFINITIONS.md` — Precise definitions of all framework terms

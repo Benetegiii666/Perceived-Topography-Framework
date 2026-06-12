@@ -66,13 +66,19 @@ Attraction → Investigation → Sufficiency → Action
 - Action Stability — independent of Confidence
 - Act when additional information is unlikely to change the selected action
 
-## Learning (Emerging)
+## Learning (Phase 4.1 — Complete)
+
+**Definition:** Learning is an evidence-supported optimizer modification triggered by prediction error.
 
 ```
 Expectation → Action → Outcome → Prediction Error → Investigation → Evidence-Supported Explanation → Model Update
 ```
 
-Learning is evidence-supported model update, not outcome or postmortem (D016).
+**Four update targets:** Interpretation, Policy, Goal, Action Model.
+
+**Reusable unit:** Model Update Object (preserves reasoning chain + applicability boundary + confidence).
+
+**Adaptive loop closure:** Optimizer → Motion → Outcome → Prediction Error → Learning → Modified Optimizer.
 
 ## Layer Separation (FL_010)
 
@@ -88,11 +94,10 @@ The framework operates at four distinct layers:
 ## What Has NOT Been Decided
 
 - Whether Decision Space and Capability are primitives, derived, or collapsible
-- Whether Learning vs Reaction is a clean distinction
-- Structure of reusable model updates for organizational/agent memory
+- Action Model classification (optimizer subcomponent? derived? architecture-layer?)
+- Model Update Object exact structure (Phase 4.2 — next)
 - Phase 4 validation: Do reasoning architecture objects trace to theory?
 - Phase 4 validation: Do discovery questions trace to dimensions?
-- Cross-layer leaks: How Goal and Policy relate across Theory/Engineering/Architecture layers
 
 ## Active Fault Lines
 

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-06-11 — Phase 4.1 Complete: Learning Events — Adaptive Loop Closed
+- Learning defined: evidence-supported optimizer modification triggered by prediction error
+- Learning vs Reaction distinction established (reaction = overcorrection without investigation)
+- Four update targets: Interpretation, Policy, Goal, Action Model
+- Action Model emerged as necessary target — classification under investigation
+- Model Update Object proposed as reusable unit (preserves reasoning chain + applicability boundary)
+- Adaptive loop closed: Optimizer → Motion → Outcome → Error → Learning → Modified Optimizer
+- Capability and Decision Space tested — did not force new targets, remain under investigation
+- Created `01_CONCEPT_ARCHITECTURE/LEARNING.md` — Phase 4.1 foundational document
+- Phase 4.2 (Model Update Object structure) identified as next work
+
 ## 2026-06-11 — MILESTONE: Phase 3 Complete — Optimizer Motion Model Resolved
 - FL_013 RESOLVED: Attraction — two modes (Action: Goal Relevance + Confidence; Exploration: + Confidence Gap + Connectivity)
 - Phase 3 fully complete: Attraction → Investigation → Sufficiency → Action
