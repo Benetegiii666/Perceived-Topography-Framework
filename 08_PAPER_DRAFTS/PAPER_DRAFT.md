@@ -200,6 +200,9 @@ Representation is one reason context layers alone are insufficient. Retrieved in
 
 Confidence is not the same as truth. It is a behavioral variable: high-confidence information exerts more force than low-confidence information. Confidence also affects whether the optimizer acts, investigates, escalates, or abstains.
 
+
+In this paper, capitalized Confidence refers to the topography dimension: how trustworthy, grounded, or reliable a perceived information surface appears to the optimizer. Lowercase confidence refers to the general degree of belief or reliability assigned in ordinary reasoning contexts.
+
 The framework treats hallucination partly as a confidence/sufficiency failure: the system moves to answer before evidence is strong enough to support the claim. [DEEPMIND_GOPHERCITE] [RAG_FOUNDATIONAL]
 
 ## Connectivity
@@ -263,6 +266,8 @@ Premise stacks matter because failures are often misdiagnosed. Without knowing t
 A **Model Update Object** is a reusable record of learning.
 
 It preserves the prior expectation, premise stack, triggering action, observed outcome, prediction error, evidence trace, explanation, update target, applicability boundary, and confidence level. Its purpose is to prevent learning from degrading into folklore, memory, or isolated postmortem notes.
+
+A model update is the change in future reasoning. A Model Update Object is the durable record of that change.
 
 ## Discovery
 
@@ -428,9 +433,9 @@ A context layer may retrieve a postmortem. A reasoning layer converts the postmo
 
 ## Reasoning State Is the Missing Unit
 
-The central claim of this paper is that human-agent systems need a unit of memory smaller than an organization and larger than a retrieved chunk: the reasoning state transition.
+The central claim of this paper is that human-agent systems need a unit of memory smaller than an organization and larger than a retrieved chunk: the reasoning-state transition.
 
-A reasoning state transition captures how an optimizer moved from one state to another:
+A reasoning-state transition captures how an optimizer moved from one state to another:
 
 > Given this goal, under these constraints, with this interpretation, based on these premises, seeing this information, trusting it to this degree, considering these alternatives, judging this sufficient, the optimizer acted. Then reality responded. The outcome confirmed or violated the expectation. The system learned, failed to learn, or reacted.
 
@@ -2204,6 +2209,8 @@ It contains eleven fields:
 
 **Confidence** records how strongly the system should trust the update. Without it, weakly supported lessons become false certainty.
 
+The Confidence field in a Model Update Object records how strongly the learning should shape future behavior. It is related to the topography dimension Confidence, but it is not identical: the topography dimension concerns perceived trustworthiness during reasoning, while the Model Update Object field concerns the reliability of a completed learning update.
+
 ---
 
 ## 9.4 Observability Envelope
@@ -2404,7 +2411,7 @@ The framework defines six core reasoning objects:
 | 5 | Learning Event | Where did reality contradict the model? |
 | 6 | Model Update Object | What reusable change should shape future reasoning? |
 
-Together, these objects preserve the reasoning state transition.
+Together, these objects preserve the reasoning-state transition.
 
 ---
 
@@ -2990,7 +2997,7 @@ This confirmation updates the reasoning state. The system now has enough to act.
 
 ---
 
-## 12.6 Sufficiency
+## 12.6 Sufficiency Rationale
 
 The system records a sufficiency rationale: the goal is confirmed, the audience is confirmed, claims policy is visible, prior model updates support the direction, buying-stage readiness will be included, and remaining uncertainty can be preserved as prediction-error triggers rather than blocking generation.
 
