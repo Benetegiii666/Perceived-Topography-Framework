@@ -298,7 +298,7 @@ Discovery is where human intent first becomes agent-usable reasoning state.
 
 The framework does not treat alignment only as value matching between a model and a human. It treats alignment as a property of the broader human-agent system: goals, policies, interpretations, information surfaces, action affordances, confidence structures, oversight, and learning loops must work together so that behavior reliably moves toward intended outcomes.
 
-This does not replace existing AI alignment work. It reframes one applied layer of the problem: the designed topography through which agent behavior emerges. [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY]
+This does not replace existing AI alignment work. It reframes one applied layer of the problem: the designed topography through which agent behavior emerges. [Ji et al., 2023]
 
 ## Governance
 
@@ -377,7 +377,7 @@ A reasoning-state layer must also answer:
 
 The difference matters because organizational failure often survives document retrieval. A campaign brief may exist, but the system may not know which assumption inside the brief later failed. A policy may exist, but the agent may not encounter it at the moment of action. A postmortem may exist, but its lesson may not be represented in a form that can shape future behavior. A dashboard may show the outcome, but not the premise that made the outcome surprising. A playbook may describe what to do, but not when it should be overridden, escalated, or reinterpreted.
 
-Organizations already experience this problem without AI. They store documents but lose decisions. They remember outcomes but forget assumptions. They perform retrospectives but fail to update future behavior. They create playbooks that drift from practice. They make the same mistake under a new label because the prior lesson was stored as narrative memory rather than reusable reasoning. AI systems amplify this failure because they can retrieve and generate faster than they can understand the state transitions that made the information meaningful. [ORGANIZATIONAL_MEMORY] [KNOWLEDGE_MANAGEMENT] [March & Simon, 1958]
+Organizations already experience this problem without AI. They store documents but lose decisions. They remember outcomes but forget assumptions. They perform retrospectives but fail to update future behavior. They create playbooks that drift from practice. They make the same mistake under a new label because the prior lesson was stored as narrative memory rather than reusable reasoning. AI systems amplify this failure because they can retrieve and generate faster than they can understand the state transitions that made the information meaningful. [Walsh & Ungson, 1991] [Alavi & Leidner, 2001] [March & Simon, 1958]
 
 This is why retrieval alone cannot solve the problem.
 
@@ -1330,7 +1330,7 @@ Investigation is not generic curiosity. It is goal-directed uncertainty reductio
 
 A system should not investigate forever. Nor should it investigate every possible uncertainty. Investigation is justified when the answer could materially change the action, the confidence level, the escalation path, or the applicability of a prior model update.
 
-This connects the framework to bounded rationality, information foraging, value-of-information reasoning, and rational metareasoning. Systems do not search indefinitely. They allocate attention and search effort under constraints. [Simon, 1955] [INFORMATION_FORAGING] [VALUE_OF_INFORMATION] [RATIONAL_METAREASONING]
+This connects the framework to bounded rationality, information foraging, value-of-information reasoning, and rational metareasoning. Systems do not search indefinitely. They allocate attention and search effort under constraints. [Simon, 1955] [Pirolli & Card, 1999] [Howard, 1966] [Russell & Wefald, 1991]
 
 Consider the healthcare campaign example.
 
@@ -2378,7 +2378,7 @@ Its central claim:
 - [POSTMORTEM_PRACTICES]
 - [INCIDENT_LEARNING]
 - [KNOWLEDGE_REPRESENTATION]
-- [CASE_BASED_REASONING]
+- [Aamodt & Plaza, 1994]
 - [ORGANIZATIONAL_ROUTINES]
 - [AI_MEMORY_SYSTEMS]
 - [HUMAN_AI_COLLABORATION]
@@ -2646,7 +2646,7 @@ The principle is simple:
 - [ORGANIZATIONAL_MEMORY]
 - [DECISION_PROVENANCE]
 - [ORGANIZATIONAL_LEARNING]
-- [CASE_BASED_REASONING]
+- [Aamodt & Plaza, 1994]
 - [HCI_HUMAN_AI_COLLABORATION]
 - [AGENT_MEMORY_SYSTEMS]
 
@@ -3181,7 +3181,7 @@ The next section sketches an implementation bridge.
 - [ORGANIZATIONAL_LEARNING]
 - [KNOWLEDGE_MANAGEMENT]
 - [DECISION_PROVENANCE]
-- [CASE_BASED_REASONING]
+- [Aamodt & Plaza, 1994]
 
 **Likely needed:**
 - [MARKETING_ANALYTICS]
@@ -3429,7 +3429,7 @@ A framework that cannot be tested becomes rhetoric. The next section defines how
 - [WORKFLOW_AUTOMATION]
 - [HUMAN_AI_COLLABORATION]
 - [AI_GOVERNANCE]
-- [CASE_BASED_REASONING]
+- [Aamodt & Plaza, 1994]
 
 **Likely needed:**
 - [MCP_TOOL_PROTOCOLS]
@@ -3786,7 +3786,7 @@ The posture is simple:
 
 ## 15.1 Bounded Rationality and Satisficing
 
-The framework's treatment of sufficiency is directly indebted to Herbert Simon's work on bounded rationality and satisficing. [Simon, 1955] [BOUNDED_RATIONALITY_SURVEY]
+The framework's treatment of sufficiency is directly indebted to Herbert Simon's work on bounded rationality and satisficing. [Simon, 1955] [de Clippel & Rozen, 2024]
 
 The framework uses this lineage in three ways: it treats agents and organizations as bounded; it distinguishes confidence from sufficiency; and it treats investigation as bounded search.
 
@@ -3844,7 +3844,7 @@ The framework uses a broader, systems-level notion of gradient: directional pres
 
 ## 15.8 Retrieval-Augmented Generation and Grounding
 
-The framework is closely related to RAG and evidence-backed answering. [Lewis et al., 2020] [Menick et al., 2022] [RAG_EVALUATION]
+The framework is closely related to RAG and evidence-backed answering. [Lewis et al., 2020] [Menick et al., 2022] [Yu et al., 2024]
 
 The framework treats grounding as part of the Confidence and Sufficiency problem. But it argues grounding alone is not enough — a source may support a claim while the system still lacks the goal, policy, premise stack, decision state, sufficiency rationale, and model update needed for organizational reasoning.
 
@@ -3854,7 +3854,7 @@ The framework is complementary to RAG, not a replacement.
 
 ## 15.9 AI Safety, Alignment, and Agentic Misalignment
 
-The framework is motivated by concerns about agentic AI systems. [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY]
+The framework is motivated by concerns about agentic AI systems. [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [Ji et al., 2023]
 
 The framework contributes a complementary diagnostic lens. It does not replace alignment research, capability evaluations, or deployment safeguards. It reframes one applied layer of safety: the designed topography through which agent behavior emerges.
 
@@ -3864,7 +3864,7 @@ The safety claim: containment is necessary but incomplete. Safer systems require
 
 ## 15.10 Anti-Anthropomorphism and Behavioral Description
 
-The paper's opening argument is influenced by work cautioning against anthropomorphic descriptions of model behavior. [Shanahan et al., 2023] [AI_ANTHROPOMORPHISM]
+The paper's opening argument is influenced by work cautioning against anthropomorphic descriptions of model behavior. [Shanahan et al., 2023] [Shanahan, 2022]
 
 The optimizer frame preserves seriousness about risk while improving diagnostic precision. It avoids both errors: dismissing risk because the system is "just predicting tokens," and over-ascribing human-like inner life to behavior explainable through system dynamics.
 
@@ -3872,7 +3872,7 @@ The optimizer frame preserves seriousness about risk while improving diagnostic 
 
 ## 15.11 Knowledge Management and Organizational Memory
 
-The framework is related to knowledge management. [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT]
+The framework is related to knowledge management. [Alavi & Leidner, 2001] [Walsh & Ungson, 1991]
 
 The distinction: Knowledge management preserves artifacts. Reasoning architecture preserves state transitions. The two are complementary.
 
@@ -3880,7 +3880,7 @@ The distinction: Knowledge management preserves artifacts. Reasoning architectur
 
 ## 15.12 Decision Provenance, Design Rationale, and Workflow Traceability
 
-The framework overlaps with decision provenance and design rationale research. [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS]
+The framework overlaps with decision provenance and design rationale research. [Moreau et al., 2013] [Lee, 1997]
 
 The six reasoning objects can be understood as a provenance structure for adaptive reasoning — preserving not only lineage of artifacts, but lineage of belief, action, and learning.
 
@@ -3888,7 +3888,7 @@ The six reasoning objects can be understood as a provenance structure for adapti
 
 ## 15.13 Human-AI Collaboration and Mixed-Initiative Systems
 
-The Discovery Framework is related to HCI, mixed-initiative systems, and human-in-the-loop AI. [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES]
+The Discovery Framework is related to HCI, mixed-initiative systems, and human-in-the-loop AI. [Amershi et al., 2019] [Horvitz, 1999] [Johnson et al., 2014]
 
 The framework's contribution is connecting interaction design directly to reasoning-object creation. Discovery is not only a better conversation. It is the front door to Reasoning Architecture.
 
@@ -3896,7 +3896,7 @@ The framework's contribution is connecting interaction design directly to reason
 
 ## 15.14 Case-Based Reasoning
 
-The framework has affinities with case-based reasoning. [CASE_BASED_REASONING]
+The framework has affinities with case-based reasoning. [Aamodt & Plaza, 1994]
 
 A Model Update Object performs a related function to a case: it allows prior experience to shape future reasoning. The difference is that a Model Update Object is organized around model change, not merely prior example similarity. It helps prevent shallow analogy.
 
@@ -3904,7 +3904,7 @@ A Model Update Object performs a related function to a case: it allows prior exp
 
 ## 15.15 Uncertainty, Abstention, and Calibration
 
-The framework's treatment of hallucination and escalation is related to uncertainty calibration and abstention research. [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
+The framework's treatment of hallucination and escalation is related to uncertainty calibration and abstention research. [Guo et al., 2017] [Kadavath et al., 2022]
 
 The contribution is placing abstention, clarification, and escalation inside optimizer motion as possible actions produced by sufficiency judgment. This links uncertainty calibration to topography design.
 
@@ -3958,7 +3958,7 @@ If the blend is useful, then human-agent system design should shift in several w
 
 ### Citation Debt — Section 15
 
-**Used:** [Simon, 1955] [BOUNDED_RATIONALITY_SURVEY] [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958] [Cyert & March, 1963] [Argyris & Schön, 1978] [Weick, 1995] [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988] [Ng et al., 1999] [Lewis et al., 2020] [Menick et al., 2022] [RAG_EVALUATION] [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY] [Shanahan et al., 2023] [AI_ANTHROPOMORPHISM] [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT] [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS] [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES] [CASE_BASED_REASONING] [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
+**Used:** [Simon, 1955] [de Clippel & Rozen, 2024] [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958] [Cyert & March, 1963] [Argyris & Schön, 1978] [Weick, 1995] [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988] [Ng et al., 1999] [Lewis et al., 2020] [Menick et al., 2022] [Yu et al., 2024] [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [Ji et al., 2023] [Shanahan et al., 2023] [Shanahan, 2022] [Alavi & Leidner, 2001] [Walsh & Ungson, 1991] [Moreau et al., 2013] [Lee, 1997] [Amershi et al., 2019] [Horvitz, 1999] [Johnson et al., 2014] [Aamodt & Plaza, 1994] [Guo et al., 2017] [Kadavath et al., 2022]
 
 ### Draft Notes — Section 15
 
