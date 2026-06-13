@@ -36,7 +36,7 @@ These citations appear in the paper's body text with resolved author-year refere
 - Sections: S15
 - Frequency: 2 occurrences
 - Claim supported: Survey context for bounded rationality literature.
-- Verified metadata: de Clippel, G. & Rozen, K. (2024). "Bounded Rationality and Limited Data Sets." *Econometrica*. (Note: Verify exact title — may be a working paper or different survey. The bounded rationality survey literature is broad.)
+- Verified metadata: de Clippel, G., & Rozen, K. (2024). "Bounded Rationality in Choice Theory: A Survey." *Journal of Economic Literature*, 62(3), 995-1039. https://doi.org/10.1257/jel.20231592
 - Retired placeholders: [BOUNDED_RATIONALITY_SURVEY]
 
 ---
