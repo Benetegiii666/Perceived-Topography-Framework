@@ -1569,7 +1569,7 @@ This connection matters because it suggests that hallucination mitigation and ag
 
 ## 7.1 Hallucination as Premature Sufficiency
 
-Hallucination is commonly defined as the production of plausible but unsupported content. In language-model systems, this may include fabricated facts, nonexistent citations, incorrect summaries, invented policies, false claims about data, or confident answers beyond available evidence. [Menick et al., 2022] [Lewis et al., 2020] [GROUNDING_CITATION_GENERATION]
+Hallucination is commonly defined as the production of plausible but unsupported content. In language-model systems, this may include fabricated facts, nonexistent citations, incorrect summaries, invented policies, false claims about data, or confident answers beyond available evidence. [Menick et al., 2022] [Lewis et al., 2020]
 
 The topography frame describes hallucination as a motion failure.
 
@@ -1818,7 +1818,7 @@ The framework uses a narrow definition:
 
 > Learning is an evidence-supported model update triggered by prediction error.
 
-A bad outcome is not learning. A correction is not learning. A reaction is not learning. A postmortem is not necessarily learning. Learning occurs only when an expectation is violated, the mismatch is investigated, an evidence-supported explanation is formed, and the resulting model update changes future reasoning or behavior. [Argyris & Schön, 1978] [Cyert & March, 1963] [ORGANIZATIONAL_LEARNING]
+A bad outcome is not learning. A correction is not learning. A reaction is not learning. A postmortem is not necessarily learning. Learning occurs only when an expectation is violated, the mismatch is investigated, an evidence-supported explanation is formed, and the resulting model update changes future reasoning or behavior. [Argyris & Schön, 1978] [Cyert & March, 1963]
 
 The basic learning sequence is:
 
@@ -3812,7 +3812,7 @@ The framework shares the view that organizations adapt through feedback, search,
 
 ## 15.4 Organizational Learning
 
-The distinction between reaction and learning is indebted to organizational learning theory, especially single-loop and double-loop learning. [Argyris & Schön, 1978] [ORGANIZATIONAL_LEARNING]
+The distinction between reaction and learning is indebted to organizational learning theory, especially single-loop and double-loop learning. [Argyris & Schön, 1978]
 
 A reaction changes behavior after an outcome. Learning changes the model that produced the behavior. The framework's contribution is to formalize the minimum reasoning objects needed for human-agent systems to preserve this distinction.
 
@@ -3836,7 +3836,7 @@ The framework extends affordance intuitions into human-agent systems. A tool per
 
 ## 15.7 Reward Shaping and Environment Design
 
-The framework's use of **gradient** is related to reward shaping but is not equivalent to formal RL reward functions. [Ng et al., 1999] [REINFORCEMENT_LEARNING_REWARD_DESIGN]
+The framework's use of **gradient** is related to reward shaping but is not equivalent to formal RL reward functions. [Ng et al., 1999]
 
 The framework uses a broader, systems-level notion of gradient: directional pressures created by goals, information, confidence, constraints, tool access, action costs, evidence requirements, prior learning, and human oversight. Topography-first safety asks designers to shape these pressures so grounded behavior becomes the easiest sufficient path.
 
@@ -3844,7 +3844,7 @@ The framework uses a broader, systems-level notion of gradient: directional pres
 
 ## 15.8 Retrieval-Augmented Generation and Grounding
 
-The framework is closely related to RAG and evidence-backed answering. [Lewis et al., 2020] [GROUNDING_CITATION_GENERATION] [Menick et al., 2022] [RAG_EVALUATION]
+The framework is closely related to RAG and evidence-backed answering. [Lewis et al., 2020] [Menick et al., 2022] [RAG_EVALUATION]
 
 The framework treats grounding as part of the Confidence and Sufficiency problem. But it argues grounding alone is not enough — a source may support a claim while the system still lacks the goal, policy, premise stack, decision state, sufficiency rationale, and model update needed for organizational reasoning.
 
@@ -3958,7 +3958,7 @@ If the blend is useful, then human-agent system design should shift in several w
 
 ### Citation Debt — Section 15
 
-**Used:** [Simon, 1955] [BOUNDED_RATIONALITY_SURVEY] [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958] [Cyert & March, 1963] [Argyris & Schön, 1978] [ORGANIZATIONAL_LEARNING] [Weick, 1995] [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988] [Ng et al., 1999] [REINFORCEMENT_LEARNING_REWARD_DESIGN] [Lewis et al., 2020] [GROUNDING_CITATION_GENERATION] [Menick et al., 2022] [RAG_EVALUATION] [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY] [Shanahan et al., 2023] [AI_ANTHROPOMORPHISM] [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT] [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS] [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES] [CASE_BASED_REASONING] [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
+**Used:** [Simon, 1955] [BOUNDED_RATIONALITY_SURVEY] [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958] [Cyert & March, 1963] [Argyris & Schön, 1978] [Weick, 1995] [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988] [Ng et al., 1999] [Lewis et al., 2020] [Menick et al., 2022] [RAG_EVALUATION] [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY] [Shanahan et al., 2023] [AI_ANTHROPOMORPHISM] [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT] [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS] [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES] [CASE_BASED_REASONING] [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
 
 ### Draft Notes — Section 15
 
