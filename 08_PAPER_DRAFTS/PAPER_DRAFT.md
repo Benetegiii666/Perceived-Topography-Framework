@@ -28,6 +28,15 @@ If an optimizer is given a goal, tools, and a poorly shaped environment, it may 
 
 A useful image is simple: when a marble rolls downhill, we do not explain its motion only by studying the marble. We look at the slope. AI agents should be treated the same way. The challenge is not only to inspect the agent, restrict the agent, or reward the agent differently. The challenge may become less about rewarding agents and more about shaping the landscape they optimize within.
 
+
+The contrast can be stated visually before it is formalized:
+
+The diagrams in this paper are conceptual aids. Topography and gradients are analytic metaphors for how information, constraints, confidence, and action pathways shape optimizer behavior; they are not claims that agents perceive literal spatial landscapes.
+
+![From Agent Fear to Landscape Design](paper_assets/svg/fig1_fear_to_landscape.svg)
+
+*Figure 1 — From Agent Fear to Landscape Design.*
+
 This paper uses language carefully here. The point is not to deny that models can exhibit behavior that appears deceptive, self-protective, or strategically harmful. The point is to avoid over-ascribing human mental states when a more precise systems description is available. Prior work on language model behavior has also warned against falling too easily into anthropomorphic descriptions of model conduct. [DEEPMIND_ROLE_PLAY]
 
 The Perceived Topography Framework proposes a different starting point. Instead of asking only how to restrain an agent, it asks how to shape the information and action landscape through which the agent moves. What can the system see? What can it retrieve? What does it understand? What does it trust? What is connected to what? Which actions are cheap, salient, and reversible? Which require evidence, approval, or additional investigation? Which paths produce confidence, and which paths produce friction? Which outcomes are made attractive, and which are made unstable, costly, or unavailable?
@@ -438,6 +447,11 @@ The central claim of this paper is that human-agent systems need a unit of memor
 A reasoning-state transition captures how an optimizer moved from one state to another:
 
 > Given this goal, under these constraints, with this interpretation, based on these premises, seeing this information, trusting it to this degree, considering these alternatives, judging this sufficient, the optimizer acted. Then reality responded. The outcome confirmed or violated the expectation. The system learned, failed to learn, or reacted.
+
+
+![Context Is Not Reasoning State](paper_assets/svg/fig2_context_vs_reasoning_state.svg)
+
+*Figure 2 — Context Is Not Reasoning State.*
 
 This is the unit that most organizational AI systems do not preserve.
 
@@ -903,6 +917,12 @@ In each case, the information is present somewhere in the organization, but weak
 This distinction is crucial for human-agent systems. It explains why adding context does not necessarily improve decisions, why policies fail to govern action, why organizations repeat mistakes despite documentation, and why agents can behave unsafely even when "the right information" technically exists.
 
 ---
+
+The core structure of the framework can now be shown directly:
+
+![Optimizer in a Perceived Topography](paper_assets/svg/fig3_optimizer_in_topography.svg)
+
+*Figure 3 — Optimizer in a Perceived Topography.*
 
 ## 5.1 The Five Dimensions of Information Topography
 
@@ -1609,6 +1629,12 @@ These questions move failure analysis away from vague descriptions and toward de
 
 ---
 
+![Motion and Premature Sufficiency](paper_assets/svg/fig4_motion_and_premature_sufficiency.svg)
+
+*Figure 4 — Motion and Premature Sufficiency.*
+
+---
+
 ## 7.4 Why More Context Is Not Enough
 
 A common response to hallucination is to add retrieval. A common response to unsafe agent behavior is to add policy. Both are useful. Neither is enough by itself.
@@ -2077,6 +2103,11 @@ The learning loop can now be stated formally:
 Optimizer State → Motion through Information Topography → Action → Outcome → Prediction Error → Investigation → Evidence-Supported Explanation → Model Update → Updated Optimizer State / Updated Topography
 ```
 
+
+![Learning Is Model Change](paper_assets/svg/fig5_learning_is_model_change.svg)
+
+*Figure 5 — Learning Is Model Change.*
+
 This loop is the difference between a system that repeats patterns and a system that adapts.
 
 However, the loop still needs a durable representation.
@@ -2415,6 +2446,12 @@ Together, these objects preserve the reasoning-state transition.
 
 ---
 
+![Reasoning Architecture: Six Objects Preserve the State Transition](paper_assets/svg/fig6_reasoning_architecture_six_objects.svg)
+
+*Figure 6 — Reasoning Architecture: Six Objects Preserve the State Transition.*
+
+---
+
 ## 10.3 Optimizer State
 
 The **Optimizer State** records the active Goal, Policy, and Interpretation.
@@ -2714,6 +2751,12 @@ Runtime Discovery converts that messy input into reasoning objects. It is the on
 Initial Discovery designs the map. Runtime Discovery uses and updates the map.
 
 ---
+
+At runtime, Discovery turns messy human intent into preserved reasoning state through a structured loop:
+
+![Runtime Discovery Loop](paper_assets/svg/fig7_runtime_discovery_loop.svg)
+
+*Figure 7 — Runtime Discovery Loop.*
 
 ## 11.3 Retrieve
 
