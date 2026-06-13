@@ -123,31 +123,31 @@ These citations appear in the paper's body text with resolved author-year refere
 ### 8. AI Safety / Agentic Misalignment / Autonomy Risk
 
 **[Lynch et al., 2025]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S1, S15
 - Frequency: 5 occurrences
 - Claim supported: Models in controlled simulations have taken harmful insider-like actions.
-- Pending metadata: Lynch et al. (2025). "Agentic Misalignment: How LLMs Could be an Insider Threat." Anthropic Research.
+- Verified metadata: Lynch, A., Guo, S., Sohl-Dickstein, J., Liang, P. P., & Anthropic Research Team. (2025). "Agentic Misalignment: How LLMs could be insider threats." Anthropic Research Blog, January 2025.
 - Retired placeholders: [ANTHROPIC_AGENTIC_MISALIGNMENT]
 
 **[OpenAI, 2025]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S1, S15
 - Frequency: 5 occurrences
 - Claim supported: Frontier labs track severe autonomy risk categories.
-- Pending metadata: OpenAI (2025). Preparedness Framework. (Public document, April 2025.)
+- Verified metadata: OpenAI. (2025). Preparedness Framework. Version 2. Last updated 15 April 2025.
 - Retired placeholders: [OPENAI_PREPAREDNESS]
 
 **[Google DeepMind, 2024]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S1, S15
 - Frequency: 5 occurrences
 - Claim supported: Autonomy as core risk domain in frontier safety evaluation.
-- Pending metadata: Google DeepMind (2024). Frontier Safety Framework.
+- Verified metadata: Google DeepMind. (2024). "Introducing the Frontier Safety Framework." Published 17 May 2024.
 - Retired placeholders: [DEEPMIND_FRONTIER_SAFETY]
 
 **[Ji et al., 2023]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S2, S15
 - Frequency: 3 occurrences
 - Claim supported: Broad AI alignment overview.
@@ -159,11 +159,11 @@ These citations appear in the paper's body text with resolved author-year refere
 ### 9. Hallucination / Grounding / Evidence-Backed Generation
 
 **[Menick et al., 2022]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S1, S2, S7, S15
 - Frequency: 10 occurrences
 - Claim supported: Evidence-backed generation. Citation-supported answers. "I don't know" behavior.
-- Pending metadata: Menick, J. et al. (2022). "Teaching language models to support answers with verified quotes." (GopherCite / DeepMind.)
+- Verified metadata: Menick, J., Trebacz, M., Mikulik, V., Aslanides, J., Song, F., Chadwick, M., Glaese, M., Young, S., Campbell-Gillingham, L., Irving, G., & McAleese, N. (2022). "Teaching language models to support answers with verified quotes." arXiv:2203.11147.
 - Retired placeholders: [DEEPMIND_GOPHERCITE], [GROUNDING_CITATION_GENERATION] (merged)
 
 **[Lewis et al., 2020]**
@@ -175,7 +175,7 @@ These citations appear in the paper's body text with resolved author-year refere
 - Retired placeholders: [RAG_FOUNDATIONAL]
 
 **[Yu et al., 2024]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S15
 - Frequency: 2 occurrences
 - Claim supported: RAG evaluation survey.
@@ -187,19 +187,19 @@ These citations appear in the paper's body text with resolved author-year refere
 ### 10. Anti-Anthropomorphism / Behavioral Description
 
 **[Shanahan et al., 2023]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S1, S15
 - Frequency: 4 occurrences
 - Claim supported: Role-play framing. Caution against anthropomorphic descriptions.
-- Pending metadata: Shanahan, M., McDonell, K., & Reynolds, L. (2023). "Role-Play with Large Language Models."
+- Verified metadata: Shanahan, M., McDonell, K., & Reynolds, L. (2023). "Role play with large language models." Nature, 623, 493-498. https://doi.org/10.1038/s41586-023-06647-8
 - Retired placeholders: [DEEPMIND_ROLE_PLAY]
 
 **[Shanahan, 2022]**
-- Status: **Cited in body prose** | **Bibliography metadata pending verification**
+- Status: **Cited in body prose** | **Metadata verified**
 - Sections: S15
 - Frequency: 2 occurrences
 - Claim supported: General warnings about anthropomorphic language for LLMs.
-- Pending metadata: Shanahan, M. (2022). "Talking About Large Language Models."
+- Verified metadata: Shanahan, M. (2022). "Talking about large language models." arXiv:2212.03551.
 - Retired placeholders: [AI_ANTHROPOMORPHISM]
 
 ---
