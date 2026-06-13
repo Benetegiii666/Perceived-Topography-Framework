@@ -127,7 +127,7 @@ These citations appear in the paper's body text with resolved author-year refere
 - Sections: S1, S15
 - Frequency: 5 occurrences
 - Claim supported: Models in controlled simulations have taken harmful insider-like actions.
-- Verified metadata: Lynch, A., Guo, S., Sohl-Dickstein, J., Liang, P. P., & Anthropic Research Team. (2025). "Agentic Misalignment: How LLMs could be insider threats." Anthropic Research Blog, January 2025.
+- Verified metadata: Lynch, A., Wright, B., Larson, C., Troy, K. K., Ritchie, S. J., Mindermann, S., Perez, E., & Hubinger, E. (2025). "Agentic Misalignment: How LLMs Could be an Insider Threat." Anthropic Research. Published June 20, 2025. Note: Source metadata follows Anthropic Research page / BibTeX entry. The page title uses "insider threats"; the BibTeX title uses "How LLMs Could be an Insider Threat." Use the BibTeX title for bibliography consistency.
 - Retired placeholders: [ANTHROPIC_AGENTIC_MISALIGNMENT]
 
 **[OpenAI, 2025]**
