@@ -91,6 +91,8 @@ paper_assets/
 
 **File:** `svg/fig1_fear_to_landscape.svg`
 **Placement:** Section 1
+**Importance:** High
+**Reader Aha:** The agent is not only something to box; it is something moving through a designed landscape.
 **Canvas:** 1400 x 760
 **Layout:** Two-panel comparison
 
@@ -138,6 +140,8 @@ Absorbs the original "Fear Framing vs Topography Framing" diagram. Also absorbs 
 
 **File:** `svg/fig2_context_vs_reasoning_state.svg`
 **Placement:** Section 3
+**Importance:** High
+**Reader Aha:** Retrieving the right document is not the same as preserving why that document mattered.
 **Canvas:** 1400 x 760
 **Layout:** Three-layer vertical stack
 
@@ -178,7 +182,9 @@ Updated from the original two-column "Context vs Reasoning State" to a three-lay
 ## Figure 3 — Optimizer in a Perceived Topography
 
 **File:** `svg/fig3_optimizer_in_topography.svg`
-**Placement:** Section 4 or early Section 5
+**Placement:** Early Section 5, immediately after Information Topography is introduced.
+**Importance:** CRITICAL — non-negotiable
+**Reader Aha:** The optimizer does not navigate reality directly; it navigates perceived topography.
 **Canvas:** 1400 x 900
 **Layout:** Three-region horizontal with overlay
 
@@ -233,6 +239,8 @@ This diagram must avoid looking like a table or org chart. The topography region
 
 **File:** `svg/fig4_motion_and_premature_sufficiency.svg`
 **Placement:** Section 6 or Section 7
+**Importance:** High
+**Reader Aha:** Many failures are not mysterious; they are premature sufficiency.
 **Canvas:** 1400 x 820
 **Layout:** Process flow with failure shortcut
 
@@ -272,6 +280,8 @@ Absorbs the useful parts of the original "Box-First Safety vs Topography-First S
 
 **File:** `svg/fig5_learning_is_model_change.svg`
 **Placement:** Section 8 or Section 9
+**Importance:** High
+**Reader Aha:** Learning is not storage; learning is model change after prediction error.
 **Canvas:** 1200 x 900
 **Layout:** Loop with side contrast
 
@@ -321,6 +331,8 @@ New diagram — was missing from the original 5-diagram plan. Supports Sections 
 
 **File:** `svg/fig6_reasoning_architecture_six_objects.svg`
 **Placement:** Section 10
+**Importance:** CRITICAL — non-negotiable
+**Reader Aha:** The durable unit is not the document, but the optimizer state transition.
 **Canvas:** 1400 x 820
 **Layout:** Horizontal chain with supporting layer
 
@@ -364,6 +376,8 @@ Replaces the original "Core Framework Loop" diagram. The completed paper needs t
 
 **File:** `svg/fig7_runtime_discovery_loop.svg`
 **Placement:** Section 11 or Section 12
+**Importance:** High
+**Reader Aha:** Discovery is how messy intent becomes structured reasoning without making the user fill out a form.
 **Canvas:** 1400 x 820
 **Layout:** Horizontal flow left-to-right with output objects below
 
@@ -423,7 +437,7 @@ Vertical arrows from relevant main nodes:
 |--------|-------|---------|
 | 1 | From Agent Fear to Landscape Design | Section 1 |
 | 2 | Context Is Not Reasoning State | Section 3 |
-| 3 | Optimizer in a Perceived Topography | Section 4 or 5 |
+| 3 | Optimizer in a Perceived Topography | **Early Section 5** (locked) |
 | 4 | Motion and Premature Sufficiency | Section 6 or 7 |
 | 5 | Learning Is Model Change | Section 8 or 9 |
 | 6 | Reasoning Architecture: Six Objects | Section 10 |
@@ -433,8 +447,31 @@ Vertical arrows from relevant main nodes:
 
 ## Production Notes
 
-### First SVG Pass
-Conceptual, not final. Generate all seven after revision passes complete.
+### Generation Order
+
+Generate rough SVGs in this order (hardest first — if Figure 3 works, the rest inherit its visual language):
+
+1. Figure 3 — Optimizer in a Perceived Topography (CRITICAL)
+2. Figure 6 — Reasoning Architecture: Six Objects (CRITICAL)
+3. Figure 5 — Learning Is Model Change
+4. Figure 7 — Runtime Discovery Loop
+5. Figure 1 — From Agent Fear to Landscape Design
+6. Figure 2 — Context Is Not Reasoning State
+7. Figure 4 — Motion and Premature Sufficiency
+
+### Acceptance Criteria for First SVG Pass
+
+Each rough SVG should be judged against:
+
+- Can the reader understand the diagram in 10 seconds?
+- Does the diagram teach something the paragraph alone does not?
+- Does it preserve the framework's terminology exactly?
+- Does it avoid adding new theory?
+- Does it work in grayscale?
+- Does it have one clear aha?
+- Does it look like systems architecture meets field guide?
+
+Do not polish colors, spacing, or typography until the conceptual layout passes.
 
 ### Paper Text Notes
 Each diagram should include a short note in the paper text (not inside the SVG) explaining:
