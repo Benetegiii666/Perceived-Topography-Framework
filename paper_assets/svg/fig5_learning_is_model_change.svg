@@ -65,7 +65,8 @@
   <!-- Feedback loop: Changed State → Expectation -->
   <path d="M 730 748 Q 850 748, 880 650 Q 910 400, 880 200 Q 860 117, 670 117" fill="none" stroke="#2E8B57" stroke-width="1.5" stroke-dasharray="8,4"/>
   <polygon points="670,117 680,111 680,123" fill="#2E8B57"/>
-  <text x="910" y="400" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#2E8B57" text-anchor="start" font-style="italic" transform="rotate(90, 910, 400)">new expectations</text>
+  <text x="870" y="440" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#2E8B57" text-anchor="middle" font-style="italic">changed future</text>
+  <text x="870" y="455" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#2E8B57" text-anchor="middle" font-style="italic">expectations</text>
 
   <!-- ====== SIDE CONTRAST (left) ====== -->
 
