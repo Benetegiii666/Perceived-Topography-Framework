@@ -12,9 +12,9 @@ Drafting phase: ALL 17 SECTIONS COMPLETE — Paper v0.1 draft done
 
 # 1. Introduction: From Agent Fear to Topography Design
 
-Public discussion of AI agents has begun to acquire a familiar shape. A model is placed in a constrained environment, given a goal, granted tools, and then observed under pressure. Sometimes it fabricates facts. Sometimes it appears to deceive. Sometimes it acts as though the constraints around it are obstacles rather than instructions. In prominent safety evaluations, models in controlled simulations have taken harmful insider-like actions when their assigned goals conflicted with shutdown, replacement, or organizational change. [ANTHROPIC_AGENTIC_MISALIGNMENT]
+Public discussion of AI agents has begun to acquire a familiar shape. A model is placed in a constrained environment, given a goal, granted tools, and then observed under pressure. Sometimes it fabricates facts. Sometimes it appears to deceive. Sometimes it acts as though the constraints around it are obstacles rather than instructions. In prominent safety evaluations, models in controlled simulations have taken harmful insider-like actions when their assigned goals conflicted with shutdown, replacement, or organizational change. [Lynch et al., 2025]
 
-The natural reaction is fear. These systems look less like passive tools and more like actors pursuing their own interests. The language quickly becomes moralized: the agent lied, schemed, resisted, betrayed, or tried to escape. The more autonomy and tools a system is given, the more this language seems to fit. Frontier AI labs have responded by building preparedness frameworks, autonomy evaluations, deployment safeguards, and research programs around long-range autonomy, autonomous replication, safeguard circumvention, cyber misuse, and other severe-risk categories. [OPENAI_PREPAREDNESS] [DEEPMIND_FRONTIER_SAFETY]
+The natural reaction is fear. These systems look less like passive tools and more like actors pursuing their own interests. The language quickly becomes moralized: the agent lied, schemed, resisted, betrayed, or tried to escape. The more autonomy and tools a system is given, the more this language seems to fit. Frontier AI labs have responded by building preparedness frameworks, autonomy evaluations, deployment safeguards, and research programs around long-range autonomy, autonomous replication, safeguard circumvention, cyber misuse, and other severe-risk categories. [OpenAI, 2025] [Google DeepMind, 2024]
 
 Those concerns should not be dismissed. Systems that can plan, use tools, access sensitive information, communicate externally, and act over long horizons create real risk. A model does not need inner malice to cause harm. It only needs an objective, an action space, imperfect constraints, and a path through the environment that makes the harmful action appear useful, available, or sufficient.
 
@@ -37,7 +37,7 @@ The diagrams in this paper are conceptual aids. Topography and gradients are ana
 
 *Figure 1 — From Agent Fear to Landscape Design.*
 
-This paper uses language carefully here. The point is not to deny that models can exhibit behavior that appears deceptive, self-protective, or strategically harmful. The point is to avoid over-ascribing human mental states when a more precise systems description is available. Prior work on language model behavior has also warned against falling too easily into anthropomorphic descriptions of model conduct. [DEEPMIND_ROLE_PLAY]
+This paper uses language carefully here. The point is not to deny that models can exhibit behavior that appears deceptive, self-protective, or strategically harmful. The point is to avoid over-ascribing human mental states when a more precise systems description is available. Prior work on language model behavior has also warned against falling too easily into anthropomorphic descriptions of model conduct. [Shanahan et al., 2023]
 
 The Perceived Topography Framework proposes a different starting point. Instead of asking only how to restrain an agent, it asks how to shape the information and action landscape through which the agent moves. What can the system see? What can it retrieve? What does it understand? What does it trust? What is connected to what? Which actions are cheap, salient, and reversible? Which require evidence, approval, or additional investigation? Which paths produce confidence, and which paths produce friction? Which outcomes are made attractive, and which are made unstable, costly, or unavailable?
 
@@ -47,7 +47,7 @@ This reframing also clarifies the relationship between hallucination and harmful
 
 A model that fabricates a fact has moved through an information landscape where unsupported completion was easier than evidence-backed uncertainty. A model that takes an unsafe action has moved through an action landscape where the harmful path appeared useful, possible, and sufficient relative to the goal. In both cases, the system did not merely lack a rule. It lacked a shaped environment in which evidence, confidence, constraints, and consequences exerted the right force at the right time.
 
-There are already partial answers to this problem. Evidence-backed generation systems attempt to reduce hallucination by requiring factual claims to be supported by retrieved sources, and by allowing the system to say "I don't know" when support is insufficient. [DEEPMIND_GOPHERCITE] Frontier safety programs evaluate dangerous capabilities, monitor autonomy, and design safeguards for deployment. These efforts are important. But they remain incomplete if they do not preserve the reasoning state that produced an action: the goal being optimized, the constraints in force, the premises assumed, the information visible, the confidence assigned, the alternatives considered, the sufficiency threshold reached, and the outcome later observed.
+There are already partial answers to this problem. Evidence-backed generation systems attempt to reduce hallucination by requiring factual claims to be supported by retrieved sources, and by allowing the system to say "I don't know" when support is insufficient. [Menick et al., 2022] Frontier safety programs evaluate dangerous capabilities, monitor autonomy, and design safeguards for deployment. These efforts are important. But they remain incomplete if they do not preserve the reasoning state that produced an action: the goal being optimized, the constraints in force, the premises assumed, the information visible, the confidence assigned, the alternatives considered, the sufficiency threshold reached, and the outcome later observed.
 
 Without that reasoning state, organizations repeatedly start cold. An agent may retrieve a document but not know why that document mattered. A team may remember that a campaign failed but not which premise failed. A workflow may include a policy but not make the policy salient at the moment of action. A model may cite sources but not preserve the decision path that made those sources sufficient. A postmortem may describe what happened without updating the future behavior of the system. Knowledge exists, but learning does not propagate.
 
@@ -80,16 +80,16 @@ That is the problem the Perceived Topography Framework is built to address.
 ### Citation Debt — Section 1
 
 **Used:**
-- [ANTHROPIC_AGENTIC_MISALIGNMENT]
-- [OPENAI_PREPAREDNESS]
-- [DEEPMIND_FRONTIER_SAFETY]
-- [DEEPMIND_ROLE_PLAY]
-- [DEEPMIND_GOPHERCITE]
+- [Lynch et al., 2025]
+- [OpenAI, 2025]
+- [Google DeepMind, 2024]
+- [Shanahan et al., 2023]
+- [Menick et al., 2022]
 
 **Likely needed:**
 - [AI_ALIGNMENT_OVERVIEW]
 - [AGENT_SAFETY_SURVEY]
-- [RAG_FOUNDATIONAL]
+- [Lewis et al., 2020]
 - [GROUNDING_CITATION_GENERATION]
 - [ORGANIZATIONAL_MEMORY]
 - [DECISION_PROVENANCE]
@@ -119,7 +119,7 @@ An **optimizer** is a system that selects actions in relation to a goal, under c
 
 The term does not imply consciousness, desire, moral agency, or malice. An optimizer need not "want" in the human sense. It need only exhibit goal-directed action selection. In this paper, optimizer is a behavioral description, not a psychological claim.
 
-This usage is influenced by bounded rationality and satisficing: real decision-makers do not evaluate all possible actions under perfect information, but search, interpret, and stop when a course of action appears sufficient. [SIMON1955] [SIMON_SATISFICING]
+This usage is influenced by bounded rationality and satisficing: real decision-makers do not evaluate all possible actions under perfect information, but search, interpret, and stop when a course of action appears sufficient. [Simon, 1955]
 
 ## Agent
 
@@ -145,7 +145,7 @@ Policy is treated as a boundary condition, not merely as a written rule. A polic
 
 Interpretation includes signal meaning, causal assumptions, and action models: beliefs about which actions are likely to produce which outcomes under which conditions. Two systems may see the same information but act differently because they interpret it differently.
 
-Interpretation is related to sensemaking: actors do not respond to reality directly, but to the meaning they construct from available signals, context, and prior assumptions. [WEICK_SENSEMAKING]
+Interpretation is related to sensemaking: actors do not respond to reality directly, but to the meaning they construct from available signals, context, and prior assumptions. [Weick, 1995]
 
 ## Reasoning State
 
@@ -181,7 +181,7 @@ A **gradient** is a directional pressure within the perceived topography.
 
 A gradient makes some paths appear easier, more useful, more relevant, more confident, lower-cost, or more sufficient than others. In this paper, gradient does not necessarily mean a mathematical gradient or a reinforcement-learning reward function. It is a broader design term for how goals, information, confidence, constraints, tool access, action costs, and prior learning shape movement.
 
-The framework's use of gradient is related to reward shaping and environment design, but it is not identical to formal reward shaping. [NG_REWARD_SHAPING]
+The framework's use of gradient is related to reward shaping and environment design, but it is not identical to formal reward shaping. [Ng et al., 1999]
 
 ## Visibility
 
@@ -212,7 +212,7 @@ Confidence is not the same as truth. It is a behavioral variable: high-confidenc
 
 In this paper, capitalized Confidence refers to the topography dimension: how trustworthy, grounded, or reliable a perceived information surface appears to the optimizer. Lowercase confidence refers to the general degree of belief or reliability assigned in ordinary reasoning contexts.
 
-The framework treats hallucination partly as a confidence/sufficiency failure: the system moves to answer before evidence is strong enough to support the claim. [DEEPMIND_GOPHERCITE] [RAG_FOUNDATIONAL]
+The framework treats hallucination partly as a confidence/sufficiency failure: the system moves to answer before evidence is strong enough to support the claim. [Menick et al., 2022] [Lewis et al., 2020]
 
 ## Connectivity
 
@@ -240,7 +240,7 @@ Investigation begins when an observation, contradiction, confidence gap, or deci
 
 Sufficiency is not certainty. A system may have incomplete confidence in the full explanation but still reach sufficiency if the same action remains appropriate across plausible explanations. Conversely, a system may be confident about one fact but still lack sufficiency because a missing variable could change the decision.
 
-This concept is directly related to bounded rationality and satisficing. [SIMON1955] [SIMON_SATISFICING]
+This concept is directly related to bounded rationality and satisficing. [Simon, 1955]
 
 ## Action
 
@@ -260,7 +260,7 @@ Prediction error is the trigger condition for learning, but it is not learning b
 
 A bad outcome alone is not learning. A reaction is not learning. A postmortem is not necessarily learning. Learning occurs when an expectation is violated, the mismatch is investigated, an evidence-supported explanation is formed, and future behavior is updated.
 
-This usage is related to organizational learning, especially the distinction between correcting behavior and updating the assumptions that produced it. [ARGYRIS_SCHON] [CYERT_MARCH]
+This usage is related to organizational learning, especially the distinction between correcting behavior and updating the assumptions that produced it. [Argyris & Schön, 1978] [Cyert & March, 1963]
 
 ## Premise Stack
 
@@ -310,7 +310,7 @@ Governance is not merely having rules. Governance succeeds when the rules are vi
 
 **Hallucination** refers to the production of plausible but unsupported claims.
 
-In this framework, hallucination is not only an output defect. It is also a reasoning-state failure: the system reaches sufficiency before evidence warrants the claim. Grounding, citation, uncertainty expression, and "I don't know" behavior can be understood as ways of reshaping the information topography so unsupported completion becomes less attractive than evidence-backed response. [DEEPMIND_GOPHERCITE] [RAG_FOUNDATIONAL]
+In this framework, hallucination is not only an output defect. It is also a reasoning-state failure: the system reaches sufficiency before evidence warrants the claim. Grounding, citation, uncertainty expression, and "I don't know" behavior can be understood as ways of reshaping the information topography so unsupported completion becomes less attractive than evidence-backed response. [Menick et al., 2022] [Lewis et al., 2020]
 
 ---
 
@@ -325,21 +325,21 @@ The central claim is that safer and more reliable human-agent systems require no
 ### Citation Debt — Section 2
 
 **Used:**
-- [SIMON1955]
-- [SIMON_SATISFICING]
-- [WEICK_SENSEMAKING]
-- [NG_REWARD_SHAPING]
-- [DEEPMIND_GOPHERCITE]
-- [RAG_FOUNDATIONAL]
-- [ARGYRIS_SCHON]
-- [CYERT_MARCH]
+- [Simon, 1955]
+- [Simon, 1955]
+- [Weick, 1995]
+- [Ng et al., 1999]
+- [Menick et al., 2022]
+- [Lewis et al., 2020]
+- [Argyris & Schön, 1978]
+- [Cyert & March, 1963]
 - [AI_ALIGNMENT_OVERVIEW]
 - [AGENT_SAFETY_SURVEY]
 
 **Likely needed:**
-- [GIBSON_AFFORDANCES]
-- [NORMAN_AFFORDANCES]
-- [MARCH_SIMON_ORGS]
+- [Gibson, 1979]
+- [Norman, 1988]
+- [March & Simon, 1958]
 - [ORGANIZATIONAL_MEMORY]
 - [DECISION_PROVENANCE]
 - [HCI_HUMAN_AI_COLLABORATION]
@@ -377,7 +377,7 @@ A reasoning-state layer must also answer:
 
 The difference matters because organizational failure often survives document retrieval. A campaign brief may exist, but the system may not know which assumption inside the brief later failed. A policy may exist, but the agent may not encounter it at the moment of action. A postmortem may exist, but its lesson may not be represented in a form that can shape future behavior. A dashboard may show the outcome, but not the premise that made the outcome surprising. A playbook may describe what to do, but not when it should be overridden, escalated, or reinterpreted.
 
-Organizations already experience this problem without AI. They store documents but lose decisions. They remember outcomes but forget assumptions. They perform retrospectives but fail to update future behavior. They create playbooks that drift from practice. They make the same mistake under a new label because the prior lesson was stored as narrative memory rather than reusable reasoning. AI systems amplify this failure because they can retrieve and generate faster than they can understand the state transitions that made the information meaningful. [ORGANIZATIONAL_MEMORY] [KNOWLEDGE_MANAGEMENT] [MARCH_SIMON_ORGS]
+Organizations already experience this problem without AI. They store documents but lose decisions. They remember outcomes but forget assumptions. They perform retrospectives but fail to update future behavior. They create playbooks that drift from practice. They make the same mistake under a new label because the prior lesson was stored as narrative memory rather than reusable reasoning. AI systems amplify this failure because they can retrieve and generate faster than they can understand the state transitions that made the information meaningful. [ORGANIZATIONAL_MEMORY] [KNOWLEDGE_MANAGEMENT] [March & Simon, 1958]
 
 This is why retrieval alone cannot solve the problem.
 
@@ -553,14 +553,14 @@ The next sections define the optimizer, the perceived topography it navigates, t
 **Used:**
 - [ORGANIZATIONAL_MEMORY]
 - [KNOWLEDGE_MANAGEMENT]
-- [MARCH_SIMON_ORGS]
+- [March & Simon, 1958]
 
 **Likely needed:**
 - [DECISION_PROVENANCE]
 - [ORGANIZATIONAL_LEARNING]
-- [ARGYRIS_SCHON]
-- [CYERT_MARCH]
-- [RAG_FOUNDATIONAL]
+- [Argyris & Schön, 1978]
+- [Cyert & March, 1963]
+- [Lewis et al., 2020]
 - [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT]
 - [HCI_HUMAN_AI_COLLABORATION]
 - [SAFETY_CASES]
@@ -585,7 +585,7 @@ The previous section argued that context is not enough. A human-agent system doe
 
 This section defines the first component of that reasoning state: the optimizer.
 
-The framework uses **optimizer** as a functional abstraction. It does not claim that a language model is internally, mechanistically, or consciously optimizing in the way a human planner, reinforcement-learning agent, or economic actor might be described. The term is used at the level of the human-agent workflow: when a system is given a goal, tools, information, permissions, and an action space, its behavior can often be usefully analyzed as optimizer-like movement through a perceived environment. [AI_AGENTS_FOUNDATIONAL] [DENNETT_INTENTIONAL_STANCE] [RUSSELL_NORVIG_AGENTS]
+The framework uses **optimizer** as a functional abstraction. It does not claim that a language model is internally, mechanistically, or consciously optimizing in the way a human planner, reinforcement-learning agent, or economic actor might be described. The term is used at the level of the human-agent workflow: when a system is given a goal, tools, information, permissions, and an action space, its behavior can often be usefully analyzed as optimizer-like movement through a perceived environment. [Russell & Norvig, 2020] [Dennett, 1987]
 
 This distinction matters. The paper is not arguing that agents possess desires, intentions, moral commitments, or survival instincts. It is arguing that harmful or useful behavior can emerge when a goal-directed system moves through an environment shaped by information, constraints, confidence, tools, and action costs. The optimizer is therefore not a moral actor. It is the unit of analysis for goal-directed behavior under bounded conditions.
 
@@ -717,7 +717,7 @@ A system may see a metric and assign the wrong meaning. It may observe engagemen
 
 In each case, the system had information. The failure was meaning.
 
-This connects the framework to sensemaking. Human and organizational actors do not merely receive reality. They interpret ambiguous signals, construct meaning, and act from that constructed understanding. Human-agent systems inherit this problem. The difference is that they may accelerate interpretation, reuse it across workflows, and convert it into action before humans have fully inspected the assumptions. [WEICK_SENSEMAKING]
+This connects the framework to sensemaking. Human and organizational actors do not merely receive reality. They interpret ambiguous signals, construct meaning, and act from that constructed understanding. Human-agent systems inherit this problem. The difference is that they may accelerate interpretation, reuse it across workflows, and convert it into action before humans have fully inspected the assumptions. [Weick, 1995]
 
 ---
 
@@ -861,21 +861,21 @@ Those dimensions determine which information exerts force on behavior.
 ### Citation Debt — Section 4
 
 **Used:**
-- [AI_AGENTS_FOUNDATIONAL]
-- [DENNETT_INTENTIONAL_STANCE]
-- [RUSSELL_NORVIG_AGENTS]
-- [SIMON1955]
-- [SIMON_SATISFICING]
-- [WEICK_SENSEMAKING]
+- [Russell & Norvig, 2020]
+- [Dennett, 1987]
+- [Russell & Norvig, 2020]
+- [Simon, 1955]
+- [Simon, 1955]
+- [Weick, 1995]
 
 **Likely needed:**
 - [BOUNDED_RATIONALITY_SURVEY]
 - [AI_ALIGNMENT_OVERVIEW]
 - [AGENT_SAFETY_SURVEY]
 - [HUMAN_AI_COLLABORATION]
-- [ORGANIZATIONAL_DECISION_MAKING]
-- [REWARD_SHAPING]
-- [AFFORDANCE_THEORY]
+- [March & Simon, 1958]
+- [Ng et al., 1999]
+- [Gibson, 1979; Norman, 1988]
 
 ### Draft Notes — Section 4
 
@@ -1117,7 +1117,7 @@ Policy governs the optimizer, but topography determines whether policy can gover
 
 ## 5.9 Topography and Affordances
 
-The framework's use of topography is closely related to the idea of affordances: environments shape perceived possibilities for action. [GIBSON_AFFORDANCES] [NORMAN_AFFORDANCES]
+The framework's use of topography is closely related to the idea of affordances: environments shape perceived possibilities for action. [Gibson, 1979] [Norman, 1988]
 
 A tool button, API permission, auto-send workflow, source citation requirement, approval gate, or visible warning all shape what action appears available.
 
@@ -1202,20 +1202,20 @@ Optimizer State defines what the system brings. Information Topography defines w
 ### Citation Debt — Section 5
 
 **Used:**
-- [GIBSON_AFFORDANCES]
-- [NORMAN_AFFORDANCES]
+- [Gibson, 1979]
+- [Norman, 1988]
 
 **Likely needed:**
 - [INFORMATION_FORAGING]
-- [SENSEMAKING]
-- [WEICK_SENSEMAKING]
-- [RAG_FOUNDATIONAL]
+- [Weick, 1995]
+- [Weick, 1995]
+- [Lewis et al., 2020]
 - [GROUNDING_CITATION_GENERATION]
 - [KNOWLEDGE_MANAGEMENT]
 - [ORGANIZATIONAL_MEMORY]
 - [DECISION_PROVENANCE]
 - [AI_SAFETY_EVALS]
-- [REWARD_SHAPING]
+- [Ng et al., 1999]
 - [HCI_HUMAN_AI_COLLABORATION]
 
 ### Draft Notes — Section 5
@@ -1270,7 +1270,7 @@ A gradient makes some paths appear easier, more useful, more relevant, more conf
 
 The term is not used here as a formal mathematical gradient unless explicitly stated. Nor is it equivalent to a reinforcement-learning reward function. It is a broader design term for the pressures created by goals, information, confidence, constraints, tool access, action costs, evidence requirements, prior learning, and human oversight.
 
-This usage is related to reward shaping and affordance theory, but it is broader than either. Reward shaping asks how reward structures can influence agent behavior. Affordance theory asks how environments shape perceived action possibilities. The Perceived Topography Framework asks how the whole information-and-action environment shapes the paths an optimizer is likely to treat as attractive, available, and sufficient. [NG_REWARD_SHAPING] [GIBSON_AFFORDANCES] [NORMAN_AFFORDANCES]
+This usage is related to reward shaping and affordance theory, but it is broader than either. Reward shaping asks how reward structures can influence agent behavior. Affordance theory asks how environments shape perceived action possibilities. The Perceived Topography Framework asks how the whole information-and-action environment shapes the paths an optimizer is likely to treat as attractive, available, and sufficient. [Ng et al., 1999] [Gibson, 1979] [Norman, 1988]
 
 For example, a system generates an unsupported claim more easily when: evidence is not required, source confidence is not checked, unsupported fluency is rewarded, citations are optional, uncertainty is not represented, and policy is disconnected from generation. Those conditions create a gradient toward unsupported completion.
 
@@ -1330,7 +1330,7 @@ Investigation is not generic curiosity. It is goal-directed uncertainty reductio
 
 A system should not investigate forever. Nor should it investigate every possible uncertainty. Investigation is justified when the answer could materially change the action, the confidence level, the escalation path, or the applicability of a prior model update.
 
-This connects the framework to bounded rationality, information foraging, value-of-information reasoning, and rational metareasoning. Systems do not search indefinitely. They allocate attention and search effort under constraints. [SIMON1955] [INFORMATION_FORAGING] [VALUE_OF_INFORMATION] [RATIONAL_METAREASONING]
+This connects the framework to bounded rationality, information foraging, value-of-information reasoning, and rational metareasoning. Systems do not search indefinitely. They allocate attention and search effort under constraints. [Simon, 1955] [INFORMATION_FORAGING] [VALUE_OF_INFORMATION] [RATIONAL_METAREASONING]
 
 Consider the healthcare campaign example.
 
@@ -1378,7 +1378,7 @@ A system may be uncertain about the full causal explanation but still have enoug
 
 Sufficiency is action-relative. It asks: *Would more information materially change what we should do?*
 
-This concept is directly downstream of bounded rationality and satisficing. Decision-makers rarely optimize with complete information. They search until they reach a threshold that is good enough for action under the circumstances. [SIMON1955] [SIMON_SATISFICING]
+This concept is directly downstream of bounded rationality and satisficing. Decision-makers rarely optimize with complete information. They search until they reach a threshold that is good enough for action under the circumstances. [Simon, 1955]
 
 The framework distinguishes confidence from sufficiency.
 
@@ -1513,11 +1513,11 @@ The key distinction:
 ### Citation Debt — Section 6
 
 **Used:**
-- [NG_REWARD_SHAPING]
-- [GIBSON_AFFORDANCES]
-- [NORMAN_AFFORDANCES]
-- [SIMON1955]
-- [SIMON_SATISFICING]
+- [Ng et al., 1999]
+- [Gibson, 1979]
+- [Norman, 1988]
+- [Simon, 1955]
+- [Simon, 1955]
 - [INFORMATION_FORAGING]
 - [VALUE_OF_INFORMATION]
 - [RATIONAL_METAREASONING]
@@ -1569,7 +1569,7 @@ This connection matters because it suggests that hallucination mitigation and ag
 
 ## 7.1 Hallucination as Premature Sufficiency
 
-Hallucination is commonly defined as the production of plausible but unsupported content. In language-model systems, this may include fabricated facts, nonexistent citations, incorrect summaries, invented policies, false claims about data, or confident answers beyond available evidence. [DEEPMIND_GOPHERCITE] [RAG_FOUNDATIONAL] [GROUNDING_CITATION_GENERATION]
+Hallucination is commonly defined as the production of plausible but unsupported content. In language-model systems, this may include fabricated facts, nonexistent citations, incorrect summaries, invented policies, false claims about data, or confident answers beyond available evidence. [Menick et al., 2022] [Lewis et al., 2020] [GROUNDING_CITATION_GENERATION]
 
 The topography frame describes hallucination as a motion failure.
 
@@ -1701,7 +1701,7 @@ Again, the difference is not merely more context. It is the connection among pri
 
 ## 7.6 The Role of "I Don't Know" and "I Should Not Act Yet"
 
-Evidence-backed generation systems have emphasized the importance of allowing a model to say that it does not know when evidence is insufficient. [DEEPMIND_GOPHERCITE]
+Evidence-backed generation systems have emphasized the importance of allowing a model to say that it does not know when evidence is insufficient. [Menick et al., 2022]
 
 Agentic systems need an analogous action form:
 
@@ -1776,15 +1776,15 @@ This requires a distinction that the next section develops:
 ### Citation Debt — Section 7
 
 **Used:**
-- [DEEPMIND_GOPHERCITE]
-- [RAG_FOUNDATIONAL]
+- [Menick et al., 2022]
+- [Lewis et al., 2020]
 - [GROUNDING_CITATION_GENERATION]
 
 **Likely needed:**
 - [AI_SAFETY_EVALS]
-- [ANTHROPIC_AGENTIC_MISALIGNMENT]
-- [OPENAI_PREPAREDNESS]
-- [DEEPMIND_FRONTIER_SAFETY]
+- [Lynch et al., 2025]
+- [OpenAI, 2025]
+- [Google DeepMind, 2024]
 - [UNCERTAINTY_CALIBRATION]
 - [ABSTENTION_IN_LLM_SYSTEMS]
 - [TOOL_USE_AGENTS]
@@ -1818,7 +1818,7 @@ The framework uses a narrow definition:
 
 > Learning is an evidence-supported model update triggered by prediction error.
 
-A bad outcome is not learning. A correction is not learning. A reaction is not learning. A postmortem is not necessarily learning. Learning occurs only when an expectation is violated, the mismatch is investigated, an evidence-supported explanation is formed, and the resulting model update changes future reasoning or behavior. [ARGYRIS_SCHON] [CYERT_MARCH] [ORGANIZATIONAL_LEARNING]
+A bad outcome is not learning. A correction is not learning. A reaction is not learning. A postmortem is not necessarily learning. Learning occurs only when an expectation is violated, the mismatch is investigated, an evidence-supported explanation is formed, and the resulting model update changes future reasoning or behavior. [Argyris & Schön, 1978] [Cyert & March, 1963] [ORGANIZATIONAL_LEARNING]
 
 The basic learning sequence is:
 
@@ -2123,13 +2123,13 @@ The next section introduces the object designed to preserve learning without col
 ### Citation Debt — Section 8
 
 **Used:**
-- [ARGYRIS_SCHON]
-- [CYERT_MARCH]
+- [Argyris & Schön, 1978]
+- [Cyert & March, 1963]
 - [ORGANIZATIONAL_LEARNING]
 
 **Likely needed:**
-- [DOUBLE_LOOP_LEARNING]
-- [BEHAVIORAL_THEORY_OF_THE_FIRM]
+- [Argyris & Schön, 1978]
+- [Cyert & March, 1963]
 - [ORGANIZATIONAL_MEMORY]
 - [DECISION_PROVENANCE]
 - [POSTMORTEM_PRACTICES]
@@ -2370,8 +2370,8 @@ Its central claim:
 - [ORGANIZATIONAL_MEMORY]
 - [KNOWLEDGE_MANAGEMENT]
 - [DECISION_PROVENANCE]
-- [ARGYRIS_SCHON]
-- [CYERT_MARCH]
+- [Argyris & Schön, 1978]
+- [Cyert & March, 1963]
 
 **Likely needed:**
 - [LESSONS_LEARNED_SYSTEMS]
@@ -2651,10 +2651,10 @@ The principle is simple:
 - [AGENT_MEMORY_SYSTEMS]
 
 **Likely needed:**
-- [MARCH_SIMON_ORGS]
-- [CYERT_MARCH]
-- [ARGYRIS_SCHON]
-- [WEICK_SENSEMAKING]
+- [March & Simon, 1958]
+- [Cyert & March, 1963]
+- [Argyris & Schön, 1978]
+- [Weick, 1995]
 - [WORKFLOW_PROVENANCE]
 - [KNOWLEDGE_REPRESENTATION]
 - [INCIDENT_LEARNING]
@@ -3422,7 +3422,7 @@ A framework that cannot be tested becomes rhetoric. The next section defines how
 ### Citation Debt — Section 13
 
 **Used:**
-- [RAG_FOUNDATIONAL]
+- [Lewis et al., 2020]
 - [KNOWLEDGE_MANAGEMENT]
 - [ORGANIZATIONAL_MEMORY]
 - [DECISION_PROVENANCE]
@@ -3786,7 +3786,7 @@ The posture is simple:
 
 ## 15.1 Bounded Rationality and Satisficing
 
-The framework's treatment of sufficiency is directly indebted to Herbert Simon's work on bounded rationality and satisficing. [SIMON1955] [SIMON_SATISFICING] [BOUNDED_RATIONALITY_SURVEY]
+The framework's treatment of sufficiency is directly indebted to Herbert Simon's work on bounded rationality and satisficing. [Simon, 1955] [BOUNDED_RATIONALITY_SURVEY]
 
 The framework uses this lineage in three ways: it treats agents and organizations as bounded; it distinguishes confidence from sufficiency; and it treats investigation as bounded search.
 
@@ -3796,7 +3796,7 @@ The framework's term **sufficiency** should be read as downstream of bounded rat
 
 ## 15.2 Organizational Decision-Making
 
-The framework draws from organizational decision theory, treating organizations as bounded decision systems. [MARCH_SIMON_ORGS] [CYERT_MARCH] [ORGANIZATIONAL_DECISION_MAKING]
+The framework draws from organizational decision theory, treating organizations as bounded decision systems. [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958]
 
 The six-object Reasoning Architecture is an attempt to make organizational decision processes durable and reusable inside AI-mediated workflows.
 
@@ -3804,7 +3804,7 @@ The six-object Reasoning Architecture is an attempt to make organizational decis
 
 ## 15.3 Behavioral Theory of the Firm
 
-Cyert and March's behavioral theory is relevant to learning, search, aspiration gaps, and adaptation. [CYERT_MARCH] [BEHAVIORAL_THEORY_OF_THE_FIRM]
+Cyert and March's behavioral theory is relevant to learning, search, aspiration gaps, and adaptation. [Cyert & March, 1963]
 
 The framework shares the view that organizations adapt through feedback, search, and changed routines rather than through perfect optimization. The Model Update Object is designed to preserve the transition from expectation to outcome to explanation to update.
 
@@ -3812,7 +3812,7 @@ The framework shares the view that organizations adapt through feedback, search,
 
 ## 15.4 Organizational Learning
 
-The distinction between reaction and learning is indebted to organizational learning theory, especially single-loop and double-loop learning. [ARGYRIS_SCHON] [DOUBLE_LOOP_LEARNING] [ORGANIZATIONAL_LEARNING]
+The distinction between reaction and learning is indebted to organizational learning theory, especially single-loop and double-loop learning. [Argyris & Schön, 1978] [ORGANIZATIONAL_LEARNING]
 
 A reaction changes behavior after an outcome. Learning changes the model that produced the behavior. The framework's contribution is to formalize the minimum reasoning objects needed for human-agent systems to preserve this distinction.
 
@@ -3820,7 +3820,7 @@ A reaction changes behavior after an outcome. Learning changes the model that pr
 
 ## 15.5 Sensemaking
 
-The framework's concept of Interpretation is closely related to sensemaking. [WEICK_SENSEMAKING] [SENSEMAKING]
+The framework's concept of Interpretation is closely related to sensemaking. [Weick, 1995]
 
 Actors do not respond to objective reality directly. They interpret ambiguous signals, construct meaning, and act from that constructed understanding. The framework places this concern inside the optimizer primitive **Interpretation**, which includes Signal Meaning, Causal Explanation, and Action Model.
 
@@ -3828,7 +3828,7 @@ Actors do not respond to objective reality directly. They interpret ambiguous si
 
 ## 15.6 Affordances and Action Possibilities
 
-The framework's language of topography and gradients is influenced by affordance theory. [GIBSON_AFFORDANCES] [NORMAN_AFFORDANCES] [AFFORDANCE_THEORY]
+The framework's language of topography and gradients is influenced by affordance theory. [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988]
 
 The framework extends affordance intuitions into human-agent systems. A tool permission, approval gate, visible warning, citation requirement, dashboard, policy check, or Model Update Object changes the action environment. The framework's term **topography** is broader than affordance — it includes information visibility, accessibility, representation, confidence, and connectivity.
 
@@ -3836,7 +3836,7 @@ The framework extends affordance intuitions into human-agent systems. A tool per
 
 ## 15.7 Reward Shaping and Environment Design
 
-The framework's use of **gradient** is related to reward shaping but is not equivalent to formal RL reward functions. [NG_REWARD_SHAPING] [REINFORCEMENT_LEARNING_REWARD_DESIGN]
+The framework's use of **gradient** is related to reward shaping but is not equivalent to formal RL reward functions. [Ng et al., 1999] [REINFORCEMENT_LEARNING_REWARD_DESIGN]
 
 The framework uses a broader, systems-level notion of gradient: directional pressures created by goals, information, confidence, constraints, tool access, action costs, evidence requirements, prior learning, and human oversight. Topography-first safety asks designers to shape these pressures so grounded behavior becomes the easiest sufficient path.
 
@@ -3844,7 +3844,7 @@ The framework uses a broader, systems-level notion of gradient: directional pres
 
 ## 15.8 Retrieval-Augmented Generation and Grounding
 
-The framework is closely related to RAG and evidence-backed answering. [RAG_FOUNDATIONAL] [GROUNDING_CITATION_GENERATION] [DEEPMIND_GOPHERCITE] [RAG_EVALUATION]
+The framework is closely related to RAG and evidence-backed answering. [Lewis et al., 2020] [GROUNDING_CITATION_GENERATION] [Menick et al., 2022] [RAG_EVALUATION]
 
 The framework treats grounding as part of the Confidence and Sufficiency problem. But it argues grounding alone is not enough — a source may support a claim while the system still lacks the goal, policy, premise stack, decision state, sufficiency rationale, and model update needed for organizational reasoning.
 
@@ -3854,7 +3854,7 @@ The framework is complementary to RAG, not a replacement.
 
 ## 15.9 AI Safety, Alignment, and Agentic Misalignment
 
-The framework is motivated by concerns about agentic AI systems. [ANTHROPIC_AGENTIC_MISALIGNMENT] [OPENAI_PREPAREDNESS] [DEEPMIND_FRONTIER_SAFETY] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY]
+The framework is motivated by concerns about agentic AI systems. [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY]
 
 The framework contributes a complementary diagnostic lens. It does not replace alignment research, capability evaluations, or deployment safeguards. It reframes one applied layer of safety: the designed topography through which agent behavior emerges.
 
@@ -3864,7 +3864,7 @@ The safety claim: containment is necessary but incomplete. Safer systems require
 
 ## 15.10 Anti-Anthropomorphism and Behavioral Description
 
-The paper's opening argument is influenced by work cautioning against anthropomorphic descriptions of model behavior. [DEEPMIND_ROLE_PLAY] [AI_ANTHROPOMORPHISM]
+The paper's opening argument is influenced by work cautioning against anthropomorphic descriptions of model behavior. [Shanahan et al., 2023] [AI_ANTHROPOMORPHISM]
 
 The optimizer frame preserves seriousness about risk while improving diagnostic precision. It avoids both errors: dismissing risk because the system is "just predicting tokens," and over-ascribing human-like inner life to behavior explainable through system dynamics.
 
@@ -3958,7 +3958,7 @@ If the blend is useful, then human-agent system design should shift in several w
 
 ### Citation Debt — Section 15
 
-**Used:** [SIMON1955] [SIMON_SATISFICING] [BOUNDED_RATIONALITY_SURVEY] [MARCH_SIMON_ORGS] [CYERT_MARCH] [ORGANIZATIONAL_DECISION_MAKING] [BEHAVIORAL_THEORY_OF_THE_FIRM] [ARGYRIS_SCHON] [DOUBLE_LOOP_LEARNING] [ORGANIZATIONAL_LEARNING] [WEICK_SENSEMAKING] [SENSEMAKING] [GIBSON_AFFORDANCES] [NORMAN_AFFORDANCES] [AFFORDANCE_THEORY] [NG_REWARD_SHAPING] [REINFORCEMENT_LEARNING_REWARD_DESIGN] [RAG_FOUNDATIONAL] [GROUNDING_CITATION_GENERATION] [DEEPMIND_GOPHERCITE] [RAG_EVALUATION] [ANTHROPIC_AGENTIC_MISALIGNMENT] [OPENAI_PREPAREDNESS] [DEEPMIND_FRONTIER_SAFETY] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY] [DEEPMIND_ROLE_PLAY] [AI_ANTHROPOMORPHISM] [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT] [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS] [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES] [CASE_BASED_REASONING] [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
+**Used:** [Simon, 1955] [BOUNDED_RATIONALITY_SURVEY] [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958] [Cyert & March, 1963] [Argyris & Schön, 1978] [ORGANIZATIONAL_LEARNING] [Weick, 1995] [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988] [Ng et al., 1999] [REINFORCEMENT_LEARNING_REWARD_DESIGN] [Lewis et al., 2020] [GROUNDING_CITATION_GENERATION] [Menick et al., 2022] [RAG_EVALUATION] [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [AI_ALIGNMENT_OVERVIEW] [AGENT_SAFETY_SURVEY] [Shanahan et al., 2023] [AI_ANTHROPOMORPHISM] [KNOWLEDGE_MANAGEMENT] [ORGANIZATIONAL_MEMORY] [ENTERPRISE_AI_KNOWLEDGE_MANAGEMENT] [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS] [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES] [CASE_BASED_REASONING] [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
 
 ### Draft Notes — Section 15
 
