@@ -80,6 +80,25 @@ When regenerating SESSION_START.md:
 ## CURRENT_STATE.md
 `01_CONCEPT_ARCHITECTURE/CURRENT_STATE.md` is the "living constitution" — the canonical snapshot of what the framework currently believes. Not history, not evolution, not discussion. Just: if someone joined the project today, what do we currently believe? This file is regenerated with every significant architecture update.
 
+## Paper Revision Governance (Phase 6)
+
+During Paper v0.1 revision, any edit to `PAPER_DRAFT.md` must be classified as one of:
+
+- **Heading-only** — heading text changes, no body text
+- **Formatting-only** — whitespace, markdown, code blocks
+- **Citation-only** — adding/updating citation placeholders
+- **Diagram-only** — adding figure placement markers
+- **Clarification** — rewording for clarity without changing meaning
+- **Expansion** — adding new content (paragraphs, examples, AHA patches)
+- **Compression** — removing or shortening content
+- **Substantive rewrite** — changing the argument, structure, or claims
+
+**Compression or substantive rewrite edits require explicit approval before commit.**
+
+After every major revision batch, run a compression/integrity audit against the last approved full-draft commit. Reference audit: `08_PAPER_DRAFTS/COMPRESSION_AUDIT.md`.
+
+Last audit result (2026-06-12): **CLEAN.** Three post-completion commits examined. Net +87 lines. No unintended compression, deletions, or loss of examples, AHA language, validation content, citation placeholders, diagram placeholders, section transitions, or technical terminology.
+
 ## Folder README Maintenance
 Each folder has a `README.md` that lists its contents. When adding or removing files from any folder, update that folder's README to reflect the change.
 
