@@ -74,13 +74,13 @@
 
   <text x="200" y="340" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#B94A48" text-anchor="middle">≠ Learning</text>
 
-  <rect x="90" y="365" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="1"/>
+  <rect x="90" y="365" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="2"/>
   <text x="200" y="393" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#B94A48" text-anchor="middle">Storage</text>
 
-  <rect x="90" y="425" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="1"/>
+  <rect x="90" y="425" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="2"/>
   <text x="200" y="453" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#B94A48" text-anchor="middle">Postmortem</text>
 
-  <rect x="90" y="485" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="1"/>
+  <rect x="90" y="485" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="2"/>
   <text x="200" y="513" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#B94A48" text-anchor="middle">Reaction</text>
 
   <text x="200" y="560" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8A94A6" text-anchor="middle" font-style="italic">These change behavior</text>

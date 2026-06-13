@@ -3,7 +3,7 @@
   <desc>The optimizer does not move through objective reality directly. It moves through a perceived topography shaped by what is visible, accessible, represented, trusted, and connected. Behavior emerges from the interaction between optimizer state and perceived landscape.</desc>
 
   <rect width="1400" height="900" fill="#F7F9FC"/>
-  <text x="700" y="45" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#102033" text-anchor="middle">Optimizer in a Perceived Topography</text>
+  <text x="700" y="45" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#102033" text-anchor="middle">Optimizer in a Perceived Topography</text>
 
   <!-- LEFT: Optimizer State -->
   <rect x="40" y="120" width="300" height="400" rx="16" fill="#FFFFFF" stroke="#2E5EAA" stroke-width="2.5"/>
