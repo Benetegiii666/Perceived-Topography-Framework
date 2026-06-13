@@ -3542,13 +3542,76 @@ For organizational learning: reduction in repeated mistakes, higher reuse of val
 
 ## 14.11 Assumption Verification
 
-The framework should treat assumptions as first-class test objects. An assumption should not pass merely because it is plausible, fluent, senior, convenient, or repeated.
+The framework should treat assumptions as first-class test objects.
 
-Every important assumption should be checked across multiple layers where possible: What source supports this assumption? Why did we believe this before action? Does this assumption conflict with a rule or constraint? What observation supports or contradicts it? What would reality show if this assumption were wrong? Who is accountable for confirming or challenging it? Where does this assumption apply, and where should it not apply? How strongly should this assumption shape action?
+An assumption should not pass merely because it is plausible, fluent, senior, convenient, or repeated.
 
-This multi-layer verification is essential to the framework's rigor. Only after structured contact with evidence should an assumption become a model update.
+Every important assumption should be checked across multiple layers where possible.
 
-The framework's discipline is not that it has many terms. Its discipline is that assumptions must survive structured contact with evidence.
+Examples:
+
+```
+Artifact layer:
+Which source supports this assumption?
+
+Premise layer:
+Why did we believe this before action?
+
+Policy layer:
+Does this assumption conflict with a rule or constraint?
+
+Evidence layer:
+What observation supports or contradicts it?
+
+Outcome layer:
+What would reality show if this assumption were wrong?
+
+Human layer:
+Who is accountable for confirming or challenging it?
+
+Applicability layer:
+Where does this assumption apply, and where should it not apply?
+
+Confidence layer:
+How strongly should this assumption shape action?
+```
+
+This multi-layer verification is essential to the framework's rigor.
+
+For example:
+
+```
+Assumption:
+Workflow pain indicates buying readiness.
+```
+
+The system should test:
+
+```
+Source:
+Where did this assumption come from?
+
+Premise:
+Was it used in prior campaign reasoning?
+
+Evidence:
+Did workflow-pain messaging produce qualified demos or only engagement?
+
+Outcome:
+What happened when we acted on it?
+
+Boundary:
+Does it apply to all healthcare campaigns or only certain RPM campaigns?
+
+Confidence:
+How strong is the evidence?
+```
+
+Only after that pressure should the assumption become a model update.
+
+The framework's discipline is not that it has many terms.
+
+Its discipline is that assumptions must survive structured contact with evidence.
 
 ---
 
