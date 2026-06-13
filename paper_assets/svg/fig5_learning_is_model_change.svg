@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <title>Figure 5 — Learning Is Model Change</title>
+  <desc>Learning occurs when prediction error is investigated, explained with evidence, and converted into a model update that changes future reasoning. Storage, postmortems, and reactions alone are not learning.</desc>
+
+  <rect width="1200" height="900" fill="#F7F9FC"/>
+  <text x="600" y="42" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#102033" text-anchor="middle">Learning Is Model Change</text>
+
+  <!-- ====== MAIN LOOP (center-right) ====== -->
+
+  <!-- Expectation -->
+  <rect x="450" y="90" width="220" height="55" rx="12" fill="#FFFFFF" stroke="#2E5EAA" stroke-width="2.5"/>
+  <text x="560" y="123" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#102033" text-anchor="middle">Expectation</text>
+
+  <line x1="560" y1="145" x2="560" y2="170" stroke="#102033" stroke-width="2"/>
+  <polygon points="560,177 554,167 566,167" fill="#102033"/>
+
+  <!-- Action -->
+  <rect x="450" y="180" width="220" height="55" rx="12" fill="#FFFFFF" stroke="#2E5EAA" stroke-width="2.5"/>
+  <text x="560" y="213" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#102033" text-anchor="middle">Action</text>
+
+  <line x1="560" y1="235" x2="560" y2="260" stroke="#102033" stroke-width="2"/>
+  <polygon points="560,267 554,257 566,257" fill="#102033"/>
+
+  <!-- Outcome -->
+  <rect x="450" y="270" width="220" height="55" rx="12" fill="#FFFFFF" stroke="#2E5EAA" stroke-width="2.5"/>
+  <text x="560" y="303" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#102033" text-anchor="middle">Outcome</text>
+
+  <line x1="560" y1="325" x2="560" y2="350" stroke="#102033" stroke-width="2"/>
+  <polygon points="560,357 554,347 566,347" fill="#102033"/>
+
+  <!-- Prediction Error (warning color) -->
+  <rect x="450" y="360" width="220" height="55" rx="12" fill="#FFFFFF" stroke="#D89A21" stroke-width="2.5"/>
+  <text x="560" y="393" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#D89A21" text-anchor="middle">Prediction Error</text>
+
+  <line x1="560" y1="415" x2="560" y2="440" stroke="#102033" stroke-width="2"/>
+  <polygon points="560,447 554,437 566,437" fill="#102033"/>
+
+  <!-- Investigation -->
+  <rect x="450" y="450" width="220" height="55" rx="12" fill="#FFFFFF" stroke="#2E5EAA" stroke-width="2.5"/>
+  <text x="560" y="483" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#102033" text-anchor="middle">Investigation</text>
+
+  <line x1="560" y1="505" x2="560" y2="530" stroke="#102033" stroke-width="2"/>
+  <polygon points="560,537 554,527 566,527" fill="#102033"/>
+
+  <!-- Evidence-Supported Explanation -->
+  <rect x="410" y="540" width="300" height="55" rx="12" fill="#FFFFFF" stroke="#2E5EAA" stroke-width="2.5"/>
+  <text x="560" y="565" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#102033" text-anchor="middle">Evidence-Supported</text>
+  <text x="560" y="583" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#102033" text-anchor="middle">Explanation</text>
+
+  <line x1="560" y1="595" x2="560" y2="620" stroke="#102033" stroke-width="2"/>
+  <polygon points="560,627 554,617 566,617" fill="#102033"/>
+
+  <!-- Model Update (green) -->
+  <rect x="450" y="630" width="220" height="55" rx="12" fill="#FFFFFF" stroke="#2E8B57" stroke-width="2.5"/>
+  <text x="560" y="663" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2E8B57" text-anchor="middle">Model Update</text>
+
+  <line x1="560" y1="685" x2="560" y2="710" stroke="#102033" stroke-width="2"/>
+  <polygon points="560,717 554,707 566,707" fill="#102033"/>
+
+  <!-- Changed Future State (green fill) -->
+  <rect x="390" y="720" width="340" height="55" rx="12" fill="#2E8B57" stroke="#2E8B57" stroke-width="2.5"/>
+  <text x="560" y="745" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Changed Future Optimizer</text>
+  <text x="560" y="763" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">State / Topography</text>
+
+  <!-- Feedback loop: Changed State → Expectation -->
+  <path d="M 730 748 Q 850 748, 880 650 Q 910 400, 880 200 Q 860 117, 670 117" fill="none" stroke="#2E8B57" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <polygon points="670,117 680,111 680,123" fill="#2E8B57"/>
+  <text x="910" y="400" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#2E8B57" text-anchor="start" font-style="italic" transform="rotate(90, 910, 400)">new expectations</text>
+
+  <!-- ====== SIDE CONTRAST (left) ====== -->
+
+  <rect x="50" y="300" width="300" height="280" rx="16" fill="#FFFFFF" stroke="#B94A48" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+  <text x="200" y="340" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#B94A48" text-anchor="middle">≠ Learning</text>
+
+  <rect x="90" y="365" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="1"/>
+  <text x="200" y="393" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#B94A48" text-anchor="middle">Storage</text>
+
+  <rect x="90" y="425" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="1"/>
+  <text x="200" y="453" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#B94A48" text-anchor="middle">Postmortem</text>
+
+  <rect x="90" y="485" width="220" height="45" rx="10" fill="#F7F9FC" stroke="#B94A48" stroke-width="1"/>
+  <text x="200" y="513" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#B94A48" text-anchor="middle">Reaction</text>
+
+  <text x="200" y="560" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8A94A6" text-anchor="middle" font-style="italic">These change behavior</text>
+  <text x="200" y="575" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8A94A6" text-anchor="middle" font-style="italic">without explaining why</text>
+
+  <!-- Caption -->
+  <text x="600" y="840" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A6" text-anchor="middle" font-style="italic">Learning occurs when prediction error is investigated, explained with evidence,</text>
+  <text x="600" y="858" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A6" text-anchor="middle" font-style="italic">and converted into a model update that changes future reasoning.</text>
+  <text x="600" y="876" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8A94A6" text-anchor="middle" font-style="italic">Storage, postmortems, and reactions alone are not learning.</text>
+</svg>
