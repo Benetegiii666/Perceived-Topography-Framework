@@ -899,7 +899,7 @@ This distinction is crucial for human-agent systems. It explains why adding cont
 
 ---
 
-## 5.1 Five Dimensions of Information Topography
+## 5.1 The Five Dimensions of Information Topography
 
 The framework defines five dimensions of Information Topography:
 
@@ -1624,7 +1624,7 @@ The design problem is not only information availability. It is behavioral force.
 
 ---
 
-## 7.5 Unsupported Claims and Unsafe Actions
+## 7.5 Two Cases: Unsupported Claims and Unsafe Actions
 
 The relationship can be made concrete by comparing two cases.
 
@@ -2275,7 +2275,7 @@ The system is not merely retrieving an old campaign. It is reusing learning.
 
 ---
 
-## 9.7 Failure Modes Prevented
+## 9.7 Failure Modes Model Update Objects Prevent
 
 Model Update Objects are designed to prevent several common failure modes:
 
@@ -2484,7 +2484,7 @@ The Model Update Object is the durable output of learning. It allows future syst
 
 ---
 
-## 10.9 Supporting Concerns
+## 10.9 Supporting Concerns, Not New Objects
 
 The six core objects are supported by several recurring concerns:
 
@@ -2932,7 +2932,7 @@ The key claim is that the campaign assets are not the only output. The reusable 
 
 ---
 
-## 12.1 Starting Point: Messy Human Intent
+## 12.1 Messy Human Intent
 
 The workflow begins with a simple request:
 
@@ -3084,7 +3084,7 @@ This update changes how the system asks next time. The system has learned not on
 
 ---
 
-## 12.13 Next Campaign: Starting Smarter
+## 12.13 The Next Campaign Starts Smarter
 
 Later, another marketer asks: "I want to do a healthcare campaign for our RPM platform."
 
@@ -3244,7 +3244,7 @@ The important question is not "Have we automated the entire loop?" The important
 
 ---
 
-## 13.6 System Components
+## 13.6 Suggested System Components
 
 A practical implementation may include:
 
@@ -3422,7 +3422,7 @@ The framework's own method applies to itself. It must remain in a constant state
 
 ---
 
-## 14.1 What the Framework Claims
+## 14.1 Testable Claims
 
 Six testable claims:
 
@@ -3540,7 +3540,19 @@ For organizational learning: reduction in repeated mistakes, higher reuse of val
 
 ---
 
-## 14.11 Evaluation of the Six Reasoning Objects
+## 14.11 Assumption Verification
+
+The framework should treat assumptions as first-class test objects. An assumption should not pass merely because it is plausible, fluent, senior, convenient, or repeated.
+
+Every important assumption should be checked across multiple layers where possible: What source supports this assumption? Why did we believe this before action? Does this assumption conflict with a rule or constraint? What observation supports or contradicts it? What would reality show if this assumption were wrong? Who is accountable for confirming or challenging it? Where does this assumption apply, and where should it not apply? How strongly should this assumption shape action?
+
+This multi-layer verification is essential to the framework's rigor. Only after structured contact with evidence should an assumption become a model update.
+
+The framework's discipline is not that it has many terms. Its discipline is that assumptions must survive structured contact with evidence.
+
+---
+
+## 14.12 Evaluation of the Six Reasoning Objects
 
 Each object should be evaluated by whether it does useful work:
 
@@ -3555,7 +3567,7 @@ Each object should be evaluated by whether it does useful work:
 
 ---
 
-## 14.12 Evaluation of the Five Topography Dimensions
+## 14.13 Evaluation of the Five Topography Dimensions
 
 | Dimension | Validation Question |
 |-----------|-------------------|
@@ -3571,7 +3583,7 @@ The framework's categories are valuable only if they improve diagnosis. A correc
 
 ---
 
-## 14.13 Validation in the Healthcare Campaign MVP
+## 14.14 Validation in the Healthcare Campaign MVP
 
 **Study design:** Compare context-only campaign assistant (Workflow A) vs. reasoning-state campaign assistant (Workflow B). Same initial prompt, same source artifacts.
 
@@ -3581,7 +3593,7 @@ The framework's categories are valuable only if they improve diagnosis. A correc
 
 ---
 
-## 14.14 The Framework Should Update Itself
+## 14.15 The Framework Should Update Itself
 
 If validation shows a category is confusing, revise it. If Model Update Objects are too heavy, simplify them. If topography dimensions overlap in practice, refine definitions. If a workflow performs better without the full architecture, document the boundary.
 
@@ -3593,7 +3605,7 @@ This makes validation not only a section of the paper, but a governance principl
 
 ---
 
-## 14.15 Transition to Related Work
+## 14.16 Transition to Related Work
 
 The next section situates the framework in relation to prior work.
 
@@ -3737,7 +3749,7 @@ The safety claim: containment is necessary but incomplete. Safer systems require
 
 ---
 
-## 15.10 Anti-Anthropomorphism
+## 15.10 Anti-Anthropomorphism and Behavioral Description
 
 The paper's opening argument is influenced by work cautioning against anthropomorphic descriptions of model behavior. [DEEPMIND_ROLE_PLAY] [AI_ANTHROPOMORPHISM]
 
@@ -3753,7 +3765,7 @@ The distinction: Knowledge management preserves artifacts. Reasoning architectur
 
 ---
 
-## 15.12 Decision Provenance and Design Rationale
+## 15.12 Decision Provenance, Design Rationale, and Workflow Traceability
 
 The framework overlaps with decision provenance and design rationale research. [DECISION_PROVENANCE] [DESIGN_RATIONALE] [WORKFLOW_PROVENANCE] [PROVENANCE_SYSTEMS]
 
@@ -3761,7 +3773,7 @@ The six reasoning objects can be understood as a provenance structure for adapti
 
 ---
 
-## 15.13 Human-AI Collaboration
+## 15.13 Human-AI Collaboration and Mixed-Initiative Systems
 
 The Discovery Framework is related to HCI, mixed-initiative systems, and human-in-the-loop AI. [HCI_HUMAN_AI_COLLABORATION] [MIXED_INITIATIVE_SYSTEMS] [HUMAN_IN_THE_LOOP_AI] [COACTIVE_DESIGN] [HUMAN_AI_INTERACTION_GUIDELINES]
 
@@ -3777,7 +3789,7 @@ A Model Update Object performs a related function to a case: it allows prior exp
 
 ---
 
-## 15.15 Uncertainty and Abstention
+## 15.15 Uncertainty, Abstention, and Calibration
 
 The framework's treatment of hallucination and escalation is related to uncertainty calibration and abstention research. [UNCERTAINTY_CALIBRATION] [ABSTENTION_IN_LLM_SYSTEMS] [SELECTIVE_PREDICTION]
 
@@ -3871,7 +3883,7 @@ A fence tells the optimizer where not to go. Topography design shapes where it n
 
 ---
 
-## 16.2 Implication for Alignment: Alignment Is Distributed
+## 16.2 Implication for Alignment: Alignment Is Distributed Across the System
 
 Alignment should not be treated only as a property of the model. In a deployed system, behavior emerges from goals, policies, tools, permissions, retrieval quality, memory, interfaces, workflow incentives, approval paths, confidence thresholds, human oversight, prior learning, and measurement systems.
 
@@ -3891,7 +3903,7 @@ Enterprise AI maturity should be measured not only by how much knowledge is conn
 
 ---
 
-## 16.4 Implication for Knowledge Management: Preserve the Transition
+## 16.4 Implication for Knowledge Management: Preserve the State Transition
 
 Knowledge management preserves artifacts. The framework suggests a complementary goal: preserve the state transition that made the artifact meaningful.
 
@@ -3911,7 +3923,7 @@ Static governance produces rules. Learning governance produces rules that can be
 
 ---
 
-## 16.6 Implication for Product Design: Build for Sufficiency
+## 16.6 Implication for Product Design: Build for Sufficiency, Not Just Completion
 
 Many AI products are optimized for task completion. The framework suggests that good products should optimize for sufficiency, not mere completion.
 
@@ -3931,7 +3943,7 @@ The human becomes a reviewer, corrector, approver, and co-reasoner — not a pro
 
 ---
 
-## 16.8 Implication for Evaluation: Evaluate State Transitions
+## 16.8 Implication for Evaluation: Evaluate State Transitions, Not Only Outputs
 
 AI evaluation often focuses on outputs: Was the answer correct? Was the content acceptable? Did the agent complete the task?
 
@@ -4159,7 +4171,7 @@ A theory of learning must be willing to learn. A framework about prediction erro
 
 ---
 
-## 17.8 Final Claim
+## 17.8 Build Better Landscapes
 
 The next generation of AI systems will not be judged only by how much they know, how many tools they can call, or how fluent their answers sound.
 

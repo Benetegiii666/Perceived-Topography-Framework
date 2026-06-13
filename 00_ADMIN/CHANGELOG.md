@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-06-12 — Reader-Journey / Heading Audit Applied
+- 17 heading refinements applied across Sections 5, 7, 9, 10, 12, 13, 14, 15, 16, 17
+- Section 14.11 Assumption Verification added and subsequent sections renumbered (14.11→14.16)
+- READER_JOURNEY.md populated with intended experience, section arcs, revision principles, structural risks
+- PAPER_TOC.md regenerated
+- No theory changes — headings only, plus one new validation subsection
+
 ## 2026-06-12 — SVG Audit: Revised from 5 to 7 Diagrams
 - Revised SVG plan from 5 to 7 diagrams after completing all 17 sections
 - Added: Figure 3 (Optimizer in Perceived Topography — most important missing diagram), Figure 5 (Learning Is Model Change), Figure 6 (Six-Object Reasoning Architecture)
