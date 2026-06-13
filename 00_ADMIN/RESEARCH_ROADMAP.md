@@ -212,3 +212,26 @@ If we achieve that, this phase is complete and worthy of filing as a major miles
 **Allowed:** Clarify language, compress concepts, define terms, choose examples, add citations, design diagrams, write narrative sections, identify validation methods.
 
 **NOT allowed without explicit approval:** New primitives, new topography dimensions, new optimizer phases, new foundational architecture documents, major theory expansion.
+
+---
+
+## PHASE 7 — Artifact Finalization and External Review — **NEXT**
+
+**Prerequisite:** Paper v0.1 release checkpoint reached.
+
+### Remaining Work
+
+- [ ] Final SVG polish pass (low-priority items from cross-figure audit)
+- [ ] Optional checklist-only citation-debt cleanup in RELATED_WORK_LEDGER.md
+- [ ] PDF/docx export
+- [ ] Peer review / external reader review
+- [ ] Possible abstract refinement
+- [ ] Possible executive-summary / adoption-roadmap companion
+
+### Definition of Done
+
+Phase 7 is complete when:
+- [ ] SVGs are polished to publication quality
+- [ ] Paper is exported as PDF
+- [ ] At least one external reader has reviewed and provided feedback
+- [ ] Feedback has been addressed or documented as future work

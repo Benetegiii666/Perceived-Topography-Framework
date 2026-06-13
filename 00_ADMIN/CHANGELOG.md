@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-12 — MILESTONE: Paper v0.1 Release Checkpoint
+- PAPER_v0.1.md created as clean reader-facing export artifact
+- 17 sections + References, ~33,677 words, 7 SVG figures, 33 citations
+- All revision gates completed: compression audit, heading audit, AHA audit, terminology fixes, figure placement, SVG generation, citation resolution (3 batches), bibliography creation, consistency check, export readiness audit
+- Phase 6 (Narrative Paper) substantially complete
+- Phase 7 (Artifact Finalization and External Review) begins
+- Remaining: SVG polish, PDF export, peer review, abstract, adoption roadmap
+
 ## 2026-06-12 — Reader-Journey / Heading Audit Applied
 - 17 heading refinements applied across Sections 5, 7, 9, 10, 12, 13, 14, 15, 16, 17
 - Section 14.11 Assumption Verification added and subsequent sections renumbered (14.11→14.16)

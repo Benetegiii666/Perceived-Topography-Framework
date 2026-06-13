@@ -132,10 +132,26 @@ The framework operates at four distinct layers:
 | Architecture | How should reasoning be structured for retrieval? |
 | Implementation | What do we build? |
 
+## Paper v0.1 — Release Checkpoint (2026-06-12)
+
+**PAPER_v0.1.md** has been created as the clean reader-facing Markdown artifact.
+
+- 17 sections + References
+- ~33,677 words
+- 7 SVG figures with resolved paths
+- 33 body-prose citations, 33 bibliography entries
+- Zero unresolved body placeholders, zero draft-note blocks, zero export issues
+
+**Current phase:** Phase 7 — Artifact Finalization and External Review
+
 ## What Has NOT Been Decided
 
 - Whether Decision Space and Capability are primitives, derived, or collapsible
-- Phase 5 decision: paper, reference implementation, validation plan, product concept, consulting methodology, or combination?
+- Final SVG polish pass
+- PDF/docx export format
+- Peer review / external reader review plan
+- Abstract refinement
+- Executive-summary / adoption-roadmap companion
 
 ## Active Fault Lines
 
