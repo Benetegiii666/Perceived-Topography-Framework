@@ -147,7 +147,7 @@ These citations appear in the paper's body text with resolved author-year refere
 - Verified metadata: Google DeepMind. (2024). "Introducing the Frontier Safety Framework." Published 17 May 2024.
 - Retired placeholders: [DEEPMIND_FRONTIER_SAFETY]
 
-**[Ji et al., 2023]**
+**[Ji et al., 2024]**
 - Status: **Cited in body prose** | **Metadata verified**
 - Sections: S2, S15
 - Frequency: 3 occurrences

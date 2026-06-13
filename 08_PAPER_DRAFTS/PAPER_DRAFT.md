@@ -298,7 +298,7 @@ Discovery is where human intent first becomes agent-usable reasoning state.
 
 The framework does not treat alignment only as value matching between a model and a human. It treats alignment as a property of the broader human-agent system: goals, policies, interpretations, information surfaces, action affordances, confidence structures, oversight, and learning loops must work together so that behavior reliably moves toward intended outcomes.
 
-This does not replace existing AI alignment work. It reframes one applied layer of the problem: the designed topography through which agent behavior emerges. [Ji et al., 2023]
+This does not replace existing AI alignment work. It reframes one applied layer of the problem: the designed topography through which agent behavior emerges. [Ji et al., 2024]
 
 ## Governance
 
@@ -3854,7 +3854,7 @@ The framework is complementary to RAG, not a replacement.
 
 ## 15.9 AI Safety, Alignment, and Agentic Misalignment
 
-The framework is motivated by concerns about agentic AI systems. [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [Ji et al., 2023]
+The framework is motivated by concerns about agentic AI systems. [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [Ji et al., 2024]
 
 The framework contributes a complementary diagnostic lens. It does not replace alignment research, capability evaluations, or deployment safeguards. It reframes one applied layer of safety: the designed topography through which agent behavior emerges.
 
@@ -3958,7 +3958,7 @@ If the blend is useful, then human-agent system design should shift in several w
 
 ### Citation Debt — Section 15
 
-**Used:** [Simon, 1955] [de Clippel & Rozen, 2024] [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958] [Cyert & March, 1963] [Argyris & Schön, 1978] [Weick, 1995] [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988] [Ng et al., 1999] [Lewis et al., 2020] [Menick et al., 2022] [Yu et al., 2024] [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [Ji et al., 2023] [Shanahan et al., 2023] [Shanahan, 2022] [Alavi & Leidner, 2001] [Walsh & Ungson, 1991] [Moreau et al., 2013] [Lee, 1997] [Amershi et al., 2019] [Horvitz, 1999] [Johnson et al., 2014] [Aamodt & Plaza, 1994] [Guo et al., 2017] [Kadavath et al., 2022]
+**Used:** [Simon, 1955] [de Clippel & Rozen, 2024] [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958] [Cyert & March, 1963] [Argyris & Schön, 1978] [Weick, 1995] [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988] [Ng et al., 1999] [Lewis et al., 2020] [Menick et al., 2022] [Yu et al., 2024] [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [Ji et al., 2024] [Shanahan et al., 2023] [Shanahan, 2022] [Alavi & Leidner, 2001] [Walsh & Ungson, 1991] [Moreau et al., 2013] [Lee, 1997] [Amershi et al., 2019] [Horvitz, 1999] [Johnson et al., 2014] [Aamodt & Plaza, 1994] [Guo et al., 2017] [Kadavath et al., 2022]
 
 ### Draft Notes — Section 15
 
