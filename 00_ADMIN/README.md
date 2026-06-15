@@ -15,3 +15,19 @@ Project governance, goals, and change tracking. The operational backbone of the 
 - `SESSION_LOG/` — Archived session handoff notes (one per session)
   - `SESSION_2026-06-09.md` — Initialization session
   - `SESSION_2026-06-11.md` — Layer separation session
+- `REVIEW_PACKETS/` — Reviewer-agent prompts and review preparation
+  - `V0_2_REVIEWER_AGENT_PACKET.md` — Six reviewer agents for v0.2 external review
+  - `V0_2_REVIEW_SYNTHESIS_MEMO.md` — Cross-reviewer synthesis and v1.0 priority recommendations
+  - `V0_2_REVIEW_RUN_LOG.md` — Run log confirming execution and integrity
+  - `V1_0_REVIEW_RESPONSE_PLAN.md` — Prioritized editorial decision plan for v1.0
+  - `V1_0_REWRITE_DOCTRINE_AND_WORKPLAN.md` — Editorial doctrine, arc preservation, compression strategy for v1.0
+  - `V1_0_OUTLINE_AND_VISUAL_PLACEMENT_MAP.md` — Proposed v1.0 section structure, SVG mapping, compression hypotheses
+  - `V1_0_SECTION_REWRITE_QUEUE.md` — Section-by-section drafting status tracker
+  - `V1_0_SECTION_01_SOURCE_PACKET.md` — Source material, retention/compression plan, and drafting instructions for Section 1
+  - `V0_2_AGENT_REVIEWS/` — Six independent review reports
+    - `01_Cold_Intelligent_Reader.md`
+    - `02_AI_Agent_Systems_Reviewer.md`
+    - `03_Product_Organizational_Systems_Reviewer.md`
+    - `04_Academic_Theory_Reviewer.md`
+    - `05_Skeptical_Practitioner.md`
+    - `06_Evidence_and_Citation_Auditor.md`
