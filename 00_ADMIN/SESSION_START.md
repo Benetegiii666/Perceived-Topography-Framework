@@ -5,51 +5,78 @@ Perceived Topography Framework
 
 ## Project Status
 - **Concept Architecture v0.1:** FROZEN (Phases 1-5 complete)
-- **Paper v0.1:** EXPORTED — clean Markdown + DOCX + HTML review artifacts created
-- **Paper v0.2 editorial pass:** IN PROGRESS — Section 1 compressed, Section 2 term basket mapped
+- **Paper v0.1:** FROZEN — clean Markdown + DOCX + HTML review artifacts created
+- **Paper v0.2:** FROZEN — accepted 2026-06-14
+- **Paper v1.0:** IN PROGRESS — working draft scaffold created, Section 1 draft inserted
 - **Phase 7:** Artifact Finalization and External Review — active
-- **SVGs:** 7 generated (2 polished, 5 rough-approved), final polish complete
-- **Citations:** 33 body-prose citations resolved, 33 bibliography entries, zero unresolved
-- **Exports:** DOCX (117KB) + HTML (388KB) created. PDF pending LaTeX install.
+- **SVGs:** 7 generated, all current, no stale language
+- **Citations:** 33 body-prose citation keys, all resolved in bibliography and references
+- **Appendix A:** The Decision Topography Interview (23 items, 4 phases) — integrated
 
 ---
 
-## Current Editorial State
+## v1.0 Rewrite Status
 
-### Completed
-- Paper v0.1 draft (17 sections, all complete)
-- AHA audit (6 promoted, 2 retired)
-- SVG audit (revised 5→7 diagrams)
-- Heading/reader-journey refinements
-- Terminology discipline fixes
-- Figure placeholders inserted (7 figures + disclaimer)
-- Seven SVGs generated, Figures 3+6 refined, cross-figure fixes applied
-- Citation Batches 1-3 resolved (all body-prose citations)
-- Related Work Ledger synced (33 entries)
-- Bibliography created and verified (33 entries, all metadata confirmed)
-- Final citation consistency check passed
-- Export readiness audit passed
-- PAPER_v0.1.md clean export created
-- DOCX + HTML exports created
-- Manuscript reality check: confirmed actual prose, zero scaffold
-- Section files split to 08_PAPER_DRAFTS/sections/
-- Section 1 story beat map completed
-- Section 1 compression applied (1,819→1,758 words)
-- Section 2 term basket / relocation map completed
+### Doctrine and Planning (Complete)
+- v0.2 reviewer-agent run: 6 independent reviews + synthesis memo
+- v1.0 review response plan
+- v1.0 rewrite doctrine with body-of-work framing, standalone arc requirement, compression posture, dimension admission test, visual compression strategy
+- Approved 11-section outline with SVG placement map and final authorial decisions
+- Section rewrite queue tracking all 15 items
 
-### In Progress
-- **Section 2 editorial decision pending:** Three options for restructuring terms glossary
-  - Option A: Full relocation (S2→800 words, terms moved to where needed)
-  - Option B: Keep as-is with "skim and return" note
-  - Option C: Hybrid tiers (core terms + one-line pointers for later terms)
-- Remaining sections (3-17) have not yet had editorial review passes
+### Approved v1.0 Structure
+```
+1.  From Agent Fear to Landscape Design
+2.  Context Does Not Preserve the Why
+3.  Optimizer State and Perceived Topography
+4.  Gradients, Sufficiency, and Failure
+5.  A Constructed Stress Test: The Healthcare Campaign
+6.  Learning Requires Preserved Reasoning
+7.  Discovery Turns Human Intent Into Reusable Reasoning
+8.  What It Would Take to Build This
+9.  Boundaries, Objections, and Falsifiability
+10. The Blend Has Roots
+11. Build Better Landscapes
+Appendix A: The Decision Topography Interview
+References
+```
 
-### Not Started
-- Final SVG optional polish (5 cosmetic items deferred)
-- PDF export (needs LaTeX)
-- Peer review / external reader review
-- Abstract
-- Executive summary / adoption roadmap companion
+### Key Doctrine Decisions
+- Reader comprehension governs; compression is a method, not the goal
+- 15,000 words is the minimum body threshold, not the ceiling
+- v1.0 is a complete standalone theory paper AND the keystone of a broader body of work
+- Later artifacts extend, operationalize, validate, or specialize — they do not complete the argument
+- Full-framework loop appears early (S1) as a reader map
+- Objections distributed where they arise; S9 is the formal synthesis
+- No Appendix B; implementation detail deferred to product/design track
+- Abstract and epistemic-status paragraph included
+- Three-column stress test required (context-only / reasoning-state / next-cycle learning)
+
+### Section Drafting Status
+| Section | Status |
+|---------|--------|
+| Abstract | Not started |
+| Epistemic Status | Not started |
+| 1. From Agent Fear to Landscape Design | **Draft inserted / pending review** |
+| 2. Context Does Not Preserve the Why | Not started |
+| 3. Optimizer State and Perceived Topography | Not started |
+| 4. Gradients, Sufficiency, and Failure | Not started |
+| 5. A Constructed Stress Test | Not started |
+| 6. Learning Requires Preserved Reasoning | Not started |
+| 7. Discovery | Not started |
+| 8. What It Would Take to Build This | Not started |
+| 9. Boundaries, Objections, and Falsifiability | Not started |
+| 10. The Blend Has Roots | Not started |
+| 11. Build Better Landscapes | Not started |
+| Appendix A | Not started |
+| References | Not started |
+
+### Remaining Open Decisions
+- Tiny contrast example: add one? Which domain?
+- Target audience / venue for v1.0
+- "Model Update Object" naming
+- Real case sourcing for future validation
+- Body-of-work framing: explicit in manuscript or internal only?
 
 ---
 
@@ -63,9 +90,12 @@ Perceived Topography Framework
 | Emerging Concepts | 5 (EC_001-EC_005) |
 | Counterarguments | 6 (CA_001-CA_006) |
 | Concept Architecture docs | 7 foundational |
-| Paper sections | 17 + References |
+| Paper sections (v0.2) | 17 + Appendix A + References |
+| Paper sections (v1.0 draft) | 11 + Appendix A + References (1 drafted) |
 | SVG figures | 7 |
 | Bibliography entries | 33 |
+| Reviewer-agent reports | 6 + synthesis memo |
+| v1.0 planning artifacts | 6 (doctrine, outline, response plan, rewrite queue, source packet, run log) |
 
 ---
 
@@ -73,14 +103,15 @@ Perceived Topography Framework
 
 | File | Purpose |
 |------|---------|
-| PAPER_DRAFT.md | Working manuscript (35,046 words) |
+| PAPER_v1.0_WORKING.md | Active v1.0 working draft — Section 1 inserted |
+| PAPER_DRAFT.md | Working manuscript (~36,800 words, v0.2 era) |
 | PAPER_v0.1.md | Clean v0.1 snapshot (33,677 words) — DO NOT EDIT |
+| PAPER_v0.2.md | Clean v0.2 snapshot (36,861 words) — DO NOT EDIT |
 | BIBLIOGRAPHY.md | 33 verified entries |
-| RELATED_WORK_LEDGER.md | Citation source of truth |
-| sections/ | Individual section files for review |
-| SECTION_1_STORY_BEAT_MAP.md | Section 1 editorial map |
-| SECTION_2_TERM_BASKET_MAP.md | Section 2 editorial map |
-| paper_assets/svg/ | 7 SVG figures |
+| V1_0_REWRITE_DOCTRINE_AND_WORKPLAN.md | Editorial doctrine for v1.0 |
+| V1_0_OUTLINE_AND_VISUAL_PLACEMENT_MAP.md | Approved 11-section outline with decisions |
+| V1_0_SECTION_REWRITE_QUEUE.md | Section-by-section drafting tracker |
+| V1_0_SECTION_01_SOURCE_PACKET.md | Source material and drafting instructions for S1 |
 
 ---
 
@@ -101,10 +132,17 @@ Perceived Topography Framework
 - Every PAPER_DRAFT.md edit classified as: heading-only, formatting-only, citation-only, diagram-only, clarification, expansion, compression, or substantive rewrite
 - Compression and substantive rewrite require explicit approval
 - PAPER_v0.1.md is the frozen v0.1 snapshot — do not edit
+- PAPER_v0.2.md is the frozen v0.2 snapshot — do not edit
+- PAPER_v1.0_WORKING.md is the active v1.0 working draft
+
+## v1.0 Rewrite Standard
+```
+Does this section help the reader explain the framework more cogently?
+If yes, preserve, clarify, or restructure it.
+If no, compress, move, visualize, or cut it.
+```
 
 ## Instruction to ChatGPT
-Use this as the current project state. The paper v0.2 editorial pass is in progress. Section 1 has been compressed. Section 2 term restructuring decision is pending. When repository updates are needed, flag as **Repository Action Required** with classification and content.
+Use this as the current project state. Paper v0.2 is frozen. Paper v1.0 is in progress — Section 1 draft inserted, all other sections scaffolded. The approved 11-section structure, rewrite doctrine, and final authorial decisions are in the REVIEW_PACKETS folder. When repository updates are needed, flag as **Repository Action Required** with classification and content.
 
 ---
-
-*This file is regenerated by Claude before each session. Last generated: 2026-06-13.*
