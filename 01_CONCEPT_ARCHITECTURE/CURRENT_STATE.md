@@ -149,14 +149,32 @@ The framework operates at four distinct layers:
 - D011 (Differential Intervention Principle) integrated as one sentence in S14.12
 - Zero Citation Debt, Draft Notes, placeholders, or process contamination
 
-**Current phase:** Phase 7 — Artifact Finalization and External Review
+## Paper v1.0 — Working Draft (2026-06-21)
+
+**PAPER_v1.0_WORKING.md** — structurally complete working draft. FROZEN.
+
+- 11 sections + Appendix A + References
+- 2,583 lines
+- Abstract and Epistemic Status included
+- 36 reference entries
+
+## Companion Artifacts — v1.0 Stack (2026-06-22)
+
+| Artifact | Status | Path |
+|---|---|---|
+| Executive Brief v1.0 | Accepted | `COMPANION_ARTIFACTS/EXECUTIVE_BRIEF_v1.0.md` |
+| Build Discovery Guide v1.0 | Accepted | `COMPANION_ARTIFACTS/BUILD_DISCOVERY_GUIDE_v1.0.md` |
+| HLD / Reference Architecture v1.0 | Accepted (QA 34/34) | `REFERENCE_ARCHITECTURE/HLD_REFERENCE_ARCHITECTURE_v1.0.md` |
+
+The v1.0 artifact stack is complete. The project is ready to transition from architecture artifacts into first implementation slice planning.
+
+**Current phase:** Phase 7 — Artifact Finalization and External Review. Implementation planning next.
 
 ## What Has NOT Been Decided
 
 - PDF/docx export format for v0.2
 - Peer review / external reader review plan
-- Abstract
-- Executive-summary / adoption-roadmap companion
+- First implementation slice target (HLD Ch 13 defines criteria)
 - Final SVG optional polish (5 deferred cosmetic items)
 - Whether Decision Space and Capability are primitives, derived, or collapsible
 
