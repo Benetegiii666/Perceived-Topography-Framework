@@ -21,7 +21,16 @@ This field kit draws from:
 | `IMPLEMENTATION_PLANNING/CAMPAIGN_BRIEF_WORKFLOW_DISCOVERY_v0.1.md` | Discovery questionnaire structure |
 | `IMPLEMENTATION_PLANNING/FIRST_IMPLEMENTATION_SLICE_PLAN_v0.2.md` | Information surface registry, component lanes |
 
-## Recommended Sequence
+## Pre-Start Flow (Before July 13, 2026)
+
+1. Use `00_PRE_START_OPERATING_PLAN.md` to stay oriented before official start.
+2. Use `07_JEREMY_MARKETING_STRATEGY_MEETING_GUIDE.md` for the Jeremy conversation.
+3. Record the meeting. Provide transcript to Claude for processing into discovery forms.
+4. Capture notes in `08_POST_JEREMY_NOTES_TEMPLATE.md`.
+5. Do not fill formal discovery tables until real stakeholder answers exist.
+6. After July 13, use the main stakeholder email, orientation summary, live script, questionnaire, and notes template for formal Rapid marketing discovery.
+
+## Post-Start Sequence (After July 13, 2026)
 
 1. **Send the email** (`01_STAKEHOLDER_EMAIL.md`).
 2. **Attach the executive orientation summary** (`02_EXECUTIVE_ORIENTATION_SUMMARY.md`) as pre-read.
@@ -36,6 +45,7 @@ For deeper follow-up passes, use the full internal question bank (`04A_FULL_QUES
 
 | File | Purpose |
 |---|---|
+| `00_PRE_START_OPERATING_PLAN.md` | Pre-start operating plan (before July 13) |
 | `01_STAKEHOLDER_EMAIL.md` | Copy-paste email to send before the conversation |
 | `02_EXECUTIVE_ORIENTATION_SUMMARY.md` | 1-2 page pre-read for stakeholders |
 | `03_LIVE_CONVERSATION_SCRIPT.md` | Opening framing for the live conversation |
@@ -43,3 +53,5 @@ For deeper follow-up passes, use the full internal question bank (`04A_FULL_QUES
 | `04A_FULL_QUESTION_BANK_INTERNAL.md` | Internal master question bank (all 13 categories) — NOT for first live conversation |
 | `05_NOTES_CAPTURE_TEMPLATE.md` | Structured note-taking template |
 | `06_FIELD_KIT_TO_REPO_MAPPING.md` | Where field kit outputs go in the formal repo |
+| `07_JEREMY_MARKETING_STRATEGY_MEETING_GUIDE.md` | Lightweight meeting guide for Jeremy conversation |
+| `08_POST_JEREMY_NOTES_TEMPLATE.md` | Post-meeting notes template for Jeremy conversation |
