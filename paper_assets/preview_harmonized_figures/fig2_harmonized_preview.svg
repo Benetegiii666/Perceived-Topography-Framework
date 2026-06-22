@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" width="1400" height="760">
+  <title>Figure 2 — Context Is Not Reasoning State</title>
+  <desc>Context preserves artifacts. Reasoning state preserves why artifacts shaped action. The action/learning layer preserves how reality responded and what should change.</desc>
+
+  <rect width="1400" height="760" fill="#F7F2E8"/>
+  <text x="700" y="40" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#2B2A24" text-anchor="middle">Context Is Not Reasoning State</text>
+
+  <!-- ====== TOP LAYER: Context Layer ====== -->
+  <rect x="120" y="80" width="1160" height="150" rx="16" fill="#FAF7F0" stroke="#8B8575" stroke-width="2"/>
+  <text x="700" y="110" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#8B8575" text-anchor="middle">Context Layer</text>
+
+  <!-- Artifact pills -->
+  <rect x="155" y="125" width="130" height="32" rx="16" fill="#F7F2E8" stroke="#8B8575" stroke-width="1"/>
+  <text x="220" y="146" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">documents</text>
+
+  <rect x="305" y="125" width="110" height="32" rx="16" fill="#F7F2E8" stroke="#8B8575" stroke-width="1"/>
+  <text x="360" y="146" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">policies</text>
+
+  <rect x="435" y="125" width="130" height="32" rx="16" fill="#F7F2E8" stroke="#8B8575" stroke-width="1"/>
+  <text x="500" y="146" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">campaigns</text>
+
+  <rect x="585" y="125" width="130" height="32" rx="16" fill="#F7F2E8" stroke="#8B8575" stroke-width="1"/>
+  <text x="650" y="146" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">dashboards</text>
+
+  <rect x="735" y="125" width="100" height="32" rx="16" fill="#F7F2E8" stroke="#8B8575" stroke-width="1"/>
+  <text x="785" y="146" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">notes</text>
+
+  <rect x="855" y="125" width="130" height="32" rx="16" fill="#F7F2E8" stroke="#8B8575" stroke-width="1"/>
+  <text x="920" y="146" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">transcripts</text>
+
+  <text x="700" y="200" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">What does the organization know?</text>
+
+  <!-- Arrow down -->
+  <line x1="700" y1="230" x2="700" y2="260" stroke="#2B2A24" stroke-width="2"/>
+  <polygon points="700,267 694,257 706,257" fill="#2B2A24"/>
+
+  <!-- ====== MIDDLE LAYER: Reasoning-State Layer (emphasized) ====== -->
+  <rect x="120" y="275" width="1160" height="175" rx="16" fill="#EFE6D6" stroke="#6F7F3A" stroke-width="3"/>
+  <text x="700" y="305" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#6F7F3A" text-anchor="middle">Reasoning-State Layer</text>
+  <text x="700" y="322" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-style="italic">— the missing layer —</text>
+
+  <!-- Reasoning state items -->
+  <rect x="145" y="340" width="100" height="34" rx="17" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2"/>
+  <text x="195" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-weight="bold">Goal</text>
+
+  <rect x="265" y="340" width="100" height="34" rx="17" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2"/>
+  <text x="315" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-weight="bold">Policy</text>
+
+  <rect x="385" y="340" width="140" height="34" rx="17" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2"/>
+  <text x="455" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-weight="bold">Interpretation</text>
+
+  <rect x="545" y="340" width="150" height="34" rx="17" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2"/>
+  <text x="620" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-weight="bold">Premise Stack</text>
+
+  <rect x="715" y="340" width="150" height="34" rx="17" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2"/>
+  <text x="790" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-weight="bold">Decision State</text>
+
+  <rect x="885" y="340" width="130" height="34" rx="17" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2"/>
+  <text x="950" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-weight="bold">Confidence</text>
+
+  <rect x="1035" y="340" width="130" height="34" rx="17" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2"/>
+  <text x="1100" y="362" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6F7F3A" text-anchor="middle" font-weight="bold">Sufficiency</text>
+
+  <text x="700" y="415" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6F7F3A" text-anchor="middle" font-style="italic">What should the system do with what it knows?</text>
+
+  <!-- Arrow down -->
+  <line x1="700" y1="450" x2="700" y2="480" stroke="#2B2A24" stroke-width="2"/>
+  <polygon points="700,487 694,477 706,477" fill="#2B2A24"/>
+
+  <!-- ====== BOTTOM LAYER: Action / Learning Layer ====== -->
+  <rect x="120" y="495" width="1160" height="145" rx="16" fill="#FAF7F0" stroke="#7C9A63" stroke-width="2"/>
+  <text x="700" y="525" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#7C9A63" text-anchor="middle">Action / Learning Layer</text>
+
+  <!-- Action/learning items -->
+  <rect x="170" y="545" width="160" height="34" rx="17" fill="#F7F2E8" stroke="#7C9A63" stroke-width="1"/>
+  <text x="250" y="567" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#7C9A63" text-anchor="middle">generated artifact</text>
+
+  <rect x="355" y="545" width="130" height="34" rx="17" fill="#F7F2E8" stroke="#7C9A63" stroke-width="1"/>
+  <text x="420" y="567" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#7C9A63" text-anchor="middle">tool action</text>
+
+  <rect x="510" y="545" width="120" height="34" rx="17" fill="#F7F2E8" stroke="#7C9A63" stroke-width="1"/>
+  <text x="570" y="567" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#7C9A63" text-anchor="middle">outcome</text>
+
+  <rect x="655" y="545" width="155" height="34" rx="17" fill="#F7F2E8" stroke="#B08A3A" stroke-width="1"/>
+  <text x="732" y="567" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#B08A3A" text-anchor="middle">prediction error</text>
+
+  <rect x="835" y="545" width="150" height="34" rx="17" fill="#F7F2E8" stroke="#7C9A63" stroke-width="1"/>
+  <text x="910" y="567" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#7C9A63" text-anchor="middle">model update</text>
+
+  <text x="700" y="610" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#7C9A63" text-anchor="middle" font-style="italic">What happened, and what changed?</text>
+
+  <!-- Caption -->
+  <text x="700" y="680" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">Context preserves artifacts. Reasoning state preserves why artifacts shaped action.</text>
+  <text x="700" y="700" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">The action/learning layer preserves how reality responded and what should change.</text>
+</svg>

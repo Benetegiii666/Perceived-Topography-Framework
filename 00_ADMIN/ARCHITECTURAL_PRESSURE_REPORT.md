@@ -72,6 +72,10 @@ Some gradients appear directly measurable (churn rate, latency, cost). Others ma
 
 **Watch reason:** Could explain why actors sharing the same visibility may still disagree on *what matters*. Two executives seeing the same dashboard may weight "trust" differently not because they perceive it differently, but because one treats it as a real gradient and the other treats it as a constructed metric.
 
+## HLD / Reference Architecture Requirement (added 2026-06-21)
+
+HLD / Reference Architecture requirement: reasoning-relevant retrieval must be designed explicitly. It cannot be treated as ordinary semantic document retrieval. The HLD must specify reasoning-object metadata, indexing, applicability boundaries, provenance, confidence, lifecycle status, and human confirmation of reuse. See `00_ADMIN/REVIEW_PACKETS/HLD_REFERENCE_ARCHITECTURE_NOTES.md` for full planning notes.
+
 **Status:** Pressure only. No promotion. If this survives, it may challenge the clean separation between the reality and perception layers — which would be a new fault line.
 
 ## Emerging Pressure Candidate: Attention as Mediating Mechanism

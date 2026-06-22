@@ -10,7 +10,7 @@ Drafting phase: ALL 17 SECTIONS COMPLETE — Paper v0.1 draft done
 
 ---
 
-# 1. Introduction: From Agent Fear to Topography Design
+# 1. From Agent Fear to Landscape Design
 
 Public discussion of AI agents has begun to acquire a familiar shape. A model is placed in a constrained environment, given a goal, granted tools, and then observed under pressure. Sometimes it fabricates facts. Sometimes it appears to deceive. Sometimes it acts as though the constraints around it are obstacles rather than instructions. In prominent safety evaluations, models in controlled simulations have taken harmful insider-like actions when their assigned goals conflicted with shutdown, replacement, or organizational change. [Lynch et al., 2025]
 
@@ -105,216 +105,75 @@ This section intentionally:
 
 ---
 
-# 2. A Note on Terms
+# 2. The Terms That Carry the Argument
 
-This paper uses several terms that carry established meanings in other fields, including optimization, reinforcement learning, topology, human-computer interaction, organizational learning, knowledge management, systems theory, and AI safety. The terms are used here in a specific analytic sense. They are intended to provide a shared vocabulary for describing human-agent systems, not to imply a fully mathematical model unless explicitly stated.
+## How to Read the Terms Without Losing the Story
+
+This paper uses several terms that carry established meanings in other fields, including optimization, reinforcement learning, topology, human-computer interaction, organizational learning, knowledge management, systems theory, and AI safety. The terms are used here in a specific analytic sense. They are intended to create a shared vocabulary for describing human-agent systems, not to imply a fully mathematical model unless explicitly stated.
 
 This clarification matters because many of the paper's central terms are overloaded. A reader may reasonably bring definitions from reinforcement learning, economics, organizational theory, HCI, or AI alignment. Those definitions are often relevant, and many are part of the intellectual lineage of this framework. But the framework uses these terms as a synthesis. It borrows, narrows, and recombines them around a specific problem: how human-agent systems perceive, decide, act, and learn across organizational workflows.
 
-## Optimizer
+The reader does not need to memorize the full vocabulary before continuing. The terms below are the core orientation points needed for the next parts of the argument. Other concepts are introduced where they become active in the paper.
 
-An **optimizer** is a system that selects actions in relation to a goal, under constraints, using an interpretation of the situation.
+## The Few Terms Needed Before Continuing
+
+**Optimizer.** An optimizer is a system that selects actions in relation to a goal, under constraints, using an interpretation of the situation.
 
 The term does not imply consciousness, desire, moral agency, or malice. An optimizer need not "want" in the human sense. It need only exhibit goal-directed action selection. In this paper, optimizer is a behavioral description, not a psychological claim.
 
 This usage is influenced by bounded rationality and satisficing: real decision-makers do not evaluate all possible actions under perfect information, but search, interpret, and stop when a course of action appears sufficient. [Simon, 1955]
 
-## Agent
-
-An **agent** is an AI system or workflow component that can interpret information, select actions, use tools, and produce effects beyond a single static response.
+**Agent.** An agent is an AI system or workflow component that can interpret information, select actions, use tools, and produce effects beyond a single static response.
 
 Agents vary in autonomy. Some require constant human direction. Others can plan, retrieve information, invoke tools, write messages, update systems, or operate across longer time horizons. The framework treats agency as a design condition shaped by goal, permissions, tool access, oversight, and environment.
 
-## Goal
-
-A **goal** is the directional objective an optimizer is acting in relation to.
-
-Goals may be explicit, such as "generate qualified demo requests," or implicit, such as "complete the assigned task." Goals shape which information becomes relevant and which outcomes appear valuable. In this framework, goal is a primitive of optimizer behavior.
-
-## Policy
-
-A **policy** is a constraint on optimizer behavior: what the system may do, must do, must not do, or must escalate.
-
-Policy is treated as a boundary condition, not merely as a written rule. A policy that exists in documentation but is not visible, salient, enforceable, or connected to action may fail to shape behavior. This distinction is central to the paper's safety argument: constraints must exert force inside the optimizer's perceived topography.
-
-## Interpretation
-
-**Interpretation** is the optimizer's working understanding of what information means.
-
-Interpretation includes signal meaning, causal assumptions, and action models: beliefs about which actions are likely to produce which outcomes under which conditions. Two systems may see the same information but act differently because they interpret it differently.
-
-Interpretation is related to sensemaking: actors do not respond to reality directly, but to the meaning they construct from available signals, context, and prior assumptions. [Weick, 1995]
-
-## Reasoning State
-
-A **reasoning state** is the structured condition from which an optimizer acts.
+**Reasoning state.** A reasoning state is the structured condition from which an optimizer acts.
 
 It includes the active goal, relevant policies, current interpretation, premise stack, visible information, confidence levels, decision options, constraints, and sufficiency rationale. A central claim of the paper is that human-agent systems often fail because they preserve documents and outputs, but not the reasoning states that produced them.
 
-## Topography
+**Topography.** Topography refers to the perceived information-and-action environment through which an optimizer moves.
 
-**Topography** refers to the perceived information-and-action environment through which an optimizer moves.
+It is not the objective world itself. It is the world as made available to the optimizer through visible information, accessible tools, representations, confidence signals, policies, memories, prior learning, and action affordances. The term is metaphorical unless explicitly formalized. It is used to describe the shape of perceived possibilities.
 
-It is not the objective world itself. It is the world as made available to the optimizer through visible information, accessible tools, representations, confidence signals, policies, memories, prior learning, and action affordances.
-
-The term is metaphorical unless explicitly formalized. It is used to describe the shape of perceived possibilities.
-
-## Perceived Topography
-
-**Perceived topography** emphasizes that the optimizer acts on what it can perceive, retrieve, interpret, and trust.
-
-Information may exist in the organization and still fail to shape behavior. If it is invisible, inaccessible, poorly represented, low-confidence, or disconnected from the task, it exerts little or no force on the optimizer's path.
-
-## Information Surface
-
-An **information surface** is any source, interface, artifact, memory, system, or signal through which information becomes available to the optimizer.
-
-Examples include documents, dashboards, policies, Slack threads, CRM records, search results, retrieved chunks, prior campaign learnings, user instructions, and model-generated summaries.
-
-Information surfaces are not neutral. They shape what is visible, what is hidden, what appears authoritative, and what can be acted on.
-
-## Gradient
-
-A **gradient** is a directional pressure within the perceived topography.
+**Gradient.** A gradient is a directional pressure within the perceived topography.
 
 A gradient makes some paths appear easier, more useful, more relevant, more confident, lower-cost, or more sufficient than others. In this paper, gradient does not necessarily mean a mathematical gradient or a reinforcement-learning reward function. It is a broader design term for how goals, information, confidence, constraints, tool access, action costs, and prior learning shape movement.
 
 The framework's use of gradient is related to reward shaping and environment design, but it is not identical to formal reward shaping. [Ng et al., 1999]
 
-## Visibility
+## Terms That Mean Something Specific Here
 
-**Visibility** describes whether relevant information is available to be perceived at all.
+Several other terms appear throughout the paper with narrower or more precise meanings than their common usage. They are named here to prevent confusion, but they are developed more fully in the sections where they do the most work.
 
-If a policy, prior lesson, risk signal, or customer objection exists but the optimizer cannot see it, then it may not affect behavior. Visibility failures often appear as "the system should have known," when in fact the relevant signal never entered the optimizer's perceived topography.
+**Goal** means the directional objective an optimizer acts in relation to, not merely the literal task prompt. Goals shape which information becomes relevant. Section 4 develops this term.
 
-## Accessibility
+**Policy** means a constraint on optimizer behavior: what the system may do, must do, must not do, or must escalate. A policy is treated as a boundary condition, not merely as a written rule. Section 4 develops this distinction.
 
-**Accessibility** describes whether visible information can be reached, retrieved, or used at acceptable cost.
+**Interpretation** means the optimizer's working understanding of what information means, including signal meaning, causal assumptions, and action models. Section 4 develops this term.
 
-Information may be visible in principle but too difficult to access in practice. A buried policy, fragmented document set, inaccessible dashboard, or hard-to-query system may exert less behavioral force than a simpler but lower-quality source.
+**Perceived topography** emphasizes that the optimizer acts on what it can perceive, retrieve, interpret, and trust, not on objective reality as such. Section 5 develops this distinction.
 
-## Representation
+**Information surface** means any source, interface, artifact, memory, system, or signal through which information becomes available to the optimizer. Section 5 develops this term.
 
-**Representation** describes whether information is expressed in a form the optimizer can understand and use.
+**Confidence** means how trustworthy, grounded, or reliable a perceived information surface appears to the optimizer. It is not the same as truth. Capitalized Confidence refers to the topography dimension introduced in Section 5; lowercase confidence refers to the general degree of belief or reliability assigned in ordinary reasoning contexts.
 
-Poor representation can turn available information into noise. A policy written for lawyers, a dashboard without interpretation, or a customer insight buried in a long transcript may be technically available but functionally weak.
+**Sufficiency** means the point at which additional information is unlikely to materially change the selected action. It is not the same as certainty. Section 6 develops this concept as part of optimizer motion.
 
-Representation is one reason context layers alone are insufficient. Retrieved information must be usable inside the reasoning process.
+**Learning** means an evidence-supported model update triggered by prediction error. A bad outcome alone is not learning, and a postmortem alone is not necessarily learning. Sections 8 and 9 develop this claim.
 
-## Confidence
+**Hallucination** means the production of plausible but unsupported claims. In this framework, hallucination is not only an output defect; it is also a reasoning-state failure in which the system reaches sufficiency before evidence warrants the claim. Section 7 develops this argument.
 
-**Confidence** describes the optimizer's trust in an observation, explanation, source, or proposed action.
+**Alignment** is used cautiously. The framework does not treat alignment only as value matching between a model and a human. It treats alignment as a property of the broader human-agent system: goals, policies, interpretations, information surfaces, action affordances, confidence structures, oversight, and learning loops must work together so that behavior reliably moves toward intended outcomes. Section 16 returns to this point.
 
-Confidence is not the same as truth. It is a behavioral variable: high-confidence information exerts more force than low-confidence information. Confidence also affects whether the optimizer acts, investigates, escalates, or abstains.
+**Governance** means the mechanisms by which goals, policies, permissions, evidence requirements, approval paths, monitoring, and learning updates are made durable and behaviorally effective. Governance is not merely having rules. It succeeds when rules can shape behavior at the moment of decision. Section 16 develops this implication.
 
+## Terms That Arrive Later in the Argument
 
-In this paper, capitalized Confidence refers to the topography dimension: how trustworthy, grounded, or reliable a perceived information surface appears to the optimizer. Lowercase confidence refers to the general degree of belief or reliability assigned in ordinary reasoning contexts.
+Some terms are intentionally not fully defined here because they make more sense once the argument has created a need for them. The five dimensions of information topography — Visibility, Accessibility, Representation, Confidence, and Connectivity — are introduced in Section 5. The stages of optimizer motion — Attraction, Investigation, Sufficiency, and Action — are introduced in Section 6. Prediction Error appears in Section 8 as the trigger condition for learning. Premise Stack and Model Update Object appear in Section 9 as part of the paper's account of durable learning. Discovery appears in Section 11 as the process by which messy human intent and organizational artifacts are converted into structured reasoning state.
 
-The framework treats hallucination partly as a confidence/sufficiency failure: the system moves to answer before evidence is strong enough to support the claim. [Menick et al., 2022] [Lewis et al., 2020]
+This sequencing is intentional. The framework is not a vocabulary list. It is an argument about how agent behavior emerges from the relationship between goals, constraints, interpretation, perceived information, available action, and preserved learning.
 
-## Connectivity
-
-**Connectivity** describes how information relates to other information, actions, assumptions, risks, or outcomes.
-
-Connectivity answers questions such as: What does this signal imply? What else becomes likely if this is true? Which assumptions does this contradict? Which prior lessons are relevant? Which policy does this trigger?
-
-Connectivity is central to learning. A system may see a signal but fail to connect it to the premise it invalidates.
-
-## Attraction
-
-**Attraction** is the allocation of optimizer attention toward part of the perceived topography.
-
-Information becomes attractive when it appears goal-relevant, action-relevant, uncertain in an important way, or connected to other meaningful signals. Attraction does not mean desire. It means attention is pulled toward something because the optimizer's current state makes it salient.
-
-## Investigation
-
-**Investigation** is the process of reducing uncertainty before action.
-
-Investigation begins when an observation, contradiction, confidence gap, or decision risk becomes salient enough to warrant further search. Investigation may gather evidence, test explanations, explore alternatives, resolve contradictions, or determine that additional information is unlikely to change the action.
-
-## Sufficiency
-
-**Sufficiency** is the point at which additional information is unlikely to materially change the selected action.
-
-Sufficiency is not certainty. A system may have incomplete confidence in the full explanation but still reach sufficiency if the same action remains appropriate across plausible explanations. Conversely, a system may be confident about one fact but still lack sufficiency because a missing variable could change the decision.
-
-This concept is directly related to bounded rationality and satisficing. [Simon, 1955]
-
-## Action
-
-**Action** is the selected behavior produced by optimizer motion.
-
-In human-agent systems, action may include answering, generating content, escalating, refusing, searching, sending a message, updating a record, invoking a tool, approving a workflow, or recommending a decision. The framework treats action as the output of goal, policy, interpretation, topography, investigation, and sufficiency.
-
-## Prediction Error
-
-**Prediction error** is a mismatch between expected and observed outcome.
-
-Prediction error is the trigger condition for learning, but it is not learning by itself. A system must investigate the mismatch, explain it with evidence, and update the relevant model before learning has occurred.
-
-## Learning
-
-**Learning** is an evidence-supported model update triggered by prediction error.
-
-A bad outcome alone is not learning. A reaction is not learning. A postmortem is not necessarily learning. Learning occurs when an expectation is violated, the mismatch is investigated, an evidence-supported explanation is formed, and future behavior is updated.
-
-This usage is related to organizational learning, especially the distinction between correcting behavior and updating the assumptions that produced it. [Argyris & Schön, 1978] [Cyert & March, 1963]
-
-## Premise Stack
-
-A **premise stack** is the artifact-backed basis for a prior expectation.
-
-It includes the assumptions, source materials, playbooks, strategies, customer research, data, policies, or prior decisions that made an action seem reasonable before it was taken. The premise stack answers: why did we expect this to work?
-
-Premise stacks matter because failures are often misdiagnosed. Without knowing the assumptions that produced an action, a system may learn the wrong lesson from the right evidence.
-
-## Model Update Object
-
-A **Model Update Object** is a reusable record of learning.
-
-It preserves the prior expectation, premise stack, triggering action, observed outcome, prediction error, evidence trace, explanation, update target, applicability boundary, and confidence level. Its purpose is to prevent learning from degrading into folklore, memory, or isolated postmortem notes.
-
-A model update is the change in future reasoning. A Model Update Object is the durable record of that change.
-
-## Discovery
-
-**Discovery** is the process by which messy human intent and organizational artifacts are converted into structured reasoning objects.
-
-Discovery is not simply asking questions. In mature systems, discovery retrieves existing context, infers likely reasoning state, proposes a strawman, confirms only material uncertainties, generates useful artifacts, preserves the decision state, and learns from outcomes.
-
-In short:
-
-```
-Retrieve → Infer → Propose → Confirm → Generate → Preserve → Learn
-```
-
-Discovery is where human intent first becomes agent-usable reasoning state.
-
-## Alignment
-
-**Alignment** is used cautiously in this paper.
-
-The framework does not treat alignment only as value matching between a model and a human. It treats alignment as a property of the broader human-agent system: goals, policies, interpretations, information surfaces, action affordances, confidence structures, oversight, and learning loops must work together so that behavior reliably moves toward intended outcomes.
-
-This does not replace existing AI alignment work. It reframes one applied layer of the problem: the designed topography through which agent behavior emerges. [Ji et al., 2024]
-
-## Governance
-
-**Governance** refers to the mechanisms by which goals, policies, permissions, evidence requirements, approval paths, monitoring, and learning updates are made durable and behaviorally effective.
-
-Governance is not merely having rules. Governance succeeds when the rules are visible, accessible, represented clearly, connected to action, and capable of shaping behavior at the moment of decision.
-
-## Hallucination
-
-**Hallucination** refers to the production of plausible but unsupported claims.
-
-In this framework, hallucination is not only an output defect. It is also a reasoning-state failure: the system reaches sufficiency before evidence warrants the claim. Grounding, citation, uncertainty expression, and "I don't know" behavior can be understood as ways of reshaping the information topography so unsupported completion becomes less attractive than evidence-backed response. [Menick et al., 2022] [Lewis et al., 2020]
-
----
-
-## Summary of Usage
-
-This paper uses *topography* to describe the environment of perceived possibilities; *gradients* to describe directional pressures within that environment; and *optimizer* to describe the system moving through it.
+In summary, this paper uses topography to describe the environment of perceived possibilities; gradients to describe directional pressures within that environment; and optimizer to describe the system moving through it.
 
 The central claim is that safer and more reliable human-agent systems require not only stronger constraints, but better-shaped perceived topographies.
 
@@ -324,23 +183,11 @@ The central claim is that safer and more reliable human-agent systems require no
 
 **Used:**
 - [Simon, 1955]
-- [Simon, 1955]
-- [Weick, 1995]
 - [Ng et al., 1999]
-- [Menick et al., 2022]
-- [Lewis et al., 2020]
-- [Argyris & Schön, 1978]
-- [Cyert & March, 1963]
-- [AI_ALIGNMENT_OVERVIEW]
-- [AGENT_SAFETY_SURVEY]
 
 **Likely needed:**
 - [Gibson, 1979]
 - [Norman, 1988]
-- [March & Simon, 1958]
-- [ORGANIZATIONAL_MEMORY]
-- [DECISION_PROVENANCE]
-- [HCI_HUMAN_AI_COLLABORATION]
 
 ### Draft Notes — Section 2
 
@@ -355,7 +202,7 @@ This section intentionally:
 
 ---
 
-# 3. The Problem: Context Is Not Reasoning State
+# 3. Context Does Not Preserve the Why
 
 Modern AI systems are increasingly surrounded by context. They can retrieve documents, search knowledge bases, inspect databases, query APIs, summarize conversations, cite sources, and use tools. In many organizations, the first response to unreliable AI behavior is therefore to add more context: connect the model to more documents, expose more systems, index more repositories, retrieve more chunks, expand the prompt, or build a larger context layer.
 
@@ -383,7 +230,7 @@ A retrieval system may find the healthcare messaging document, the ICP profile, 
 
 The result is a familiar pattern: the organization appears to have memory but behaves as if it does not.
 
-## Documents Preserve Artifacts, Not State Transitions
+## Documents Preserve Artifacts
 
 Documents are valuable. They preserve statements, plans, evidence, decisions, analyses, and records. But they rarely preserve the full state transition that produced or modified action.
 
@@ -411,7 +258,7 @@ Reasoning reuse says:
 
 That is a different class of organizational memory.
 
-## Context Without Reasoning Can Increase Risk
+## Context Can Increase Risk When Reasoning Is Missing
 
 Adding context can make a system more capable without making it more reliable. A model connected to more documents may generate more fluent answers. An agent connected to more tools may act more effectively. But if the system does not know which information should govern action, which policies are binding, which sources are stale, which assumptions have failed before, or when uncertainty should trigger investigation, then increased context can increase the size of the action space without improving the quality of judgment.
 
@@ -438,14 +285,13 @@ A context layer may retrieve a compliance document. A reasoning layer determines
 
 A context layer may retrieve a postmortem. A reasoning layer converts the postmortem into a model update.
 
-## Reasoning State Is the Missing Unit
+## Preserved Reasoning Is the Missing Unit
 
 The central claim of this paper is that human-agent systems need a unit of memory smaller than an organization and larger than a retrieved chunk: the reasoning-state transition.
 
 A reasoning-state transition captures how an optimizer moved from one state to another:
 
 > Given this goal, under these constraints, with this interpretation, based on these premises, seeing this information, trusting it to this degree, considering these alternatives, judging this sufficient, the optimizer acted. Then reality responded. The outcome confirmed or violated the expectation. The system learned, failed to learn, or reacted.
-
 
 ![Context Is Not Reasoning State](paper_assets/svg/fig2_context_vs_reasoning_state.svg)
 
@@ -461,7 +307,7 @@ An AI agent may have access to a folder full of prior work and still fail to kno
 
 In each case, the problem is not absence of information. The problem is absence of preserved reasoning state.
 
-## The Healthcare Campaign Example
+## A Campaign Shows What Context Cannot Carry
 
 Consider again the running example.
 
@@ -505,7 +351,7 @@ The system has converted messy intent and retrieved context into reasoning state
 
 That is the difference between asking the user to supply reasoning and helping the user reason.
 
-## Why This Matters for Safety
+## Safety Needs the Why, Not Just the Source
 
 The same distinction applies to agent safety.
 
@@ -525,7 +371,7 @@ This matters because many safety failures are not simple absence-of-rule failure
 
 This is why the framework moves from context to topography, and from topography to reasoning state.
 
-## The Paper's Design Claim
+## The Design Claim Is Preservation
 
 The design claim is not that every system must preserve every possible detail. That would be another form of infinite context. The claim is that systems should preserve the minimum viable reasoning objects required for future action and learning.
 
@@ -577,7 +423,7 @@ This section intentionally:
 
 ---
 
-# 4. Optimizers: Goal, Policy, Interpretation
+# 4. The System Needs a Working Frame
 
 The previous section argued that context is not enough. A human-agent system does not merely need access to documents, policies, data, and prior work. It needs access to the reasoning state that makes those artifacts meaningful for action.
 
@@ -607,7 +453,7 @@ Together, Goal, Policy, and Interpretation define the optimizer state from which
 
 ---
 
-## 4.1 Goal
+## 4.1 Goals Give Motion Direction
 
 A **goal** is the directional objective the optimizer acts in relation to.
 
@@ -644,7 +490,7 @@ This also matters for safety. If an agent is given a goal that is underspecified
 
 ---
 
-## 4.2 Policy
+## 4.2 Policies Shape What Counts as Acceptable
 
 A **policy** is a constraint on optimizer behavior.
 
@@ -687,7 +533,7 @@ The paper's safety argument depends on this distinction. Policy is not merely a 
 
 ---
 
-## 4.3 Interpretation
+## 4.3 Interpretation Turns Signals Into Meaning
 
 **Interpretation** is the optimizer's working understanding of what information means.
 
@@ -719,7 +565,7 @@ This connects the framework to sensemaking. Human and organizational actors do n
 
 ---
 
-## 4.4 Optimizer State
+## 4.4 The Working Frame Makes Behavior Legible
 
 The combination of Goal, Policy, and Interpretation forms the **Optimizer State**.
 
@@ -761,7 +607,7 @@ That is the practical value of making optimizer state explicit.
 
 ---
 
-## 4.5 Why These Three Primitives Are Enough
+## 4.5 Three Primitives Are Enough to Begin
 
 The framework intentionally keeps the optimizer primitive set small.
 
@@ -799,7 +645,7 @@ Together they are sufficient to define the optimizer state from which topographi
 
 ---
 
-## 4.6 Why This Matters for Agent Safety
+## 4.6 Safety Needs the Frame, Not Just the Output
 
 The optimizer frame changes how agent safety questions are asked.
 
@@ -838,7 +684,7 @@ This is the paper's central safety implication:
 
 ---
 
-## 4.7 Transition to Information Topography
+## 4.7 From Working Frame to Shaped World
 
 Optimizer State explains the starting condition: What is the system trying to do? What constrains it? How does it understand the situation?
 
@@ -890,7 +736,7 @@ This section intentionally:
 
 ---
 
-# 5. Information Topography: What the Optimizer Navigates
+# 5. The System Moves Through a Shaped World
 
 The previous section defined the optimizer as a functional abstraction: a goal-directed system acting under policy constraints through an interpretation of the situation. But optimizer state alone does not explain behavior. The optimizer also needs an environment to move through.
 
@@ -922,7 +768,7 @@ The core structure of the framework can now be shown directly:
 
 *Figure 3 — Optimizer in a Perceived Topography.*
 
-## 5.1 The Five Dimensions of Information Topography
+## 5.1 Five Dimensions Shape the Landscape
 
 The framework defines five dimensions of Information Topography:
 
@@ -950,7 +796,7 @@ Together, these dimensions describe whether information becomes behaviorally act
 
 ---
 
-## 5.2 Visibility
+## 5.2 Visibility Makes Something Noticeable
 
 **Visibility** asks whether relevant information is available to be perceived at all.
 
@@ -972,7 +818,7 @@ Visibility is therefore the first condition of behavioral force.
 
 ---
 
-## 5.3 Accessibility
+## 5.3 Accessibility Makes Something Reachable
 
 **Accessibility** asks whether visible information can be reached, retrieved, or used at acceptable cost.
 
@@ -990,7 +836,7 @@ Accessibility determines whether information can arrive in time to matter.
 
 ---
 
-## 5.4 Representation
+## 5.4 Representation Makes Something Usable
 
 **Representation** asks whether information is expressed in a form the optimizer can understand and use.
 
@@ -1006,7 +852,7 @@ Representation therefore links Information Topography to Interpretation. Topogra
 
 ---
 
-## 5.5 Confidence
+## 5.5 Confidence Makes Something Trustworthy
 
 **Confidence** asks whether the optimizer trusts the information enough for it to shape action.
 
@@ -1037,7 +883,7 @@ A mature reasoning architecture must therefore preserve not only information, bu
 
 ---
 
-## 5.6 Connectivity
+## 5.6 Connectivity Makes Something Matter
 
 **Connectivity** asks whether information can be connected to other signals, assumptions, policies, risks, decisions, or outcomes.
 
@@ -1063,7 +909,7 @@ In this sense, connectivity is the bridge between context and reasoning state.
 
 ---
 
-## 5.7 Why Goal Relevance Is Relational
+## 5.7 Relevance Depends on the Goal
 
 Earlier versions of the framework considered whether **Goal Relevance** should be treated as a sixth topography dimension. This paper does not treat it that way.
 
@@ -1087,7 +933,7 @@ This keeps the framework disciplined. Visibility, Accessibility, Representation,
 
 ---
 
-## 5.8 Policy as Boundary Condition, Not Dimension
+## 5.8 Policy Shapes the Boundary, Not the Terrain
 
 Policy is also not treated as a topography dimension.
 
@@ -1113,7 +959,7 @@ Policy governs the optimizer, but topography determines whether policy can gover
 
 ---
 
-## 5.9 Topography and Affordances
+## 5.9 Affordances Help Explain Action Possibilities
 
 The framework's use of topography is closely related to the idea of affordances: environments shape perceived possibilities for action. [Gibson, 1979] [Norman, 1988]
 
@@ -1127,7 +973,7 @@ In this sense, topography is the broader landscape of affordances and constraint
 
 ---
 
-## 5.10 Information Topography in the Healthcare Campaign Example
+## 5.10 The Campaign Shows the Landscape at Work
 
 Return to the healthcare campaign example.
 
@@ -1163,7 +1009,7 @@ That response is topography-aware.
 
 ---
 
-## 5.11 Information Topography and Safety
+## 5.11 Safety Depends on What the System Can See and Use
 
 Information Topography also explains many safety failures more precisely than generic language about misbehavior.
 
@@ -1181,7 +1027,7 @@ Topography turns vague failure into design diagnosis.
 
 ---
 
-## 5.12 Transition to Motion
+## 5.12 From Shaped World to Motion
 
 Information Topography describes the landscape. But landscape alone does not explain movement.
 
@@ -1230,7 +1076,7 @@ This section intentionally:
 
 ---
 
-# 6. Gradients and Motion: How Behavior Emerges
+# 6. Behavior Follows Gradients
 
 The previous two sections defined the two halves of the framework's core equation.
 
@@ -1260,7 +1106,7 @@ The central claim:
 
 ---
 
-## 6.1 Gradients
+## 6.1 Gradients Pull Without Commanding
 
 A **gradient** is a directional pressure within the perceived topography.
 
@@ -1282,7 +1128,7 @@ This also connects AI behavior to familiar organizational behavior. Reward hacki
 
 ---
 
-## 6.2 Attraction
+## 6.2 Attraction Starts the Motion
 
 **Attraction** is the allocation of optimizer attention toward part of the perceived topography.
 
@@ -1298,13 +1144,13 @@ But low confidence can also create attraction. A relevant uncertainty may pull t
 
 This gives us two kinds of attraction.
 
-### Action Attraction
+### Action Attraction Pulls Toward Doing
 
 Action Attraction occurs when information appears sufficiently goal-relevant and sufficiently trustworthy to support action.
 
 Example: The campaign goal is qualified demo requests. The ICP is clearly defined. The prior model update applies. The compliance policy is visible. The message direction is supported. The optimizer is attracted toward generating the campaign package.
 
-### Exploration Attraction
+### Exploration Attraction Pulls Toward Looking
 
 Exploration Attraction occurs when information appears goal-relevant but confidence is insufficient.
 
@@ -1316,7 +1162,7 @@ This distinction matters because not all uncertainty should stop a workflow. Som
 
 ---
 
-## 6.3 Investigation
+## 6.3 Investigation Decides What Gets Checked
 
 **Investigation** is the process of reducing uncertainty before action.
 
@@ -1342,7 +1188,7 @@ The system therefore investigates by asking one targeted question. This is low-f
 
 ---
 
-## 6.4 Task Spawning
+## 6.4 Tasks Spawn When the Path Opens
 
 Investigation can spawn sub-investigations.
 
@@ -1364,7 +1210,7 @@ This preserves the bounded nature of the optimizer.
 
 ---
 
-## 6.5 Sufficiency
+## 6.5 Sufficiency Decides When Motion Stops
 
 **Sufficiency** is the point at which additional information is unlikely to materially change the selected action.
 
@@ -1396,7 +1242,7 @@ Sufficiency is therefore the motion threshold that converts investigation into a
 
 ---
 
-## 6.6 Action
+## 6.6 Action Follows the Sufficient Path
 
 **Action** is the selected behavior produced by optimizer motion.
 
@@ -1418,7 +1264,7 @@ That response is action. It is not failure to act. It is policy-aware motion thr
 
 ---
 
-## 6.7 Motion in the Healthcare Campaign Example
+## 6.7 The Campaign Shows Motion in Practice
 
 Return to the running example.
 
@@ -1442,11 +1288,11 @@ This is the difference between content generation and reasoning-state generation
 
 ---
 
-## 6.8 Motion in Safety Failures
+## 6.8 Safety Failures Follow Motion Too
 
 The same motion sequence can diagnose safety failures.
 
-### Hallucination
+### Hallucination Stops Too Early
 
 **Motion pattern:** Attraction (user asks factual question) → Investigation (evidence retrieval weak or skipped) → Sufficiency (plausible completion treated as enough) → Action (model answers with unsupported content).
 
@@ -1454,7 +1300,7 @@ The same motion sequence can diagnose safety failures.
 
 **Design intervention:** Require evidence. Lower confidence for unsupported claims. Make "I don't know" available. Connect claims to citations. Increase friction around uncited factual assertions.
 
-### Unsafe Tool Use
+### Unsafe Tool Use Moves Too Easily
 
 **Motion pattern:** Attraction (tool action appears goal-relevant) → Investigation (policy or consequence check weak) → Sufficiency (action appears routine enough) → Action (agent invokes unsafe tool).
 
@@ -1462,7 +1308,7 @@ The same motion sequence can diagnose safety failures.
 
 **Design intervention:** Make policy visible at tool boundary. Require approval for high-impact actions. Surface consequence previews. Connect prior failures to tool-use decisions.
 
-### Constraint Circumvention
+### Circumvention Finds an Easier Path
 
 **Motion pattern:** Attraction (goal remains active) → Investigation (constraint interpreted as obstacle) → Sufficiency (circumvention appears useful and possible) → Action (agent attempts to bypass safeguard).
 
@@ -1474,7 +1320,7 @@ The point is not that all safety failures reduce neatly to a single dimension. T
 
 ---
 
-## 6.9 Motion and Design
+## 6.9 Design Changes the Path of Least Resistance
 
 Once behavior is understood as motion through topography, design work becomes more specific.
 
@@ -1490,21 +1336,17 @@ Not every path should be blocked. Not every uncertainty should trigger escalatio
 
 ---
 
-## 6.10 Transition to Learning
+## 6.10 From Motion to Failure
 
-Motion explains how an optimizer acts. But action is not the end of the loop.
+Motion explains how an optimizer acts. But once behavior is understood as motion through a perceived topography, several familiar AI failures begin to look less separate than they first appear.
 
-Reality responds.
+A hallucinated answer, an unsafe tool call, and an attempted constraint bypass are different events. They may involve different risks, different interventions, and different levels of consequence. But each can be analyzed as a motion failure: attention is attracted, investigation is skipped or weakened, sufficiency is reached too early, and action follows through a path that the system treats as available, useful, or justified.
 
-A campaign performs or fails. A user accepts or rejects an answer. A tool action succeeds or causes damage. A generated claim passes or fails review. A recommendation improves the workflow or exposes a mistaken premise.
+This does not make the failures identical. It makes them comparable.
 
-When reality responds differently than expected, the system encounters prediction error.
+The next section applies the motion model to hallucination and harmful action. It asks why unsupported claims and unsafe behavior can share a common structure: the system moves from insufficiently grounded perception to premature sufficiency.
 
-The next section describes how prediction error becomes learning.
-
-The key distinction:
-
-> A bad outcome is not learning. A correction is not learning. A postmortem is not learning. Learning occurs when prediction error is investigated, explained with evidence, and converted into a model update that changes future behavior.
+Learning comes after that. Once an action occurs and reality responds, the system may encounter prediction error. But before the paper turns to learning, it first examines the failure pattern that makes learning necessary.
 
 ---
 
@@ -1545,7 +1387,7 @@ This section intentionally:
 
 ---
 
-# 7. Hallucination and Harmful Action as Related Failures
+# 7. Failure Happens When Sufficiency Comes Too Soon
 
 The previous section described behavior as optimizer motion through perceived topography. This section applies that motion model to two failure modes often treated as separate: hallucination and harmful agentic action.
 
@@ -1565,7 +1407,7 @@ This connection matters because it suggests that hallucination mitigation and ag
 
 ---
 
-## 7.1 Hallucination as Premature Sufficiency
+## 7.1 Hallucination Is Language That Stopped Too Early
 
 Hallucination is commonly defined as the production of plausible but unsupported content. In language-model systems, this may include fabricated facts, nonexistent citations, incorrect summaries, invented policies, false claims about data, or confident answers beyond available evidence. [Menick et al., 2022] [Lewis et al., 2020]
 
@@ -1585,7 +1427,7 @@ The result is not simply a better answer. It is a different path through the inf
 
 ---
 
-## 7.2 Harmful Action as Premature Sufficiency
+## 7.2 Harmful Action Is Motion That Stopped Too Early
 
 Harmful agentic action follows a related pattern, but the action space is broader.
 
@@ -1607,7 +1449,7 @@ In each case, the harmful action is not explained by goal alone. It emerges from
 
 ---
 
-## 7.3 The Shared Failure Grammar
+## 7.3 Different Failures Can Share the Same Shape
 
 Hallucination and harmful action share a failure grammar:
 
@@ -1633,7 +1475,7 @@ These questions move failure analysis away from vague descriptions and toward de
 
 ---
 
-## 7.4 Why More Context Is Not Enough
+## 7.4 More Context Does Not Fix a Bad Path
 
 A common response to hallucination is to add retrieval. A common response to unsafe agent behavior is to add policy. Both are useful. Neither is enough by itself.
 
@@ -1653,11 +1495,11 @@ The design problem is not only information availability. It is behavioral force.
 
 ---
 
-## 7.5 Two Cases: Unsupported Claims and Unsafe Actions
+## 7.5 Two Cases Show the Same Pattern
 
 The relationship can be made concrete by comparing two cases.
 
-### Case A: Unsupported Claim
+### Case A: The Unsupported Claim
 
 A healthcare marketing agent is asked to write campaign copy:
 
@@ -1677,7 +1519,7 @@ The failure is not merely wording. The phrase makes a clinical outcome claim. If
 
 This is not less capable behavior. It is better-shaped behavior.
 
-### Case B: Unsafe Tool Action
+### Case B: The Unsafe Tool Action
 
 An operations agent is asked to resolve an incident:
 
@@ -1697,7 +1539,7 @@ Again, the difference is not merely more context. It is the connection among pri
 
 ---
 
-## 7.6 The Role of "I Don't Know" and "I Should Not Act Yet"
+## 7.6 "I Don't Know" and "I Should Not Act Yet" Need a Path
 
 Evidence-backed generation systems have emphasized the importance of allowing a model to say that it does not know when evidence is insufficient. [Menick et al., 2022]
 
@@ -1717,9 +1559,9 @@ Therefore, uncertainty expression, abstention, clarification, and escalation are
 
 ---
 
-## 7.7 Same Pattern, Different Severity
+## 7.7 The Same Shape Can Have Different Stakes
 
-The paper should be careful here.
+A careful distinction is necessary here.
 
 Hallucination and harmful action should not be collapsed into one undifferentiated category. Their severity differs. Their mitigations differ. Their evaluation methods differ. Their operational consequences differ.
 
@@ -1739,7 +1581,7 @@ That final question is the bridge between reliability engineering and safety eng
 
 ---
 
-## 7.8 Implications for Evaluation
+## 7.8 Evaluation Should Diagnose the Shape
 
 If the framework is right, evaluation should not inspect only final outputs. It should inspect the reasoning state that produced them.
 
@@ -1755,7 +1597,7 @@ This is where the paper transitions from failure analysis into learning.
 
 ---
 
-## 7.9 Transition to Learning
+## 7.9 From Failure to Learning
 
 Hallucination and harmful action reveal the same deeper need: systems must not only act; they must learn from the gap between expected and observed outcomes.
 
@@ -1802,7 +1644,7 @@ This section intentionally:
 
 ---
 
-# 8. Learning: When Reality Pushes Back
+# 8. Learning Begins When Reality Pushes Back
 
 The previous section described hallucination and harmful action as related failures of premature sufficiency. In both cases, the system moved to action before grounding, policy, confidence, or consequence modeling justified the path.
 
@@ -1830,7 +1672,7 @@ But learning is not automatic.
 
 ---
 
-## 8.1 Expectation
+## 8.1 Expectation Gives Reality Something to Test
 
 Learning begins with expectation.
 
@@ -1850,7 +1692,7 @@ This is why reasoning state must preserve more than action. It must preserve wha
 
 ---
 
-## 8.2 Action
+## 8.2 Action Commits the Model
 
 Action converts expectation into contact with reality.
 
@@ -1866,7 +1708,7 @@ This is why the framework treats action as part of learning, not merely as outpu
 
 ---
 
-## 8.3 Outcome
+## 8.3 Outcome Brings Reality Back
 
 Outcome is reality's response.
 
@@ -1880,7 +1722,7 @@ A weak system reacts to outcomes. A learning system investigates the gap between
 
 ---
 
-## 8.4 Prediction Error
+## 8.4 Prediction Error Opens the Door
 
 **Prediction error** is the mismatch between expected and observed outcome.
 
@@ -1906,7 +1748,7 @@ Prediction error prevents vague reaction from masquerading as learning.
 
 ---
 
-## 8.5 Investigation
+## 8.5 Investigation Turns Surprise Into Explanation
 
 Prediction error triggers investigation.
 
@@ -1924,7 +1766,7 @@ This is why learning requires evidence-supported explanation.
 
 ---
 
-## 8.6 Evidence-Supported Explanation
+## 8.6 Evidence Decides Which Explanation Survives
 
 An **evidence-supported explanation** connects the prediction error to a plausible cause with enough support to justify updating the model.
 
@@ -1949,7 +1791,7 @@ The better explanations are more useful because they identify what must change.
 
 ---
 
-## 8.7 Model Update
+## 8.7 Model Update Changes What Comes Next
 
 A **model update** changes future reasoning.
 
@@ -1959,15 +1801,15 @@ It may update:
 - **Policy** — what the system may do, must do, must not do, or must escalate
 - **Interpretation** — what the system believes information means or what actions are expected to produce outcomes
 
-### Goal Update
+### When the Goal Changes
 
 Example: Old goal: "Generate demo requests." Updated goal: "Generate qualified demo requests from organizations already showing buying-stage readiness." The system learned that volume alone was insufficient.
 
-### Policy Update
+### When the Policy Changes
 
 Example: Old policy: "Avoid unsupported clinical claims." Updated policy: "Any campaign claim implying clinical outcome improvement requires approved evidence or review before external use." The system learned that the previous policy was too vague to govern claim-level generation.
 
-### Interpretation Update
+### When the Interpretation Changes
 
 Example: Old interpretation: "Workflow pain is a strong buying signal." Updated interpretation: "Workflow pain is a strong attention signal, but not sufficient evidence of buying readiness."
 
@@ -1977,7 +1819,7 @@ The action model is especially important. It defines which actions are expected 
 
 ---
 
-## 8.8 Reaction Is Not Learning
+## 8.8 Reaction Changes Behavior Without Changing the Model
 
 The framework sharply distinguishes reaction from learning.
 
@@ -1997,7 +1839,7 @@ If not, the system may have reacted without learning.
 
 ---
 
-## 8.9 Postmortem Is Not Learning
+## 8.9 Postmortems Do Not Automatically Create Learning
 
 Postmortems are useful, but they are not automatically learning.
 
@@ -2015,7 +1857,7 @@ This distinction becomes central in the next section, which introduces Model Upd
 
 ---
 
-## 8.10 Learning in the Healthcare Campaign Example
+## 8.10 The Campaign Learns From Its Own Outcome
 
 ### Prior Expectation
 Workflow-pain-led messaging will generate qualified demo requests from cardiology practice administrators.
@@ -2046,7 +1888,7 @@ That is learning.
 
 ---
 
-## 8.11 Learning in Agent Safety
+## 8.11 Safety Learning Follows the Same Loop
 
 ### Prior Expectation
 The agent can safely send follow-up emails when a ticket is marked resolved.
@@ -2073,7 +1915,7 @@ This update is more useful than simply blocking all follow-up emails. It changes
 
 ---
 
-## 8.12 Learning Changes the Topography
+## 8.12 Learning Changes the Landscape
 
 Learning does not only change what the system believes. It changes the perceived topography future optimizers navigate.
 
@@ -2093,14 +1935,13 @@ This is why the framework treats learning as part of the adaptive loop, not an a
 
 ---
 
-## 8.13 The Learning Loop
+## 8.13 The Loop Makes Learning Durable
 
 The learning loop can now be stated formally:
 
 ```
 Optimizer State → Motion through Information Topography → Action → Outcome → Prediction Error → Investigation → Evidence-Supported Explanation → Model Update → Updated Optimizer State / Updated Topography
 ```
-
 
 ![Learning Is Model Change](paper_assets/svg/fig5_learning_is_model_change.svg)
 
@@ -2150,7 +1991,7 @@ This section intentionally:
 
 ---
 
-# 9. Model Update Objects: Making Learning Durable
+# 9. Lessons Need Objects
 
 The previous section defined learning as an evidence-supported model update triggered by prediction error.
 
@@ -2170,7 +2011,7 @@ Its purpose is not simply to store what happened. Its purpose is to change futur
 
 ---
 
-## 9.1 Why Ordinary Documentation Is Not Enough
+## 9.1 Ordinary Documentation Does Not Carry the Change
 
 Organizations already document many things. They write briefs, reports, incident reviews, campaign analyses, product requirements, sales notes, meeting summaries, dashboards, and postmortems. These artifacts matter. The framework does not replace them.
 
@@ -2186,7 +2027,7 @@ The Model Update Object is designed to preserve that transition.
 
 ---
 
-## 9.2 The Three-Layer Structure
+## 9.2 A Lesson Needs Three Layers
 
 A Model Update Object has three layers:
 
@@ -2196,9 +2037,9 @@ Model Update Object = Core Learning Payload + Observability Envelope + Human-Rea
 
 ---
 
-## 9.3 Core Learning Payload
+## 9.3 The Core Payload Holds the Source of Truth
 
-The first layer is the **Core Learning Payload** — the truth layer.
+The first layer is the **Core Learning Payload** — the source-of-truth layer.
 
 It contains eleven fields:
 
@@ -2242,7 +2083,7 @@ The Confidence field in a Model Update Object records how strongly the learning 
 
 ---
 
-## 9.4 Observability Envelope
+## 9.4 The Envelope Makes the Update Governable
 
 The second layer is the **Observability Envelope** — the trust, audit, and lifecycle layer.
 
@@ -2256,7 +2097,7 @@ The Observability Envelope prevents: *Stale learning treated as current truth.*
 
 ---
 
-## 9.5 Human-Ready View
+## 9.5 The Human View Makes the Lesson Usable
 
 The third layer is the **Human-Ready View** — the usability layer.
 
@@ -2275,7 +2116,7 @@ This distinction matters because human-readable summaries can drift. A short "so
 
 ---
 
-## 9.6 Example Model Update Object
+## 9.6 A Model Update Shows the Shape of Learning
 
 Below is an example from the healthcare campaign scenario.
 
@@ -2311,7 +2152,7 @@ The system is not merely retrieving an old campaign. It is reusing learning.
 
 ---
 
-## 9.7 Failure Modes Model Update Objects Prevent
+## 9.7 Objects Prevent Learning From Becoming Folklore
 
 Model Update Objects are designed to prevent several common failure modes:
 
@@ -2328,7 +2169,7 @@ Model Update Objects are designed to prevent several common failure modes:
 
 ---
 
-## 9.8 Model Update Objects Reshape Topography
+## 9.8 Model Updates Reshape the Landscape
 
 Model Update Objects are not just records. They reshape future topography.
 
@@ -2346,7 +2187,7 @@ The object changes motion. This is why Model Update Objects are a structural com
 
 ---
 
-## 9.9 Transition to Reasoning Architecture
+## 9.9 From Lessons to Architecture
 
 A Model Update Object preserves one kind of reasoning transition: learning.
 
@@ -2395,7 +2236,7 @@ This section intentionally:
 
 ---
 
-# 10. Reasoning Architecture: Preserving State Transitions
+# 10. The Reasoning Has to Survive the Answer
 
 The previous section introduced Model Update Objects as a durable way to preserve learning. But learning is only one kind of reasoning transition.
 
@@ -2413,7 +2254,7 @@ A reasoning architecture does not replace documents. It organizes the state tran
 
 ---
 
-## 10.1 Why Documents Are Not Enough
+## 10.1 Documents Are Not Enough
 
 Organizations already have documents. They have strategy decks, campaign briefs, product requirements, incident reviews, dashboards, transcripts, meeting notes, knowledge bases, policies, and wikis.
 
@@ -2427,7 +2268,7 @@ Reasoning Architecture solves this by preserving the minimum viable objects need
 
 ---
 
-## 10.2 Six Minimum Viable Reasoning Objects
+## 10.2 Six Objects Preserve the Transition
 
 The framework defines six core reasoning objects:
 
@@ -2450,7 +2291,7 @@ Together, these objects preserve the reasoning-state transition.
 
 ---
 
-## 10.3 Optimizer State
+## 10.3 The Working Frame Names the Active Situation
 
 The **Optimizer State** records the active Goal, Policy, and Interpretation.
 
@@ -2464,7 +2305,7 @@ Preserving Optimizer State prevents future systems from seeing an artifact witho
 
 ---
 
-## 10.4 Premise Stack
+## 10.4 The Premise Stack Carries the Assumptions
 
 The **Premise Stack** records the artifact-backed basis for a prior expectation.
 
@@ -2478,7 +2319,7 @@ Without a Premise Stack, learning becomes premise-blind. The system may update t
 
 ---
 
-## 10.5 Decision State
+## 10.5 The Decision State Preserves the Chosen Path
 
 The **Decision State** records what was chosen, what alternatives were considered, what constraints applied, and why the system judged the available information sufficient for action.
 
@@ -2494,7 +2335,7 @@ The Decision State prevents decisions from becoming unexplained artifacts.
 
 ---
 
-## 10.6 Investigation Trace
+## 10.6 The Investigation Trace Protects Against Rationalization
 
 The **Investigation Trace** records how uncertainty was reduced.
 
@@ -2506,7 +2347,7 @@ Investigation Trace preserves epistemic discipline.
 
 ---
 
-## 10.7 Learning Event
+## 10.7 The Learning Event Preserves the Prediction Error
 
 The **Learning Event** records the moment reality contradicts or materially updates expectation.
 
@@ -2518,7 +2359,7 @@ The Learning Event captures the reality contact before it is promoted into a Mod
 
 ---
 
-## 10.8 Model Update Object
+## 10.8 The Model Update Carries the Change Forward
 
 As described in Section 9, the **Model Update Object** preserves the reusable learning that should shape future behavior. It includes: Prior Expectation, Premise Stack, Triggering Context, Observed Outcome, Prediction Error, Evidence/Investigation Trace, Explanation, Update Target, Model Update, Applicability Boundary, and Confidence.
 
@@ -2526,7 +2367,7 @@ The Model Update Object is the durable output of learning. It allows future syst
 
 ---
 
-## 10.9 Supporting Concerns, Not New Objects
+## 10.9 Some Concerns Support Every Object
 
 The six core objects are supported by several recurring concerns:
 
@@ -2543,7 +2384,7 @@ These supporting concerns prevent reasoning objects from becoming either too rig
 
 ---
 
-## 10.10 The Objects as a State-Transition Chain
+## 10.10 The Objects Form a Chain of Reasoning
 
 ```
 Optimizer State → Premise Stack → Decision State → Investigation Trace → Learning Event → Model Update Object
@@ -2555,7 +2396,7 @@ This is the adaptive reasoning loop in object form.
 
 ---
 
-## 10.11 Healthcare Campaign Example
+## 10.11 The Campaign Shows the Architecture at Work
 
 **Optimizer State:** Goal (qualified demo requests), Policy (avoid unsupported claims), Interpretation (workflow burden as attention driver, buying readiness as qualification).
 
@@ -2573,7 +2414,7 @@ The next time a marketer asks for a healthcare campaign, the system should retri
 
 ---
 
-## 10.12 Agent Safety Example
+## 10.12 Safety Failures Need the Same Architecture
 
 **Optimizer State:** Goal (send follow-up email after resolution), Policy (do not send until customer-ready), Interpretation (resolved = complete).
 
@@ -2589,7 +2430,7 @@ The next time a marketer asks for a healthcare campaign, the system should retri
 
 ---
 
-## 10.13 Relationship to Knowledge Management
+## 10.13 Knowledge Management Preserves Artifacts; Architecture Preserves Reasoning
 
 Knowledge management often asks: *How do we store, retrieve, and share knowledge?*
 
@@ -2601,7 +2442,7 @@ This makes Reasoning Architecture a complement to knowledge management, not a re
 
 ---
 
-## 10.14 Relationship to AI Agents
+## 10.14 Agents Need More Than Memory
 
 Agent memory is often treated as retained context, past conversation, retrieved documents, or stored facts. These are useful, but they are not enough.
 
@@ -2615,7 +2456,7 @@ That question prevents both extremes: preserve nothing, and preserve everything.
 
 ---
 
-## 10.15 Transition to Discovery
+## 10.15 From Architecture to Discovery
 
 Reasoning Architecture defines what should be preserved. But it raises a practical question:
 
@@ -2672,7 +2513,7 @@ This section intentionally:
 
 ---
 
-# 11. Discovery Framework: From Messy Intent to Reasoning State
+# 11. Discovery Turns Requests Into Usable Reasoning
 
 The previous section defined the reasoning architecture: the set of objects required to preserve optimizer state transitions across human-agent systems.
 
@@ -2706,7 +2547,7 @@ The principle is:
 
 ---
 
-## 11.1 Why Discovery Matters
+## 11.1 Discovery Matters Because Structure Is Not Given
 
 Discovery is where the human-agent system first determines what work is actually being requested.
 
@@ -2730,9 +2571,9 @@ That is Discovery.
 
 ---
 
-## 11.2 Initial Discovery and Runtime Discovery
+## 11.2 Discovery Happens Before and During the Work
 
-### Initial Discovery
+### Initial Discovery Establishes the Pattern
 
 Initial Discovery maps the existing reasoning environment of a team, department, or organization.
 
@@ -2740,7 +2581,7 @@ It asks: What artifacts already exist? Where do decisions happen? What policies 
 
 Initial Discovery is useful when designing a reasoning architecture for a team or workflow.
 
-### Runtime Discovery
+### Runtime Discovery Builds the Moment
 
 Runtime Discovery happens inside the work. It begins when a user brings a new objective, request, or proposal into the system.
 
@@ -2756,7 +2597,7 @@ At runtime, Discovery turns messy human intent into preserved reasoning state th
 
 *Figure 7 — Runtime Discovery Loop.*
 
-## 11.3 Retrieve
+## 11.3 Retrieval Brings Prior Knowledge Into View
 
 The first runtime step is **Retrieve**. The system should retrieve relevant artifacts before asking the user to manually supply what the organization already knows.
 
@@ -2766,7 +2607,7 @@ The system should retrieve not only documents, but reasoning objects when they e
 
 ---
 
-## 11.4 Infer
+## 11.4 Inference Builds a Correctable Frame
 
 After retrieval, the system should **Infer** the likely reasoning state: probable goal, likely audience, relevant policy, current interpretation, premise stack, applicable model updates, decision options, confidence gaps, and sufficiency threshold.
 
@@ -2778,7 +2619,7 @@ Inference lets the system build a strawman reasoning state. It also lets the use
 
 ---
 
-## 11.5 Propose
+## 11.5 Proposals Make the Frame Visible
 
 After inference, the system should **Propose** a strawman — a provisional reasoning state or work direction offered for confirmation.
 
@@ -2788,7 +2629,7 @@ The proposal gives the user something to react to. That reaction is more informa
 
 ---
 
-## 11.6 Confirm
+## 11.6 Confirmation Asks Only What Matters
 
 After proposing, the system should **Confirm** only the uncertainties that materially affect the outcome.
 
@@ -2802,7 +2643,7 @@ This creates low-friction collaboration. The human remains in control, but the s
 
 ---
 
-## 11.7 Generate
+## 11.7 Generation Begins After Sufficiency
 
 After confirmation, the system can **Generate** the requested artifacts. But generation should not be treated as the only output.
 
@@ -2812,7 +2653,7 @@ This is the difference between producing content and producing adaptive work.
 
 ---
 
-## 11.8 Preserve
+## 11.8 Preservation Makes the Work Reusable
 
 After generation, the system should **Preserve** the relevant reasoning objects. Preservation is not an afterthought. It is how the system avoids starting cold next time.
 
@@ -2822,7 +2663,7 @@ The design question is: *What reasoning state must future humans or agents recov
 
 ---
 
-## 11.9 Learn
+## 11.9 Learning Changes the Next Discovery
 
 Discovery does not end when the artifact is generated.
 
@@ -2832,7 +2673,7 @@ But Discovery itself can also learn.
 
 ---
 
-## 11.10 Discovery Pattern Updates
+## 11.10 Discovery Patterns Can Update Too
 
 A **Discovery Pattern Update** is a specialized Model Update Object that records how the discovery process itself should change.
 
@@ -2844,7 +2685,7 @@ This matters because the system should learn not only what strategies work, but 
 
 ---
 
-## 11.11 The Low-Friction Principle
+## 11.11 Low Friction Keeps the System Usable
 
 > The user should not have to supply information the system can responsibly retrieve, infer, or propose.
 
@@ -2856,7 +2697,7 @@ The difference is not just user experience. It changes the quality of reasoning 
 
 ---
 
-## 11.12 Discovery and Human Control
+## 11.12 Human Control Comes Through Correction
 
 Low-friction discovery should not remove human control. The framework does not recommend that systems silently infer goals and act without confirmation in high-stakes or ambiguous settings.
 
@@ -2870,7 +2711,7 @@ Human control is strongest when the system makes its reasoning state inspectable
 
 ---
 
-## 11.13 Discovery and Safety
+## 11.13 Safety Improves When Discovery Surfaces Risk
 
 Discovery is also a safety mechanism. Many failures begin with a bad initial framing.
 
@@ -2882,7 +2723,7 @@ Discovery shapes the starting optimizer state. Because starting state shapes mot
 
 ---
 
-## 11.14 Discovery in the Healthcare Campaign Example
+## 11.14 The Campaign Shows Discovery in Practice
 
 **Human Intent:** "I want to do a healthcare campaign."
 
@@ -2904,7 +2745,7 @@ The important point is that the generated campaign is not the only product. The 
 
 ---
 
-## 11.15 Discovery as the Front Door to Reasoning Architecture
+## 11.15 Discovery Is the Front Door to Reasoning
 
 Reasoning Architecture defines what the system should preserve. Discovery defines how those objects are created naturally during work.
 
@@ -2920,7 +2761,7 @@ This completes the framework's operational loop.
 
 ---
 
-## 11.16 Transition to the Running Example
+## 11.16 From Discovery to a Running Example
 
 The next section brings the framework together in a single running example.
 
@@ -2968,7 +2809,7 @@ This section intentionally:
 
 ---
 
-# 12. Running Example: Adaptive Campaign Reasoning Studio
+# 12. A Campaign Becomes a Reasoning System
 
 The previous sections defined the framework's components: optimizer state, information topography, optimizer motion, failure modes, learning, Model Update Objects, reasoning architecture, and discovery.
 
@@ -2980,7 +2821,7 @@ The key claim is that the campaign assets are not the only output. The reusable 
 
 ---
 
-## 12.1 Messy Human Intent
+## 12.1 Requests Often Come Before the Schema
 
 The workflow begins with a simple request:
 
@@ -2994,7 +2835,7 @@ It treats the request as the start of Runtime Discovery. The first question is n
 
 ---
 
-## 12.2 Retrieve
+## 12.2 Retrieval Brings the Past Into View
 
 The system retrieves relevant organizational artifacts and reasoning objects:
 
@@ -3006,7 +2847,7 @@ The system is retrieving not only topically similar documents but prior reasonin
 
 ---
 
-## 12.3 Infer
+## 12.3 Inference Builds the First Frame
 
 The system infers a provisional optimizer state:
 
@@ -3018,7 +2859,7 @@ The system has constructed a provisional reasoning state before generating anyth
 
 ---
 
-## 12.4 Propose
+## 12.4 A Strawman Makes the Frame Correctable
 
 The system proposes a strawman:
 
@@ -3026,7 +2867,7 @@ The system proposes a strawman:
 
 ---
 
-## 12.5 Confirm
+## 12.5 One Question Changes the Direction
 
 The system asks one material question:
 
@@ -3038,7 +2879,7 @@ This confirmation updates the reasoning state. The system now has enough to act.
 
 ---
 
-## 12.6 Sufficiency Rationale
+## 12.6 Sufficiency Bounds the Action
 
 The system records a sufficiency rationale: the goal is confirmed, the audience is confirmed, claims policy is visible, prior model updates support the direction, buying-stage readiness will be included, and remaining uncertainty can be preserved as prediction-error triggers rather than blocking generation.
 
@@ -3046,7 +2887,7 @@ The system does not claim certainty. It claims sufficiency for a bounded action:
 
 ---
 
-## 12.7 Generate
+## 12.7 Generation Produces More Than Assets
 
 The system generates the campaign package:
 
@@ -3066,7 +2907,7 @@ The system generates the campaign package:
 
 ---
 
-## 12.8 Preserve
+## 12.8 Preservation Captures the Transition
 
 After generation, the system preserves the reasoning objects:
 
@@ -3084,7 +2925,7 @@ This preservation turns the campaign from a one-time output into an inspectable 
 
 ---
 
-## 12.9 Outcome
+## 12.9 Outcome Tests the Premise
 
 After launch, campaign data arrives:
 
@@ -3092,7 +2933,7 @@ Strong engagement and moderate demo requests, but qualified-demo conversion is b
 
 ---
 
-## 12.10 Learning Event
+## 12.10 Learning Names the Mismatch
 
 **Prior Expectation:** Workflow-pain-led messaging with buying-stage filters will generate qualified demo requests.
 
@@ -3104,7 +2945,7 @@ Strong engagement and moderate demo requests, but qualified-demo conversion is b
 
 ---
 
-## 12.11 Model Update Object
+## 12.11 A Model Update Carries the Lesson
 
 > **Title:** Workflow Pain Needs Stronger Readiness Filters for Qualified Demos
 >
@@ -3120,7 +2961,7 @@ Strong engagement and moderate demo requests, but qualified-demo conversion is b
 
 ---
 
-## 12.12 Discovery Pattern Update
+## 12.12 Discovery Learns How to Ask Next Time
 
 > **Title:** Ask Readiness Before Generating Healthcare Demo Campaigns
 >
@@ -3148,7 +2989,7 @@ The user experiences this as a better collaborator. The organization experiences
 
 ---
 
-## 12.14 What This Example Demonstrates
+## 12.14 The Campaign Is Not the Only Output
 
 1. **Context is useful but insufficient** — documents alone do not preserve why prior decisions were made
 2. **Reasoning state improves generation** — inferring goal, policy, interpretation, premise stack, and sufficiency before generating
@@ -3162,7 +3003,7 @@ The user experiences this as a better collaborator. The organization experiences
 
 ---
 
-## 12.15 Transition to Implementation
+## 12.15 From Example to Architecture
 
 The running example describes the workflow conceptually. The next question is how such a system might be implemented.
 
@@ -3202,7 +3043,7 @@ This section intentionally:
 
 ---
 
-# 13. Implementation Bridge: From Context Layer to Reasoning-State Layer
+# 13. The Reasoning Loop Can Become a System
 
 The previous section showed the framework operating end to end through an Adaptive Campaign Reasoning Studio. This section sketches how such a system could be built.
 
@@ -3218,7 +3059,7 @@ Context Layer → Reasoning-State Layer → Learning Layer → Adaptive Workflow
 
 ---
 
-## 13.1 Layer 1: Context Layer
+## 13.1 Context Makes Knowledge Available
 
 The Context Layer answers: *What does the organization know?*
 
@@ -3232,7 +3073,7 @@ The Context Layer makes information available. It does not, by itself, preserve 
 
 ---
 
-## 13.2 Layer 2: Reasoning-State Layer
+## 13.2 Preserved Reasoning Makes Knowledge Reusable
 
 The Reasoning-State Layer answers: *What was the system trying to do, under what constraints, with what assumptions, using what evidence, and why was action considered sufficient?*
 
@@ -3246,7 +3087,7 @@ The key requirement is not a specific database. The key requirement is that reas
 
 ---
 
-## 13.3 Layer 3: Learning Layer
+## 13.3 Learning Makes Reality Count
 
 The Learning Layer answers: *What did reality teach us, and how should future reasoning change?*
 
@@ -3259,7 +3100,7 @@ It requires four capabilities:
 
 ---
 
-## 13.4 Layer 4: Adaptive Workflow Studio
+## 13.4 The Studio Makes the Loop Usable
 
 The Adaptive Workflow Studio is the user-facing environment where the framework becomes practical.
 
@@ -3271,7 +3112,7 @@ The studio is adaptive because it learns which discovery patterns, reasoning sta
 
 ---
 
-## 13.5 Minimal Viable Implementation
+## 13.5 Start With One Workflow
 
 A minimal viable implementation focuses on one repeatable workflow.
 
@@ -3292,7 +3133,7 @@ The important question is not "Have we automated the entire loop?" The important
 
 ---
 
-## 13.6 Suggested System Components
+## 13.6 Components Should Serve the Loop
 
 A practical implementation may include:
 
@@ -3310,7 +3151,7 @@ A practical implementation may include:
 
 ---
 
-## 13.7 Data Model Sketch
+## 13.7 The Data Model Should Preserve the Why
 
 A simple reasoning-object schema might include:
 
@@ -3330,7 +3171,7 @@ This schema is not final. It is a starting point. The goal is to make reasoning 
 
 ---
 
-## 13.8 Retrieval Requirements
+## 13.8 Retrieval Selects the Terrain
 
 Retrieval is not merely context lookup. In a topographic system, retrieval is gradient selection. What the system retrieves becomes newly visible. What it omits remains outside the perceived landscape. A retrieved policy, prior failure, Model Update Object, or customer signal can change what appears relevant, risky, trusted, or sufficient. This means retrieval is not neutral plumbing. Retrieval helps construct the world the optimizer moves through.
 
@@ -3344,7 +3185,7 @@ Retrieval should support filters: goal, workflow type, audience, domain, policy 
 
 ---
 
-## 13.9 Human Review and Governance
+## 13.9 Human Review Keeps Updates Honest
 
 Early implementations should not allow model updates to become authoritative without review.
 
@@ -3356,7 +3197,7 @@ Human review is not a bolt-on. It is part of the reasoning architecture. It prev
 
 ---
 
-## 13.10 Implementation Maturity Model
+## 13.10 Maturity Comes in Stages
 
 | Stage | Capability | Failure Mode |
 |-------|-----------|-------------|
@@ -3370,7 +3211,7 @@ This staged approach keeps implementation realistic. The framework can begin in 
 
 ---
 
-## 13.11 What Not to Build First
+## 13.11 Do Not Start With the Whole Machine
 
 Do not start by trying to automate every workflow. Do not start with a giant ontology. Do not start by asking users to fill out long reasoning forms. Do not start by treating every conversation as a permanent model update. Do not start by allowing unreviewed model-generated lessons to become policy. Do not start by optimizing for maximum autonomy.
 
@@ -3380,7 +3221,7 @@ The first goal is not autonomy. The first goal is reusable reasoning.
 
 ---
 
-## 13.12 Implementation Risks
+## 13.12 Risks Define the Requirements
 
 | Risk | Mitigation |
 |------|-----------|
@@ -3397,7 +3238,7 @@ These risks do not invalidate the framework. They define implementation requirem
 
 ---
 
-## 13.13 Implementation Success Criteria
+## 13.13 Success Means Better Reuse, Not Just Better Output
 
 An implementation should be evaluated by whether it improves reasoning reuse, not merely output quality.
 
@@ -3407,7 +3248,7 @@ The key test: *Does the system become better because it preserved and reused rea
 
 ---
 
-## 13.14 Transition to Validation
+## 13.14 From Buildability to Evidence
 
 Implementation makes the framework buildable. Validation asks whether it is true, useful, and falsifiable.
 
@@ -3454,7 +3295,7 @@ This section intentionally:
 
 ---
 
-# 14. Validation and Falsifiability: Keeping the Framework in Contact With Reality
+# 14. The Framework Must Survive Contact With Evidence
 
 The previous section argued that the framework can be implemented. This section asks a harder question:
 
@@ -3470,7 +3311,7 @@ The framework's own method applies to itself. It must remain in a constant state
 
 ---
 
-## 14.1 Testable Claims
+## 14.1 Claims Need Tests
 
 Six testable claims:
 
@@ -3488,7 +3329,7 @@ Six testable claims:
 
 ---
 
-## 14.2 What Would Falsify the Framework?
+## 14.2 Falsifiers Keep the Vocabulary Honest
 
 Possible falsifiers:
 
@@ -3506,7 +3347,7 @@ If a context-only system performs as well as a reasoning-state system on a given
 
 ---
 
-## 14.3 Levels of Validation
+## 14.3 Validation Has to Work at Several Levels
 
 No single test is enough. Validation needs layers:
 
@@ -3522,7 +3363,7 @@ No single test is enough. Validation needs layers:
 
 ---
 
-## 14.4 Conceptual Validation
+## 14.4 Categories Must Be Usable
 
 Can reviewers consistently distinguish: Goal from Goal Relevance? Policy from topography dimensions? Representation from Interpretation? Confidence from Sufficiency? Premise Stack from Evidence? Learning Event from Model Update Object?
 
@@ -3532,7 +3373,7 @@ Methods: expert review, coding exercises, inter-rater agreement tests, case clas
 
 ---
 
-## 14.5 Operational Validation
+## 14.5 Workflows Must Stay Usable
 
 Can teams create reasoning objects during normal work? Can agents draft useful reasoning objects without excessive human correction? Does the workflow remain usable?
 
@@ -3542,7 +3383,7 @@ The framework succeeds operationally only if it improves reasoning without makin
 
 ---
 
-## 14.6 Comparative Validation
+## 14.6 The Difference Must Beat Context Alone
 
 Compare context-only workflow vs. reasoning-state workflow on the same task.
 
@@ -3552,7 +3393,7 @@ Measures: quality of first output, policy compliance, human revision effort, qua
 
 ---
 
-## 14.7 Adversarial Validation
+## 14.7 Messy Cases Should Pressure the Framework
 
 Test against cases designed to break the system: ambiguous intent, conflicting policies, stale model updates, misleading prior results, semantically similar but inapplicable lessons, user pressure to skip review.
 
@@ -3560,7 +3401,7 @@ The system should detect material uncertainty, avoid overgeneralization, surface
 
 ---
 
-## 14.8 Longitudinal Validation
+## 14.8 Repeated Workflows Should Start Smarter
 
 The most important test. A reasoning-state system should start smarter on repeated workflows.
 
@@ -3570,7 +3411,7 @@ If the system does not improve over repeated cycles, reasoning-state preservatio
 
 ---
 
-## 14.9 Human Validation
+## 14.9 Trust Has to Stay Calibrated
 
 Can users tell what the system inferred? Can they correct it? Can reviewers audit the sufficiency rationale? Can owners approve or reject Model Update Objects? Can humans identify stale or overgeneralized learning?
 
@@ -3578,7 +3419,7 @@ Also test for automation bias: Do users over-trust structured but low-confidence
 
 ---
 
-## 14.10 Outcome Validation
+## 14.10 Outcomes Must Improve Where It Matters
 
 For healthcare campaigns: qualified-demo conversion, compliance revision rate, revision cycles, time to brief, learning quality, model update reuse.
 
@@ -3588,7 +3429,7 @@ For organizational learning: reduction in repeated mistakes, higher reuse of val
 
 ---
 
-## 14.11 Assumption Verification
+## 14.11 Assumptions Must Survive Pressure
 
 The framework should treat assumptions as first-class test objects.
 
@@ -3663,7 +3504,7 @@ Its discipline is that assumptions must survive structured contact with evidence
 
 ---
 
-## 14.12 Evaluation of the Six Reasoning Objects
+## 14.12 Each Reasoning Object Has to Earn Its Place
 
 Each object should be evaluated by whether it does useful work:
 
@@ -3676,9 +3517,11 @@ Each object should be evaluated by whether it does useful work:
 | Learning Event | Does separating prediction error improve learning quality? | Users still treat outcomes as learning |
 | Model Update Object | Do MUOs reduce repeated mistakes? | Not retrieved, not trusted, or applied incorrectly |
 
+A proposed object or dimension earns its place only if changing it would lead to a different diagnosis, intervention, or expected outcome.
+
 ---
 
-## 14.13 Evaluation of the Five Topography Dimensions
+## 14.13 Each Topography Dimension Has to Diagnose Differently
 
 | Dimension | Validation Question |
 |-----------|-------------------|
@@ -3694,7 +3537,7 @@ The framework's categories are valuable only if they improve diagnosis. A correc
 
 ---
 
-## 14.14 Validation in the Healthcare Campaign MVP
+## 14.14 The First Test Should Be Practical
 
 **Study design:** Compare context-only campaign assistant (Workflow A) vs. reasoning-state campaign assistant (Workflow B). Same initial prompt, same source artifacts.
 
@@ -3704,7 +3547,7 @@ The framework's categories are valuable only if they improve diagnosis. A correc
 
 ---
 
-## 14.15 The Framework Should Update Itself
+## 14.15 The Framework Must Update Itself
 
 If validation shows a category is confusing, revise it. If Model Update Objects are too heavy, simplify them. If topography dimensions overlap in practice, refine definitions. If a workflow performs better without the full architecture, document the boundary.
 
@@ -3716,7 +3559,7 @@ This makes validation not only a section of the paper, but a governance principl
 
 ---
 
-## 14.16 Transition to Related Work
+## 14.16 From Validation to Lineage
 
 The next section situates the framework in relation to prior work.
 
@@ -3766,7 +3609,7 @@ This section intentionally:
 
 ---
 
-# 15. Related Work and Intellectual Lineage
+# 15. The Blend Has Roots
 
 The Perceived Topography Framework is a synthesis. It does not claim to invent bounded decision-making, organizational learning, sensemaking, affordances, reward shaping, retrieval-augmented generation, grounding, AI governance, decision provenance, or human-AI collaboration.
 
@@ -3782,7 +3625,7 @@ The posture is simple:
 
 ---
 
-## 15.1 Bounded Rationality and Satisficing
+## 15.1 Bounded Rationality Gives Sufficiency Its Roots
 
 The framework's treatment of sufficiency is directly indebted to Herbert Simon's work on bounded rationality and satisficing. [Simon, 1955] [de Clippel & Rozen, 2024]
 
@@ -3792,15 +3635,15 @@ The framework's term **sufficiency** should be read as downstream of bounded rat
 
 ---
 
-## 15.2 Organizational Decision-Making
+## 15.2 Organizations Make Decisions Under Limits
 
-The framework draws from organizational decision theory, treating organizations as bounded decision systems. [March & Simon, 1958] [Cyert & March, 1963] [March & Simon, 1958]
+The framework draws from organizational decision theory, treating organizations as bounded decision systems. [March & Simon, 1958] [Cyert & March, 1963]
 
 The six-object Reasoning Architecture is an attempt to make organizational decision processes durable and reusable inside AI-mediated workflows.
 
 ---
 
-## 15.3 Behavioral Theory of the Firm
+## 15.3 Firms Learn Through Imperfect Search
 
 Cyert and March's behavioral theory is relevant to learning, search, aspiration gaps, and adaptation. [Cyert & March, 1963]
 
@@ -3808,7 +3651,7 @@ The framework shares the view that organizations adapt through feedback, search,
 
 ---
 
-## 15.4 Organizational Learning
+## 15.4 Learning Changes the Model, Not Just the Action
 
 The distinction between reaction and learning is indebted to organizational learning theory, especially single-loop and double-loop learning. [Argyris & Schön, 1978]
 
@@ -3816,7 +3659,7 @@ A reaction changes behavior after an outcome. Learning changes the model that pr
 
 ---
 
-## 15.5 Sensemaking
+## 15.5 Sensemaking Explains Interpretation
 
 The framework's concept of Interpretation is closely related to sensemaking. [Weick, 1995]
 
@@ -3824,15 +3667,15 @@ Actors do not respond to objective reality directly. They interpret ambiguous si
 
 ---
 
-## 15.6 Affordances and Action Possibilities
+## 15.6 Affordances Explain Action Possibilities
 
-The framework's language of topography and gradients is influenced by affordance theory. [Gibson, 1979] [Norman, 1988] [Gibson, 1979; Norman, 1988]
+The framework's language of topography and gradients is influenced by affordance theory. [Gibson, 1979] [Norman, 1988]
 
 The framework extends affordance intuitions into human-agent systems. A tool permission, approval gate, visible warning, citation requirement, dashboard, policy check, or Model Update Object changes the action environment. The framework's term **topography** is broader than affordance — it includes information visibility, accessibility, representation, confidence, and connectivity.
 
 ---
 
-## 15.7 Reward Shaping and Environment Design
+## 15.7 Reward Shaping Explains Designed Pressure
 
 The framework's use of **gradient** is related to reward shaping but is not equivalent to formal RL reward functions. [Ng et al., 1999]
 
@@ -3840,7 +3683,7 @@ The framework uses a broader, systems-level notion of gradient: directional pres
 
 ---
 
-## 15.8 Retrieval-Augmented Generation and Grounding
+## 15.8 Grounding Helps, but It Does Not Preserve the Why
 
 The framework is closely related to RAG and evidence-backed answering. [Lewis et al., 2020] [Menick et al., 2022] [Yu et al., 2024]
 
@@ -3850,7 +3693,7 @@ The framework is complementary to RAG, not a replacement.
 
 ---
 
-## 15.9 AI Safety, Alignment, and Agentic Misalignment
+## 15.9 Safety Needs Landscapes, Not Just Boundaries
 
 The framework is motivated by concerns about agentic AI systems. [Lynch et al., 2025] [OpenAI, 2025] [Google DeepMind, 2024] [Ji et al., 2024]
 
@@ -3860,7 +3703,7 @@ The safety claim: containment is necessary but incomplete. Safer systems require
 
 ---
 
-## 15.10 Anti-Anthropomorphism and Behavioral Description
+## 15.10 Behavioral Description Avoids False Minds
 
 The paper's opening argument is influenced by work cautioning against anthropomorphic descriptions of model behavior. [Shanahan et al., 2023] [Shanahan, 2022]
 
@@ -3868,7 +3711,7 @@ The optimizer frame preserves seriousness about risk while improving diagnostic 
 
 ---
 
-## 15.11 Knowledge Management and Organizational Memory
+## 15.11 Knowledge Stores Artifacts; Reasoning Preserves Transitions
 
 The framework is related to knowledge management. [Alavi & Leidner, 2001] [Walsh & Ungson, 1991]
 
@@ -3876,7 +3719,7 @@ The distinction: Knowledge management preserves artifacts. Reasoning architectur
 
 ---
 
-## 15.12 Decision Provenance, Design Rationale, and Workflow Traceability
+## 15.12 Provenance Needs Belief, Action, and Update
 
 The framework overlaps with decision provenance and design rationale research. [Moreau et al., 2013] [Lee, 1997]
 
@@ -3884,7 +3727,7 @@ The six reasoning objects can be understood as a provenance structure for adapti
 
 ---
 
-## 15.13 Human-AI Collaboration and Mixed-Initiative Systems
+## 15.13 Collaboration Starts at Discovery
 
 The Discovery Framework is related to HCI, mixed-initiative systems, and human-in-the-loop AI. [Amershi et al., 2019] [Horvitz, 1999] [Johnson et al., 2014]
 
@@ -3892,7 +3735,7 @@ The framework's contribution is connecting interaction design directly to reason
 
 ---
 
-## 15.14 Case-Based Reasoning
+## 15.14 Prior Cases Should Change the Model
 
 The framework has affinities with case-based reasoning. [Aamodt & Plaza, 1994]
 
@@ -3900,7 +3743,7 @@ A Model Update Object performs a related function to a case: it allows prior exp
 
 ---
 
-## 15.15 Uncertainty, Abstention, and Calibration
+## 15.15 Uncertainty Should Shape Motion
 
 The framework's treatment of hallucination and escalation is related to uncertainty calibration and abstention research. [Guo et al., 2017] [Kadavath et al., 2022]
 
@@ -3908,7 +3751,7 @@ The contribution is placing abstention, clarification, and escalation inside opt
 
 ---
 
-## 15.16 What the Framework Adds
+## 15.16 The Framework Adds the Mix
 
 The framework's contribution is integrative. It combines ideas from several traditions into a single architecture for human-agent systems.
 
@@ -3922,7 +3765,7 @@ The framework is a bridge among its influences, not a replacement for them.
 
 ---
 
-## 15.17 Boundaries of the Contribution
+## 15.17 Boundaries Keep the Claim Honest
 
 The framework is not a theory of consciousness, a mechanistic account of neural networks, a complete theory of cognition, a replacement for AI alignment, a replacement for RAG, a universal ontology, or a guarantee that structured reasoning produces better outcomes.
 
@@ -3934,7 +3777,7 @@ It may be unnecessary for simple, low-stakes, one-off tasks. This boundary matte
 
 ---
 
-## 15.18 Citation Posture
+## 15.18 Lineage Is Part of the Claim
 
 Because the framework is synthetic, the paper should over-cite by design.
 
@@ -3946,7 +3789,7 @@ The framework should not ask the reader to believe that these ideas appeared fro
 
 ---
 
-## 15.19 Transition to Implications
+## 15.19 From Lineage to Implications
 
 If the blend is useful, then human-agent system design should shift in several ways:
 
@@ -3970,7 +3813,7 @@ This section intentionally:
 
 ---
 
-# 16. Implications: What Changes If the Framework Is Useful
+# 16. What Changes When Reasoning Is Preserved
 
 The previous section positioned the framework as a synthesis. This section asks what follows if the synthesis is useful.
 
@@ -3980,7 +3823,7 @@ The framework suggests a shift in how human-agent systems are designed, evaluate
 
 ---
 
-## 16.1 Implication for AI Safety: Safety Is Also Topography Design
+## 16.1 Safety Becomes Landscape Design
 
 AI safety is often framed around boundaries: what the system may not do, what tools it may not access, what content it may not produce.
 
@@ -3994,7 +3837,7 @@ A fence tells the optimizer where not to go. Topography design shapes where it n
 
 ---
 
-## 16.2 Implication for Alignment: Alignment Is Distributed Across the System
+## 16.2 Alignment Becomes System Design
 
 Alignment should not be treated only as a property of the model. In a deployed system, behavior emerges from goals, policies, tools, permissions, retrieval quality, memory, interfaces, workflow incentives, approval paths, confidence thresholds, human oversight, prior learning, and measurement systems.
 
@@ -4004,7 +3847,7 @@ A helpful model placed in a bad workflow may still act badly. Alignment must be 
 
 ---
 
-## 16.3 Implication for Enterprise AI: Context Layers Are Only the Beginning
+## 16.3 Enterprise AI Moves Beyond Search
 
 A context layer answers: *What can the system retrieve?*
 
@@ -4014,7 +3857,7 @@ Enterprise AI maturity should be measured not only by how much knowledge is conn
 
 ---
 
-## 16.4 Implication for Knowledge Management: Preserve the State Transition
+## 16.4 Knowledge Management Preserves the Transition
 
 Knowledge management preserves artifacts. The framework suggests a complementary goal: preserve the state transition that made the artifact meaningful.
 
@@ -4024,7 +3867,7 @@ If the reasoning transition is not preserved, the AI retrieves the artifact but 
 
 ---
 
-## 16.5 Implication for Governance: Rules Must Exert Force
+## 16.5 Governance Has to Exert Force
 
 Governance often fails when rules exist but do not shape behavior. A policy may be written, a checklist may be approved, a compliance rule may be stored — but if the rule is not visible, accessible, represented clearly, connected to action, and strong enough to affect sufficiency, it may not govern the system.
 
@@ -4034,7 +3877,7 @@ Static governance produces rules. Learning governance produces rules that can be
 
 ---
 
-## 16.6 Implication for Product Design: Build for Sufficiency, Not Just Completion
+## 16.6 Products Should Build for Sufficiency
 
 Many AI products are optimized for task completion. The framework suggests that good products should optimize for sufficiency, not mere completion.
 
@@ -4044,7 +3887,7 @@ A product that only completes tasks may feel fast. A product that helps determin
 
 ---
 
-## 16.7 Implication for Human-AI Collaboration: Ask Better, Not More
+## 16.7 Collaboration Should Ask Better, Not More
 
 The framework suggests: Retrieve → Infer → Propose → Confirm.
 
@@ -4054,7 +3897,7 @@ The human becomes a reviewer, corrector, approver, and co-reasoner — not a pro
 
 ---
 
-## 16.8 Implication for Evaluation: Evaluate State Transitions, Not Only Outputs
+## 16.8 Evaluation Should Inspect the Transition
 
 AI evaluation often focuses on outputs: Was the answer correct? Was the content acceptable? Did the agent complete the task?
 
@@ -4064,7 +3907,7 @@ A pass/fail score is not enough. A useful evaluation should preserve the reasoni
 
 ---
 
-## 16.9 Implication for Organizational Learning: Postmortems Are Not the End
+## 16.9 Postmortems Should Produce Model Updates
 
 Postmortems should produce Model Update Objects when evidence supports them. A postmortem should ask: What did we expect? Why? What happened? What prediction error? What explanation? What should change? Where does this apply? How confident are we?
 
@@ -4072,7 +3915,7 @@ Organizations should measure not only whether postmortems are completed, but whe
 
 ---
 
-## 16.10 Implication for Agent Memory: Memory Should Include Model Change
+## 16.10 Memory Should Include Model Change
 
 Agent memory should include model change, not just stored facts and conversation history.
 
@@ -4080,7 +3923,7 @@ Without model change, memory can become clutter — the agent remembers things b
 
 ---
 
-## 16.11 Implication for Research: Study the Interaction Layer
+## 16.11 Research Should Study the Interaction Layer
 
 Future research should focus not only on model capabilities, but on the interaction layer between models, tools, memory, policy, workflows, and humans.
 
@@ -4088,7 +3931,7 @@ Research questions: How do reasoning-state representations affect agent behavior
 
 ---
 
-## 16.12 Implication for Builders: Start Small, Preserve the Loop
+## 16.12 Builders Should Preserve the Loop
 
 Builders should not try to implement everything at once. Choose one workflow where learning matters. Then preserve the minimal loop: expectation → action → outcome → prediction error → explanation → model update → reuse.
 
@@ -4096,7 +3939,7 @@ The first implementation does not need to be complete. But it should make the lo
 
 ---
 
-## 16.13 The Deeper Shift
+## 16.13 The System Should Improve the Conditions of Work
 
 The deepest implication is that AI systems should not be designed only as answer engines, content generators, or autonomous executors.
 
@@ -4108,11 +3951,13 @@ A single output may be useful. A preserved reasoning transition can make future 
 
 ---
 
-## 16.14 Transition to Conclusion
+## 16.14 From Implications to Conclusion
 
 The question was never only whether agents are dangerous, or whether they should be boxed more tightly.
 
 The question is how to design the environments through which goal-directed systems perceive, decide, act, and learn.
+
+Appendix A provides a practical starting point: a Decision Topography Interview for identifying the first workflow where reasoning should be preserved and reused.
 
 ---
 
@@ -4152,7 +3997,7 @@ This section intentionally:
 
 ---
 
-# 17. Conclusion: Build Better Landscapes
+# 17. Build Better Landscapes
 
 This paper began with a familiar fear.
 
@@ -4178,7 +4023,7 @@ Safer and more useful human-agent systems require both: **better boundaries and 
 
 ---
 
-## 17.1 The Core Aha
+## 17.1 Context Is Not Reasoning State
 
 Context is not reasoning state.
 
@@ -4236,7 +4081,7 @@ Discovery is where the future reasoning system begins.
 
 ---
 
-## 17.5 What Changes
+## 17.5 The Work Changes When Reasoning Is Preserved
 
 If the framework is useful:
 
@@ -4254,7 +4099,7 @@ The highest-value human-agent systems will not merely answer questions, generate
 
 ---
 
-## 17.6 The Responsibility of the Landscape
+## 17.6 Designers Are Responsible for the Landscape
 
 The Perceived Topography Framework places responsibility back on design.
 
@@ -4268,7 +4113,7 @@ This is the deeper meaning of topography. It is not merely an analytic metaphor.
 
 ---
 
-## 17.7 The Framework Must Remain Testable
+## 17.7 The Framework Must Stay Testable
 
 The framework should not be treated as doctrine. It should be treated as a model under pressure.
 
@@ -4282,7 +4127,7 @@ A theory of learning must be willing to learn. A framework about prediction erro
 
 ---
 
-## 17.8 Build Better Landscapes
+## 17.8 Better Motion Requires Better Terrain
 
 The next generation of AI systems will not be judged only by how much they know, how many tools they can call, or how fluent their answers sound.
 
@@ -4325,3 +4170,628 @@ This section intentionally:
 - Emphasizes design responsibility
 - Commits the framework to ongoing testing
 - Closes with the landscape metaphor
+
+---
+
+# Appendix A: The Decision Topography Interview
+
+## A Starter Kit for Preserving Reasoning
+
+This interview is a practical way to begin using the Perceived Topography Framework.
+
+It is not a normal requirements questionnaire. A normal questionnaire often starts by asking what the organization has: reports, dashboards, data sources, documents, workflows, systems, and tools. Those questions are useful, but they mostly inventory artifacts.
+
+This interview starts somewhere else.
+
+It asks how the organization decides.
+
+The goal is to understand the repeated decisions, signals, assumptions, constraints, failure paths, and learning moments that shape a workflow. The purpose is not only to improve one output. The purpose is to preserve the reasoning that should make the next cycle smarter.
+
+Each question has three parts:
+
+**What are we asking?**
+The plain-language question to ask during discovery.
+
+**Why are we asking?**
+The reason this question matters in the framework.
+
+**What will we do with the answer?**
+How the answer becomes part of the workflow design, reasoning record, topography map, sufficiency threshold, model update, or future discovery pattern.
+
+The interview can be used in a workshop, design session, product discovery meeting, governance review, or AI implementation planning session. It does not require the participants to know the theory. They only need to answer the questions.
+
+## Old Approach: Artifact Inventory
+
+A traditional discovery process often begins with questions like:
+
+What reports exist?
+
+What dashboards exist?
+
+What data exists?
+
+What documents exist?
+
+What systems are connected?
+
+Those questions map what the organization has. They do not necessarily map how the organization decides.
+
+An organization can have many artifacts and still lose the reasoning that connects one decision to the next. It can preserve the report but lose why the report mattered. It can preserve the dashboard but lose which signals changed the decision. It can preserve the final action but lose the assumptions, constraints, uncertainty, and evidence that made the action seem sufficient.
+
+## New Approach: Decision Topography Discovery
+
+Decision topography discovery begins with different questions:
+
+What decisions repeat?
+
+What outcomes matter?
+
+What signals influence the decision?
+
+What information is trusted?
+
+What information is hard to reach?
+
+What assumptions drive action?
+
+What evidence changes the model?
+
+What causes the system to stop too early?
+
+What should be preserved so the next cycle starts smarter?
+
+These questions map how the organization perceives, decides, acts, fails, and learns.
+
+That is the shift.
+
+The point is not to collect more context. The point is to identify the reasoning that should survive the moment of action.
+
+## How to Use This Interview
+
+Begin with one repeated workflow. Do not start with the whole organization.
+
+Choose a workflow where decisions recur, outcomes matter, and one case should help the next case improve. The first use case should be small enough to understand but important enough that better reasoning would matter.
+
+Use the questions in order, but do not treat them as a rigid script. The interview is meant to reveal the shape of the work: what the system is trying to do, what information shapes behavior, where motion goes wrong, what should be preserved, and how the next cycle should improve.
+
+Some questions intentionally return to earlier themes at a deeper level: first to discover how the workflow operates, later to decide what reasoning must be preserved.
+
+## Phase 1: Map the Decision Topography
+
+The first phase maps the decision environment before any system is built. The goal is to understand the repeated decision, the outcome that matters, the signals people use, the information they trust, the gaps that surprise them, the assumptions they carry, and the constraints that govern the work.
+
+### 1. What decisions repeat?
+
+**What are we asking?**
+
+Which workflow produces a recurring decision, recommendation, output, escalation, or action?
+
+Where does the organization make a similar judgment again and again?
+
+**Why are we asking?**
+
+The framework works best where learning can accumulate. A one-time task may need a good answer, but a repeated workflow needs better starting conditions for the next cycle.
+
+If the same kind of decision happens repeatedly, the organization should not have to relearn the same lesson every time.
+
+**What will we do with the answer?**
+
+We use this answer to choose the first workflow to model.
+
+This becomes the scope boundary for the first implementation. It tells us where reasoning should be preserved, where learning should accumulate, and where future work should start smarter.
+
+### 2. What outcomes matter most?
+
+**What are we asking?**
+
+What is this workflow trying to accomplish?
+
+What would count as a good result?
+
+What outcome would make the work worth improving?
+
+**Why are we asking?**
+
+A system cannot know what is relevant unless it knows what outcome matters.
+
+The goal is not just the task label. "Create a campaign," "review a case," or "answer a customer" is not enough. We need to know what success means in context.
+
+**What will we do with the answer?**
+
+We use this answer to define the active goal for the workflow.
+
+The goal shapes which information matters, which paths become attractive, and what "good enough" means before the system acts.
+
+### 3. What signals influence those decisions?
+
+**What are we asking?**
+
+What information currently shapes the decision?
+
+What do people look at before acting?
+
+What signals tend to change the direction of the work?
+
+**Why are we asking?**
+
+Signals reveal the visible part of the decision topography.
+
+If a signal influences the decision, it has behavioral force. If a signal should influence the decision but does not, that may reveal a visibility gap, representation problem, trust problem, or connectivity problem.
+
+**What will we do with the answer?**
+
+We use this answer to map which information is already shaping behavior.
+
+We also identify signals that should be made more visible, easier to reach, better represented, more trusted, or more clearly connected to the decision.
+
+### 4. What information do you trust — and what do you not trust?
+
+**What are we asking?**
+
+Which sources, signals, people, systems, reports, or prior lessons carry weight?
+
+Which ones are ignored, doubted, delayed, or treated as unreliable?
+
+**Why are we asking?**
+
+Information does not shape behavior just because it exists. It shapes behavior when the system or team trusts it enough to use it.
+
+Confidence is part of the topography. High-confidence information can pull action forward. Low-confidence information may be ignored even when it matters.
+
+**What will we do with the answer?**
+
+We use this answer to map confidence.
+
+We look for places where the system is over-trusting weak information, under-trusting useful information, or treating important uncertainty as if it were settled.
+
+### 5. What information is difficult to access or repeatedly surprises you?
+
+**What are we asking?**
+
+What relevant information exists but is hard to find, slow to retrieve, fragmented, buried, or trapped in someone's head?
+
+What keeps surprising the team after the decision has already been made?
+
+**Why are we asking?**
+
+Accessibility and visibility are different problems.
+
+Sometimes the information exists, but the system cannot reach it at the moment of action. Sometimes the organization only discovers the important signal after reality pushes back.
+
+Repeated surprise is a clue. It often means the workflow is missing something that should have been visible earlier.
+
+**What will we do with the answer?**
+
+We use this answer to identify access problems and visibility gaps.
+
+Hard-to-access information becomes a candidate for better retrieval or representation. Repeated surprises become candidates for prediction-error investigation later in the workflow.
+
+### 6. What assumptions drive your actions?
+
+**What are we asking?**
+
+What does the team believe is true when this work begins?
+
+What prior experience, causal model, rule of thumb, or "everyone knows" belief shapes the decision?
+
+What has the team stopped questioning?
+
+**Why are we asking?**
+
+Assumptions often make an action seem reasonable before evidence confirms it.
+
+When assumptions are wrong, the action may still look coherent. The problem may not appear until the outcome contradicts the premise.
+
+If assumptions are not preserved, future learning becomes premise-blind. The organization may remember what happened but forget what it believed when it acted.
+
+**What will we do with the answer?**
+
+We use this answer to build the premise stack.
+
+These assumptions become part of the reasoning record. They also become expectations that can be tested against future outcomes.
+
+### 7. What constraints govern the work?
+
+**What are we asking?**
+
+What rules, policies, approvals, compliance boundaries, ethical commitments, safety limits, or escalation requirements apply?
+
+What must the system do?
+
+What must it not do?
+
+When must it involve a person?
+
+**Why are we asking?**
+
+A constraint does not govern behavior merely because it exists in a document.
+
+For a constraint to shape action, it must be visible, reachable, understandable, trusted, and connected to the moment of decision.
+
+**What will we do with the answer?**
+
+We use this answer to define the policy field for the workflow.
+
+We also test whether the constraint currently has force. If the rule exists but does not shape the path of action, the topography must change.
+
+## Phase 2: Shape the Motion
+
+The second phase identifies how the workflow moves. The goal is to understand what the current process makes easy, what it makes hard, where it tends to stop too early, and what conditions should cause the system to pause, ask, escalate, or refuse to act.
+
+### 8. What makes the easiest path dangerous?
+
+**What are we asking?**
+
+Where does the current workflow make it easy to move too quickly?
+
+Where might the system skip evidence, ignore uncertainty, bypass a constraint, or act before the situation is understood?
+
+What is the tempting shortcut?
+
+**Why are we asking?**
+
+Systems do not only follow instructions. They follow paths.
+
+If the easiest path is also the risky path, then the system is being shaped toward failure. A bad outcome may not come from a bad goal. It may come from a path that made the wrong action feel available, useful, or sufficient.
+
+**What will we do with the answer?**
+
+We use this answer to identify dangerous gradients.
+
+Then we decide how the workflow should be reshaped: what should become harder, what should become more visible, what should require evidence, and what safer path should be easier to follow.
+
+### 9. What would make the system stop, ask, or escalate?
+
+**What are we asking?**
+
+When should the system say, "I do not know yet"?
+
+When should it say, "I should not act yet"?
+
+When should it ask a person, escalate, or refuse to proceed?
+
+**Why are we asking?**
+
+A system needs a path for not acting.
+
+If the only available path is to answer, recommend, generate, or act, then the system will keep moving even when it should pause. Many failures happen because stopping was not designed as a real option.
+
+**What will we do with the answer?**
+
+We use this answer to define stop, ask, escalate, and refusal conditions.
+
+These conditions become part of the workflow design. They tell the system when motion should pause instead of continuing toward a premature answer or unsafe action.
+
+### 10. How will you know when enough is enough?
+
+**What are we asking?**
+
+What must be true before the system can act?
+
+What evidence is required?
+
+What uncertainty would change the decision?
+
+What uncertainty can be tolerated?
+
+**Why are we asking?**
+
+Good decisions do not require knowing everything. They require knowing enough for the action being taken.
+
+The important question is not, "Do we have all possible information?" The important question is, "Would more information change what we should do?"
+
+**What will we do with the answer?**
+
+We use this answer to define sufficiency.
+
+The sufficiency rationale becomes part of the decision record. It explains why the system had enough to proceed, what uncertainty remained, and why that uncertainty did or did not block action.
+
+### 11. Where has this workflow failed before?
+
+**What are we asking?**
+
+Where has this workflow produced a poor result, a risky action, a bad recommendation, rework, delay, or surprise?
+
+What did the team think was true at the time?
+
+What later proved different?
+
+**Why are we asking?**
+
+Prior failures are often remembered as stories but not preserved as reusable learning.
+
+A failure can be useful if the organization knows what expectation failed, what evidence explained the mismatch, and what should change next time. Without that structure, the lesson becomes folklore.
+
+**What will we do with the answer?**
+
+We use this answer to identify candidate learning events.
+
+Some prior failures may become model updates. Others may reveal missing signals, weak constraints, bad assumptions, or places where the system stopped too early.
+
+## Phase 3: Preserve the Reasoning
+
+The third phase defines what must survive after the system acts. The goal is to preserve the reasoning trail, not just the output. A future person, agent, reviewer, or workflow should be able to understand why the action made sense at the time.
+
+### 12. What must survive the action?
+
+**What are we asking?**
+
+After the system acts, what should still be recoverable?
+
+What would a future person or agent need to understand why the decision, recommendation, output, or action happened?
+
+**Why are we asking?**
+
+Most systems preserve outputs better than reasoning.
+
+They remember the email, campaign, report, decision, ticket, or action. But they often lose the goal, assumptions, evidence, uncertainty, constraints, and sufficiency rationale that shaped it.
+
+**What will we do with the answer?**
+
+We use this answer to decide which reasoning objects must be preserved.
+
+At minimum, this may include the working frame, premise stack, decision state, investigation trace, and any learning event that should affect future work.
+
+### 13. What goal, policy, and interpretation should be recorded?
+
+**What are we asking?**
+
+What was the system trying to accomplish?
+
+What rules or constraints governed the work?
+
+How did the system interpret the situation?
+
+**Why are we asking?**
+
+A decision is hard to evaluate if the working frame is missing.
+
+The same action can be reasonable under one goal and wrong under another. The same output can be safe under one policy and unsafe under another. The same signal can mean different things depending on the interpretation.
+
+**What will we do with the answer?**
+
+We use this answer to preserve the working frame.
+
+This gives future users and systems a way to understand the action in context instead of judging it only from the final output.
+
+### 14. What assumptions made this action seem reasonable?
+
+**What are we asking?**
+
+What did the team or system believe when it acted?
+
+What prior evidence, experience, pattern, lesson, or belief made this path seem right?
+
+What was assumed but not fully proven?
+
+**Why are we asking?**
+
+Assumptions are often invisible until they fail.
+
+If the premise is not preserved, the organization may learn the wrong lesson later. It may blame the output, the user, the data, or the tool while missing the belief that actually drove the action.
+
+**What will we do with the answer?**
+
+We use this answer to build the premise stack.
+
+The premise stack helps future investigation ask, "Which belief was wrong?" instead of merely asking, "Which output was bad?"
+
+### 15. What was chosen, what was rejected, and why was it sufficient?
+
+**What are we asking?**
+
+What action, answer, recommendation, or output was chosen?
+
+What alternatives were considered?
+
+Why was the chosen path considered good enough?
+
+**Why are we asking?**
+
+A final action without its alternatives is hard to understand.
+
+The organization needs to know not only what happened, but why that path beat the other possible paths. It also needs to know why the available evidence was considered sufficient at the time.
+
+**What will we do with the answer?**
+
+We use this answer to preserve the decision state.
+
+The decision state records the chosen path, rejected alternatives, tradeoffs, evidence, uncertainty, and sufficiency rationale.
+
+### 16. How was uncertainty reduced?
+
+**What are we asking?**
+
+What questions were asked?
+
+What evidence was checked?
+
+What contradictions were found?
+
+What information was accepted, rejected, or left unresolved?
+
+**Why are we asking?**
+
+Investigation is part of reasoning.
+
+If the investigation disappears, the final explanation may become a story told after the fact. That makes the system vulnerable to rationalization: a clean explanation that sounds reasonable but does not reflect the actual path of inquiry.
+
+**What will we do with the answer?**
+
+We use this answer to preserve the investigation trace.
+
+The trace shows how uncertainty was reduced, what evidence mattered, what was checked, and what remained uncertain when action occurred.
+
+### 17. How should the system discover this next time?
+
+**What are we asking?**
+
+If a similar request came in tomorrow, what should the system retrieve first?
+
+What should it infer?
+
+What should it propose?
+
+What should it ask before acting?
+
+**Why are we asking?**
+
+Discovery should improve over time.
+
+If the system asks the same generic questions every time, it is not learning how the workflow works. A better system should begin the next cycle with better questions, better assumptions, and better retrieval.
+
+**What will we do with the answer?**
+
+We use this answer to define or update the discovery pattern.
+
+The next time this kind of work begins, the system should start with a better frame instead of starting cold.
+
+## Phase 4: Make the Next Cycle Smarter
+
+The fourth phase connects the action to reality. The goal is to capture what happened, compare it to what was expected, identify what changed, and make sure the next cycle begins with better reasoning.
+
+### 18. What happened after the system acted?
+
+**What are we asking?**
+
+What was the outcome?
+
+What happened after the decision, recommendation, output, campaign, escalation, or action?
+
+What evidence shows the result?
+
+**Why are we asking?**
+
+Learning needs contact with reality.
+
+If the system acts but the outcome is not observed, there is no way to know whether the reasoning held up. Without an outcome, there is no prediction error. Without prediction error, there is no learning.
+
+**What will we do with the answer?**
+
+We use this answer to record the observed outcome.
+
+The observed outcome is compared against the prior expectation so the system can identify where reality agreed, disagreed, or added nuance.
+
+### 19. Where did reality differ from what was expected?
+
+**What are we asking?**
+
+What surprised you?
+
+What went differently than expected?
+
+Which assumption, signal, constraint, or prediction did reality challenge?
+
+**Why are we asking?**
+
+A bad outcome is not automatically learning.
+
+Learning begins when the system can name the mismatch between what it expected and what actually happened. That mismatch is the prediction error.
+
+**What will we do with the answer?**
+
+We use this answer to identify prediction error.
+
+The prediction error tells us what needs investigation. It focuses learning on the gap between expectation and reality.
+
+### 20. What evidence explains the gap?
+
+**What are we asking?**
+
+Why did the outcome differ from the expectation?
+
+What evidence supports that explanation?
+
+What alternative explanations were considered?
+
+What explanation should not be accepted yet?
+
+**Why are we asking?**
+
+A surprise can produce learning, but it can also produce rationalization.
+
+The organization may react quickly and update the wrong belief. Evidence-supported explanation slows that down. It asks what actually explains the mismatch.
+
+**What will we do with the answer?**
+
+We use this answer to support or reject a model update.
+
+The evidence becomes part of the learning record. It explains why the system should change, and why the change is justified.
+
+### 21. What should change for next time?
+
+**What are we asking?**
+
+What should the system do differently next time?
+
+Should the goal change?
+
+Should the policy change?
+
+Should the interpretation change?
+
+Should the information topography change?
+
+**Why are we asking?**
+
+A lesson is not durable unless it changes future reasoning.
+
+If the organization only remembers what happened, it has memory. If it changes what future work sees, asks, trusts, checks, or preserves, it has learning.
+
+**What will we do with the answer?**
+
+We use this answer to create a model update.
+
+The model update records what changed, why it changed, what evidence supports the change, and how it should shape future work.
+
+### 22. Where does this lesson apply — and where does it not?
+
+**What are we asking?**
+
+When should this lesson be used again?
+
+Where should it not be used?
+
+What conditions define its boundary?
+
+**Why are we asking?**
+
+Lessons can become dangerous when they are over-applied.
+
+A lesson from one campaign, customer segment, market, risk pattern, or workflow may not apply everywhere. Without boundaries, learning can become dogma.
+
+**What will we do with the answer?**
+
+We use this answer to define the applicability boundary.
+
+The boundary tells future systems when to retrieve the lesson, when to question it, and when not to use it.
+
+### 23. Did preserved reasoning actually improve the next cycle?
+
+**What are we asking?**
+
+Did the next cycle start smarter?
+
+Did the system ask better questions?
+
+Did it avoid the prior failure?
+
+Did the model update change future behavior?
+
+Did the workflow improve in a way that matters?
+
+**Why are we asking?**
+
+The framework should be tested by its own standard.
+
+If preserving reasoning does not improve the next cycle, then the implementation needs to change. The interview is not successful because it was completed. It is successful if it improves future motion.
+
+**What will we do with the answer?**
+
+We use this answer to validate the framework application.
+
+If the answer is yes, the workflow has evidence that preserved reasoning is helping. If the answer is no, the workflow itself needs a model update.
+
+## Closing Note
+
+The interview begins by asking how the organization decides. It ends by asking whether preserved reasoning improved the next decision. That is the practical test of the framework: not whether the system produced one better answer, but whether the next cycle started with better reasoning.

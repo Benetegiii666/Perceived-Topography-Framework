@@ -24,6 +24,12 @@ Project governance, goals, and change tracking. The operational backbone of the 
   - `V1_0_OUTLINE_AND_VISUAL_PLACEMENT_MAP.md` — Proposed v1.0 section structure, SVG mapping, compression hypotheses
   - `V1_0_SECTION_REWRITE_QUEUE.md` — Section-by-section drafting status tracker
   - `V1_0_SECTION_01_SOURCE_PACKET.md` — Source material, retention/compression plan, and drafting instructions for Section 1
+  - `V1_0_SECTION_02_SOURCE_PACKET.md` — Source material, retention/compression plan, and drafting instructions for Section 2
+  - `V1_0_SECTION_03_SOURCE_PACKET.md` — Source material, retention/compression plan, and drafting instructions for Section 3
+  - `V1_0_SECTION_04_SOURCE_PACKET.md` — Source material, retention/compression plan, and drafting instructions for Section 4
+  - `V1_0_SECTION_05_SOURCE_PACKET.md` — Source material, retention/compression plan, and drafting instructions for Section 5
+  - `V1_0_SECTION_06_SOURCE_PACKET.md` — Source material, five-movement plan, and drafting instructions for Section 6
+  - `V1_0_SECTION_07_SOURCE_PACKET.md` — Source material, five-movement plan, and drafting instructions for Section 7
   - `V0_2_AGENT_REVIEWS/` — Six independent review reports
     - `01_Cold_Intelligent_Reader.md`
     - `02_AI_Agent_Systems_Reviewer.md`

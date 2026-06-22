@@ -2,7 +2,7 @@
 
 > If someone joined the project today, what do we currently believe?
 
-**Last updated:** 2026-06-12
+**Last updated:** 2026-06-14
 
 ---
 
@@ -134,24 +134,31 @@ The framework operates at four distinct layers:
 
 ## Paper v0.1 — Release Checkpoint (2026-06-12)
 
-**PAPER_v0.1.md** has been created as the clean reader-facing Markdown artifact.
+**PAPER_v0.1.md** — frozen v0.1 snapshot. 17 sections + References. ~33,677 words.
 
-- 17 sections + References
-- ~33,677 words
+## Paper v0.2 — Release Checkpoint (2026-06-14)
+
+**PAPER_v0.2.md** — frozen v0.2 snapshot. ACCEPTED.
+
+- 17 sections + Appendix A + References
+- ~36,861 words
+- Full title architecture pass (199 headings rewritten)
+- Appendix A: The Decision Topography Interview (23 items, 4 phases)
 - 7 SVG figures with resolved paths
-- 33 body-prose citations, 33 bibliography entries
-- Zero unresolved body placeholders, zero draft-note blocks, zero export issues
+- 33 body-prose citation keys, all resolved
+- D011 (Differential Intervention Principle) integrated as one sentence in S14.12
+- Zero Citation Debt, Draft Notes, placeholders, or process contamination
 
 **Current phase:** Phase 7 — Artifact Finalization and External Review
 
 ## What Has NOT Been Decided
 
-- Whether Decision Space and Capability are primitives, derived, or collapsible
-- Final SVG polish pass
-- PDF/docx export format
+- PDF/docx export format for v0.2
 - Peer review / external reader review plan
-- Abstract refinement
+- Abstract
 - Executive-summary / adoption-roadmap companion
+- Final SVG optional polish (5 deferred cosmetic items)
+- Whether Decision Space and Capability are primitives, derived, or collapsible
 
 ## Active Fault Lines
 

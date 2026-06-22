@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <title>Figure 3 — Optimizer in a Perceived Topography</title>
+  <desc>The optimizer does not move through objective reality directly. It moves through a perceived topography shaped by what is visible, accessible, represented, trusted, and connected. Behavior emerges from the interaction between optimizer state and perceived landscape.</desc>
+
+  <rect width="1400" height="900" fill="#F7F2E8"/>
+  <text x="700" y="45" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#2B2A24" text-anchor="middle">Optimizer in a Perceived Topography</text>
+
+  <!-- LEFT: Optimizer State -->
+  <rect x="40" y="120" width="300" height="400" rx="16" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="2.5"/>
+  <text x="190" y="155" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#2B2A24" text-anchor="middle">Optimizer State</text>
+
+  <rect x="65" y="180" width="250" height="80" rx="10" fill="#EFE6D6" stroke="#6F7F3A" stroke-width="1.5"/>
+  <text x="190" y="210" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#2B2A24" text-anchor="middle">Goal</text>
+  <text x="190" y="232" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">What am I trying</text>
+  <text x="190" y="247" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">to achieve?</text>
+
+  <rect x="65" y="280" width="250" height="80" rx="10" fill="#EFE6D6" stroke="#6F7F3A" stroke-width="1.5"/>
+  <text x="190" y="310" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#2B2A24" text-anchor="middle">Policy</text>
+  <text x="190" y="332" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">What constraints</text>
+  <text x="190" y="347" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">govern behavior?</text>
+
+  <rect x="65" y="380" width="250" height="80" rx="10" fill="#EFE6D6" stroke="#6F7F3A" stroke-width="1.5"/>
+  <text x="190" y="410" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#2B2A24" text-anchor="middle">Interpretation</text>
+  <text x="190" y="432" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">What does this</text>
+  <text x="190" y="447" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle">information mean?</text>
+
+  <!-- CENTER: Perceived Topography -->
+  <rect x="405" y="95" width="550" height="500" rx="24" fill="#EFE6D6" stroke="#6F7F3A" stroke-width="1.5"/>
+
+  <!-- Organic contour lines -->
+  <path d="M 420 180 Q 520 155 650 175 Q 780 195 940 165" fill="none" stroke="#6F7F3A" stroke-width="0.7" opacity="0.18"/>
+  <path d="M 425 230 Q 550 200 680 225 Q 800 250 945 215" fill="none" stroke="#6F7F3A" stroke-width="0.7" opacity="0.16"/>
+  <path d="M 418 310 Q 530 280 660 300 Q 790 320 948 290" fill="none" stroke="#6F7F3A" stroke-width="0.6" opacity="0.14"/>
+  <path d="M 422 370 Q 560 345 690 365 Q 820 385 942 355" fill="none" stroke="#6F7F3A" stroke-width="0.6" opacity="0.12"/>
+  <path d="M 425 430 Q 545 405 675 425 Q 810 445 940 415" fill="none" stroke="#6F7F3A" stroke-width="0.5" opacity="0.10"/>
+  <path d="M 420 490 Q 555 465 690 480 Q 825 495 945 470" fill="none" stroke="#6F7F3A" stroke-width="0.5" opacity="0.08"/>
+  <path d="M 500 150 Q 600 250 680 200 Q 760 150 850 230" fill="none" stroke="#6F7F3A" stroke-width="0.5" opacity="0.12"/>
+  <path d="M 480 350 Q 580 300 700 340 Q 820 380 900 320" fill="none" stroke="#6F7F3A" stroke-width="0.5" opacity="0.10"/>
+  <path d="M 510 470 Q 620 430 730 460 Q 840 490 920 440" fill="none" stroke="#6F7F3A" stroke-width="0.4" opacity="0.08"/>
+
+  <text x="680" y="128" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#2B2A24" text-anchor="middle">Perceived Topography</text>
+
+  <!-- Five dimensions — staggered -->
+  <rect x="445" y="150" width="240" height="40" rx="20" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2" opacity="0.95"/>
+  <text x="470" y="175" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#6F7F3A">Visibility</text>
+  <text x="580" y="175" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8B8575">Can this be perceived?</text>
+
+  <rect x="465" y="205" width="260" height="40" rx="20" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2" opacity="0.95"/>
+  <text x="490" y="230" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#6F7F3A">Accessibility</text>
+  <text x="615" y="230" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8B8575">Can this be reached?</text>
+
+  <rect x="450" y="260" width="280" height="40" rx="20" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2" opacity="0.95"/>
+  <text x="475" y="285" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#6F7F3A">Representation</text>
+  <text x="625" y="285" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8B8575">How is this expressed?</text>
+
+  <rect x="470" y="315" width="250" height="40" rx="20" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2" opacity="0.95"/>
+  <text x="495" y="340" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#6F7F3A">Confidence</text>
+  <text x="615" y="340" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8B8575">How trustworthy?</text>
+
+  <rect x="455" y="370" width="260" height="40" rx="20" fill="#FAF7F0" stroke="#6F7F3A" stroke-width="1.2" opacity="0.95"/>
+  <text x="480" y="395" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#6F7F3A">Connectivity</text>
+  <text x="615" y="395" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8B8575">What is this connected to?</text>
+
+  <!-- Policy guardrail boundaries — curved, not rectangular -->
+  <path d="M 410 88 Q 680 68 950 88" fill="none" stroke="#8B8575" stroke-width="3.5" stroke-dasharray="14,7" stroke-linecap="round"/>
+  <path d="M 410 600 Q 680 620 950 600" fill="none" stroke="#8B8575" stroke-width="3.5" stroke-dasharray="14,7" stroke-linecap="round"/>
+  <path d="M 410 88 Q 393 200 403 345 Q 393 490 410 600" fill="none" stroke="#8B8575" stroke-width="3" stroke-dasharray="14,7" stroke-linecap="round"/>
+  <path d="M 950 88 Q 967 200 957 345 Q 967 490 950 600" fill="none" stroke="#8B8575" stroke-width="3" stroke-dasharray="14,7" stroke-linecap="round"/>
+
+  <text x="680" y="635" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">Policy boundary — constraints that govern</text>
+  <text x="680" y="652" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">what the optimizer may do</text>
+
+  <!-- Goal Relevance projection — cone/beam from Goal into topography -->
+  <path d="M 315 220 L 445 170" fill="none" stroke="#B08A3A" stroke-width="2" stroke-dasharray="8,4"/>
+  <path d="M 315 220 L 445 280" fill="none" stroke="#B08A3A" stroke-width="2" stroke-dasharray="8,4"/>
+  <path d="M 315 220 L 445 225" fill="none" stroke="#B08A3A" stroke-width="1.5" stroke-dasharray="8,4"/>
+  <ellipse cx="520" cy="225" rx="85" ry="70" fill="#B08A3A" opacity="0.06"/>
+
+  <text x="375" y="168" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#B08A3A" font-style="italic" text-anchor="middle">Goal Relevance</text>
+  <text x="375" y="183" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#B08A3A" text-anchor="middle">(projection / filter)</text>
+
+  <!-- RIGHT: Motion -->
+  <rect x="1040" y="120" width="310" height="400" rx="16" fill="#FAF7F0" stroke="#7C9A63" stroke-width="2.5"/>
+  <text x="1195" y="155" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#2B2A24" text-anchor="middle">Motion</text>
+
+  <rect x="1065" y="180" width="260" height="58" rx="10" fill="#EFE6D6" stroke="#7C9A63" stroke-width="1.5"/>
+  <text x="1195" y="215" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#2B2A24" text-anchor="middle">Attraction</text>
+  <line x1="1195" y1="238" x2="1195" y2="258" stroke="#7C9A63" stroke-width="2"/>
+  <polygon points="1195,265 1189,255 1201,255" fill="#7C9A63"/>
+
+  <rect x="1065" y="270" width="260" height="58" rx="10" fill="#EFE6D6" stroke="#7C9A63" stroke-width="1.5"/>
+  <text x="1195" y="305" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#2B2A24" text-anchor="middle">Investigation</text>
+  <line x1="1195" y1="328" x2="1195" y2="348" stroke="#7C9A63" stroke-width="2"/>
+  <polygon points="1195,355 1189,345 1201,345" fill="#7C9A63"/>
+
+  <rect x="1065" y="360" width="260" height="58" rx="10" fill="#EFE6D6" stroke="#7C9A63" stroke-width="1.5"/>
+  <text x="1195" y="395" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#2B2A24" text-anchor="middle">Sufficiency</text>
+  <line x1="1195" y1="418" x2="1195" y2="438" stroke="#7C9A63" stroke-width="2"/>
+  <polygon points="1195,445 1189,435 1201,435" fill="#7C9A63"/>
+
+  <rect x="1065" y="450" width="260" height="58" rx="10" fill="#7C9A63" stroke="#7C9A63" stroke-width="1.5"/>
+  <text x="1195" y="485" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#FAF7F0" text-anchor="middle">Action</text>
+
+  <!-- Primary flow arrows -->
+  <line x1="340" y1="320" x2="398" y2="320" stroke="#2B2A24" stroke-width="2.5"/>
+  <polygon points="405,320 395,314 395,326" fill="#2B2A24"/>
+  <line x1="960" y1="320" x2="1033" y2="320" stroke="#2B2A24" stroke-width="2.5"/>
+  <polygon points="1040,320 1030,314 1030,326" fill="#2B2A24"/>
+
+  <!-- Equation bar -->
+  <rect x="80" y="700" width="1240" height="55" rx="12" fill="#FAF7F0" stroke="#2B2A24" stroke-width="1.5"/>
+  <text x="250" y="733" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#2B2A24" text-anchor="middle" font-weight="bold">Optimizer</text>
+  <text x="250" y="748" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8B8575" text-anchor="middle">(Goal, Policy, Interpretation)</text>
+  <text x="490" y="733" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" fill="#2B2A24" text-anchor="middle">+</text>
+  <text x="700" y="733" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#2B2A24" text-anchor="middle" font-weight="bold">Topography</text>
+  <text x="700" y="748" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#8B8575" text-anchor="middle">(Visibility, Accessibility, Representation, Confidence, Connectivity)</text>
+  <text x="930" y="733" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" fill="#2B2A24" text-anchor="middle">=</text>
+  <text x="1120" y="733" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#2B2A24" text-anchor="middle" font-weight="bold">Behavior</text>
+  <text x="1120" y="748" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#8B8575" text-anchor="middle">(Attraction, Investigation, Sufficiency, Action)</text>
+
+  <!-- Caption -->
+  <text x="700" y="800" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">The optimizer does not move through objective reality directly.</text>
+  <text x="700" y="818" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">It moves through a perceived topography shaped by what is visible, accessible,</text>
+  <text x="700" y="836" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8B8575" text-anchor="middle" font-style="italic">represented, trusted, and connected.</text>
+
+  <!-- Region labels -->
+  <text x="190" y="548" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle" font-style="italic">What the system brings</text>
+  <text x="680" y="670" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle" font-style="italic">What the system navigates</text>
+  <text x="1195" y="548" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8B8575" text-anchor="middle" font-style="italic">How behavior emerges</text>
+</svg>

@@ -594,6 +594,19 @@ Visual compression is allowed and encouraged when it preserves
 relationships better than prose.
 ```
 
+```
+Visual representation is argument, not decoration. Tables, figures,
+matrices, and diagrams should be treated with the same care as prose.
+A visual is successful only if it helps the reader understand, remember,
+or explain the argument more clearly.
+```
+
+```
+Visuals should not merely shorten the paper. They should improve the
+reader's ability to compare, sequence, distinguish, diagnose, or
+explain the framework.
+```
+
 v1.0 should look for opportunities to replace repeated explanation with:
 
 - Trace tables
