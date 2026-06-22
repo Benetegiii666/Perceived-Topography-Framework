@@ -10,5 +10,8 @@ Planning artifacts for the first implementation of the Perceived Topography Fram
 - `RAPID_COMPONENT_CAPABILITY_MAP_v0.1.md` — Rapid-style component inventory mapped to MVP / MVP-adjacent / future phases.
 - `CAMPAIGN_BRIEF_WORKFLOW_DISCOVERY_v0.1.md` — Workflow discovery worksheet (Categories 1-3). Awaiting Benet review and input.
 
+### Related
+- `../FIELD_KITS/RAPID_MARKETING_DISCOVERY_FIELD_KIT/` — Stakeholder-facing field kit for live discovery conversations.
+
 ### Prior Versions
 - `FIRST_IMPLEMENTATION_SLICE_PLAN_v0.1.md` — v0.1 slice plan (preserved).
