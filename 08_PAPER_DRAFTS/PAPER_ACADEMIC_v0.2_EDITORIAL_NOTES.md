@@ -527,3 +527,27 @@ Figures from v1.0 that should be adapted or preserved for the academic version:
 6. **Second-domain diagnostic** — Added to S10.1 per instruction.
 
 7. **Wu et al. 2023** — Added to bibliography alphabetically.
+
+---
+
+## v0.2 Copyedit Notes (2026-06-25)
+
+### Table Numbering
+Tables renumbered sequentially:
+- Table 1: Five Diagnostic Dimensions of Perceived Topography (S4.2)
+- Table 2: Minimum Viable Reasoning Objects (S6, was Table 7)
+- Table 3: Where the Workflows Diverge (S8.5, was unnumbered)
+- Table 4: Maturity Model for Reasoning-State Preservation (S10.6, was Table 8)
+
+### Author Affiliation
+TODO: Benet to decide between Independent Researcher, The Noble Living Group, or Unaffiliated. Currently "[Affiliation TBD]" in manuscript.
+
+### Figure Readiness
+
+| # | Candidate Figure | Required before submission? | Asset exists? | Create later? | Placement |
+|---|---|---|---|---|---|
+| 1 | Discovery / RIPC loop (Retrieve → Infer → Propose → Confirm) | Recommended | No | Yes — Mermaid → SVG | After S7 RIPC introduction |
+| 2 | Reasoning-state loop (Optimizer State → ... → Modified Optimizer State) | Recommended | Frozen paper Fig 7 exists as candidate | Adapt from frozen paper | After Table 2 in S6 |
+| 3 | Healthcare stress-test pathway (context-only vs reasoning-state) | Optional | No | Yes — Mermaid → SVG | S8.5 near Table 3 |
+| 4 | Frozen paper Figure 1 (From Agent Fear to Landscape Design) | Optional | Exists as PNG | Evaluate fit for academic version | S1 |
+| 5 | Frozen paper Figure 8 (hero asset) | Do not modify | Locked asset | N/A | N/A |

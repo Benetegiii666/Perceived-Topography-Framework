@@ -289,6 +289,8 @@ The framework describes perceived topography through five dimensions: **Visibili
 
 These dimensions are not a complete ontology of information behavior. They are a minimum viable diagnostic set. Each dimension earns its place only if changing it would lead to a different diagnosis, intervention, or expected outcome.
 
+**Table 1. Five Diagnostic Dimensions of Perceived Topography**
+
 | Dimension | Diagnostic question | Typical failure | Design response |
 |---|---|---|---|
 | **Visibility** | Did the relevant signal enter the system's perceived field? | The information existed somewhere, but never appeared in the working frame. | Surface the signal at the point where it matters. |
@@ -543,7 +545,7 @@ A stored postmortem says what happened. A Model Update Object says how future re
 
 The update must also avoid overgeneralization. If workflow-burden messaging produced attention but weak qualified demand, the lesson is not "workflow burden does not matter." A better update might be: workflow burden is an attention signal, but not by itself a buying-readiness signal. A crude update can damage future reasoning as easily as no update at all.
 
-**Table 7. Minimum Viable Reasoning Objects**
+**Table 2. Minimum Viable Reasoning Objects**
 
 | Reasoning-state object | What it preserves | What fails without it |
 |---|---|---|
@@ -828,6 +830,8 @@ A cautious system that only blocks work becomes unusable. A useful system preser
 The two workflows do not diverge because one has better raw information.
 
 They diverge because one treats context as material and the other treats reasoning state as material.
+
+**Table 3. Where the Workflows Diverge**
 
 | Decision point | Context-only workflow | Reasoning-state workflow |
 |---|---|---|
@@ -1223,7 +1227,7 @@ Not every workflow needs the same level of reasoning-state preservation.
 
 A maturity model can help researchers and practitioners ask how much structure is appropriate for a given workflow. The point is not to make every system climb to the highest level. The point is fit.
 
-**Table 8. Maturity Model for Reasoning-State Preservation**
+**Table 4. Maturity Model for Reasoning-State Preservation**
 
 | Level | Name | What is preserved | Typical capability | Typical failure |
 |---|---|---|---|---|
