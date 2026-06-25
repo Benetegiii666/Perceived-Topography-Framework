@@ -1706,17 +1706,81 @@ A useful framework does not need to win everywhere. It needs to show where it he
 
 ---
 
-## 11. Conclusion: Designing Better Perceived Landscapes
+## 11. Conclusion: The Ground Beneath Action
 
-**Status:** Placeholder — to be drafted from v1.0 Section 11.
+**Status:** Draft Candidate — ChatGPT v0.1
+**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Required reviewers:** Argument Architect, Voice Preservation Editor, AI Voice Detection Editor, Integration Editor
 
-**Intent:** Keep the "build better landscapes" energy but make it academically restrained.
+---
 
-**Required closing contribution statement:**
+The reliability problem has moved.
 
-> Agentic reliability is not only a property of model capability, prompt quality, or tool restriction. It is also a property of the perceived landscape from which action becomes sufficient. The Perceived Topography Framework provides a vocabulary for diagnosing that landscape, a reasoning-state architecture for preserving its transitions, and a research agenda for testing whether better-shaped landscapes produce more governable, learnable human-agent systems.
+When systems only answered questions, the main concern was whether the answer was correct. That concern remains. But agentic systems do more than answer. They preserve state, call tools, update records, draft messages, route work, retrieve memories, and shape what future systems will treat as known. The unit of concern is no longer only the output. It is the condition from which action became reasonable.
 
-**Source material:** `PAPER_v1.0_WORKING.md` Section 11.
+That condition is not created by the model alone.
+
+A model does not need inner malice to cause harm. It needs a goal, an action space, imperfect constraints, and a path through the environment that makes the wrong action appear useful, available, safe, or sufficient. When that happens, the failure is not mysterious. The system moved through a landscape that made one path easier than another.
+
+The core argument is simple: human-agent systems act from perceived landscapes, and those landscapes can be designed.
+
+That idea is not built from speculation alone. Its pieces are hardened by older traditions: bounded rationality, affordances, sensemaking, organizational learning, design rationale, human-AI interaction, retrieval, memory, reflection, and safety research. [Simon, 1955; Gibson, 1979; Norman, 1988; Weick, 1995; Argyris and Schon, 1978] Each tradition names part of the problem. The synthesis here gives those parts a shared operating surface.
+
+Perceived topography names the information-and-action landscape that becomes effective at the moment of reasoning and action. Visibility, Accessibility, Representation, Confidence, and Connectivity describe how information moves from existence to influence. Gradients describe why some paths become easier to enter than others. Premature sufficiency names the moment when action becomes ready before the right evidence, uncertainty, policy, consequence, or human confirmation has exerted enough force.
+
+Reasoning-state architecture gives the landscape memory. It preserves not only what the system used, but why an action became justified, withheld, escalated, or revised. Discovery gives that architecture a human checkpoint before inferred intent hardens into durable state. Model Update Objects give outcomes somewhere to change future reasoning rather than merely decorate a postmortem.
+
+These ideas still need to be tested. They should be tested hard. Context-only systems may perform just as well in some domains. Existing memory and reflection architectures may already preserve enough reasoning state in some workflows. Discovery may add friction or anchoring. Topography dimensions may need revision. Reasoning-state objects may become new surfaces for manipulation, politics, or bureaucratic theater.
+
+Those risks do not make the framework weak. They make it serious.
+
+A serious framework does not ask to be protected from disconfirmation. It asks to be put under pressure. The right next step is not admiration. It is use, comparison, perturbation, adversarial testing, and revision.
+
+The reason to do that work is that the pattern keeps appearing.
+
+A policy exists but does not govern the action. A prior failure is stored but does not shape the next premise. A retrieved document appears but does not connect to the decision it should constrain. A human confirms a frame without seeing the assumption that mattered. A system stops because the fluent path feels sufficient, not because the reasoning warrants action.
+
+These are not isolated quirks. They are landscape failures.
+
+The practical implication is direct. We should stop asking only whether the agent is powerful, aligned, constrained, or well prompted. Those questions matter, but they are incomplete. We also need to ask what kind of world the system is acting from.
+
+What can it see?
+
+What can it reach?
+
+What form does information take?
+
+What does it trust?
+
+What connects to the decision?
+
+What makes action feel sufficient?
+
+What survives into the next cycle?
+
+The ground beneath action is designable. That does not mean it is easy to design well, or that design alone guarantees safety. It means reliability is partly a landscape problem. If unsafe, unsupported, or shallow action lies downhill, systems will keep finding that path. If evidence, policy, uncertainty, and human judgment are made behaviorally effective before action, better paths become easier to reach.
+
+That is why the framework has legs.
+
+It does not explain everything. It should not try. But it gives a name to a recurring structure of failure and a way to design against it. It joins established ideas into a form that builders, reviewers, researchers, and organizations can use.
+
+The work ahead is to make the framework sharper by testing where it holds and where it loses scope.
+
+But the direction is worth taking seriously: if human-agent systems act from perceived landscapes, then reliability is not only a matter of controlling the actor.
+
+It is a matter of designing the ground beneath the action.
+
+---
+
+**Scaffold intent notes:**
+
+**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+
+**Title change:** "The Ground Beneath Action" replaces "Designing Better Perceived Landscapes" — a more concrete and distinctive title.
+
+**Structural relationship to frozen paper:** Draws from frozen paper Section 11 ("Build Better Landscapes"). The academic version is more compressed and more explicitly bounded. The frozen paper's closing energy is preserved ("build better landscapes" becomes "design the ground beneath the action"). The frozen paper's contribution statement is distributed through the prose rather than presented as a block quote.
+
+**Forward connection:** This is the final section. It closes with the paper's central design claim restated as a direction for work.
 
 ---
 
