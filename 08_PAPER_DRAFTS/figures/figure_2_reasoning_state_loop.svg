@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" font-family="Helvetica, Arial, sans-serif">
+  <rect width="800" height="620" fill="white"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">Figure 2. Reasoning-State Loop</text>
+  <text x="400" y="52" text-anchor="middle" font-size="12" fill="#555" font-style="italic">Six core reasoning-state objects plus one loop-closing state.</text>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <marker id="arrow-loop" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Box 1: Optimizer State -->
+  <rect x="280" y="72" width="240" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">1. Optimizer State</text>
+  <text x="400" y="116" text-anchor="middle" font-size="10" fill="#555">Goal · Policy · Interpretation</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="400" y1="132" x2="400" y2="148" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: Premise Stack -->
+  <rect x="280" y="152" width="240" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="176" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">2. Premise Stack</text>
+  <text x="400" y="196" text-anchor="middle" font-size="10" fill="#555">active assumptions and claims</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="400" y1="212" x2="400" y2="228" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: Decision State -->
+  <rect x="280" y="232" width="240" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="256" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">3. Decision State</text>
+  <text x="400" y="276" text-anchor="middle" font-size="10" fill="#555">act · pause · escalate · refuse</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="400" y1="292" x2="400" y2="308" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 4: Investigation Trace -->
+  <rect x="280" y="312" width="240" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="336" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">4. Investigation Trace</text>
+  <text x="400" y="356" text-anchor="middle" font-size="10" fill="#555">what was checked and why</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="400" y1="372" x2="400" y2="388" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 5: Learning Event -->
+  <rect x="280" y="392" width="240" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="416" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">5. Learning Event</text>
+  <text x="400" y="436" text-anchor="middle" font-size="10" fill="#555">outcome or contradiction</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="400" y1="452" x2="400" y2="468" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 6: Model Update Object -->
+  <rect x="280" y="472" width="240" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="400" y="496" text-anchor="middle" font-size="13" font-weight="bold" fill="#111">6. Model Update Object</text>
+  <text x="400" y="516" text-anchor="middle" font-size="10" fill="#555">what should change next</text>
+
+  <!-- Arrow 6→7 -->
+  <line x1="520" y1="502" x2="590" y2="502" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 7: Modified Optimizer State -->
+  <rect x="594" y="472" width="170" height="60" rx="10" ry="10" fill="#f5f5f5" stroke="#333" stroke-width="1.5"/>
+  <text x="679" y="493" text-anchor="middle" font-size="12" font-weight="bold" fill="#111">7. Modified</text>
+  <text x="679" y="509" text-anchor="middle" font-size="12" font-weight="bold" fill="#111">Optimizer State</text>
+  <text x="679" y="525" text-anchor="middle" font-size="10" fill="#555">next-cycle frame</text>
+
+  <!-- Loop arrow: Modified Optimizer State → Optimizer State -->
+  <path d="M 679 472 L 679 62 Q 679 42 659 42 L 525 42 Q 510 42 510 57 L 510 68" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-loop)"/>
+  <text x="700" y="270" text-anchor="start" font-size="11" fill="#555" font-style="italic">next cycle</text>
+
+  <!-- Caption -->
+  <text x="400" y="575" text-anchor="middle" font-size="11" fill="#555">The loop preserves why action became sufficient</text>
+  <text x="400" y="592" text-anchor="middle" font-size="11" fill="#555">and how future reasoning should begin differently.</text>
+</svg>
