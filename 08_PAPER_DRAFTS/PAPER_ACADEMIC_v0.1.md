@@ -1708,41 +1708,29 @@ A useful framework does not need to win everywhere. It needs to show where it he
 
 ## 11. Conclusion: The Ground Beneath Action
 
-**Status:** Draft Candidate — ChatGPT v0.1
-**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Required reviewers:** Argument Architect, Voice Preservation Editor, AI Voice Detection Editor, Integration Editor
+**Status:** Accepted — v0.2
+**Review status:** Accepted. All 7 pass criteria met. Voice 4/5 (up from 2/5). 2 minor AI flags (down from 14). All 3 severe flags eliminated.
+**Prior versions:** v0.1 (Voice 2/5, 14 flags, 3 severe). Reviews: `SECTION_11_REVIEW_v0.1_2026-06-25.md`.
 
 ---
 
 The reliability problem has moved.
 
-When systems only answered questions, the main concern was whether the answer was correct. That concern remains. But agentic systems do more than answer. They preserve state, call tools, update records, draft messages, route work, retrieve memories, and shape what future systems will treat as known. The unit of concern is no longer only the output. It is the condition from which action became reasonable.
-
-That condition is not created by the model alone.
+When systems only answered questions, the main concern was whether the answer was correct. That concern remains. But agentic systems now act inside workflows. They use tools, preserve memory, and leave traces that shape what future systems and teams will treat as known. The unit of concern is no longer only the output. It is the condition from which action became reasonable.
 
 A model does not need inner malice to cause harm. It needs a goal, an action space, imperfect constraints, and a path through the environment that makes the wrong action appear useful, available, safe, or sufficient. When that happens, the failure is not mysterious. The system moved through a landscape that made one path easier than another.
 
-The core argument is simple: human-agent systems act from perceived landscapes, and those landscapes can be designed.
+Human-agent systems act from perceived landscapes, and those landscapes can be designed.
 
-That idea is not built from speculation alone. Its pieces are hardened by older traditions: bounded rationality, affordances, sensemaking, organizational learning, design rationale, human-AI interaction, retrieval, memory, reflection, and safety research. [Simon, 1955; Gibson, 1979; Norman, 1988; Weick, 1995; Argyris and Schon, 1978] Each tradition names part of the problem. The synthesis here gives those parts a shared operating surface.
+This is not a loose metaphor. The account developed here is grounded in hardened ideas: bounded decision-making and satisficing; affordances, interfaces, and information foraging; sensemaking, organizational memory, and learning; agent memory, reflection, retrieval, and safety. The synthesis matters because these traditions keep pointing to the same problem from different angles. Actors do not move through the world as it exists in full. They move through the world as it becomes available, meaningful, trusted, and actionable.
 
-Perceived topography names the information-and-action landscape that becomes effective at the moment of reasoning and action. Visibility, Accessibility, Representation, Confidence, and Connectivity describe how information moves from existence to influence. Gradients describe why some paths become easier to enter than others. Premature sufficiency names the moment when action becomes ready before the right evidence, uncertainty, policy, consequence, or human confirmation has exerted enough force.
+That is the space this framework names.
 
-Reasoning-state architecture gives the landscape memory. It preserves not only what the system used, but why an action became justified, withheld, escalated, or revised. Discovery gives that architecture a human checkpoint before inferred intent hardens into durable state. Model Update Objects give outcomes somewhere to change future reasoning rather than merely decorate a postmortem.
-
-These ideas still need to be tested. They should be tested hard. Context-only systems may perform just as well in some domains. Existing memory and reflection architectures may already preserve enough reasoning state in some workflows. Discovery may add friction or anchoring. Topography dimensions may need revision. Reasoning-state objects may become new surfaces for manipulation, politics, or bureaucratic theater.
-
-Those risks do not make the framework weak. They make it serious.
-
-A serious framework does not ask to be protected from disconfirmation. It asks to be put under pressure. The right next step is not admiration. It is use, comparison, perturbation, adversarial testing, and revision.
-
-The reason to do that work is that the pattern keeps appearing.
-
-A policy exists but does not govern the action. A prior failure is stored but does not shape the next premise. A retrieved document appears but does not connect to the decision it should constrain. A human confirms a frame without seeing the assumption that mattered. A system stops because the fluent path feels sufficient, not because the reasoning warrants action.
+The pattern is easy to recognize once it has a name. A policy sits in the repository, but the claim never feels bound by it. The postmortem is searchable; the next incident still starts from the same old premise. A retrieved document appears in context and somehow never touches the sentence it should have stopped. In a campaign workflow, "reduces readmissions" feels close enough to adjacent truth that the evidence boundary arrives too late. A human confirms the visible frame while the real assumption remains hidden underneath it.
 
 These are not isolated quirks. They are landscape failures.
 
-The practical implication is direct. We should stop asking only whether the agent is powerful, aligned, constrained, or well prompted. Those questions matter, but they are incomplete. We also need to ask what kind of world the system is acting from.
+The practical questions follow:
 
 What can it see?
 
@@ -1758,15 +1746,15 @@ What makes action feel sufficient?
 
 What survives into the next cycle?
 
-The ground beneath action is designable. That does not mean it is easy to design well, or that design alone guarantees safety. It means reliability is partly a landscape problem. If unsafe, unsupported, or shallow action lies downhill, systems will keep finding that path. If evidence, policy, uncertainty, and human judgment are made behaviorally effective before action, better paths become easier to reach.
-
 That is why the framework has legs.
 
-It does not explain everything. It should not try. But it gives a name to a recurring structure of failure and a way to design against it. It joins established ideas into a form that builders, reviewers, researchers, and organizations can use.
+It does not explain everything. It should not try. Some failures are model failures. Some are institutional failures. Some are failures of power, incentive, expertise, or governance. But many human-agent failures become clearer when we stop looking only at the actor and begin looking at the ground on which action became reasonable.
 
-The work ahead is to make the framework sharper by testing where it holds and where it loses scope.
+The work ahead is to test that ground: perturb it, compare it, misuse it, narrow it, and improve it. The framework should become sharper where it helps and smaller where it does not.
 
-But the direction is worth taking seriously: if human-agent systems act from perceived landscapes, then reliability is not only a matter of controlling the actor.
+But the direction is worth taking seriously. If unsafe, unsupported, or shallow action lies downhill, systems will keep finding that path. If evidence, policy, uncertainty, and human judgment become behaviorally effective before action, better paths become easier to reach.
+
+Reliability is not only a matter of controlling the actor.
 
 It is a matter of designing the ground beneath the action.
 
@@ -1774,13 +1762,21 @@ It is a matter of designing the ground beneath the action.
 
 **Scaffold intent notes:**
 
-**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+**Source:** ChatGPT v0.2 draft, provided by Benet 2026-06-25. Rewritten per v0.1 review (14 AI flags, Voice 2/5).
 
-**Title change:** "The Ground Beneath Action" replaces "Designing Better Perceived Landscapes" — a more concrete and distinctive title.
+**v0.1 → v0.2 changes applied:**
 
-**Structural relationship to frozen paper:** Draws from frozen paper Section 11 ("Build Better Landscapes"). The academic version is more compressed and more explicitly bounded. The frozen paper's closing energy is preserved ("build better landscapes" becomes "design the ground beneath the action"). The frozen paper's contribution statement is distributed through the prose rather than presented as a block quote.
+- Cut entirely: two glossary re-enumeration paragraphs (Flags 6, 7), five "may" hedging sentences (Flag 8), "Those risks do not make the framework weak. They make it serious." (Flag 9), "The reason to do that work is that the pattern keeps appearing." (Flag 10), "That condition is not created by the model alone." (Flag 2), "The core argument is simple:" prefix (Flag 4), "The practical implication is direct." (Flag 12)
+- Rewritten: tradition list grouped into clusters instead of 10-item flat enumeration (Flag 5); seven-item verb-object list compressed to three concrete examples (Flag 1); five failure-pattern sentences rewritten with varied grammar — some concrete, one names a specific scenario (Flag 11); balanced hedge restructured to state position first (Flag 13); diplomatic qualifier in closing replaced with direct claim (Flag 14)
+- Word count: ~850 → ~500 (41% reduction)
+- The seven questions preserved exactly
+- "That is why the framework has legs" preserved
+- "It does not explain everything. It should not try." preserved
+- Closing line preserved
 
-**Forward connection:** This is the final section. It closes with the paper's central design claim restated as a direction for work.
+**Title:** "The Ground Beneath Action" — preserved from v0.1.
+
+**Forward connection:** Final section. Closes with the paper's central design claim.
 
 ---
 
