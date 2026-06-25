@@ -835,39 +835,41 @@ A reasoning-state architecture is therefore not an alternative to context. It is
 
 ## 7. Discovery and Human Confirmation
 
-**Status:** Draft Candidate — ChatGPT v0.1
-**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Required reviewers:** HCI Reviewer, AI Safety/Governance Reviewer, Voice Preservation Editor, AI Voice Detection Editor, Conceptual Rigor Reviewer, Integration Editor, Citation Auditor
+**Status:** Accepted — v0.2
+**Review status:** Accepted. All 5 pass criteria met. 7/7 v0.1 fixes resolved. Voice 4/5, 0 AI flags. Frozen paper closing restored.
+**Prior versions:** v0.1 (Voice 3.5-4/5, 6 flags, 7 required changes). Reviews: `SECTION_7_REVIEW_v0.1_2026-06-25.md`.
 
 ---
 
 Reasoning-state architecture creates a new responsibility: the system must not silently convert inferred human intent into durable state.
 
-A human-agent workflow begins with incomplete understanding. The user may provide a goal, a fragment of context, a desired outcome, a constraint, or a rough description of the situation. The agent must then interpret what was meant. That interpretation is unavoidable. The risk is not that the system infers. The risk is that it preserves or acts from the inference as if it had been confirmed.
+A human-agent workflow rarely begins with full specification. The human gives a goal, a fragment of context, a desired outcome, a constraint, or a rough description of the situation. The agent has to interpret what was meant. That inference is not a bug. It is part of the work.
 
-Discovery is the process that sits between human intent and preserved reasoning state.
+The danger begins when the inference hardens before the human has seen it.
 
-The term is used here in a specific sense. Discovery is not a requirements workshop, a form, a long interview, or a generic clarification phase. It is the structured process by which the system exposes its interpretation of the human's goal, constraints, assumptions, and uncertainty before those interpretations shape future action. Discovery turns hidden inference into reviewable reasoning.
+Discovery is the process that sits between human intent and preserved reasoning state. It is not better intake. It is pre-action topography design.
+
+That distinction matters. Intake collects what the human says. Discovery exposes what the system thinks the human means. Intake asks for information. Discovery proposes a frame and gives the human a chance to correct it before the frame shapes action, memory, or learning.
 
 The basic loop is:
 
 **Retrieve → Infer → Propose → Confirm**
 
-The system retrieves available context. It infers a working interpretation. It proposes that interpretation back to the human in a form that can be corrected. The human confirms, rejects, revises, or bounds it. Only then should the interpretation become part of durable reasoning state.
+The system retrieves what is already available. It infers a working interpretation. It proposes that interpretation back to the human in a form that can be corrected. The human confirms, rejects, revises, or bounds it. Only then should the interpretation become part of durable reasoning state.
 
-This loop matters because human intent is often underspecified. A marketer may ask for a healthcare campaign without naming the evidence boundary. A product manager may ask for a launch plan without stating which risk is unacceptable. A support lead may ask for automation without specifying when the system should stop and escalate. The agent can often make a plausible inference. Plausible is not the same as confirmed.
+Human intent is often underspecified in ways that matter. A marketer may ask for a healthcare campaign without naming the evidence boundary. A product manager may ask for a launch plan without stating which risk is unacceptable. A support lead may ask for automation without specifying when the system should stop and escalate. The agent can often make a plausible inference. Plausible is not confirmed.
 
-A poor Discovery process creates two opposite failures.
+Two bad designs sit on either side of Discovery.
 
-The first is **blank-form burden**. The system asks the human to specify everything up front: goals, constraints, evidence standards, target audiences, policy boundaries, success metrics, exception rules, and escalation conditions. This protects the system from guessing, but it shifts too much interpretive labor to the human. The result is friction, incomplete answers, or performative requirements capture. The human has to do the structuring work the agent should be helping with.
+One is **blank-form burden**. The system asks the human to specify everything up front: goals, audiences, constraints, success metrics, exception rules, and escalation conditions. That protects the system from guessing, but it shifts too much interpretive labor to the human. The human has to do the structuring work the agent should be helping with.
 
-The second failure is **silent inference**. The system does the opposite. It infers the goal, fills gaps, assumes constraints, chooses a frame, and proceeds. This feels efficient. It is often impressive in the first turn. But the reasoning state now rests on unconfirmed interpretations. If the system later acts, learns, or preserves state from that interpretation, the workflow has converted guesswork into architecture.
+The other is **silent inference**. The system fills the gaps, chooses the frame, and proceeds. This feels efficient. It is often impressive in the first turn. But the reasoning state now rests on unconfirmed interpretation. If the system later acts from that interpretation or preserves it for reuse, guesswork has become architecture.
 
 Discovery is the alternative to both failures.
 
 A good Discovery process does not ask the human to build the whole frame from scratch. It also does not hide the frame. It proposes the frame.
 
-In practice, the agent should say, in effect:
+The agent should be able to say, in substance:
 
 > Here is what I think you are trying to accomplish.
 > Here is what I think constrains the work.
@@ -875,11 +877,13 @@ In practice, the agent should say, in effect:
 > Here are the uncertainties that could materially change the action.
 > Confirm, revise, or bound this before I preserve it.
 
-The exact wording will vary by domain and interface. The architectural move is the same: the system makes its inferred reasoning state visible before treating it as stable.
+The wording will vary. The architectural move does not: the system makes its inferred reasoning state visible before treating it as stable.
 
-This connects Discovery to mixed-initiative interaction. Effective human-agent systems should not force a choice between full automation and full manual control. They should allocate work between human and system in ways that respect uncertainty, cost, and consequence. [Horvitz, 1999] Discovery is one such allocation. The system does the first pass of structure-building; the human validates the parts that matter.
+Mixed-initiative systems already reject the false choice between full automation and full manual control. They allocate work between human and machine according to uncertainty, cost, and consequence. [Horvitz, 1999] Human-AI interaction guidelines make a similar demand: systems should make clear what they can do, support correction, show contextually relevant information, and allow users to control or override behavior. [Amershi et al., 2019]
 
-Discovery also protects against automation bias. Humans may over-trust systems when outputs appear fluent, confident, or complete. [Parasuraman and Riley, 1997; Lee and See, 2004] A Discovery loop should therefore avoid presenting inferred intent as settled fact. It should expose uncertainty and make correction easy. The goal is not to ask for approval after the system has already framed the problem. The goal is to make framing itself reviewable.
+Discovery applies that logic to reasoning state. The system does the first pass of structure-building. The human validates the parts that matter.
+
+It also has to manage automation bias. Fluent system outputs can make an inferred frame feel more settled than it is. [Parasuraman and Riley, 1997; Lee and See, 2004] The propose step can anchor the human toward the system's interpretation. That is a real limitation of propose-then-confirm patterns. Discovery must therefore expose uncertainty, make alternatives easy to see, and make correction cheaper than passive agreement.
 
 The object of Discovery is the Optimizer State.
 
@@ -891,9 +895,9 @@ A healthcare campaign example shows the difference. A user asks:
 
 > Draft a campaign for our remote patient monitoring product for cardiology practices.
 
-A silent-inference system may proceed as if the goal is maximum persuasive impact, the audience is any cardiology decision-maker, and the strongest message is clinical outcome improvement. It may produce a polished campaign that sounds useful but rests on unconfirmed assumptions.
+A silent-inference system may proceed as if the goal is maximum persuasive impact, the audience is any cardiology decision-maker, and the strongest message is clinical outcome improvement. It may produce polished work that rests on unconfirmed assumptions.
 
-A blank-form system may ask the user to define every audience segment, compliance rule, evidence threshold, funnel stage, approved claim, and success metric before producing anything. That may be safer, but it is not practical for real work.
+A blank-form system may ask the user to define every audience segment, compliance rule, evidence threshold, funnel stage, approved claim, and success metric before producing anything. That may be safer, but it is not how real work usually moves.
 
 A Discovery-oriented system proposes a frame:
 
@@ -901,9 +905,7 @@ A Discovery-oriented system proposes a frame:
 
 That is not just a clarification question. It is a proposed Optimizer State. The human can correct the goal, change the audience, supply approved evidence, or confirm the boundary. Once confirmed, the frame can be preserved and reused.
 
-The key is that Discovery should focus on material uncertainty. Not every missing detail needs human confirmation. If a choice will not change the action, asking about it creates friction without improving reasoning. Discovery should ask when confirmation would alter the goal, policy, interpretation, evidence threshold, action boundary, or future learning path.
-
-This is where Discovery depends on the topography defined earlier. The system must know which surfaces should become visible during intent formation. Prior briefs, policies, performance data, product documentation, and approved claims may all matter. But Discovery is not retrieval for its own sake. It is retrieval in service of proposing a better frame.
+Discovery should focus on material uncertainty. Not every missing detail deserves human attention. If a choice will not change the action, asking about it creates friction without improving reasoning. But deciding which uncertainties are material is itself a design problem. The system has to model which unknowns could change the goal, policy, interpretation, evidence threshold, action boundary, or future learning path, and that model will vary by domain.
 
 The infer-confirm loop also creates a record. When the human confirms or revises the proposed frame, that confirmation becomes part of reasoning state. The system can later distinguish between what it inferred, what the human confirmed, what remained uncertain, and what was only provisionally assumed.
 
@@ -917,11 +919,13 @@ It can become manipulative, steering the human toward the system's preferred int
 
 It can become burdensome, requiring confirmation of details that do not matter.
 
-It can become brittle, treating one human confirmation as permanent even after context changes.
+It can become brittle, treating one human confirmation as permanent after context changes.
 
-It can become unsafe, preserving sensitive or mistaken human instructions as durable state without appropriate boundaries.
+It can become unsafe, preserving sensitive or mistaken instructions as durable state without appropriate boundaries.
 
-These risks matter because Discovery is not inherently good. It is a governance mechanism, and governance mechanisms can be designed badly. A useful Discovery process should make material assumptions visible, preserve human corrections, keep uncertainty alive when unresolved, and treat confirmation as scoped rather than universal.
+These risks return in the boundaries and objections section because Discovery can itself become a source of distortion.
+
+Useful Discovery makes material assumptions visible, preserve human corrections, keep uncertainty alive when unresolved, and treat confirmation as scoped rather than universal.
 
 Confirmation should therefore have boundaries.
 
@@ -929,50 +933,54 @@ A human may confirm that operational workflow burden is the right campaign frame
 
 Human confirmation is not magic. It is evidence within scope.
 
-This is why Discovery must preserve provenance. Who confirmed the interpretation? Under what conditions? For what workflow? With what confidence? Until when? A confirmation without scope can become a new source of premature sufficiency.
+Discovery must preserve that scope. Who confirmed the interpretation? Under what conditions? For what workflow? With what confidence? Until when? A confirmation without scope can become a new source of premature sufficiency.
 
 Discovery also changes the role of the user. The user is not merely a prompt writer. The user becomes a participant in constructing the system's operating landscape. That does not mean the user must specify everything. It means the system must expose the interpretations that will matter before they harden into action, memory, or learning.
 
-The design test is simple:
+The test is simple:
 
-Did the system make the important inference reviewable before acting from it?
+**Did the system make the important inference reviewable before acting from it?**
 
-If yes, Discovery has done useful work.
+If yes, the process has done useful work.
 
 If no, the system may still produce a good output. But it did so from an unconfirmed frame, and the organization may later preserve that frame as if it had been shared understanding.
 
-The next section applies the framework to a constructed healthcare marketing stress test. The point of that scenario is not to prove that Discovery always improves outcomes. It is to show how two workflows with similar context can diverge when one silently infers the frame and the other makes the frame visible, confirmable, and reusable.
+Discovery gives architecture something worth carrying. Architecture gives Discovery somewhere durable to go.
 
 ---
 
 **Scaffold intent notes:**
 
-**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+**Source:** ChatGPT v0.2 draft, provided by Benet 2026-06-25. Revised from v0.1 per Section 7 Review.
 
-**Structural relationship to frozen paper:** Draws from frozen paper Section 7 ("Discovery Turns Human Intent Into Reusable Reasoning"). The academic version is narrower — it focuses on the RIPC loop, the blank-form/silent-inference failure pair, and the governance significance of confirmation. Extended examples from the frozen paper (tool-use, support, policy) are cut to keep the healthcare example as the single illustration. The frozen paper's Table 6 (Ordinary Intake vs. Discovery) is not reproduced — its content is distributed across the prose.
+**v0.1 → v0.2 changes applied:**
 
-**Key elements preserved:**
-- Discovery as the process between human intent and preserved reasoning state
-- Retrieve → Infer → Propose → Confirm loop
-- Blank-form burden vs. silent inference as opposing failures
-- Optimizer State as the object of Discovery
-- Healthcare campaign as the illustration (proposed frame vs. silent inference vs. blank form)
-- Confirmation as scoped evidence, not universal authorization
-- Discovery risks (performative, manipulative, burdensome, brittle, unsafe)
-- Provenance requirement for confirmation
+- "Discovery is not better intake. It is pre-action topography design." restored from frozen paper (v0.1 note #2)
+- Closing rewritten: formulaic S8 preview replaced with frozen paper's "Discovery gives architecture something worth carrying. Architecture gives Discovery somewhere durable to go." Design test bolded as final rhetorical beat before closing. (v0.1 note #1)
+- Amershi et al. 2019 cited in mixed-initiative paragraph (v0.1 note #4)
+- Forward reference to S9 added after Discovery failure list (v0.1 note #5)
+- Material-uncertainty filtering acknowledged as a design problem: "But deciding which uncertainties are material is itself a design problem" (v0.1 note #6)
+- Anchoring risk acknowledged: "The propose step can anchor the human toward the system's interpretation. That is a real limitation of propose-then-confirm patterns." (v0.1 note #7)
+- AI voice fixes applied:
+  - "This connects Discovery to mixed-initiative interaction" setup sentence cut — mixed-initiative integrated into flowing prose
+  - Formulaic closing cut — replaced with frozen paper closing
+  - "Discovery also protects against automation bias" → rewritten as "It also has to manage automation bias"
+  - "These risks matter because Discovery is not inherently good" → cut; failure modes speak for themselves
+  - "The exact wording will vary by domain and interface" → compressed to "The wording will vary"
+  - "The key is that Discovery should focus on material uncertainty" → "Discovery should focus on material uncertainty"
+
+**Elements preserved from v0.1:**
+- "The risk is not that the system infers. The risk is that it preserves or acts from the inference as if it had been confirmed." → adapted to "The danger begins when the inference hardens before the human has seen it."
+- "Guesswork has become architecture"
 - "Human confirmation is not magic. It is evidence within scope."
-- Mixed-initiative interaction connection (Horvitz 1999)
-- Automation bias connection (Parasuraman & Riley, Lee & See)
+- "A confirmation without scope can become a new source of premature sufficiency."
+- Blank-form burden vs. silent inference
+- Five Discovery failure modes
+- Healthcare example as proposed Optimizer State
+- RIPC loop
+- Provenance requirement
 
-**New elements not in frozen paper:**
-- "The risk is not that the system infers. The risk is that it preserves or acts from the inference as if it had been confirmed." — sharper framing of the Discovery problem
-- "Discovery turns hidden inference into reviewable reasoning" — compressed definition
-- "The workflow has converted guesswork into architecture" — new formulation for silent inference consequence
-- "A confirmation without scope can become a new source of premature sufficiency" — connects Discovery governance to Section 5's premature sufficiency concept
-
-**Notable compression from frozen paper:** The frozen paper's extended treatment of Discovery across ~4,500 words is compressed to ~2,200 words. The frozen paper includes multiple domain examples (marketing, support, tool-use, policy); the academic version uses only the healthcare campaign. The frozen paper's discussion of how Discovery improves over time (Discovery Pattern Learning) is cut for the academic version.
-
-**Forward connection:** Closing paragraph bridges to Section 8 (Constructed Stress Test).
+**Forward connection:** Closing bridges to S8 through the final line about architecture and Discovery needing each other.
 
 ---
 
