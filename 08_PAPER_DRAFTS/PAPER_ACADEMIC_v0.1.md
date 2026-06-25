@@ -1238,9 +1238,9 @@ Those objections are welcome. A framework that cannot be challenged cannot becom
 
 ## 9. Boundaries, Objections, and Disconfirmation Conditions
 
-**Status:** Draft Candidate — ChatGPT v0.1
-**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Required reviewers:** Hostile Reviewer #2, Methodology/Epistemic Status Reviewer, AI Safety/Governance Reviewer, Conceptual Rigor Reviewer, Integration Editor, Voice Preservation Editor, AI Voice Detection Editor, Citation Auditor
+**Status:** Accepted — v0.2
+**Review status:** Accepted. All 7 pass criteria met. 7/7 v0.1 fixes resolved. Voice 5/5, 0 AI flags. Unfalsifiability confronted. Disconfirmation conditions tightened. "Does not claim" negations restored.
+**Prior versions:** v0.1 (Voice 4-5/5, 2 minor flags, 7 required changes). Reviews: `SECTION_9_REVIEW_v0.1_2026-06-25.md`.
 
 ---
 
@@ -1260,7 +1260,25 @@ Perceived topography does not erase those explanations. It asks a narrower quest
 
 That question is useful only if the answer changes diagnosis or design.
 
-### 9.1 Boundary of the Claim
+### 9.1 The Unfalsifiability Objection
+
+The strongest attack is not that the framework is wrong. It is that the framework could become impossible to prove wrong.
+
+If every failure can be described as a topography failure, then the framework risks becoming a post-hoc explanation machine. A hallucination becomes a confidence failure. A tool error becomes a connectivity failure. A weak campaign becomes a premature-sufficiency failure. A bad update becomes a Model Update Object failure. The vocabulary expands until it can absorb anything.
+
+That would be a real failure.
+
+A diagnostic framework should not win by relabeling every bad outcome in its own language. It should win only when its distinctions reveal something that competing explanations miss and when those distinctions change what a designer would do next.
+
+The framework therefore needs a discipline of loss. A failure should not count as a topography failure merely because some landscape description can be written afterward. It should count only when the relevant landscape properties can be specified in advance or reconstructed with enough precision to explain why a different design would have changed the path of attention, investigation, sufficiency, or action.
+
+Premature sufficiency is the clearest example. If a designer cannot say which evidence boundary, policy surface, prior incident, uncertainty signal, or confirmation requirement should have become behaviorally effective before action, then calling the outcome premature sufficiency adds little. It becomes a name for regret.
+
+The same test applies to the five dimensions. Visibility, Accessibility, Representation, Confidence, and Connectivity matter only if they separate failures that require different repairs. If the same intervention follows no matter which dimension is named, the dimensional vocabulary is ornamental.
+
+This is the line between diagnosis and storytelling.
+
+### 9.2 Boundary of the Claim
 
 The framework applies most clearly when four conditions hold.
 
@@ -1276,9 +1294,21 @@ The framework is less useful when the problem is primarily raw capability, deter
 
 The point is not to use the framework everywhere. The point is to use it where behavior depends on what the system can notice, reach, interpret, trust, connect, and carry forward.
 
-### 9.2 Objection: This Is Just Good System Design
+### 9.3 What the Framework Does Not Claim
 
-The strongest objection is that perceived topography is simply a new name for good system design.
+The framework does not eliminate politics. Organizations still choose goals, reward some behaviors over others, bury inconvenient constraints, and preserve some lessons while ignoring others.
+
+It does not replace domain expertise. A healthcare claim boundary, legal interpretation, clinical evidence standard, security policy, or operational risk judgment still requires people and institutions with the authority and competence to define it.
+
+It does not prove safety. A better-shaped landscape can reduce some failure paths while leaving others untouched.
+
+It does not make governance legitimate merely because governance can be automated. A policy can become behaviorally effective and still be a bad policy. An approval process can be well represented and still serve the wrong interest.
+
+These boundaries matter because the framework is not a theory of institutional goodness. It is a way to diagnose how information, constraint, confidence, and action become behaviorally effective inside human-agent systems.
+
+### 9.4 Objection: This Is Just Good System Design
+
+The strongest ordinary objection is that perceived topography is simply a new name for good system design.
 
 The objection is partly right.
 
@@ -1290,7 +1320,7 @@ The contribution is not that design matters. The contribution is a shared diagno
 
 If those distinctions do not change the diagnosis, the framework adds little. If they do, the vocabulary earns its place.
 
-### 9.3 Objection: This Is Just Retrieval, Memory, or Reflection
+### 9.5 Objection: This Is Just Retrieval, Memory, or Reflection
 
 Another objection is that retrieval, memory, and reflection already address the problem.
 
@@ -1300,31 +1330,33 @@ Retrieval can make information available. Memory can store prior material. Refle
 
 But availability is not the same as behavioral effectiveness. Storage is not the same as reusable reasoning. Reflection within a trajectory is not the same as organizational learning across cycles, agents, and contexts.
 
+As Section 6 established, retrieval makes information available; reasoning-state architecture preserves the structure that makes information behaviorally effective.
+
 A retrieved policy may not govern the claim being generated. A memory of prior failure may not connect to the new premise. A reflection note may improve one agent's next attempt without changing the workflow's future starting conditions.
 
-Reasoning-state objects are meant to preserve the relationship among goal, policy, interpretation, premise, investigation, sufficiency, action, outcome, and update. If ordinary retrieval or memory modules can preserve that structure and make it behaviorally effective, then the implementation may be simpler than the architecture described here. The conceptual requirement remains: the system must carry forward more than artifacts.
+Reasoning-state objects are meant to preserve the relationship among goal, policy, interpretation, premise, investigation, sufficiency, action, outcome, and update. If ordinary retrieval or memory modules can preserve that structure and make it behaviorally effective, then a separate implementation layer may not be necessary. The conceptual distinction could still remain valid while the implementation requirement becomes lighter.
 
-### 9.4 Objection: Human Confirmation Does Not Solve Safety
+The theory should not require new machinery where existing machinery already does the work.
+
+### 9.6 Objection: Human Confirmation Does Not Solve Safety
 
 Human confirmation can fail.
 
-Humans miss things. They defer to fluent systems. They approve under time pressure. They may not know the relevant policy. They may confirm a frame because the system proposed it first. The propose step in Discovery can anchor the human toward the agent's interpretation.
-
-That is not a side issue. It is a design constraint.
+Humans miss things. They defer to fluent systems. They approve under time pressure. They may not know the relevant policy. They may confirm a frame because the system proposed it first. The propose step in Discovery can anchor the human toward the agent's interpretation, which makes anchoring a design constraint rather than a side issue.
 
 Discovery cannot be treated as a magic legitimacy machine. A confirmation is evidence within scope. It is not proof that the interpretation is correct, safe, complete, or universally reusable. The system still needs uncertainty exposure, easy correction paths, provenance, bounded applicability, and escalation routes. For high-stakes or irreversible actions, it also needs hard controls outside the reasoning state: permissions, blocks, audits, sandboxing, and formal review. [Parasuraman and Riley, 1997; Lee and See, 2004; Amershi et al., 2019]
 
 The purpose of Discovery is not to make human confirmation perfect. It is to prevent hidden inference from silently becoming durable state.
 
-That is a lower claim, and a more defensible one.
-
-### 9.5 Objection: Reasoning-State Objects Can Be Manipulated
+### 9.7 Objection: Reasoning-State Objects Can Be Manipulated
 
 Reasoning-state architecture creates a new surface for attack and distortion.
 
 If a system preserves reasoning objects, those objects can be poisoned, over-trusted, politicized, or misapplied. A bad Model Update Object can teach the wrong lesson. A stale confirmation can govern a new situation. A biased premise can be preserved with the authority of structure. A policy boundary can be represented in a way that narrows risk on paper while leaving action unchanged.
 
-This is not hypothetical. Agentic systems already raise risks around memory poisoning, tool misuse, reward hacking, irreversible action chains, and failures across perception, cognition, memory, and action. [Su et al., 2025]
+Gradients can also be intentionally shaped for the wrong reasons. A system can be designed so that organizationally convenient paths are more visible, more reachable, or more confidence-weighted than truthful ones. In that case, topography does not protect judgment. It becomes the mechanism by which judgment is steered.
+
+Agentic systems already raise risks around memory poisoning, tool misuse, reward hacking, irreversible action chains, and failures across perception, cognition, memory, and action. [Su et al., 2025]
 
 Reasoning-state objects can also create organizational risks.
 
@@ -1340,7 +1372,7 @@ They can overgeneralize: one outcome becomes a rule for many situations that are
 
 These risks do not defeat the architecture. They bound it. Reasoning-state objects need provenance, confidence, scope, expiration, contestability, and audit. They should be treated as claims about prior reasoning, not as permanent truth.
 
-### 9.6 Objection: The Framework May Add Too Much Overhead
+### 9.8 Objection: The Framework May Add Too Much Overhead
 
 A practical objection is that reasoning-state preservation may slow the work down.
 
@@ -1354,12 +1386,14 @@ The maturity model in the research agenda returns to this question: how much rea
 
 A useful architecture must reduce the cost of good judgment. If it merely adds documentation burden, it has failed.
 
-### 9.7 Disconfirmation Conditions
+### 9.9 Disconfirmation Conditions
 
 The framework should lose scope under clear conditions.
 
-**1. If reasoning-state preservation does not improve reuse, governance, error recovery, or learning quality.**
-If systems that preserve reasoning state perform no better than context-only systems on these dimensions, the architectural claim weakens. Better retrieval may be enough.
+These are not a research design. They are falsifiability boundaries. [Popper, 1959; Lakatos, 1970; Hevner et al., 2004]
+
+**1. If reasoning-state preservation does not improve reuse, governance, error recovery, or learning quality relative to context-only baselines.**
+The comparison baseline matters. A fair test would compare workflows with similar model capability, similar artifact access, and similar task assignments, while varying whether reasoning state is preserved. Improvement should be evaluated through observable differences: fewer repeated errors, better transfer of lessons, more accurate escalation, clearer auditability, better recovery after contradiction, or higher-quality future starting states. If context-only workflows perform equally well on these measures, the architectural claim weakens.
 
 **2. If the five topography dimensions do not produce different diagnoses or interventions.**
 Visibility, Accessibility, Representation, Confidence, and Connectivity are useful only if they separate failures that would otherwise be collapsed. If changing the dimension never changes the repair, the vocabulary is too fine-grained or poorly chosen.
@@ -1367,14 +1401,14 @@ Visibility, Accessibility, Representation, Confidence, and Connectivity are usef
 **3. If premature sufficiency cannot be identified before outcome failure.**
 The concept must work as a design-time diagnostic. If it can only be applied after something goes wrong, it becomes a retrospective label rather than a useful design tool.
 
-**4. If Discovery does not improve the quality of confirmed reasoning state.**
-If infer-confirm loops mostly add friction, anchoring, or false confidence without improving goal, policy, or interpretation quality, Discovery should lose importance.
+**4. If Discovery does not outperform plausible alternatives for forming confirmed reasoning state.**
+Discovery should be compared against silent inference, blank-form intake, and workflows with no explicit infer-confirm loop. If Discovery adds friction, anchoring, or false confidence without improving the quality of Goal, Policy, Interpretation, evidence-boundary recognition, or human correction, then Discovery should lose importance.
 
 **5. If Model Update Objects do not change future Optimizer States.**
 A Model Update Object matters only if future reasoning begins differently. If updates are stored but do not shape future action, they are documentation, not learning.
 
 **6. If ordinary agent memory and reflection modules already preserve the relevant structure across cycles, agents, and organizational contexts.**
-The framework does not require a separate implementation layer if existing systems can already preserve and reuse reasoning state. The conceptual distinction would still matter less as a design claim.
+This would not necessarily falsify the theory. It would weaken the need for a distinct implementation layer. The conceptual claim could remain valid while the practical architecture collapses into existing memory or reflection systems.
 
 **7. If users systematically route around the architecture because the overhead exceeds the value.**
 A framework for usable human-agent systems cannot treat adoption failure as external. If the architecture makes good work too slow, it has misunderstood the landscape it was supposed to design.
@@ -1383,7 +1417,7 @@ These are not cosmetic caveats. They are tests.
 
 The framework becomes stronger if it survives them and narrower if it does not.
 
-### 9.8 What Remains After the Objections
+### 9.10 What Remains After the Objections
 
 After the objections, the central claim is smaller but still useful.
 
