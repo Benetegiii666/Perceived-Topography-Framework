@@ -1,7 +1,7 @@
 # Perceived Topography in Human-Agent Systems: Reasoning-State Preservation as a Design Theory for Governable Agentic Action
 
 Benet Garcia
-[Affiliation TBD]
+Independent Researcher
 
 ---
 
