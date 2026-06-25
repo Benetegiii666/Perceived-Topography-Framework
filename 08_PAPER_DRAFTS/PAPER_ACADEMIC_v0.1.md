@@ -12,23 +12,16 @@
 
 ## Abstract
 
-**Status:** Placeholder — to be drafted.
+**Status:** Accepted — v0.2
+**Review status:** Accepted. All 5 pass criteria met. Voice 4/5, 2 minor AI flags (0 severe). Hostile reviewer: no basis for rejection.
 
-**Intent:** Academic abstract. State problem, gap, framework, method, contribution, and limits. Remove manifesto tone from v1.0 abstract. Retain the core claim.
+---
 
-**Required elements:**
+AI agent failures are often explained by looking at the model: its capabilities, alignment, memory, tools, or constraints. Those explanations are necessary, but incomplete. Agentic systems act from a constructed information-and-action landscape: what they can see, reach, interpret, trust, and connect at the moment action becomes sufficient. This paper develops the Perceived Topography Framework, a reasoning-state account of human-agent reliability. The framework argues that many failures emerge not simply because information is absent, but because the relevant evidence, uncertainty, policy, consequence, or human confirmation fails to become behaviorally effective before action occurs. This failure pattern is called premature sufficiency.
 
-1. Agentic systems increasingly act through memory, tools, retrieval, and workflow integration.
-2. Current approaches focus on model capability, prompting, retrieval, tool access, or containment — necessary but insufficient.
-3. These approaches under-describe the constructed operating context from which agent action becomes sufficient.
-4. This paper introduces the Perceived Topography Framework: a design theory for diagnosing and shaping the constructed information-and-action landscapes through which human-agent systems reason, act, fail, and learn.
-5. The framework defines optimizer state, information topography (five dimensions), gradients, sufficiency, and reasoning-state transitions.
-6. A constructed healthcare marketing scenario illustrates the framework through comparative stress test — same task, same artifacts, different architecture.
-7. The paper offers a pre-empirical design vocabulary, falsifiable claims, and a research agenda — not empirical validation.
+The paper distinguishes context from reasoning state, defines perceived topography through five diagnostic dimensions — Visibility, Accessibility, Representation, Confidence, and Connectivity — and proposes reasoning-state architecture as a way to preserve the conditions from which action becomes justified, withheld, escalated, or revised. It also introduces Discovery as an infer-confirm process for turning inferred human intent into confirmed reasoning state before that interpretation becomes durable. A constructed healthcare marketing stress test shows how two workflows with the same artifacts can diverge when one relies on context alone and the other preserves goal, policy, interpretation, evidence boundaries, sufficiency rationale, outcome, and update.
 
-**Tone target:** Formal but readable. Not a manifesto. Not dry.
-
-**Source material:** `PAPER_v1.0_WORKING.md` lines 9-17, adapted.
+The framework is grounded in established work on bounded rationality, affordances, sensemaking, organizational learning, human-AI interaction, retrieval, memory, reflection, and AI safety. Its contribution is the synthesis: a diagnostic vocabulary for the ground beneath human-agent action. The framework does not explain every failure and should lose scope where its distinctions do not improve diagnosis, governance, reuse, or learning. Its value lies in making agent behavior more examinable: not only what the system did, but what landscape made that action appear available, justified, safe, or sufficient.
 
 ---
 
