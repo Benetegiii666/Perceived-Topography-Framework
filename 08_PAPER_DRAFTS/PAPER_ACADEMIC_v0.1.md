@@ -407,7 +407,7 @@ Once that distinction is clear, the next question becomes unavoidable: what kind
 
 Once reasoning state is distinguished from context, the next question is what shapes that state.
 
-The answer offered here is perceived topography: the information-and-action landscape made available to an optimizer-like system at the moment of reasoning and action. The term is a metaphor, but not an ornamental one. It is meant to make a design claim. Systems do not act from all available information. They act from information that has become visible, reachable, interpretable, trusted, and connected to the decision at hand. This framing draws on older work showing that action is shaped by perceived environments, affordances, information-seeking behavior, and bounded decision-making. [Gibson, 1979; Norman, 1988; Kuhlthau, 1991; Simon, 1955]
+The answer offered here is perceived topography: the information-and-action landscape made available to an optimizer-like system at the moment of reasoning and action. The term is a metaphor, but not an ornamental one. It is meant to make a design claim. Systems do not act from all available information. They act from information that has become visible, reachable, interpretable, trusted, and connected to the decision at hand. This framing draws on older work showing that action is shaped by perceived environments, affordances, information-seeking behavior, and bounded decision-making. [Gibson, 1979; Norman, 1988; Wilson, 1999; Kuhlthau, 1991; Simon, 1955]
 
 A perceived topography is therefore not the organization's knowledge base, the model's context window, the user interface, or the tool set considered separately. It is the effective landscape produced by their interaction. A policy in a document, a memory in a store, a dashboard in another system, and a tool in an action panel may all be present. The question is whether they influence the system's reasoning or action selection before the system acts. That is what this paper means by **exerting force**: behavioral influence on what the system notices, investigates, trusts, selects, withholds, or escalates.
 
@@ -1863,6 +1863,8 @@ Su, H., Luo, J., Liu, C., Yang, X., Zhang, Y., Dong, Y., & Zhu, J. (2025). A sur
 Walsh, J. P., & Ungson, G. R. (1991). Organizational memory. *Academy of Management Review*, *16*(1), 57-91.
 
 Weick, K. E. (1995). *Sensemaking in organizations*. Sage.
+
+Wilson, T. D. (1999). Models in information behaviour research. *Journal of Documentation*, *55*(3), 249-270.
 
 Xie, T., Zhang, D., Chen, J., Li, X., Zhao, S., Cao, R., Hua, T. J., Cheng, Z., Shin, D., Lei, F., Liu, Y., Xu, Y., Zhou, S., Savarese, S., Xiong, C., Zhong, V., & Yu, T. (2024). OSWorld: Benchmarking multimodal agents for open-ended tasks in real computer environments. *Advances in Neural Information Processing Systems*, *37*.
 
