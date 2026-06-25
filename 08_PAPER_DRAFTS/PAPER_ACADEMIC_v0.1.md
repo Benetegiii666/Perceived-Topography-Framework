@@ -27,13 +27,24 @@ The framework is grounded in established work on bounded rationality, affordance
 
 ## Epistemic Status
 
-**Status:** Placeholder — adapt from v1.0.
+**Status:** Accepted — v0.1 with fix applied
+**Review status:** Accepted. All 6 pass criteria met. Voice 4/5, 0 severe AI flags. Hedging qualifier cut. Construct inventory compressed.
 
-**Intent:** Retain this section. It is a credibility asset. State clearly: conceptual design theory, not empirical study. Constructed stress test, not field study. Pre-empirical vocabulary with falsifiable claims.
+---
 
-**Source material:** `PAPER_v1.0_WORKING.md` lines 22-33, tightened.
+This paper develops a conceptual design framework for human-agent systems. It is not an empirical study, benchmark report, field evaluation, or claim of production validation.
 
-**Editorial note:** This section may be shortened to a single paragraph for some venues. Retain the full version as the default.
+The argument is pre-empirical but grounded. It synthesizes established work on bounded rationality, affordances, information behavior, sensemaking, organizational learning, human-AI interaction, retrieval, memory, reflection, and AI safety. The contribution is the synthesis: a vocabulary for describing the perceived information-and-action landscape from which human-agent systems decide that action is available, justified, safe, or sufficient.
+
+The framework's constructs — perceived topography, premature sufficiency, the five diagnostic dimensions, reasoning-state architecture, Discovery, and Model Update Objects — should be judged by whether they improve explanation, intervention, governance, reuse, and learning in human-agent workflows.
+
+The healthcare marketing scenario is author-constructed. It is used as a stress test, not as empirical evidence. Its purpose is to make the framework examinable by holding the assignment and artifact set constant while comparing a context-only workflow with a reasoning-state workflow.
+
+The framework does not claim that perceived topography explains every agent failure. Some failures are model failures, tool failures, domain-expertise failures, governance failures, incentive failures, or institutional failures. Nor does the framework claim that reasoning-state architecture guarantees safety, eliminates politics, replaces human judgment, or makes governance legitimate because it can be automated.
+
+The central claim is narrower: many human-agent failures become clearer when we examine the landscape from which action became sufficient. If the framework's distinctions do not change diagnosis or design, they should lose scope. If reasoning-state preservation does not improve reuse, governance, error recovery, or learning relative to strong context-only baselines, the architectural claim should narrow. If Discovery adds friction or anchoring without improving confirmed reasoning state, it should lose importance.
+
+The paper therefore treats perceived topography as a serious but testable synthesis: grounded enough to use, bounded enough to challenge, and incomplete enough to require stress testing.
 
 ---
 
