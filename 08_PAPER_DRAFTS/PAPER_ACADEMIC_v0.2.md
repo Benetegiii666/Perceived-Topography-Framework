@@ -567,9 +567,9 @@ This closes the loop:
 
 **Optimizer State → Premise Stack → Decision State → Investigation Trace → Learning Event → Model Update Object → Modified Optimizer State**
 
-![Figure 2. Reasoning-State Loop](figures/figure_2_reasoning_state_loop.svg)
+![Figure 1. Reasoning-State Loop](figures/figure_2_reasoning_state_loop.svg)
 
-**Figure 2.** The reasoning-state loop preserves why action became sufficient and how future reasoning should begin differently. Six core objects plus one loop-closing state.
+**Figure 1.** The reasoning-state loop preserves why action became sufficient and how future reasoning should begin differently. Six core objects plus one loop-closing state.
 
 The loop is not meant to imply a rigid linear workflow. Human-agent systems will branch, pause, revise, and operate at multiple levels of granularity. The point is simpler: if the system cannot preserve the transition from action to update, it cannot reliably learn from its own history. At the organizational level, this is the difference between stored memory and reusable memory. [Walsh and Ungson, 1991]
 
@@ -609,9 +609,9 @@ The basic loop is:
 
 **Retrieve → Infer → Propose → Confirm**
 
-![Figure 1. Discovery (RIPC) Loop](figures/figure_1_discovery_ripc_loop.svg)
+![Figure 2. Discovery (RIPC) Loop](figures/figure_1_discovery_ripc_loop.svg)
 
-**Figure 1.** Discovery is pre-action topography design. The system retrieves context, infers a working frame, proposes it for human review, and confirms before the interpretation becomes durable reasoning state.
+**Figure 2.** Discovery is pre-action topography design. The system retrieves context, infers a working frame, proposes it for human review, and confirms before the interpretation becomes durable reasoning state.
 
 The system retrieves what is already available. It infers a working interpretation. It proposes that interpretation back to the human in a form that can be corrected. The human confirms, rejects, revises, or bounds it. Only then should the interpretation become part of durable reasoning state.
 
