@@ -298,9 +298,9 @@ The result is not a replacement for existing traditions. It is a shared diagnost
 
 ## 3. From Context to Reasoning State
 
-**Status:** Draft Candidate — ChatGPT v0.1
-**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Required reviewers:** Conceptual Rigor Reviewer, Organizational Learning Reviewer, Hostile Reviewer #2, AI Voice Detection Editor
+**Status:** Accepted — v0.2
+**Review status:** Accepted. All 6 pass criteria met. 8/8 v0.1 notes addressed. Voice 4/5, 4 AI flags (0 severe).
+**Prior versions:** v0.1 (Voice 4/5, 7 flags). Reviews: `SECTION_3_REVIEW_v0.1_2026-06-24.md`.
 
 ---
 
@@ -318,41 +318,45 @@ The distinction is not about volume. A larger context window does not automatica
 
 A policy document is a simple example. It is useful for the system to retrieve the policy. But retrieval alone does not guarantee that the policy governs the action being considered. The system must recognize that the current action falls under the policy, understand what the policy permits or prohibits, and treat that constraint as active before action becomes sufficient. If the policy is merely present in the prompt or context window, it may still fail to shape behavior.
 
-The same problem appears in organizational memory. Teams often preserve artifacts while losing the reasoning that produced them. They keep the campaign brief, the dashboard, the decision log, the ticket, and the postmortem. What disappears is the prior expectation, the assumption that made the action reasonable, the boundary condition that mattered, and the explanation of what changed after reality pushed back. [Walsh and Ungson, 1991; Markus, 2001]
+This problem has older roots than AI agents. Design rationale work has long argued that systems should preserve not only decisions, but the reasons, alternatives, and assumptions behind them. [Lee, 1997] Organizational memory research makes a similar point at the institutional level. Teams often preserve artifacts while losing the reasoning that produced them. They keep the campaign brief, the dashboard, the decision log, the ticket, and the postmortem. What disappears is the prior expectation, the assumption that made the action reasonable, the boundary condition that mattered, and the explanation of what changed after reality pushed back. [Walsh and Ungson, 1991; Markus, 2001]
 
 The result is familiar: the organization appears to remember because the document exists, but it behaves as if it has forgotten because the decision logic is not reusable.
 
 Agentic systems can inherit and accelerate this failure. A future agent may retrieve a prior artifact and still not know whether to reuse it, challenge it, qualify it, or treat it as obsolete. The system has access to the memory, but not the meaning of the memory. It sees what was produced, not the reasoning transition that produced it.
 
-This matters because agents act from stopping conditions. They do not need perfect knowledge to act. Neither do humans or organizations. They act when the current state of reasoning feels sufficient for the next move. The central design question is therefore not only whether the system had relevant information. It is whether the right information, uncertainty, and constraint were active before sufficiency arrived.
+This matters because agents act from stopping conditions. They do not need perfect knowledge to act. Neither do humans or organizations. They act when the current state of reasoning feels sufficient for the next move. This is close to Simon's account of bounded rationality and satisficing: real decision-makers operate under limits and stop when an option is good enough for the situation. [Simon, 1955]
 
-A reasoning state is the structured condition from which action becomes justified.
+The central design question is therefore not only whether the system had relevant information. It is whether the right information, uncertainty, and constraint were active before sufficiency arrived.
 
-It should preserve at least four things.
+A reasoning state is both a condition and a transition. It is the structured condition from which action becomes justified, and it is the trace of how the system moved from goal and interpretation toward action, outcome, and update.
 
-First, it should preserve the active frame: what the system is trying to accomplish, what constrains the action, and how the situation is being interpreted.
+At this point in the argument, four elements are enough to distinguish reasoning state from context. They are not exhaustive; Section 6 develops the fuller architecture. They serve here as the minimum structure needed to preserve the why.
 
-Second, it should preserve the premise stack: the claims or assumptions that make the proposed action seem reasonable.
+The first is the active frame: what the system is trying to accomplish, what constrains the action, and how the situation is being interpreted.
 
-Third, it should preserve the sufficiency rationale: why the system stopped investigating and moved toward action.
+The second is the premise stack. These are the claims or assumptions that make the proposed action seem reasonable.
 
-Fourth, it should preserve the update path: what outcome occurred, what expectation was contradicted, and what should change next time.
+A third element is the sufficiency rationale: the reason the system stopped investigating and moved toward action.
+
+Finally, reasoning state needs an update path. It should preserve what outcome occurred, what expectation was contradicted, and what should change next time.
 
 This is not a demand to record everything. A reasoning-state architecture that preserves every token, every document, and every intermediate possibility would create a new problem: excessive state without usable judgment. The goal is minimum viable reasoning preservation. The system should preserve enough structure that a future human or agent can understand why an action once appeared justified, whether that justification still holds, and what has changed.
 
-Consider a healthcare marketing workflow. A team asks an agent to draft campaign messaging for a remote patient monitoring product. A context-rich system may retrieve product documentation, audience research, approved claims, prior campaigns, and compliance guidance. That is useful. It is also not enough.
+In a healthcare marketing workflow, a team asks an agent to draft campaign messaging for a remote patient monitoring product. A context-rich system may retrieve product documentation, audience research, approved claims, prior campaigns, and compliance guidance. That is useful. It is also not enough.
 
 If the system drafts the phrase "reduces readmissions," the question is not only whether readmissions appeared somewhere in the retrieved material. The question is why that phrase became sufficient. Did the system distinguish an operational capability from a clinical outcome claim? Did it connect the claim to the evidence threshold? Did it know whether approved language existed? Did it preserve the fact that this claim required human or compliance confirmation?
 
-A context-only system may preserve the draft. A reasoning-state system should preserve the reason the claim was accepted, rejected, bounded, or escalated.
+A reasoning-state system would preserve a different trace. The evidence boundary would be active before generation. The sufficiency rationale would record that operational-value language is currently supportable, while a direct clinical-outcome claim is not. The unsupported phrase would be flagged, bounded, or escalated rather than silently converted into campaign copy.
 
-The difference becomes more important after the outcome is known. Suppose a campaign later generates attention but weak qualified demand. A conventional memory system can store the performance report. A reasoning-state system should preserve what the result contradicted. Was the weak conversion evidence that the audience was wrong, the message was wrong, the buying-stage assumption was wrong, or the offer was wrong? Without the prior expectation, the outcome can be explained many ways after the fact. Learning becomes storytelling.
+That is the difference between producing an artifact and preserving the reasoning condition behind it.
+
+The difference becomes more important after the outcome is known. Suppose a campaign later generates attention but weak qualified demand. A conventional memory system can store the performance report. A reasoning-state system should preserve what the result contradicted. Was the weak conversion evidence that the audience was wrong, the message was wrong, the buying-stage assumption was wrong, or the offer was wrong? Without the prior expectation, the outcome can be explained many ways after the fact. Learning becomes storytelling. [Weick, 1995]
 
 This is why correction is not the same as learning.
 
 A human reviewer can delete an unsupported claim from a draft. The immediate artifact improves. But if the system does not preserve why the claim was unsupported, what evidence boundary applied, and when that boundary should govern future claims, the next agent may recreate the same error in different language. The correction changed the output. It did not change the future reasoning state.
 
-Learning requires a model update. The system must preserve not only that an action was corrected, but what future expectation, confidence threshold, investigation path, or action boundary should change. [Argyris and Schon, 1978]
+Argyris and Schon's distinction between single-loop and double-loop learning is useful here. Single-loop learning can correct action within existing assumptions. Double-loop learning changes the governing assumptions themselves. A reasoning-state architecture should make that second movement possible: not only "fix this output," but "change the future expectation, threshold, or action boundary that produced this output." [Argyris and Schon, 1978]
 
 This gives reasoning state a different role from context. Context supports the current answer. Reasoning state supports future judgment.
 
@@ -364,32 +368,28 @@ Context asks: what can the system see?
 
 Reasoning state asks: from what condition is the system about to act?
 
-That question prepares the framework's next move. Once reasoning state is distinguished from context, we can ask what kind of environment shapes it. The answer is perceived topography: the landscape of visibility, accessibility, representation, confidence, and connectivity through which information becomes behaviorally effective.
+Once that distinction is clear, the next question becomes unavoidable: what kind of environment shapes that condition? The answer is perceived topography — the landscape of visibility, accessibility, representation, confidence, and connectivity through which information becomes behaviorally effective.
 
 ---
 
 **Scaffold intent notes:**
 
-**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-24.
+**Source:** ChatGPT v0.2 draft, provided by Benet 2026-06-24. Revised from v0.1 per Section 3 Review notes.
 
-**Structural relationship to frozen paper:** Combines material from frozen paper Section 2 ("Context Does Not Preserve the Why") and the opening of Section 3 ("Optimizer State and Perceived Topography"). The healthcare marketing example is used more concisely than in Section 8's full stress test — it illustrates the context/reasoning-state distinction without previewing the full comparative analysis.
+**v0.1 → v0.2 changes applied:**
 
-**Key elements preserved from frozen paper:**
-- Context vs. reasoning state as the core conceptual move
-- The policy-retrieval example (policy present but not governing)
-- Organizational memory failure (Walsh & Ungson, Markus)
-- Correction vs. learning distinction (Argyris & Schon)
-- "The organization appears to remember because the document exists" sentence
-- The four-part reasoning-state structure (frame, premises, sufficiency, update path)
-- "Minimum viable reasoning preservation" concept
-- Healthcare marketing example (readmissions claim) used illustratively
-
-**What was compressed from frozen paper:**
-- v1.0 Section 2 was ~2,500 words on context limitations. This draft covers the same ground in ~1,200 words.
-- The repeated context/reasoning-state contrast (stated 4+ times in v1.0) is stated once and developed through examples.
-- The campaign example is shorter than in Section 8 — it illustrates the distinction without full comparative analysis.
-
-**Forward connection:** The closing paragraph bridges to Section 4 (Perceived Topography: Definitions and Dimensions).
+- Four-part structure justified ("They are not exhaustive; Section 6 develops the fuller architecture")
+- Reasoning state defined as both condition and transition (reconciling justification vs. transition framing)
+- Patterned "First...Second...Third...Fourth..." list varied ("The first is... The second is... A third element is... Finally...")
+- Reasoning-state alternative shown in healthcare example (evidence boundary active, sufficiency rationale records the distinction, unsupported claim flagged)
+- Lee (1997) added for design rationale systems
+- Simon (1955) added for satisficing/stopping conditions
+- Weick (1995) added for "learning becomes storytelling" / retrospective sensemaking
+- Single-loop / double-loop learning named explicitly with Argyris & Schon
+- "Consider a healthcare marketing workflow" setup sentence cut
+- "That question prepares the framework's next move" setup sentence cut
+- Fourth restatement of context/reasoning-state distinction removed ("This gives reasoning state a different role from context" kept; earlier duplicate cut)
+- Closing bridge rewritten without formulaic transition
 
 ---
 
