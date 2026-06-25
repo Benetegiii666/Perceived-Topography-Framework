@@ -25,6 +25,7 @@ Concept Architecture v0.1 is frozen. No new theory expansion unless contradictio
 
 ### Academic Conversion (Path 2)
 - `PAPER_ACADEMIC_v0.1.md` — Academic manuscript scaffold. 11-section structure with intent notes and placeholders. Derived from frozen v1.0. Separate Path 2 output — does not replace the keystone paper as conceptual authority.
+- `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md` — Formal review protocol. 11 reviewer roles (including AI Voice Detection Editor), 5 review gates, 9-criterion scoring rubric, section assignments, synthesis protocol.
 
 ### Supporting
 - `RELATED_WORK_LEDGER.md` — 11 influence categories with citation targets, section mappings, and framework connections
