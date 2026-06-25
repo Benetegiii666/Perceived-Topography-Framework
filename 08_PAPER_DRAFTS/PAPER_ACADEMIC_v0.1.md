@@ -143,9 +143,9 @@ The practical question is therefore not only: how do we prevent agents from taki
 
 ## 2. Related Work and Theoretical Positioning
 
-**Status:** Draft Candidate — ChatGPT v0.2 (revised per v0.1 review guidance)
-**Review status:** Pending re-review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Prior version:** v0.1 reviewed 2026-06-24. Verdict: Minor revision. Voice 3/5, 8 AI flags. Full review: `SECTION_2_REVIEW_v0.1_2026-06-24.md`.
+**Status:** Accepted — v0.2 with Su et al. 2025 reference resolved
+**Review status:** Accepted per `SECTION_2_REVIEW_v0.2_2026-06-24.md`. All pass criteria met. Su et al. 2025 blocking citation resolved. Bibliography backlog (12 entries) remains for pre-submission.
+**Prior versions:** v0.1 (Voice 3/5, 8 AI flags), v0.2 (Voice 4/5, 0 AI flags). Reviews: `SECTION_2_REVIEW_v0.1_2026-06-24.md`, `SECTION_2_REVIEW_v0.2_2026-06-24.md`.
 
 ---
 
@@ -651,6 +651,8 @@ Russell, S., & Wefald, E. (1991). *Do the right thing*. MIT Press.
 Shanahan, M., et al. (2023). Role play with large language models. *Nature*, *623*, 493–498.
 
 Simon, H. A. (1955). A behavioral model of rational choice. *QJE*, *69*(1), 99–118.
+
+Su, H., Luo, J., Liu, C., Yang, X., Zhang, Y., Dong, Y., & Zhu, J. (2025). A survey on autonomy-induced security risks in large model-based agents. *arXiv preprint arXiv:2506.23844*. https://doi.org/10.48550/arXiv.2506.23844
 
 Walsh, J. P., & Ungson, G. R. (1991). Organizational memory. *AMR*, *16*(1), 57–91.
 
