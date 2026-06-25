@@ -55,3 +55,5 @@ For deeper follow-up passes, use the full internal question bank (`04A_FULL_QUES
 | `06_FIELD_KIT_TO_REPO_MAPPING.md` | Where field kit outputs go in the formal repo |
 | `07_JEREMY_MARKETING_STRATEGY_MEETING_GUIDE.md` | Lightweight meeting guide for Jeremy conversation |
 | `08_POST_JEREMY_NOTES_TEMPLATE.md` | Post-meeting notes template for Jeremy conversation |
+| `08_POST_JEREMY_NOTES_FILLED_2026-06-24.md` | Filled notes from Jeremy conversation (transcript-processed) |
+| `09_KAYE_CAMPAIGN_DISCOVERY_GUIDE.md` | Informal campaign reasoning discovery guide for Kaye conversation |

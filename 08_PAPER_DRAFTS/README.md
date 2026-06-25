@@ -23,6 +23,9 @@ Concept Architecture v0.1 is frozen. No new theory expansion unless contradictio
 - `PAPER_v0.2.md` — Second draft with revisions
 - `PAPER_v1.0.md` — Submission-ready version
 
+### Academic Conversion (Path 2)
+- `PAPER_ACADEMIC_v0.1.md` — Academic manuscript scaffold. 11-section structure with intent notes and placeholders. Derived from frozen v1.0. Separate Path 2 output — does not replace the keystone paper as conceptual authority.
+
 ### Supporting
 - `RELATED_WORK_LEDGER.md` — 11 influence categories with citation targets, section mappings, and framework connections
 - `TERMS_OF_ART.md` — Standalone terms reference (to be created)
