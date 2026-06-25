@@ -395,23 +395,129 @@ Once that distinction is clear, the next question becomes unavoidable: what kind
 
 ## 4. Perceived Topography: Definitions and Dimensions
 
-**Status:** Placeholder — to be drafted from v1.0 Section 3 (dimensions material).
+**Status:** Draft Candidate — ChatGPT v0.1
+**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Required reviewers:** Conceptual Rigor Reviewer, HCI Reviewer, Argument Architect, Hostile Reviewer #2, Voice Preservation Editor, AI Voice Detection Editor, Integration Editor
 
-**Intent:** Give the five dimensions their own section. They are one of the paper's best assets and deserve formal treatment.
+---
 
-**Five dimensions:**
+Once reasoning state is distinguished from context, the next question is what shapes that state.
 
-| Dimension | Definition | Diagnostic Question | Failure Mode | Design Intervention |
-|---|---|---|---|---|
-| **Visibility** | Can this be perceived? | What relevant information exists but is not visible to the system at decision time? | Hidden risk: the gradient exists but exerts no behavioral force. | Increase visibility of the relevant surface. |
-| **Accessibility** | Can this be reached? | What information is visible but too costly, slow, or difficult to retrieve? | Friction barrier: the information exists and is visible but does not reach the decision. | Reduce retrieval cost; improve access paths. |
-| **Representation** | How is this expressed? | Is the information expressed in a form the system can interpret and act on? | Misread signal: the information arrives but is misinterpreted. | Improve representation; structure for interpretation. |
-| **Confidence** | How trustworthy is this? | How much weight should the system give this information? | False confidence or unwarranted doubt: the system over- or under-trusts. | Surface confidence metadata; distinguish evidence from assertion. |
-| **Connectivity** | What is this connected to? | Is this information connected to the decision, policy, action, or consequence it should influence? | Disconnected policy: the constraint exists but does not shape the decision. | Connect the surface to the decision point. |
+The answer offered here is perceived topography: the information-and-action landscape made available to an optimizer-like system at the moment of reasoning and action. The term is a metaphor, but not an ornamental one. It is meant to make a design claim. Systems do not act from all available information. They act from information that has become visible, reachable, interpretable, trusted, and connected to the decision at hand.
 
-**Dimension Admission Matrix:** Preserve this. It gives the paper discipline and prevents framework sprawl.
+A perceived topography is therefore not the organization's knowledge base, the model's context window, the user interface, or the tool set considered separately. It is the effective landscape produced by their interaction. A policy in a document, a memory in a store, a dashboard in another system, and a tool in an action panel may all be present. The question is whether they exert force on the system's reasoning before action becomes sufficient.
 
-**Source material:** `PAPER_v1.0_WORKING.md` Section 3 (dimensions) and Section 4 (failure modes).
+That distinction matters because many design failures hide behind the phrase "the information was available." Available to whom, at what moment, in what form, with what authority, and connected to which action? A fact can exist without being noticed. A warning can be noticed without being understood. A policy can be understood without being connected to the current decision. A prior failure can be remembered without changing what happens next.
+
+This section defines the framework's core terms and five diagnostic dimensions.
+
+### 4.1 Core Definitions
+
+An **information surface** is any source, interface, artifact, memory, observation, tool output, policy, dashboard, or signal that can present information to the system. Information surfaces are the raw material of perceived topography. They are not the topography itself.
+
+A **perceived topography** is the effective information-and-action landscape produced when those surfaces become available to an optimizer-like system under a goal, policy, and interpretation. It describes what can be seen, reached, understood, trusted, and connected before action becomes sufficient.
+
+A **topographic dimension** is a diagnostic property of that landscape. It helps explain why information that exists somewhere may or may not shape behavior in a specific decision.
+
+A **gradient** is a directional pressure within the landscape. It makes one path feel easier, safer, more attractive, more complete, or more sufficient than another.
+
+A **topography failure** occurs when the landscape allows the wrong thing to become sufficient, or prevents the right thing from exerting force, before action occurs.
+
+These definitions are deliberately practical. They are meant to help a designer ask: what did the system experience as the available world?
+
+### 4.2 The Five Diagnostic Dimensions
+
+The framework describes perceived topography through five dimensions: **Visibility, Accessibility, Representation, Confidence, and Connectivity**.
+
+These dimensions are not a complete ontology of information behavior. They are a minimum viable diagnostic set. Each dimension earns its place only if changing it would lead to a different diagnosis, intervention, or expected outcome.
+
+| Dimension | Diagnostic question | Typical failure | Design response |
+|---|---|---|---|
+| **Visibility** | Did the relevant signal enter the system's perceived field? | The information existed somewhere, but never appeared in the working frame. | Surface the signal at the point where it matters. |
+| **Accessibility** | Could the system reach the signal at acceptable cost? | The signal was known in principle, but buried, blocked, slow, permissioned away, or outside the workflow. | Improve retrieval, routing, permissions, or workflow placement. |
+| **Representation** | Was the signal expressed in a usable form? | The information was visible and reachable, but too vague, abstract, legalistic, unstructured, or mismatched to the task. | Restructure the information so it can guide interpretation and action. |
+| **Confidence** | Was the signal trusted at the right level? | Weak evidence was over-trusted, strong evidence was underweighted, or source quality was not represented. | Calibrate authority, evidence thresholds, provenance, and uncertainty. |
+| **Connectivity** | Was the signal connected to the goal, policy, premise, decision, or outcome where it should matter? | The information remained isolated and failed to influence the action it should have constrained or updated. | Link the signal to the reasoning object or action boundary it governs. |
+
+Visibility asks whether the signal enters the field at all. This is the most basic failure. A compliance rule, customer constraint, or prior incident cannot shape behavior if it never appears in the system's working frame.
+
+Accessibility asks whether the signal can be reached without breaking the workflow. A source may be known but functionally unavailable because it sits behind permissions, latency, poor indexing, or a tool path the agent does not have. In practice, agents and humans both tend to use what the environment makes easy enough to reach.
+
+Representation asks whether the information is usable in the form presented. A policy written for lawyers may not help a campaign agent decide whether a sentence is an unsupported clinical claim. A dashboard designed for executives may not help an operations agent identify the dependency that makes an automated restart risky. Information has to be shaped for the decision it is expected to influence.
+
+Confidence asks whether the system treats the signal with the right degree of trust. Confidence is not the same as truth. A fluent prior example can feel stronger than a dry policy statement. A highly ranked retrieved passage can appear authoritative because of its placement rather than its provenance. A system may act too soon because weak evidence feels adequate, or fail to act because strong evidence is not represented as strong.
+
+Connectivity asks whether information is linked to the reasoning structure where it should exert force. This is often the missing dimension in context-heavy systems. A policy may be visible, accessible, clearly represented, and trusted, yet still fail if it is not connected to the exact claim, tool call, approval rule, or premise it should govern.
+
+The dimensions are easiest to understand through failure. If the problem is visibility, the system never saw the signal. If the problem is accessibility, it could not get there at usable cost. If the problem is representation, it saw the signal but could not use it. If the problem is confidence, it trusted the wrong thing or trusted the right thing at the wrong level. If the problem is connectivity, the signal existed but did not attach to the decision.
+
+These are different failures. They call for different repairs.
+
+### 4.3 Why These Five
+
+The five dimensions are intentionally constrained. A framework that names every important factor becomes unusable. Timeliness, salience, completeness, relevance, policy, memory, and trust all matter, but not all of them should become top-level dimensions.
+
+The admission rule is simple: a candidate dimension should be promoted only if it changes the diagnosis, intervention, or expected outcome.
+
+Timeliness is a useful example. Stale information is obviously dangerous. But in many cases, staleness can be diagnosed through the existing dimensions. A current source may not be visible. A stale source may remain accessible while the updated one is not. A date may be represented poorly. Source recency may affect confidence. The update may fail to connect to the decision. Timeliness matters, but it does not always require a sixth dimension.
+
+Relevance is handled differently. Relevance is not treated as a free-standing dimension because it depends on the active goal. The same information can be irrelevant under one goal and decisive under another. In this framework, relevance emerges from the relationship between optimizer state and topography: the goal determines what could matter; the topography determines whether what matters can exert force.
+
+Policy is also not a dimension. Policy belongs to optimizer state. It defines what should constrain action. But policy still has to pass through the topography before it can govern behavior. A policy must become visible, accessible, represented, trusted, and connected to the action where it applies. If it fails there, the policy exists as an artifact but not as an active constraint.
+
+Memory follows the same logic. Memory is not enough. A stored lesson must still become visible, reachable, usable, trusted, and connected to the new decision. Otherwise the system may appear to remember while behaving as if it does not.
+
+This keeps the framework from becoming a list of everything that matters. The five dimensions are not important because they are the only things that matter. They are important because they separate failure types that would otherwise collapse into vague statements such as "bad context," "poor retrieval," or "weak governance."
+
+### 4.4 From Description to Diagnosis
+
+The practical purpose of perceived topography is diagnosis.
+
+Consider again an agent drafting a healthcare campaign. The approved-claims repository may exist. That alone tells us little. If the agent produces an unsupported claim, the failure could have occurred in several ways.
+
+The repository may not have been visible in the workflow.
+
+It may have been visible but inaccessible to the agent.
+
+It may have been accessible but represented as a general list of approved phrases rather than a claim-boundary system.
+
+It may have been represented clearly but treated as lower confidence than prior campaign language.
+
+It may have been trusted but disconnected from the specific sentence being generated.
+
+Each diagnosis implies a different repair. Add the repository to retrieval. Change permissions. Restructure claim guidance by claim type. Add provenance and evidence thresholds. Connect claim generation to approval status. These are not interchangeable interventions.
+
+The same logic applies to unsafe tool use. A restart policy may exist, but if it is not connected to a particular service, dependency pattern, risk level, or approval condition, the agent may treat restart as sufficient too early. The failure is not simply "the agent ignored policy." The policy may never have become part of the landscape from which the action was selected.
+
+This is the work the topography concept does. It shifts diagnosis from whether information exists to whether information shaped motion. It asks whether the landscape made the right path easier, the risky path harder, and uncertainty legitimate before the system acted.
+
+The next section develops that motion explicitly. Once a landscape has structure, systems move through it. Some paths pull harder than others. Some uncertainties slow action. Some claims become sufficient too quickly. That movement is the role of gradients, investigation, sufficiency, and action.
+
+---
+
+**Scaffold intent notes:**
+
+**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+
+**Structural relationship to frozen paper:** Draws from frozen paper Section 3 (Optimizer State and Perceived Topography) — specifically the dimensions material, the dimension admission discussion, and the information surfaces definition. Also incorporates failure-mode diagnostic logic from frozen paper Section 4 (Gradients, Sufficiency, and Failure).
+
+**Key elements preserved:**
+- Information surfaces as raw material, not topography itself
+- Five dimensions with diagnostic questions, failures, and design responses
+- Dimension admission rule (change diagnosis, intervention, or expected outcome)
+- Timeliness, relevance, policy, and memory handled as non-promoted candidates
+- Policy belongs to optimizer state but must pass through topography
+- Memory must become behaviorally effective
+- Healthcare claims-repository diagnostic walkthrough
+- Tool-use diagnostic example (restart policy)
+
+**New elements not in frozen paper:**
+- "Topographic dimension" as a formal term
+- "Topography failure" as a formal term
+- 4.1 Core Definitions subsection (consolidated definitions)
+- Explicit treatment of topography as "the effective landscape produced by their interaction" rather than any single system component
+
+**Forward connection:** Closing paragraph bridges to Section 5 (Gradients, Motion, and Premature Sufficiency).
 
 ---
 
