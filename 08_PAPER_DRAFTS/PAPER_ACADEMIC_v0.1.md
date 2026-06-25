@@ -645,41 +645,176 @@ The diagnostic question becomes sharper:
 
 ## 6. Reasoning-State Architecture
 
-**Status:** Placeholder — to be drafted from v1.0 Sections 6, 7, and 8.
+**Status:** Draft Candidate — ChatGPT v0.1
+**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Required reviewers:** AI Agents Lit Reviewer, Organizational Learning Reviewer, Integration Editor, Conceptual Rigor Reviewer, AI Safety/Governance Reviewer, Voice Preservation Editor, AI Voice Detection Editor, Citation Auditor
 
-**Intent:** Combine learning, discovery, and architecture into a cleaner presentation. The v1.0 paper presents these across three sections with significant overlap. The academic version should present the architecture as a unified design.
+---
 
-**Six reasoning objects (Table 7 from v1.0):**
+If premature sufficiency is a failure of motion, the design response cannot be only more context. The system needs a way to preserve the reasoning condition from which action became justified, withheld, escalated, or revised.
 
-1. Optimizer State — what was the system trying to do?
-2. Premise Stack — why did the system expect this to work?
-3. Decision State — what was chosen, rejected, and why was it sufficient?
-4. Investigation Trace — how was uncertainty reduced?
-5. Learning Event — where did reality contradict the model?
-6. Model Update Object — what reusable change should shape future reasoning?
-7. Modified Optimizer State — (derived, not stored)
+That is the role of a reasoning-state architecture.
 
-**The chain:**
+The word architecture is used carefully here. This section is not proposing a particular software stack, database schema, orchestration framework, or vendor implementation. It describes the reasoning objects that must survive across a human-agent workflow if the system is to be governable and learnable. Implementation may vary. The preservation problem does not.
 
-> Optimizer State → Premise Stack → Decision State → Investigation Trace → Learning Event → Model Update Object → Modified Optimizer State
+A context-only system can retrieve artifacts. A reasoning-state system must preserve the movement among them: what goal was active, what constraint applied, what premise made an action attractive, what uncertainty remained, why action became sufficient, what outcome followed, and what changed afterward.
 
-**Key claim:**
+The architecture has six core objects:
 
-> A reasoning-state layer preserves the transition from goal and interpretation to action, outcome, contradiction, and future update.
+1. Optimizer State
+2. Premise Stack
+3. Decision State
+4. Investigation Trace
+5. Learning Event
+6. Model Update Object
 
-**Maturity model (Table 8 from v1.0):**
+These objects are not meant to record everything. They are a minimum viable structure for preserving the "why" behind action. Too little state leaves the system repeating mistakes with better retrieval. Too much state creates an archive no future human or agent can use.
 
-| Stage | Capability | Failure if stopped here |
-|---|---|---|
-| 0. Unstructured | Scattered documents, chats, decisions | Every cycle starts cold |
-| 1. Context Layer | Artifacts indexed and retrievable | System finds information but not reasoning state |
-| 2. Reasoning-State Capture | Reasoning objects preserved | Reasoning survives action but outcomes may not update behavior |
-| 3. Learning Layer | Learning events and MUOs connect outcomes to model change | System can learn but Discovery and governance may not adapt |
-| 4. Adaptive Loop | Prior reasoning, discovery patterns, and governance shape future decisions | Must now manage conflict, staleness, overgeneralization |
+### 6.1 Optimizer State
 
-**Editorial note:** This section must avoid sounding like a software requirements document. Define architecture as a design theory, not a system spec. The HLD exists for implementation detail.
+The Optimizer State is the working frame from which the system begins. It contains three primitives: **Goal**, **Policy**, and **Interpretation**.
 
-**Source material:** `PAPER_v1.0_WORKING.md` Sections 6, 7, 8. Tables 7 and 8.
+The **Goal** defines what the system is trying to accomplish. A goal may be explicit, such as "draft a campaign brief," or implicit in a workflow, metric, prompt, or tool configuration. Goal matters because it determines what can become relevant. The same artifact can be decisive under one goal and peripheral under another.
+
+The **Policy** defines what should constrain action. Policy includes formal rules, compliance requirements, safety boundaries, brand standards, escalation conditions, privacy limits, and human-approval requirements. A policy does not govern behavior merely by existing. It must become active inside the reasoning state before action proceeds.
+
+The **Interpretation** is the system's working understanding of the situation. It turns available signals into meaning: what the case appears to be, what the information implies, what risk exists, and what kind of action seems appropriate. This connects the architecture to sensemaking: actors do not respond to raw information; they respond to the meaning they construct from it. [Weick, 1995]
+
+Optimizer State matters because action is never selected from neutral context. It is selected from a frame. If that frame is wrong, incomplete, or unexamined, later reasoning may be coherent while still moving in the wrong direction.
+
+### 6.2 Premise Stack
+
+The Premise Stack contains the claims, assumptions, evidence, and interpretations that make a possible action seem reasonable.
+
+A premise stack is not just a list of facts. It is the support structure beneath an action. In a healthcare campaign, the premise stack might include: cardiology practice administrators care about between-visit visibility; workflow burden is a relevant pain point; operational-value language is currently supportable; direct clinical-outcome language requires approved evidence.
+
+The premise stack is where many failures become visible. A system may act from a strong goal and weak premises. It may rely on adjacent truth rather than direct support. It may treat prior campaign language as evidence when it is only precedent. It may inherit an assumption from a previous workflow without noticing that the current boundary conditions differ.
+
+Preserving the premise stack gives future reviewers something to inspect. They can ask: which premise failed? Which premise was unsupported? Which premise was true but insufficient? Which premise should transfer to the next cycle?
+
+Without that structure, correction becomes shallow. A reviewer may delete a claim, but the system does not learn why the claim should not have become action-ready in the first place.
+
+### 6.3 Decision State
+
+The Decision State captures where the system stands before action.
+
+It should answer three questions:
+
+- What action is currently proposed?
+- What alternatives were materially considered?
+- Why is the current state sufficient, insufficient, or bounded?
+
+Decision State is where sufficiency becomes explicit. The system should not only produce an answer or call a tool. It should preserve the reason it believed the current path was ready for action.
+
+In some cases, the Decision State supports direct action. The claim is supported. The policy boundary is satisfied. The uncertainty is not material enough to change the decision.
+
+In other cases, the Decision State should block or redirect action. The evidence is insufficient. The policy boundary is unresolved. The tool consequence is unclear. The system should ask, escalate, defer, or produce a bounded draft.
+
+This is where "I do not know" and "I should not act yet" become architectural possibilities rather than conversational manners. They are legitimate decision states. They preserve the fact that the system had enough understanding to know that completion was not yet warranted.
+
+### 6.4 Investigation Trace
+
+The Investigation Trace records what uncertainty the system treated as action-relevant and what it did to reduce it.
+
+This object exists because investigation can be performative. A system may search, retrieve, summarize, or cite material while never testing the premise that actually matters. In the healthcare campaign example, the system may retrieve more information about remote patient monitoring while failing to ask whether "reduces readmissions" is an approved claim for this product.
+
+A useful Investigation Trace should preserve the material question, the sources or surfaces consulted, what was found, what was not found, and whether the uncertainty was resolved. It should not become a transcript of every search. The point is to preserve the investigation that could change the action.
+
+This gives future humans and agents a way to distinguish between explored uncertainty and ignored uncertainty. It also prevents a common failure: treating the presence of search activity as evidence of sufficient investigation.
+
+### 6.5 Learning Event
+
+A Learning Event begins when the world answers back.
+
+An action is taken under some expectation. The result may confirm the expectation, contradict it, or reveal that the expectation was underspecified. Learning begins when that result is compared against the reasoning state that produced the action.
+
+This matters because outcomes do not explain themselves. A campaign may receive attention but fail to produce qualified demand. A tool call may complete a task while creating downstream risk. A support response may satisfy the immediate user while teaching the wrong pattern to the knowledge base. In each case, the outcome is evidence, not learning.
+
+The Learning Event should preserve the expectation, the observed outcome, the mismatch, and the explanation selected after investigation. This connects the architecture to organizational learning. Single-loop learning corrects action within existing assumptions. Double-loop learning changes the assumptions that govern future action. [Argyris and Schon, 1978]
+
+A Learning Event is not a postmortem pasted into memory. It is the structured comparison between what the system expected and what reality returned.
+
+### 6.6 Model Update Object
+
+The Model Update Object is the piece that turns learning into changed future reasoning.
+
+A correction changes an artifact. A Model Update Object changes the conditions under which future action should become sufficient.
+
+The update may revise an audience interpretation, lower confidence in a premise, add an evidence boundary, change an escalation rule, alter a retrieval priority, or mark a lesson as applicable only under certain conditions. The important point is not the label. The important point is that the update must be reusable.
+
+A useful Model Update Object should preserve:
+
+- what changed;
+- why it changed;
+- what evidence supports the change;
+- where the change applies;
+- how confident the system should be in applying it.
+
+This is where memory becomes learning. A stored postmortem says what happened. A Model Update Object says how future reasoning should begin differently.
+
+The update must also avoid overgeneralization. If workflow-burden messaging produced attention but weak qualified demand, the lesson is not "workflow burden does not matter." A better update might be: workflow burden is an attention signal, but not by itself a buying-readiness signal. That distinction matters because a crude update can damage future reasoning as easily as no update at all.
+
+### 6.7 Modified Optimizer State
+
+A Model Update Object matters only if it changes the next cycle.
+
+The final test of reasoning-state architecture is whether the next Optimizer State begins from improved conditions. The active goal may be the same, but the interpretation should be different. The policy boundary may be unchanged, but it should be more visible. The prior premise may still be usable, but with lower confidence or narrower applicability.
+
+This closes the loop:
+
+**Optimizer State → Premise Stack → Decision State → Investigation Trace → Learning Event → Model Update Object → Modified Optimizer State**
+
+The loop is not meant to imply a rigid linear workflow. Human-agent systems will branch, pause, revise, and operate at multiple levels of granularity. The point is simpler: if the system cannot preserve the transition from action to update, it cannot reliably learn from its own history.
+
+### 6.8 Architecture as Governance Surface
+
+Reasoning-state architecture is also a governance surface.
+
+Governance often fails when it remains outside the reasoning state. A rule is written, but not connected. A review step exists, but arrives after the action. A human approval requirement is present, but the system does not know which action class triggers it. A postmortem is stored, but never changes the next decision.
+
+When governance is represented inside reasoning state, it can shape action earlier. Policies can attach to claims. Approval requirements can attach to tool calls. Evidence thresholds can attach to outcome language. Prior incidents can attach to similar premises. Human confirmation can attach to interpretations that will persist.
+
+This does not remove the need for external controls. Some actions should still be technically blocked, sandboxed, reviewed, or logged. The point is that external controls and reasoning-state governance solve different problems. External controls constrain what the system can do. Reasoning-state governance shapes what the system treats as justified before it tries to do it.
+
+### 6.9 What the Architecture Does Not Claim
+
+This architecture does not make agents safe by default. It does not guarantee correct reasoning. It does not eliminate the need for evaluation, monitoring, human judgment, or hard permissions. It also does not require every workflow to preserve every object at the same level of detail.
+
+The claim is more bounded: if human-agent systems are expected to act, learn, and remain governable across repeated workflows, then some version of reasoning-state preservation is required. Otherwise the system may keep retrieving more context while losing the decision logic that should have changed its future behavior.
+
+A reasoning-state architecture is therefore not an alternative to context. It is the structure that lets context become reusable judgment.
+
+---
+
+**Scaffold intent notes:**
+
+**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+
+**Structural relationship to frozen paper:** Combines and compresses material from frozen paper Sections 6 (Learning), 7 (Discovery), and 8 (What It Would Take to Build This). The academic version presents the architecture as a unified design in one section rather than distributing it across three. Discovery is separated into its own section (Section 7).
+
+**Key elements preserved from frozen paper:**
+- Six reasoning objects + Modified Optimizer State
+- Optimizer State with three primitives (Goal, Policy, Interpretation)
+- Premise Stack as support structure, not fact list
+- Decision State with sufficiency as explicit field
+- Investigation Trace distinguishing explored from ignored uncertainty
+- Learning Event as structured prediction-error comparison (not postmortem)
+- Model Update Object as reusable reasoning change (not correction)
+- Correction vs. learning distinction (Argyris & Schon)
+- "I do not know" and "I should not act yet" as architectural possibilities
+- Overgeneralization risk in MUOs
+- Governance as reasoning-state interior, not only exterior control
+- Minimum viable structure (not total capture)
+- Architecture ≠ software spec
+
+**Notable omission from frozen paper:** Table 7 (Minimum Viable Reasoning Objects) and Table 8 (Maturity Model) are not included as formal tables. The six objects are presented in subsection form. The maturity model may be better placed in Section 10 (Research Agenda) or Section 11 (Conclusion). Check whether this creates a gap.
+
+**New elements not in frozen paper:**
+- "Architecture as Governance Surface" subsection (6.8) — makes explicit a claim that is distributed across frozen paper Sections 7-8
+- "What the Architecture Does Not Claim" subsection (6.9) — explicit bounding
+- "A reasoning-state architecture is therefore not an alternative to context. It is the structure that lets context become reusable judgment." — closing formulation
+
+**Forward connection:** Section ends with the claim that reasoning-state architecture lets context become reusable judgment. Section 7 addresses how reasoning state is captured before action through Discovery.
 
 ---
 
