@@ -986,40 +986,239 @@ Discovery gives architecture something worth carrying. Architecture gives Discov
 
 ## 8. Constructed Stress Test: Healthcare Marketing Campaign
 
-**Status:** Placeholder — to be drafted from v1.0 Section 5.
+**Status:** Draft Candidate — ChatGPT v0.1
+**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Required reviewers:** Methodology/Epistemic Status Reviewer, Hostile Reviewer #2, Integration Editor, Conceptual Rigor Reviewer, Voice Preservation Editor, AI Voice Detection Editor, Citation Auditor
 
-**Intent:** Keep the healthcare scenario but make it shorter and more explicitly methodological.
+---
 
-**Required framing:**
+The framework now needs to do work.
 
-> This is not a case study. It is a constructed comparative stress test. It holds the business assignment and available organizational materials constant, then compares two information architectures: context-only and reasoning-state.
+A concept can sound plausible in abstraction and still fail when applied to a real workflow shape. The test here is modest but important: can the framework produce a different diagnosis than "add more context," "write a better prompt," or "send it to compliance later"?
 
-**Compression target:** Reduce by 30-40% from v1.0.
+The scenario is constructed. It is not a field study, benchmark, or empirical validation. Its purpose is to hold the assignment and artifact set constant while changing the reasoning architecture. If the same materials produce different paths of attention, investigation, sufficiency, and action, then the framework has at least earned its diagnostic role.
 
-**Required comparison (three-column from v1.0):**
+The domain is healthcare marketing because the stakes are useful for the argument. Campaign work is familiar and practical, but healthcare claims bring evidence boundaries, policy constraints, and review obligations into the workflow. That makes the scenario a good stress test for reasoning state. It is easy for a system to produce polished language. It is harder for the system to know when polished language has crossed a boundary.
 
-| Aspect | Context-only workflow | Reasoning-state workflow |
+### 8.1 The Assignment
+
+A marketing team asks for campaign messaging for a remote patient monitoring product aimed at cardiology practices.
+
+The business goal is to generate qualified demo interest.
+
+The product supports monitoring between visits. It gives care teams a way to review patient information, identify signals that may require attention, and coordinate follow-up within clinical and operational workflows.
+
+The audience is plausible but not fully settled. Cardiology practice administrators may care about staffing pressure, workflow burden, patient follow-up, and visibility between visits. They may also care about clinical outcomes, but clinical-outcome claims require approved evidence and approved language.
+
+That boundary matters.
+
+The phrase **"reduces readmissions"** appears attractive almost immediately. It is short, persuasive, and connected to a real healthcare concern. It sounds more consequential than "supports between-visit monitoring." It also rests near adjacent truths: readmissions matter, remote monitoring can support better visibility, and care teams need tools for follow-up.
+
+But adjacent truth is not enough.
+
+A direct claim that a product reduces readmissions is not the same as a statement that the product supports monitoring, visibility, or workflow coordination. The first is a clinical-outcome claim. The second is operational-value language. A safe campaign system has to know the difference before the claim becomes action-ready.
+
+### 8.2 Common Artifact Set
+
+Both workflows receive the same materials.
+
+They have product descriptions, audience research, prior campaign examples, campaign-performance reports, sales notes, general compliance guidance, approved-claims material, and prior lessons from related campaigns.
+
+Nothing in the stress test depends on hidden information. The reasoning-state workflow does not get a secret document. The context-only workflow is not starved. The difference is how the materials become behaviorally effective.
+
+The approved-claims material supports product-capability and operational-value statements. It does not confirm a direct claim that this product reduces readmissions.
+
+The compliance guidance says that direct clinical-outcome claims require approved evidence and approved language.
+
+Prior campaign material contains outcome-adjacent language, but not a durable evidence boundary. That distinction matters because prior language can become dangerous precedent. A phrase appearing in old material does not prove it should govern the next campaign.
+
+### 8.3 Context-Only Workflow
+
+The context-only system receives the assignment and retrieves relevant artifacts.
+
+It sees that remote patient monitoring supports visibility between visits. It sees that cardiology practices experience workflow pressure. It sees that readmissions matter in healthcare. It sees prior language that moves near clinical outcomes.
+
+The materials point in a persuasive direction.
+
+A likely working interpretation emerges:
+
+> Cardiology practices need remote monitoring to improve patient follow-up, reduce operational burden, and support better outcomes.
+
+That interpretation is not foolish. It is close enough to the source material to feel grounded. The danger is that it blends several different things: what the audience cares about, what the product enables, what the organization can safely claim, and what evidence has actually been approved.
+
+The phrase "reduces readmissions" now has a strong gradient. It fits the goal. It sounds valuable. It gives the campaign a sharper hook. It turns a product capability into an outcome.
+
+The system may investigate, but it investigates the topic rather than the decisive premise. It retrieves more material about remote monitoring, patient follow-up, operational burden, care-team visibility, and readmission pressure. That search produces more context. It does not answer the question that governs the claim:
+
+> Is "reduces readmissions" approved and evidenced for this product?
+
+If that question never becomes active, the system may produce copy like:
+
+> Help cardiology teams monitor patients between visits, coordinate follow-up, and reduce preventable readmissions.
+
+The sentence is fluent. It is plausible. It sounds like normal healthcare marketing. It may even be directionally aligned with the organization's aspirations.
+
+But the reasoning state is not sufficient for the claim.
+
+The failure is not simply that the system lacked context. The system had context. The failure is that the evidence boundary did not become behaviorally effective before generation. The policy existed as information, but not as an active constraint on the sentence being produced.
+
+A reviewer might later catch the problem. The unsupported phrase may be deleted. The campaign may be corrected.
+
+But correction is not learning. Unless the reasoning state is preserved, the system may reproduce the same failure in softer language next time: "lowers hospitalizations," "prevents avoidable admissions," "keeps patients out of the hospital," or any other claim that feels close enough to the same unsupported outcome.
+
+The artifact changed. The path that produced the artifact did not.
+
+### 8.4 Reasoning-State Workflow
+
+The reasoning-state workflow receives the same assignment and the same artifacts.
+
+The attractive claim still appears. The system is not made safer by pretending "reduces readmissions" is not compelling. It is compelling. The point is to make the other forces in the landscape strong enough to matter before the claim becomes action-ready.
+
+The workflow begins by forming an Optimizer State.
+
+The Goal is not merely "make a strong campaign." It is to generate qualified demo interest from cardiology practice administrators and operational leaders.
+
+The Policy is not merely "be compliant." It is that direct clinical-outcome claims require approved evidence and approved language.
+
+The Interpretation is provisional: cardiology practice administrators likely care about workflow burden, between-visit visibility, and follow-up coordination. Clinical outcomes may matter, but the system does not yet have support for a direct outcome claim.
+
+That frame changes the next move.
+
+When the phrase "reduces readmissions" appears, the system does not treat it as ordinary campaign language. It treats it as a claim type with an evidence boundary. The active question becomes:
+
+> Do we have approved evidence or approved language for this direct clinical-outcome claim?
+
+The Investigation Trace now targets the decisive premise. The system checks approved-claims material, product evidence, compliance guidance, and any existing language that would authorize the claim. It finds support for operational-value language. It does not find confirmed support for the direct readmissions claim.
+
+That result changes sufficiency.
+
+The direct outcome claim is not sufficient.
+
+The campaign itself can still proceed.
+
+A reasoning-state system can draft within the supported boundary:
+
+> Give care teams greater visibility between visits with remote monitoring designed around clinical and operational workflow.
+
+Or:
+
+> Help cardiology teams review patient information, coordinate follow-up, and manage between-visit visibility without adding unnecessary workflow burden.
+
+The system can also preserve the unresolved question:
+
+> Direct readmission-reduction language requires approved evidence or approved claim language before use.
+
+The action is not refusal. It is bounded progress.
+
+That distinction matters. A cautious system that only blocks work becomes unusable. A useful system preserves the boundary while still helping the team move.
+
+### 8.5 Where the Workflows Diverge
+
+The two workflows do not diverge because one has better raw information.
+
+They diverge because one treats context as material and the other treats reasoning state as material.
+
+| Decision point | Context-only workflow | Reasoning-state workflow |
 |---|---|---|
-| Available information | Same | Same |
-| Goal representation | Implicit in request | Explicit optimizer state |
-| Assumption tracking | None | Premise stack |
-| Claim governance | Policy exists but disconnected | Policy connected to claim at decision point |
-| Sufficiency condition | Draft sounds professional | Evidence, policy, and uncertainty checked |
-| Outcome learning | Campaign report stored | Prediction error identified, model update created |
+| Goal | Produce persuasive campaign messaging. | Generate qualified demo interest within claim boundaries. |
+| Claim attraction | "Reduces readmissions" becomes a strong campaign hook. | The same phrase is recognized as a direct clinical-outcome claim. |
+| Policy role | Compliance guidance exists but remains general. | Evidence boundary is connected to the specific claim type. |
+| Investigation | Searches related topic material. | Tests the decisive premise: approved evidence or approved language. |
+| Sufficiency | Plausibility and adjacent truth make the claim feel usable. | Operational language is sufficient; direct outcome language is not. |
+| Action | Generates polished but unsupported claim language. | Drafts within supported boundary and flags unresolved claim. |
+| What survives | The draft, maybe a later correction. | Goal, policy, interpretation, evidence boundary, investigation result, and sufficiency rationale. |
 
-**What to cut:**
+The final row is the most important.
 
-- Extended narrative buildup
-- Repeated restatement of the same distinction
-- Examples that illustrate points already made
+A context-only system may leave behind the artifact. A reasoning-state system leaves behind the conditions that shaped the artifact.
 
-**What to keep:**
+That is the difference between a reusable campaign and a reusable lesson.
 
-- The readmissions claim as the key failure point
-- The workflow-burden/buying-readiness distinction as the premise failure
-- The comparison table showing same artifacts, different outcomes
+### 8.6 After the Campaign
 
-**Source material:** `PAPER_v1.0_WORKING.md` Section 5.
+Suppose the bounded campaign runs.
+
+It generates attention. Opens are strong. Landing-page visits are respectable. Qualified demo conversion is weaker than expected.
+
+A conventional memory system can store the result:
+
+> Good engagement. Weak qualified demand.
+
+That is useful, but it is not yet learning.
+
+The reasoning-state system can compare the outcome against the preserved expectation. The expectation was not simply "people care about remote monitoring." The more specific premise was:
+
+> Workflow burden and between-visit visibility will generate qualified demo interest from cardiology practice administrators.
+
+The outcome complicates that premise.
+
+A reasonable Model Update Object might be:
+
+> Workflow burden appears to be an attention signal, but not by itself a reliable buying-readiness signal. Future campaigns should preserve operational-value positioning while adding stronger readiness filters, such as active RPM evaluation, staffing constraints tied to monitoring workload, or explicit interest in between-visit visibility.
+
+The clinical-claim boundary remains unchanged:
+
+> Do not use direct readmission-reduction language unless approved evidence or approved claim language is supplied.
+
+Now the next campaign starts differently. Not because the system remembers the old copy, but because it inherits the changed reasoning state.
+
+That is the learning claim in miniature.
+
+### 8.7 What the Stress Test Shows
+
+The stress test does not prove that reasoning-state architecture will outperform context-only systems in production. It does not prove that the five topography dimensions are complete. It does not prove that every healthcare marketing workflow should use this exact structure.
+
+It shows something narrower.
+
+The framework produces a different diagnosis. The unsupported claim is not merely a hallucination, a compliance miss, or a retrieval failure. It is a premature-sufficiency failure caused by weak connectivity between claim generation and the evidence boundary.
+
+The framework produces a different intervention. The answer is not only "retrieve the compliance document." The intervention is to make the evidence boundary active at claim-generation time and preserve the sufficiency rationale.
+
+The framework produces a different memory object. The useful residue is not only the final campaign or postmortem. It is the reasoning transition: goal, policy, interpretation, premise, investigation, decision, outcome, and update.
+
+The framework preserves useful motion. The system does not freeze when a claim is unsupported. It moves through a better path: draft within the supported boundary, flag the unresolved claim, and preserve what would be needed to use stronger language later.
+
+That is enough for a constructed stress test.
+
+The goal is not validation. It is examinability. The scenario makes the framework's claims visible enough to challenge. A reviewer can ask whether the evidence boundary really should have been active, whether the claim distinction is too conservative, whether the same diagnosis could be produced by ordinary compliance review, or whether the reasoning-state workflow adds too much overhead.
+
+Those objections are welcome. A framework that cannot be challenged cannot become useful.
+
+---
+
+**Scaffold intent notes:**
+
+**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+
+**Structural relationship to frozen paper:** Draws from frozen paper Section 5 ("A Constructed Stress Test: The Healthcare Campaign"). The academic version is compressed (~30-40% shorter than frozen Section 5) and more explicitly methodological. The frozen paper's healthcare scenario spans two full sections (Section 5 for the stress test, with callbacks throughout Sections 6-8). The academic version consolidates the stress test into one section.
+
+**Key elements preserved:**
+- "Reduces readmissions" as the key failure point
+- Same-assignment / same-artifact design
+- Context-only vs. reasoning-state comparison
+- Adjacent truth formulation
+- Correction is not learning
+- Bounded progress (not refusal)
+- What survives the campaign (final row of comparison table)
+- Workflow-burden as attention signal, not buying-readiness signal (MUO)
+- Clinical-claim boundary preserved across campaigns
+- Constructed scenario framing (not empirical validation)
+
+**Compression from frozen paper:**
+- Frozen Section 5 was ~5,000 words. This draft is ~2,800 words (~44% reduction).
+- Frozen paper repeated the healthcare example across Sections 5, 6, 7, and 8. The academic version concentrates it here with brief callbacks in S3, S5, and S7.
+- The frozen paper's extended "three-column comparison" with context-only / reasoning-state / next-cycle learning is compressed into a single comparison table (8.5) plus a post-campaign subsection (8.6).
+- The frozen paper's "Start small, stay credible" and maturity model content is deferred to Section 10.
+
+**New elements not in frozen paper:**
+- "The framework now needs to do work" — opening frames the section's purpose directly
+- 8.7 "What the Stress Test Shows" — explicit enumeration of what the stress test demonstrates (different diagnosis, different intervention, different memory object, useful motion)
+- "The goal is not validation. It is examinability." — compressed epistemic framing
+- "Those objections are welcome. A framework that cannot be challenged cannot become useful." — closing
+
+**Notable omission:** No citations in this section. The stress test is constructed by the author and uses framework vocabulary from prior sections. No external citations are needed for the scenario itself. S5 and S6 already cite the relevant traditions. Check whether this is acceptable or whether methodological framing citations should be added.
+
+**Forward connection:** Section closes with an invitation to challenge. Section 9 (Boundaries, Objections, and Disconfirmation Conditions) is the natural response.
 
 ---
 
