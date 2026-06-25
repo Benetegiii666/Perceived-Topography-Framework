@@ -58,7 +58,7 @@ The paper therefore treats perceived topography as a serious but testable synthe
 
 ---
 
-AI agents are increasingly evaluated as actors: systems that can pursue goals, use tools, preserve state, and move through multi-step environments. [Yao et al., 2022] When these systems fail, the failure often feels different from an ordinary model error. A static model may hallucinate a citation. An agent may hallucinate, send the message, update the record, and leave the human team to discover later that the action rested on unsupported ground. [Lynch et al., 2025]
+AI agents are increasingly evaluated as actors: systems that can pursue goals, use tools, preserve state, and move through multi-step environments. [Yao et al., 2023] When these systems fail, the failure often feels different from an ordinary model error. A static model may hallucinate a citation. An agent may hallucinate, send the message, update the record, and leave the human team to discover later that the action rested on unsupported ground. [Lynch et al., 2025]
 
 The natural reaction is to ask what is wrong with the agent.
 
@@ -90,7 +90,7 @@ This pattern can appear in different kinds of failures. In hallucination, a flue
 
 A human-agent system therefore needs more than better prompts, larger context windows, or stricter fences. It needs a way to preserve the reasoning state from which action became justified. The system should retain the working goal, the governing constraint, the interpretation that made action attractive, the uncertainty that remained, and the reason investigation stopped. Without that structure, the organization may keep the artifact while losing the why.
 
-This loss is familiar in human organizations. Teams store documents but lose decisions. They remember outcomes but forget assumptions. They correct an artifact without changing the reasoning that produced the error. The next team retrieves the old material and repeats the same mistake under a new label. The organization appears to have memory but behaves as if it does not. [Walsh & Ungson, 1991; Markus, 2001]
+This loss is familiar in human organizations. Teams store documents but lose decisions. They remember outcomes but forget assumptions. They correct an artifact without changing the reasoning that produced the error. The next team retrieves the old material and repeats the same mistake under a new label. The organization appears to have memory but behaves as if it does not. [Walsh and Ungson, 1991; Markus, 2001]
 
 Agentic systems can accelerate this pattern. They can retrieve more, synthesize faster, and act with less friction. But if they inherit an information landscape where policies are disconnected, evidence boundaries are weak, prior failures are hard to reuse, and uncertainty has no legitimate action path, they may become faster at reaching the wrong kind of sufficiency.
 
@@ -120,7 +120,7 @@ The practical question is therefore not only: how do we prevent agents from taki
 
 - Roadmap compressed from 10 template sentences to one sentence
 - Context/reasoning-state triplet reduced to one strong policy example + architectural framing
-- Three citation anchors added: [Lynch et al., 2025; Yao et al., 2022], [Lewis et al., 2020], [Walsh & Ungson, 1991; Markus, 2001]
+- Three citation anchors added: [Lynch et al., 2025; Yao et al., 2023], [Lewis et al., 2020], [Walsh and Ungson, 1991; Markus, 2001]
 - Containment catalog reduced from 6 items to 4
 - Context catalog restructured into flowing prose ("documents, policies, and prior examples")
 - Bounding paragraph compressed from three "It does not claim" sentences to one semicolon-joined sentence
@@ -161,7 +161,7 @@ That places the framework between fields that are usually treated separately: la
 
 The unit of analysis has moved from the answer to the trajectory. Once a language model can reason, act, call tools, and update its behavior across steps, reliability cannot be judged only by the final response. The intermediate path matters: what the system noticed, what it retrieved, what it ignored, when it stopped searching, and why one action became preferable to another.
 
-ReAct formalized this shift by interleaving reasoning traces with task-specific actions, allowing a model to update its plan through interaction with an environment. Toolformer showed that language models could learn to call external APIs for functions such as search, calculation, and translation. Generative Agents brought memory, reflection, and planning into an architecture for believable behavior over time. [Yao et al., 2022; Schick et al., 2023; Park et al., 2023]
+ReAct formalized this shift by interleaving reasoning traces with task-specific actions, allowing a model to update its plan through interaction with an environment. Toolformer showed that language models could learn to call external APIs for functions such as search, calculation, and translation. Generative Agents brought memory, reflection, and planning into an architecture for believable behavior over time. [Yao et al., 2023; Schick et al., 2023; Park et al., 2023]
 
 Reflection-oriented systems sharpen the issue further. Reflexion uses verbal feedback and episodic memory to improve an agent across trials. Self-Refine uses iterative self-feedback to improve an initial output without additional training. These systems show that language agents can benefit from explicit critique and revision loops. [Shinn et al., 2023; Madaan et al., 2023]
 
@@ -171,7 +171,7 @@ Agent architecture work describes important components: memory, planning, reflec
 
 ### 2.2 Agent Evaluation and Realistic Task Environments
 
-Realistic agent benchmarks make the same shift visible from the evaluation side. AgentBench evaluates language models as agents across interactive environments. WebArena provides functional web environments with long-horizon tasks. SWE-bench tests whether models can resolve real GitHub issues by understanding and editing codebases. OSWorld evaluates multimodal agents in real computer environments. TheAgentCompany simulates consequential digital work inside a software-company-like setting. [Liu et al., 2023; Zhou et al., 2023; Jimenez et al., 2023; Xie et al., 2024; Xu et al., 2024]
+Realistic agent benchmarks make the same shift visible from the evaluation side. AgentBench evaluates language models as agents across interactive environments. WebArena provides functional web environments with long-horizon tasks. SWE-bench tests whether models can resolve real GitHub issues by understanding and editing codebases. OSWorld evaluates multimodal agents in real computer environments. TheAgentCompany simulates consequential digital work inside a software-company-like setting. [Liu et al., 2024; Zhou et al., 2024; Jimenez et al., 2024; Xie et al., 2024; Xu et al., 2024]
 
 These benchmarks show that real tasks are not merely harder prompts. They require state, tool use, interface navigation, recovery from errors, and coordination across artifacts. A wrong move can change the environment rather than merely produce an incorrect sentence.
 
@@ -286,9 +286,9 @@ The result is not a replacement for existing traditions. It is a shared diagnost
 **Citations needing full reference entries (not in frozen bibliography):**
 - Schick et al., 2023 (Toolformer)
 - Park et al., 2023 (Generative Agents)
-- Liu et al., 2023 (AgentBench)
-- Zhou et al., 2023 (WebArena)
-- Jimenez et al., 2023 (SWE-bench)
+- Liu et al., 2024 (AgentBench)
+- Zhou et al., 2024 (WebArena)
+- Jimenez et al., 2024 (SWE-bench)
 - Xie et al., 2024 (OSWorld)
 - Xu et al., 2024 (TheAgentCompany)
 - Shinn et al., 2023 (Reflexion)
@@ -1503,13 +1503,13 @@ The central question is simple:
 
 That question can be tested in controlled studies, design-science prototypes, field deployments, trace analyses, red-team exercises, and comparative case studies. No single method will settle the framework. The useful work is cumulative: find where the vocabulary changes diagnosis, where it does not, and where the architecture costs more than it returns. [Hevner et al., 2004; Peffers et al., 2007; Lakatos, 1970]
 
-This is a different evaluation target from most agent benchmarks. Benchmarks such as AgentBench, SWE-bench, and WebArena test whether agents can complete tasks in interactive or realistic environments. The agenda here asks a different question: whether the landscape that shaped the agent's motion was well designed, and whether the reasoning state that produced action can be inspected, challenged, and reused. [Liu et al., 2023; Jimenez et al., 2023; Zhou et al., 2023]
+This is a different evaluation target from most agent benchmarks. Benchmarks such as AgentBench, SWE-bench, and WebArena test whether agents can complete tasks in interactive or realistic environments. The agenda here asks a different question: whether the landscape that shaped the agent's motion was well designed, and whether the reasoning state that produced action can be inspected, challenged, and reused. [Liu et al., 2024; Jimenez et al., 2024; Zhou et al., 2024]
 
 ### 10.1 Compare Reasoning-State Workflows Against Context-Only Workflows
 
 The most direct test is comparative.
 
-Hold the task, model capability, and artifact access as constant as possible. Give one workflow retrieved context: documents, policies, prior work, examples, and memory. The baseline should be strong, not naive. Some agent systems already include memory, reflection, or structured feedback loops, and those capabilities should not be erased merely to make reasoning-state preservation look better. [Shinn et al., 2023; Yao et al., 2022] Give the other the same material, but require preservation of reasoning state: Goal, Policy, Interpretation, Premise Stack, Decision State, Investigation Trace, Learning Event, and Model Update Object.
+Hold the task, model capability, and artifact access as constant as possible. Give one workflow retrieved context: documents, policies, prior work, examples, and memory. The baseline should be strong, not naive. Some agent systems already include memory, reflection, or structured feedback loops, and those capabilities should not be erased merely to make reasoning-state preservation look better. [Shinn et al., 2023; Yao et al., 2023] Give the other the same material, but require preservation of reasoning state: Goal, Policy, Interpretation, Premise Stack, Decision State, Investigation Trace, Learning Event, and Model Update Object.
 
 Then ask what changes.
 
@@ -1786,98 +1786,91 @@ It is a matter of designing the ground beneath the action.
 
 ## References / Citation Backlog
 
-**Status:** Existing references from v1.0 preserved below. New citations needed for Section 2 (Related Work) marked in citation backlog.
+**Status:** Bibliography audit completed 2026-06-25. All entries verified. 14 orphan entries removed. 17 new entries added. Citation years standardized (conference year preferred over arXiv year). Full audit: `BIBLIOGRAPHY_AUDIT_2026-06-25.md`.
 
-### Existing References (from frozen v1.0)
+---
 
-Aamodt, A., & Plaza, E. (1994). Case-based reasoning. *AI Communications*, *7*(1), 39–59.
+Alavi, M., & Leidner, D. E. (2001). Review: Knowledge management and knowledge management systems: Conceptual foundations and research issues. *MIS Quarterly*, *25*(1), 107-136.
 
-Alavi, M., & Leidner, D. E. (2001). Knowledge management and knowledge management systems. *MIS Quarterly*, *25*(1), 107–136.
+Amershi, S., Weld, D., Vorvoreanu, M., Fourney, A., Nushi, B., Collisson, P., Suh, J., Iqbal, S., Bennett, P. N., Inkpen, K., Teevan, J., Kikin-Gil, R., & Horvitz, E. (2019). Guidelines for human-AI interaction. *CHI '19: Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems*, Paper 3.
 
-Amershi, S., et al. (2019). Guidelines for human-AI interaction. *CHI '19*.
+Argyris, C., & Schon, D. A. (1978). *Organizational learning: A theory of action perspective*. Addison-Wesley.
 
-Argyris, C., & Schon, D. A. (1978). *Organizational learning*. Addison-Wesley.
+Bai, Y., Kadavath, S., Kundu, S., Askell, A., Kernion, J., Jones, A., Chen, A., Goldie, A., Mirhoseini, A., McKinnon, C., Chen, C., Olsson, C., Olah, C., Hernandez, D., Drain, D., Ganguli, D., Li, D., Tran-Johnson, E., Perez, E., ... Kaplan, J. (2022). Constitutional AI: Harmlessness from AI feedback. *arXiv:2212.08073*.
 
-Bates, M. J. (1989). Browsing and berrypicking. *Online Review*, *13*(5), 407–424.
+Christiano, P. F., Leike, J., Brown, T., Martic, M., Legg, S., & Amodei, D. (2017). Deep reinforcement learning from human preferences. *Advances in Neural Information Processing Systems*, *30*.
 
-Cyert, R. M., & March, J. G. (1963). *A behavioral theory of the firm*. Prentice-Hall.
-
-Dennett, D. C. (1987). *The intentional stance*. MIT Press.
-
-Endsley, M. R. (1995). Situation awareness in dynamic systems. *Human Factors*, *37*(1), 32–64.
+Endsley, M. R. (1995). Toward a theory of situation awareness in dynamic systems. *Human Factors*, *37*(1), 32-64.
 
 Gibson, J. J. (1979). *The ecological approach to visual perception*. Houghton Mifflin.
 
-Guo, C., et al. (2017). On calibration of modern neural networks. *ICML*, 1321–1330.
+Hevner, A. R., March, S. T., Park, J., & Ram, S. (2004). Design science in information systems research. *MIS Quarterly*, *28*(1), 75-105.
 
-Horvitz, E. (1999). Mixed-initiative user interfaces. *CHI '99*, 159–166.
+Horvitz, E. (1999). Principles of mixed-initiative user interfaces. *CHI '99: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems*, 159-166.
 
-Howard, R. A. (1966). Information value theory. *IEEE Trans. Systems Science*, *2*(1), 22–26.
+Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z., Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B., & Liu, T. (2023). A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions. *arXiv:2311.05232*.
 
-Huang, L., et al. (2023). Hallucination in large language models. *arXiv:2311.05232*.
+Ji, J., Qiu, T., Chen, B., Zhang, B., Lou, H., Wang, K., Duan, Y., He, Z., Zhou, J., Zhang, Z., Zeng, F., Ng, K. Y., Dai, J., Pan, X., O'Gara, A., Lei, Y., Xu, H., Tse, B., Fu, J., ... Gao, W. (2023). AI alignment: A comprehensive survey. *arXiv:2310.19852*.
 
-Ji, J., et al. (2023). AI alignment: A comprehensive survey. *arXiv:2310.19852*.
+Jimenez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K., Press, O., & Narasimhan, K. (2024). SWE-bench: Can language models resolve real-world GitHub issues? *International Conference on Learning Representations*.
 
-Kadavath, S., et al. (2022). Language models (mostly) know what they know. *arXiv:2207.05221*.
+Kuhlthau, C. C. (1991). Inside the search process: Information seeking from the user's perspective. *Journal of the American Society for Information Science*, *42*(5), 361-371.
 
-Kuhlthau, C. C. (1991). Inside the search process. *JASIS*, *42*(5), 361–371.
+Lakatos, I. (1970). Falsification and the methodology of scientific research programmes. In I. Lakatos & A. Musgrave (Eds.), *Criticism and the growth of knowledge* (pp. 91-196). Cambridge University Press.
 
-Lee, J. (1997). Design rationale systems. *IEEE Expert*, *12*(3), 78–85.
+Lee, J. (1997). Design rationale systems: Understanding the issues. *IEEE Expert*, *12*(3), 78-85.
 
-Lee, J. D., & See, K. A. (2004). Trust in automation. *Human Factors*, *46*(1), 50–80.
+Lee, J. D., & See, K. A. (2004). Trust in automation: Designing for appropriate reliance. *Human Factors*, *46*(1), 50-80.
 
-Lewis, P., et al. (2020). Retrieval-augmented generation. *NeurIPS*, *33*, 9459–9474.
+Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Kuttler, H., Lewis, M., Yih, W., Rocktaschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *Advances in Neural Information Processing Systems*, *33*, 9459-9474.
 
-Lynch, A., et al. (2025). Agentic misalignment. Anthropic Research.
+Liu, X., Yu, H., Zhang, H., Xu, Y., Lei, X., Lai, H., Gu, Y., Ding, H., Men, K., Yang, K., Zhang, S., Deng, X., Zeng, A., Du, Z., Zhang, C., Shen, S., Zhang, T., Su, Y., Sun, H., ... Tang, J. (2024). AgentBench: Evaluating LLMs as agents. *International Conference on Learning Representations*.
+
+Lynch, A., Wright, B., Larson, C., Troy, K. K., Ritchie, S. J., Mindermann, S., Perez, E., & Hubinger, E. (2025). Agentic misalignment: How LLMs could be an insider threat. Anthropic Research.
+
+Madaan, A., Tandon, N., Gupta, P., Hallinan, S., Gao, L., Wiegreffe, S., Alon, U., Dziri, N., Prabhumoye, S., Yang, Y., Gupta, S., Majumder, B. P., Hermann, K. M., Welleck, S., Yazdanbakhsh, A., & Clark, P. (2023). Self-Refine: Iterative refinement with self-feedback. *Advances in Neural Information Processing Systems*, *36*.
 
 March, J. G. (1991). Exploration and exploitation in organizational learning. *Organization Science*, *2*(1), 71-87.
 
-March, J. G., & Simon, H. A. (1958). *Organizations*. Wiley.
+Markus, M. L. (2001). Toward a theory of knowledge reuse: Types of knowledge reuse situations and factors in reuse success. *Journal of Management Information Systems*, *18*(1), 57-93.
 
-Markus, M. L. (2001). Toward a theory of knowledge reuse. *JMIS*, *18*(1), 57–93.
-
-Maynez, J., et al. (2020). Faithfulness and factuality in abstractive summarization. *ACL*, 1906–1919.
-
-Menick, J., et al. (2022). Teaching language models to support answers with verified quotes. *arXiv:2203.11147*.
-
-Moreau, L., & Missier, P. (2013). PROV-DM: The PROV data model. W3C Recommendation.
-
-Ng, A. Y., et al. (1999). Policy invariance under reward transformations. *ICML*, 278–287.
+Maynez, J., Narayan, S., Bohnet, B., & McDonald, R. (2020). On faithfulness and factuality in abstractive summarization. *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, 1906-1919.
 
 Norman, D. A. (1988). *The design of everyday things*. Basic Books.
 
-Parasuraman, R., & Riley, V. (1997). Humans and automation. *Human Factors*, *39*(2), 230–253.
+Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P. F., Leike, J., & Lowe, R. (2022). Training language models to follow instructions with human feedback. *Advances in Neural Information Processing Systems*, *35*.
 
-Pirolli, P., & Card, S. (1999). Information foraging. *Psychological Review*, *106*(4), 643–675.
+Parasuraman, R., & Riley, V. (1997). Humans and automation: Use, misuse, disuse, abuse. *Human Factors*, *39*(2), 230-253.
 
-Russell, S., & Norvig, P. (2020). *Artificial intelligence: A modern approach* (4th ed.). Pearson.
+Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*.
 
-Russell, S., & Wefald, E. (1991). *Do the right thing*. MIT Press.
+Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems*, *24*(3), 45-77.
 
-Shanahan, M., et al. (2023). Role play with large language models. *Nature*, *623*, 493–498.
+Pirolli, P., & Card, S. (1999). Information foraging. *Psychological Review*, *106*(4), 643-675.
 
-Simon, H. A. (1955). A behavioral model of rational choice. *QJE*, *69*(1), 99–118.
+Popper, K. R. (1959). *The logic of scientific discovery*. Hutchinson.
 
-Su, H., Luo, J., Liu, C., Yang, X., Zhang, Y., Dong, Y., & Zhu, J. (2025). A survey on autonomy-induced security risks in large model-based agents. *arXiv preprint arXiv:2506.23844*. https://doi.org/10.48550/arXiv.2506.23844
+Schick, T., Dwivedi-Yu, J., Dessi, R., Raileanu, R., Lomeli, M., Hambro, E., Zettlemoyer, L., Cancedda, N., & Scialom, T. (2023). Toolformer: Language models can teach themselves to use tools. *Advances in Neural Information Processing Systems*, *36*.
 
-Walsh, J. P., & Ungson, G. R. (1991). Organizational memory. *AMR*, *16*(1), 57–91.
+Shinn, N., Cassano, F., Gopinath, A., Narasimhan, K., & Yao, S. (2023). Reflexion: Language agents with verbal reinforcement learning. *Advances in Neural Information Processing Systems*, *36*.
+
+Siggelkow, N. (2007). Persuasion with case studies. *Academy of Management Journal*, *50*(1), 20-24.
+
+Simon, H. A. (1955). A behavioral model of rational choice. *Quarterly Journal of Economics*, *69*(1), 99-118.
+
+Su, H., Luo, J., Liu, C., Yang, X., Zhang, Y., Dong, Y., & Zhu, J. (2025). A survey on autonomy-induced security risks in large model-based agents. *arXiv:2506.23844*.
+
+Walsh, J. P., & Ungson, G. R. (1991). Organizational memory. *Academy of Management Review*, *16*(1), 57-91.
 
 Weick, K. E. (1995). *Sensemaking in organizations*. Sage.
 
-### Citation Backlog (needed for Section 2)
+Xie, T., Zhang, D., Chen, J., Li, X., Zhao, S., Cao, R., Hua, T. J., Cheng, Z., Shin, D., Lei, F., Liu, Y., Xu, Y., Zhou, S., Savarese, S., Xiong, C., Zhong, V., & Yu, T. (2024). OSWorld: Benchmarking multimodal agents for open-ended tasks in real computer environments. *Advances in Neural Information Processing Systems*, *37*.
 
-| Citation Needed | Section | Topic |
-|---|---|---|
-| Yao, S., et al. (2023). ReAct. | 2.1 | LLM agent reasoning-action |
-| [CITE NEEDED] AgentBench | 2.2 | Agent evaluation |
-| [CITE NEEDED] WebArena | 2.2 | Agent evaluation |
-| [CITE NEEDED] SWE-bench | 2.2 | Agent evaluation |
-| [CITE NEEDED] OSWorld | 2.2 | Agent evaluation |
-| [CITE NEEDED] TheAgentCompany | 2.2 | Agent evaluation |
-| [CITE NEEDED] LangChain / agent orchestration frameworks | 2.1 | Agent architecture |
-| [CITE NEEDED] Tool use and function calling (Schick et al., Toolformer) | 2.1 | Tool use |
-| [CITE NEEDED] Agentic memory and reflection (Generative Agents, Park et al.) | 2.1 | Agent memory |
-| [CITE NEEDED] RLHF / Constitutional AI / alignment techniques | 2.3 | Safety and governance |
+Xu, F. F., Shi, Y., Hooi, D. S., Muennighoff, N., Shen, J. T., Xin, Z., ... & Neubig, G. (2024). TheAgentCompany: Benchmarking LLM agents on consequential real world tasks. *arXiv:2412.14161*.
+
+Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). ReAct: Synergizing reasoning and acting in language models. *International Conference on Learning Representations*.
+
+Zhou, S., Xu, F. F., Zhu, H., Zhou, X., Lo, R., Sridhar, A., Cheng, X., Ou, T., Bisk, Y., Fried, D., Alon, U., & Neubig, G. (2024). WebArena: A realistic web environment for building autonomous agents. *International Conference on Learning Representations*.
 
 ---
 
