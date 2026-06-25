@@ -526,30 +526,110 @@ But structure alone does not explain movement. A landscape can make some paths p
 
 ## 5. Gradients, Motion, and Premature Sufficiency
 
-**Status:** Placeholder — to be drafted from v1.0 Section 4.
+**Status:** Draft Candidate — ChatGPT v0.1
+**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Required reviewers:** Conceptual Rigor Reviewer, AI Safety/Governance Reviewer, Hostile Reviewer #2, Voice Preservation Editor, AI Voice Detection Editor
 
-**Intent:** Formalize the motion model and the premature sufficiency claim.
+---
 
-**Core sequence:**
+A landscape does not explain behavior until something moves through it.
 
-> Attraction → Investigation → Sufficiency → Action
+The previous section described perceived topography as the effective information-and-action landscape available to a system. But a human-agent system does not experience every possible path equally. Some sources feel closer. Some claims feel easier to make. Some tools feel safer than they are. Some policies exist without slowing the action they should constrain. The shape of the landscape matters because it creates pressure.
 
-**Key contribution:** The claim that different failures can share a motion pattern — the system acts when a path becomes sufficient before the right uncertainty, evidence, policy, or consequence has become behaviorally effective.
+This paper calls that pressure a **gradient**.
 
-**Careful framing for hallucination and unsafe tool action:**
+A gradient is a directional pressure within the perceived topography. It makes one path easier, more attractive, more trusted, lower-friction, or more action-ready than another. The term is used here as a design metaphor, not as a formal mathematical claim. A gradient does not force behavior. It pulls attention and action by changing what the system experiences as available, useful, confident, or complete. This use is continuous with prior work on bounded decision-making, affordances, and information-seeking behavior: actors do not search all possibilities equally; they move through environments that make some paths easier to perceive and pursue than others. [Simon, 1955; Gibson, 1979; Norman, 1988; Pirolli and Card, 1999]
 
-- They differ in consequence.
-- They differ in mitigation.
-- But they can share a structural pattern: premature sufficiency.
-- Do not overclaim equivalence. Claim structural similarity, not identity.
+This distinction matters because failure often begins before the final action. It begins when attention has already been pulled toward a path that the landscape makes too easy to experience as enough.
 
-**Three failure classes (from v1.0):**
+A persuasive claim has a gradient when it is familiar, fluent, and aligned with the goal. A tool has a gradient when it is visible, available, and presented without consequence. A policy has a weak gradient when it is buried, generic, or disconnected from the specific decision it should govern. A prior failure has no useful gradient if it remains stored as a postmortem but never appears when a similar premise is active again.
 
-1. Hidden Risk — gradient exists, not visible
-2. Misread Signal — gradient visible, misinterpreted
-3. Attention Failure — gradient visible and interpreted, but other gradients exert stronger pressure
+The system does not simply "choose badly." It moves through a shaped field.
 
-**Source material:** `PAPER_v1.0_WORKING.md` Section 4.
+For diagnostic purposes, that movement can be described through four moments: **Attraction, Investigation, Sufficiency, and Action**. These are not rigid workflow stages. Real systems loop, branch, revise, and return to earlier states. The sequence is useful because it identifies where motion changed: what pulled attention, what was investigated, why investigation stopped, and what action followed.
+
+**Attraction** is attention under gradient pressure. Something in the landscape pulls the system toward it: a claim, a source, a tool, a prior pattern, a user instruction, or an apparent shortcut. Attraction can be useful. It helps a system focus. But attraction becomes dangerous when the wrong path is made easier than the path that would ground, qualify, or constrain the action.
+
+**Investigation** is motion toward uncertainty reduction. It occurs when the system treats an unresolved question as action-relevant. The system does not need to investigate everything. It needs to investigate what could change the decision. If a healthcare campaign claim may cross from operational language into clinical-outcome language, the relevant investigation is not "find more material about remote patient monitoring." It is "do we have approved evidence for this specific claim?"
+
+**Sufficiency** is the stopping condition. It is the point at which the current reasoning state becomes enough to act, ask, escalate, refuse, draft, or defer. Sufficiency is not certainty. A system may be highly confident in one fact but still lack enough information for the decision. It may be uncertain about the exact cause of a problem but have enough reason to choose a safe bounded action.
+
+**Action** is the behavioral exit from the current reasoning state. Action is not always task completion. Sometimes the right action is to answer. Sometimes it is to ask a human, escalate, pause, reject a claim, produce a bounded draft, or preserve uncertainty for later review. A system that can only complete the requested task has fewer safe exits than a system that can treat uncertainty as actionable.
+
+This is the core movement:
+
+**Attraction → Investigation → Sufficiency → Action**
+
+The value of the sequence is not that every workflow follows it neatly. The value is that it exposes a design question: where did the system stop moving, and why?
+
+That question leads to the central failure pattern in this section: **premature sufficiency**.
+
+Premature sufficiency occurs when a system treats its current reasoning state as adequate for action before relevant evidence, uncertainty, policy, consequence, or human confirmation has shaped the decision. The system stops too early. It acts from a condition that may be fluent, plausible, or locally goal-aligned, but not yet warranted.
+
+This pattern is easy to miss because the output may look competent. A fluent answer can sound grounded. A polished campaign claim can sound professional. A tool call can look efficient. A workflow completion can look like success until the downstream consequence appears.
+
+Premature sufficiency is not the only failure mode in human-agent systems. Some failures come from missing capability, ambiguous goals, flawed tools, poor user instructions, or genuinely novel situations. The claim is narrower: many failures become diagnosable when we ask what made the current path feel sufficient before the right counterpressure arrived.
+
+Consider hallucination. A model is asked for an answer. A fluent completion becomes available. The answer fits the user's question, resembles patterns the model has seen, and carries no visible requirement to cite or verify. If evidence is unavailable, weakly represented, or optional, the fluent path may become sufficient before grounding occurs. The result is not merely missing information. It is motion ending too soon. [Maynez et al., 2020; Ji et al., 2023; Huang et al., 2023]
+
+Unsafe tool use can follow the same structure with different stakes. An agent is asked to fix a problem. A tool is visible. The action is familiar. The goal creates pressure to complete the task. If policy, consequence, approval, or prior-failure memory does not exert enough influence, the tool path may become action-ready before risk has been resolved. The result may be an unauthorized message, a risky restart, an incorrect database update, or an irreversible workflow action. [Parasuraman and Riley, 1997; Lee and See, 2004]
+
+The point is not that hallucination and unsafe tool action are the same. They are not. They differ in severity, evaluation method, mitigation strategy, and ethical consequence. The point is that both can share a motion structure: goal pressure pulls the system toward completion; grounding or constraint fails to create enough counterpressure; confidence attaches to a path before the decision is warranted; action follows.
+
+The healthcare campaign example makes this concrete. The phrase "reduces readmissions" has a strong gradient. It is short, persuasive, and aligned with the business goal. It sounds more consequential than "supports monitoring between visits" or "improves care-team visibility." It may also be surrounded by adjacent truths: the product supports remote monitoring, care teams need better visibility, and readmissions matter to healthcare organizations.
+
+But adjacent truth is not sufficient support for a direct clinical-outcome claim.
+
+A context-only system may investigate the topic without investigating the decisive premise. It may retrieve more material about remote monitoring, patient follow-up, and care coordination. That investigation produces more context, but it does not answer the question that should govern action: is this claim approved and evidenced for this product?
+
+The reasoning-state alternative changes the stopping condition. The system can proceed with operational-value language, but the direct outcome claim remains insufficient unless approved evidence or approved language is available. The action is not "generate the stronger claim." It is "draft within the supported boundary and flag the unresolved claim."
+
+That is a better exit from motion.
+
+A similar pattern appears in operations. An agent sees a slow service and has access to a restart tool. Restart is familiar, visible, and often effective. The tool path has a strong gradient. But if this service has dependencies, if a prior restart worsened a similar incident, or if approval is required under certain conditions, then "service is slow" is not yet sufficient for restart. The safer action may be to check dependencies, surface the prior incident, or escalate.
+
+Again, the better behavior is not paralysis. It is motion through a better-shaped landscape.
+
+This is why "I do not know" and "I should not act yet" matter. They are not signs of weakness in an agentic system. They are action affordances. They give the system somewhere legitimate to go when the current reasoning state is not enough for the requested action. Without those exits, uncertainty has no stable surface. The landscape continues to slope toward completion because completion is the only recognized success path.
+
+Designing against premature sufficiency therefore means shaping counterpressure before action. Evidence requirements must appear when claims are generated. Policies must connect to the action types they govern. Prior failures must surface when similar premises become active. Confidence must be calibrated to source quality and applicability. Human confirmation must be available before uncertain interpretations become durable reasoning state.
+
+The diagnostic question becomes sharper:
+
+**What made this path feel sufficient?**
+
+That question is often more useful than asking only what the system did wrong. It points to the missing counterpressure. The answer may be a visibility problem, an accessibility problem, a representation problem, a confidence problem, or a connectivity problem. It may also reveal that the system lacked a safe exit for uncertainty.
+
+The next section turns this diagnostic account into architecture. If failures emerge when systems act from poorly preserved or poorly shaped reasoning states, then the design response cannot be only better prompting or more retrieval. The system needs a structure that preserves goals, premises, uncertainty, sufficiency rationales, outcomes, and updates across human-agent cycles.
+
+---
+
+**Scaffold intent notes:**
+
+**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+
+**Structural relationship to frozen paper:** Draws from frozen paper Section 4 ("Gradients, Sufficiency, and Failure"). The motion model (Attraction → Investigation → Sufficiency → Action) is preserved. The premature sufficiency concept is formalized. The healthcare and operations examples are retained in compressed form.
+
+**Key elements preserved:**
+- Gradient as directional pressure (design metaphor, not mathematical)
+- Four-moment motion sequence (Attraction, Investigation, Sufficiency, Action)
+- Premature sufficiency as central failure pattern
+- Hallucination and unsafe tool use as structurally similar but consequentially different
+- Healthcare "reduces readmissions" example with gradient analysis
+- Operations restart example
+- "I do not know" and "I should not act yet" as action affordances
+- Counterpressure design as the response to premature sufficiency
+- "What made this path feel sufficient?" as the diagnostic question
+
+**New elements not in frozen paper:**
+- Explicit citation anchoring (Simon, Gibson, Norman, Pirolli & Card for gradient concept; Maynez, Ji, Huang for hallucination; Parasuraman & Riley, Lee & See for tool-use risk)
+- "Adjacent truth is not sufficient support" formulation
+- "Action affordances" for uncertainty (connecting back to Section 4's affordance vocabulary)
+- Explicit bounding: "Premature sufficiency is not the only failure mode"
+
+**Notable omission from frozen paper:** The three failure classes (Hidden Risk, Misread Signal, Attention Failure) from frozen paper Section 4 are not separately enumerated in this draft. They are implicitly covered through the dimension-to-failure mapping in Section 4.2 and the diagnostic question at the end of this section. This is a deliberate compression — the academic version treats the five dimensions as the primary diagnostic vocabulary rather than maintaining a separate failure taxonomy. Check whether this creates a gap or a conceptual conflict.
+
+**Forward connection:** Closing paragraph bridges to Section 6 (Reasoning-State Architecture).
 
 ---
 
