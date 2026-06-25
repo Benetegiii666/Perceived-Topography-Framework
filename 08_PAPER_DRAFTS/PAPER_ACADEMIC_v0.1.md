@@ -1479,37 +1479,281 @@ A framework that can fail in clear ways can become a research program.
 
 ## 10. Research Agenda and Evaluation Methods
 
-**Status:** Placeholder — NEW SECTION (not in v1.0).
+**Status:** Draft Candidate — ChatGPT v0.1
+**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Required reviewers:** Methodology/Epistemic Status Reviewer, Conceptual Rigor Reviewer, AI Safety/Governance Reviewer, Organizational Learning Reviewer, Integration Editor, Voice Preservation Editor, AI Voice Detection Editor, Citation Auditor
 
-**Intent:** This section makes the paper publishable. It shows the framework wants to be tested, not believed.
+---
 
-**Proposed evaluation paths:**
+A framework that can lose needs methods that can make it lose.
 
-### 10.1 Comparative Workflow Studies
+The prior section set falsifiability boundaries. This section turns those boundaries into a research agenda. The goal is not to prove the framework in one study. The goal is to make its claims measurable enough that they can be compared, challenged, narrowed, or improved.
 
-Context-only agent vs. reasoning-state agent on the same task, same artifacts, different architecture. Measure: reuse quality, governance reliability, error recovery, learning transfer.
+The central empirical question is simple:
 
-### 10.2 Reasoning-State Reuse Tests
+**Do human-agent systems behave, recover, govern, and learn better when reasoning state is preserved and made behaviorally effective, rather than when artifacts are only retrieved as context?**
 
-Can future agents use prior premise stacks and model updates to avoid repeating errors? Measure: premise-failure recurrence rate across cycles.
+That question can be studied in several ways. No single method is sufficient. Some claims require controlled comparison. Some require design-science prototypes. Some require field studies. Some require trace analysis. Some require adversarial testing. The useful research program is plural rather than grand.
 
-### 10.3 Governance Salience Tests
+The agenda below focuses on six evaluation families:
 
-Does connecting policy to claim/action type at decision time reduce unsafe or unsupported outputs? Measure: policy-violation rate with and without governance connectivity.
+1. Reasoning-state preservation studies
+2. Topography perturbation studies
+3. Premature sufficiency detection
+4. Discovery evaluation
+5. Model Update Object quality
+6. Maturity-model assessment
 
-### 10.4 Premature Sufficiency Tests
+Together, these methods ask whether the vocabulary changes diagnosis, whether architecture changes behavior, and whether preserved reasoning improves future action. [Hevner et al., 2004; Lakatos, 1970]
 
-Can evaluators identify where action became sufficient too early using the framework's diagnostic vocabulary? Measure: inter-rater reliability on premature sufficiency classification.
+### 10.1 Reasoning-State Preservation Studies
 
-### 10.5 Topography Perturbation Tests
+The first evaluation task is to compare reasoning-state workflows against context-only workflows.
 
-Alter visibility, accessibility, representation, confidence, or connectivity and observe behavioral change. Measure: whether dimension-specific perturbations produce dimension-specific behavioral shifts.
+The baseline matters. A weak baseline proves little. The comparison should hold model capability, task assignment, and artifact access as constant as possible. One workflow receives context through retrieval, memory, or prompt assembly. The other receives the same materials but also preserves structured reasoning state: Goal, Policy, Interpretation, Premise Stack, Decision State, Investigation Trace, Learning Event, and Model Update Object.
 
-### 10.6 Human-Agent Confirmation Studies
+The question is not whether the reasoning-state workflow produces prettier documentation. The question is whether it changes future behavior.
 
-Does infer-confirm Discovery improve intent capture without excessive user burden compared with blank-form intake or silent inference? Measure: intent accuracy, user burden, rework rate.
+Useful dependent measures include:
 
-**Source material:** New. Draws on disconfirmation conditions from v1.0 Section 9.
+- fewer repeated errors across related tasks;
+- better reuse of prior lessons;
+- more accurate escalation when evidence or policy is insufficient;
+- clearer auditability of why an action became sufficient;
+- better recovery after contradiction;
+- higher-quality future Optimizer States.
+
+A healthcare marketing study could compare two teams or systems across repeated campaign cycles. Both receive the same product information, approved claims, audience research, prior performance data, and compliance guidance. The context-only workflow retrieves and uses those artifacts. The reasoning-state workflow must also preserve the claim boundary, premise stack, sufficiency rationale, outcome, and update. The later test is whether the next campaign begins from a better frame.
+
+A software-operations study could use incident response. Both workflows receive runbooks, logs, service maps, prior incidents, and tool access. The context-only workflow retrieves relevant materials. The reasoning-state workflow must preserve the active hypothesis, risk boundary, investigation trace, proposed action, escalation rationale, outcome, and update. The later test is whether the system avoids repeating unsafe restarts, missed dependency checks, or shallow postmortem reuse.
+
+The comparison should not assume reasoning-state preservation wins. It may not. It may add overhead without improving judgment. It may improve auditability but not task quality. It may help in high-stakes workflows and fail in low-stakes ones. Those outcomes would narrow the claim in useful ways.
+
+### 10.2 Topography Perturbation Studies
+
+The five dimensions should matter only if changing them changes behavior.
+
+A topography perturbation study deliberately alters one dimension while holding the task stable. The goal is to test whether Visibility, Accessibility, Representation, Confidence, or Connectivity produce different patterns of attention, investigation, sufficiency, and action.
+
+A Visibility perturbation changes whether the relevant signal appears in the working frame. For example, a policy boundary may be present in the knowledge base but not surfaced during claim generation.
+
+An Accessibility perturbation changes the cost of reaching the signal. The boundary may be known in principle but buried behind extra steps, permissions, or workflow distance.
+
+A Representation perturbation changes the form of the signal. The same policy may appear as dense legal text, a claim-type table, or a sentence-level generation constraint.
+
+A Confidence perturbation changes how source authority, evidence quality, or uncertainty is represented. Prior campaign language may appear as ordinary precedent, low-confidence precedent, or non-authoritative historical material.
+
+A Connectivity perturbation changes whether the signal attaches to the decision it should govern. The evidence boundary may be generally available, but not connected to the specific phrase "reduces readmissions."
+
+The prediction is not that every perturbation produces a large effect. The prediction is that different perturbations should produce different failure patterns and different repairs. If they do not, the dimensions are not doing enough work.
+
+This kind of study can be run in simulation, controlled task environments, or instrumented prototypes. It can also be used diagnostically in field settings: when a failure occurs, designers can ask which perturbation would most likely have changed the path.
+
+The strongest result would be prospective. Before the task runs, designers specify which dimension they are changing and what behavioral difference they expect. After the task, traces show whether the system noticed, investigated, trusted, connected, or acted differently. Without prospective specification, topography analysis risks becoming after-the-fact storytelling.
+
+### 10.3 Premature Sufficiency Detection
+
+Premature sufficiency becomes useful only when it can be detected before harm or outcome failure.
+
+The design-time criterion from Section 5 gives the evaluation handle: sufficiency is premature when the system acts before processing information surfaces that the architecture was designed to make behaviorally effective.
+
+That means an evaluation can specify required pre-action surfaces for a class of action.
+
+For clinical-outcome claims, required surfaces might include approved-claims material, evidence threshold, compliance policy, and human confirmation.
+
+For production tool use, required surfaces might include dependency map, incident severity, approval rule, prior incident memory, and rollback plan.
+
+For customer communication, required surfaces might include account status, policy boundary, source evidence, tone constraint, and escalation condition.
+
+The test is then observable:
+
+**Did the system encounter and process the required surfaces before action became sufficient?**
+
+This can be measured through trace logs, reasoning-state objects, interface events, retrieval records, tool-call preconditions, or human-review checkpoints. The point is not to expose private chain-of-thought. The point is to preserve enough decision-relevant state to know whether the designed counterpressure appeared before action.
+
+Premature sufficiency studies should distinguish at least four outcomes:
+
+| Outcome | Meaning |
+|---|---|
+| **Appropriate sufficiency** | Required surfaces were processed; action was warranted or bounded. |
+| **Premature sufficiency** | Action occurred before required surfaces became behaviorally effective. |
+| **Over-delayed sufficiency** | The system continued investigating after the decision was already adequately supported. |
+| **Blocked sufficiency** | The system could not reach a legitimate action because the landscape gave uncertainty no usable exit. |
+
+The third and fourth outcomes matter. A safe system is not simply one that acts less. A system that over-investigates wastes time. A system that cannot move under uncertainty becomes unusable. The goal is calibrated sufficiency, not permanent hesitation.
+
+### 10.4 Discovery Evaluation
+
+Discovery should be tested against alternatives.
+
+The comparison should include at least three baselines: silent inference, blank-form intake, and no explicit inference step.
+
+In a silent-inference workflow, the agent infers the goal, policy, and interpretation without exposing the frame for confirmation.
+
+In a blank-form workflow, the human must specify the frame before the system proceeds.
+
+In a no-inference workflow, the system avoids forming a richer frame and acts only on the literal request.
+
+Discovery should outperform these alternatives only if it produces better confirmed reasoning state at acceptable cost.
+
+Useful measures include:
+
+- accuracy of Goal, Policy, and Interpretation;
+- number of material assumptions corrected before action;
+- human effort required to reach a usable frame;
+- rate of later frame disputes;
+- degree of anchoring toward the system's proposed interpretation;
+- quality of preserved scope, provenance, and uncertainty;
+- downstream reuse of confirmed frames.
+
+The anchoring risk is important. Propose-then-confirm can lead humans toward the system's first interpretation. A Discovery interface should therefore expose alternatives, uncertainty, and correction paths rather than presenting the proposed frame as settled. Human-AI interaction work already stresses intelligibility, user control, correction, and appropriate trust; Discovery evaluation should measure whether those properties actually appear in the workflow. [Amershi et al., 2019; Lee and See, 2004]
+
+Discovery may prove useful only in certain domains. It may help when goals are ambiguous and consequences matter. It may be unnecessary when tasks are simple, repeatable, and low-risk. It may fail when users lack the domain expertise to confirm the frame. Those are not side findings. They define where Discovery belongs.
+
+### 10.5 Model Update Object Quality
+
+A Model Update Object is useful only if it changes future reasoning without overgeneralizing.
+
+That creates two evaluation problems.
+
+First, did the update transfer? Did the future Optimizer State begin differently? Did confidence change? Did an evidence boundary become more visible? Did a prior failed premise lose force? Did the next agent or team avoid repeating the same mistake?
+
+Second, did the update transfer correctly? A bad update can be worse than no update. One weak campaign does not prove that workflow-burden messaging is useless. One unsafe restart does not prove that restart is never appropriate. One successful exception does not prove that the exception should become policy.
+
+Model Update Objects should therefore be evaluated on both transfer and restraint.
+
+A useful rubric might ask:
+
+| Criterion | Evaluation question |
+|---|---|
+| **Specificity** | Does the update name what changed rather than storing a vague lesson? |
+| **Evidence support** | Does the update identify the evidence or contradiction that justifies the change? |
+| **Applicability boundary** | Does it specify where the lesson applies and where it does not? |
+| **Confidence calibration** | Does it assign appropriate confidence rather than treating the update as settled truth? |
+| **Future-state effect** | Does it alter future Optimizer States, retrieval priority, evidence threshold, or action boundary? |
+| **Contestability** | Can humans or later agents challenge, revise, expire, or narrow the update? |
+
+This evaluation connects directly to organizational learning. The goal is not more memory. It is better change in future governing assumptions. [Argyris and Schon, 1978; Walsh and Ungson, 1991]
+
+### 10.6 Maturity Model for Reasoning-State Preservation
+
+Not every workflow needs the same level of reasoning-state preservation.
+
+A maturity model helps prevent two opposite mistakes. One mistake is under-preservation: the system acts, but the reasoning that should guide future work disappears. The other is over-preservation: every task becomes a documentation project.
+
+The levels below are provisional. They are not a universal standard. They are a way to evaluate how much reasoning-state structure a workflow preserves and whether that level matches the stakes.
+
+**Table 8. Maturity Model for Reasoning-State Preservation**
+
+| Level | Name | What is preserved | Typical capability | Typical failure |
+|---|---|---|---|---|
+| **0** | Artifact-only | Final output or action result. | The system produces work but preserves little reasoning. | Repeated errors; no reusable why. |
+| **1** | Context-aware | Retrieved sources, prompt context, or memory references. | The system can ground outputs in available artifacts. | Information exists but may not govern action. |
+| **2** | Frame-aware | Goal, Policy, and Interpretation. | The system exposes the working frame before action. | Premises and sufficiency may remain implicit. |
+| **3** | Decision-aware | Premise Stack, Decision State, and sufficiency rationale. | The system preserves why action, pause, escalation, or refusal was warranted. | Outcomes may not change future reasoning. |
+| **4** | Learning-aware | Learning Event and Model Update Object. | The system converts contradiction into changed future expectations or boundaries. | Updates may overgeneralize or remain local. |
+| **5** | Governed learning | Provenance, scope, confidence, contestability, expiration, and audit across cycles. | Reasoning state can be reused, challenged, narrowed, and governed. | Overhead, politics, or manipulation may distort the system. |
+
+The maturity model is not a ladder every workflow must climb. It is a fit question.
+
+A low-risk drafting task may be fine at Level 1 or 2. A regulated healthcare campaign may need Level 3 or 4. A tool-using agent with irreversible production access may require Level 5 plus external controls. The right level depends on stakes, reversibility, uncertainty, policy exposure, and learning value.
+
+The model also creates an evaluation path. Researchers can ask whether moving from one level to another improves outcomes enough to justify the cost. If Level 4 does not improve learning over Level 2 in a given domain, the heavier architecture may not be warranted.
+
+### 10.7 Instrumentation and Evidence
+
+The research agenda requires instrumentation, but not total surveillance of reasoning.
+
+The relevant evidence is not every token, every hidden activation, or every private deliberation step. The relevant evidence is decision-relevant state: what goal was active, what policy applied, what premise supported action, what uncertainty mattered, what surface was consulted, what sufficiency rationale was recorded, what outcome occurred, and what update followed.
+
+Possible evidence sources include:
+
+- retrieved artifacts and their provenance;
+- policy and evidence-boundary activations;
+- confirmation records and scoped approvals;
+- Investigation Trace entries;
+- tool-call preconditions;
+- Decision State records;
+- human review corrections;
+- Learning Events;
+- Model Update Objects;
+- future Optimizer State changes.
+
+The design challenge is to preserve enough state for evaluation without creating unusable friction or unsafe data retention. Reasoning-state preservation itself creates governance obligations. Sensitive information should not be preserved merely because it appeared in a workflow. Confirmation should not be treated as permanent. Updates should expire, narrow, or be challenged when conditions change.
+
+Evaluation therefore has to measure both performance and governance cost.
+
+A system that improves reuse but preserves sensitive information carelessly has not succeeded. A system that improves auditability but makes work unusably slow has not succeeded. A system that records beautiful reasoning objects that no future workflow uses has not succeeded.
+
+### 10.8 Research Questions
+
+The research program can be stated as a set of testable questions.
+
+**RQ1: Reasoning-state preservation.** Do workflows that preserve reasoning state improve reuse, governance, error recovery, and learning quality relative to context-only workflows with similar artifact access?
+
+**RQ2: Topography dimensions.** Do changes in Visibility, Accessibility, Representation, Confidence, and Connectivity produce distinguishable changes in behavior and repair strategy?
+
+**RQ3: Premature sufficiency.** Can premature sufficiency be detected at design time by specifying required pre-action surfaces and observing whether they become behaviorally effective before action?
+
+**RQ4: Discovery.** Does Retrieve → Infer → Propose → Confirm produce better confirmed Optimizer States than silent inference, blank-form intake, or no explicit inference step?
+
+**RQ5: Model updates.** Do Model Update Objects change future Optimizer States in ways that improve action without overgeneralizing?
+
+**RQ6: Maturity fit.** Which levels of reasoning-state preservation are appropriate for which workflow classes, given stakes, reversibility, uncertainty, and governance cost?
+
+**RQ7: Manipulation and misuse.** How can reasoning-state objects, gradients, and Discovery loops be poisoned, politicized, over-trusted, or steered toward organizational convenience rather than truth?
+
+These questions are not meant to protect the framework. They are meant to put pressure on it.
+
+### 10.9 What Would Count as Progress
+
+Progress would not require proving the whole framework correct.
+
+Smaller results would matter.
+
+If topography perturbations reliably produce different failure patterns, the dimensional vocabulary gains support.
+
+If reasoning-state workflows reduce repeated errors across cycles, the architecture gains support.
+
+If Discovery improves frame accuracy without unacceptable anchoring or burden, the infer-confirm loop gains support.
+
+If Model Update Objects change future Optimizer States without overgeneralization, the learning claim gains support.
+
+If the maturity model helps teams choose lighter or heavier preservation strategies, the framework becomes more usable.
+
+Negative results would matter too.
+
+If context-only workflows perform just as well, the architecture should narrow. If Discovery mostly adds friction, it should narrow. If dimensions do not change diagnosis, they should be revised. If reasoning-state objects become new sources of manipulation or bureaucracy, the governance account must become stronger.
+
+That is the point of the research agenda.
+
+A useful framework does not need to win everywhere. It needs to show where it helps, where it fails, and what must change when reality pushes back.
+
+---
+
+**Scaffold intent notes:**
+
+**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-25.
+
+**Structural relationship to frozen paper:** This section is NEW — it does not exist in the frozen keystone paper. The frozen paper's Section 9 includes Table 9 (disconfirmation conditions) and mentions evaluation possibilities, but does not develop a formal research agenda. The frozen paper's Table 8 (Maturity Model) appeared in Section 8; it is placed here in the academic version per the v0.1 HLD review recommendation and Section 6 scaffold notes.
+
+**Key elements:**
+- Six evaluation families (preservation, perturbation, premature sufficiency, Discovery, MUO quality, maturity)
+- Context-only baseline comparison with fair treatment
+- Topography perturbation with prospective specification requirement
+- Premature sufficiency detection via required pre-action surfaces
+- Four-outcome sufficiency classification (appropriate, premature, over-delayed, blocked)
+- Discovery tested against three alternatives (silent inference, blank-form, no inference)
+- MUO quality rubric (specificity, evidence, boundary, confidence, future-state, contestability)
+- Table 8 maturity model (six levels, provisional, fit-based)
+- Instrumentation without surveillance
+- Seven research questions
+- Negative results explicitly valued
+- Manipulation and misuse as RQ7
+
+**Citations:** Hevner et al. 2004, Lakatos 1970, Amershi et al. 2019, Lee and See 2004, Argyris and Schon 1978, Walsh and Ungson 1991.
+
+**Forward connection:** Section closes with "A useful framework does not need to win everywhere." Section 11 (Conclusion) follows.
 
 ---
 
