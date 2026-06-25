@@ -1479,9 +1479,9 @@ A framework that can fail in clear ways can become a research program.
 
 ## 10. Research Agenda and Evaluation Methods
 
-**Status:** Draft Candidate — ChatGPT v0.2 (rewritten with new framing per v0.1 review)
-**Review status:** Pending re-review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Prior version:** v0.1 reviewed 2026-06-25. Verdict: Minor revision. Voice 4/5, 2 minor AI flags, 7 required changes. Full review: `SECTION_10_REVIEW_v0.1_2026-06-25.md`.
+**Status:** Accepted — v0.3
+**Review status:** Accepted. All pass criteria met. Voice 5/5, 0 AI flags. All v0.2 additions resolved. March 1991 reference entry needed in bibliography.
+**Prior versions:** v0.1 (Voice 4/5, 7 changes), v0.2 (Voice 5/5, 4 additions). Reviews: `SECTION_10_REVIEW_v0.1_2026-06-25.md`, `SECTION_10_REVIEW_v0.2_2026-06-25.md`.
 
 ---
 
@@ -1497,13 +1497,15 @@ The central question is simple:
 
 **Do human-agent systems behave, recover, govern, or learn better when reasoning state is preserved, rather than when artifacts are only retrieved as context?**
 
-That question can be tested in controlled studies, design-science prototypes, field deployments, trace analyses, red-team exercises, and comparative case studies. No single method will settle the framework. The useful work is cumulative: find where the vocabulary changes diagnosis, where it does not, and where the architecture costs more than it returns. [Hevner et al., 2004; Lakatos, 1970]
+That question can be tested in controlled studies, design-science prototypes, field deployments, trace analyses, red-team exercises, and comparative case studies. No single method will settle the framework. The useful work is cumulative: find where the vocabulary changes diagnosis, where it does not, and where the architecture costs more than it returns. [Hevner et al., 2004; Peffers et al., 2007; Lakatos, 1970]
+
+This is a different evaluation target from most agent benchmarks. Benchmarks such as AgentBench, SWE-bench, and WebArena test whether agents can complete tasks in interactive or realistic environments. The agenda here asks a different question: whether the landscape that shaped the agent's motion was well designed, and whether the reasoning state that produced action can be inspected, challenged, and reused. [Liu et al., 2023; Jimenez et al., 2023; Zhou et al., 2023]
 
 ### 10.1 Compare Reasoning-State Workflows Against Context-Only Workflows
 
 The most direct test is comparative.
 
-Hold the task, model capability, and artifact access as constant as possible. Give one workflow retrieved context: documents, policies, prior work, examples, and memory. Give the other the same material, but require preservation of reasoning state: Goal, Policy, Interpretation, Premise Stack, Decision State, Investigation Trace, Learning Event, and Model Update Object.
+Hold the task, model capability, and artifact access as constant as possible. Give one workflow retrieved context: documents, policies, prior work, examples, and memory. The baseline should be strong, not naive. Some agent systems already include memory, reflection, or structured feedback loops, and those capabilities should not be erased merely to make reasoning-state preservation look better. [Shinn et al., 2023; Yao et al., 2022] Give the other the same material, but require preservation of reasoning state: Goal, Policy, Interpretation, Premise Stack, Decision State, Investigation Trace, Learning Event, and Model Update Object.
 
 Then ask what changes.
 
@@ -1541,7 +1543,9 @@ That kind of study helps prevent topography analysis from becoming retrospective
 
 Premature sufficiency should be detectable before harm, not only after it.
 
-For a given action class, designers can specify which information surfaces should become behaviorally effective before action. A clinical-outcome claim may require approved evidence, approved language, and compliance confirmation. A production restart may require dependency checks, severity assessment, rollback plan, and approval logic. A customer refund decision may require account status, policy boundary, exception rule, and escalation condition.
+For a given action class, designers can specify which information surfaces should become behaviorally effective before action. Required pre-action surfaces are the information surfaces a designer specifies must become behaviorally effective before a given action class can proceed, as described in Section 5's design-time account of premature sufficiency.
+
+A clinical-outcome claim may require approved evidence, approved language, and compliance confirmation. A production restart may require dependency checks, severity assessment, rollback plan, and approval logic. A customer refund decision may require account status, policy boundary, exception rule, and escalation condition.
 
 The test is straightforward:
 
@@ -1552,6 +1556,8 @@ If yes, the system may still be wrong, but the failure is not premature sufficie
 This evaluation does not require access to hidden chain-of-thought. It requires decision-relevant traces: which surfaces appeared, which constraints activated, which uncertainty was marked as material, what sufficiency rationale was preserved, and what action followed.
 
 The goal is not to make systems hesitate forever. Good evaluation should distinguish premature sufficiency from over-delayed sufficiency. A system that investigates long after the decision is adequately supported is also poorly shaped. The aim is calibrated sufficiency: enough investigation before action, not endless investigation instead of action.
+
+This maps onto the familiar tension between exploration and exploitation: systems must search enough to avoid premature closure, but not so much that exploration prevents useful action. [March, 1991]
 
 ### 10.4 Compare Discovery Against Its Alternatives
 
@@ -1589,6 +1595,8 @@ The second question is as important as the first:
 A bad update can do harm. One campaign's weak conversion does not prove that workflow-burden messaging is useless. One unsafe restart does not prove that restart should never be used. One successful exception does not prove that the exception should become policy.
 
 Model updates should therefore be evaluated for both transfer and restraint. They should change future reasoning, but not more than the evidence warrants. That is the difference between organizational learning and organizational overreaction. [Argyris and Schon, 1978; Walsh and Ungson, 1991]
+
+The maturity model below parallels Argyris and Schon's learning distinctions without simply reproducing them. Level 3 resembles single-loop learning because the system can correct action within existing assumptions. Level 4 approaches double-loop learning because outcomes can change future governing assumptions. Level 5 adds a deutero-learning concern: the system must also preserve how learning itself is scoped, contested, audited, and improved. The difference is granularity and fit. This framework treats learning as reasoning-state change inside particular workflow classes, not as a general developmental ladder.
 
 ### 10.6 Use a Maturity Model as a Starting Instrument
 
@@ -1757,6 +1765,8 @@ Lee, J. D., & See, K. A. (2004). Trust in automation. *Human Factors*, *46*(1), 
 Lewis, P., et al. (2020). Retrieval-augmented generation. *NeurIPS*, *33*, 9459–9474.
 
 Lynch, A., et al. (2025). Agentic misalignment. Anthropic Research.
+
+March, J. G. (1991). Exploration and exploitation in organizational learning. *Organization Science*, *2*(1), 71-87.
 
 March, J. G., & Simon, H. A. (1958). *Organizations*. Wiley.
 
