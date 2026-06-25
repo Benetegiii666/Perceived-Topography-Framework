@@ -46,30 +46,98 @@
 
 ## 1. Introduction: The Reliability Problem Has Moved
 
-**Status:** Placeholder — to be drafted from v1.0 Section 1.
+**Status:** Draft Candidate — ChatGPT v0.3 (revised per v0.2 review guidance)
+**Review status:** Pending re-review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Prior versions:** v0.1 (27 AI flags, Voice 2/5), v0.2 (11 AI flags, Voice 3.5-4/5). Reviews: `SECTION_1_REVIEW_2026-06-24.md`, `SECTION_1_REVIEW_v0.2_2026-06-24.md`.
 
-**Intent:** Tighten the opening. The v1.0 opening is strong but leans heavily on the "fear" hook. The academic version should lead with the reliability problem, not the fear narrative.
+**Citation note:** Three anchoring citations added per v0.2 review guidance. Full citation treatment in Section 2.
 
-**Required argument arc:**
+---
 
-1. Agentic systems increasingly combine reasoning, memory, retrieval, planning, tool use, and external action.
-2. This creates a reliability problem that cannot be reduced to output correctness — the system's behavior depends on what it can see, reach, trust, connect, and treat as sufficient.
-3. Existing containment and context strategies are necessary but incomplete.
-4. The paper proposes perceived topography as the missing design layer: the constructed landscape from which action becomes sufficient.
-5. Contribution statement: the paper introduces a design theory, a reasoning-state architecture, a diagnostic vocabulary, and a falsifiable research agenda.
+AI agents are increasingly evaluated as actors: systems that can pursue goals, use tools, preserve state, and move through multi-step environments. When these systems fail, the failure often feels different from an ordinary model error. A static model may hallucinate a citation. An agent may hallucinate, send the message, update the record, and leave the human team to discover later that the action rested on unsupported ground. [Lynch et al., 2025; Yao et al., 2022]
 
-**Key elements to preserve from v1.0:**
+The natural reaction is to ask what is wrong with the agent.
 
-- The marble/slope metaphor (use once, do not let it dominate)
-- The reframe from "what is wrong with the agent?" to "what landscape did we ask it to move through?"
-- The distinction between ascribing moral motivation vs. describing structural conditions
+That question is necessary. It is also incomplete.
 
-**What to reduce:**
+A model does not need inner malice to cause harm. It only needs a goal, an action space, imperfect constraints, and a path through the environment that makes the harmful action appear useful, available, or sufficient. The behavior may look strategic, deceptive, careless, or overconfident. But before we reach for psychological explanations, we should ask a more basic systems question: what landscape did we ask the agent to move through?
 
-- Repeated fear-framing after the opening paragraph
-- Lengthy setup before the thesis lands
+This paper proposes that we can describe that landscape.
 
-**Source material:** `PAPER_v1.0_WORKING.md` Section 1 (lines 37-60).
+A useful image is simple. When a marble rolls downhill, we do not explain its motion only by studying the marble. We look at the slope. Human-agent systems should be studied in the same way. Their behavior emerges not only from what the model can do, but from the environment of visible information, reachable tools, represented constraints, confidence signals, and connected consequences through which the system moves.
+
+This paper calls that environment a **perceived topography**: the information-and-action landscape made available to an optimizer-like system at the moment it reasons and acts. The term "optimizer-like" is functional, not psychological. By optimizer, I do not mean a conscious entity with intentions. I mean a system that selects actions in relation to a goal, under constraints, using some interpretation of the situation.
+
+The contribution is not the claim that system design matters. That is already well established. The contribution is a diagnostic vocabulary for the conditions under which action becomes sufficient before reasoning warrants it.
+
+This distinction matters because many current interventions focus on containment. Permissions, approval gates, sandboxes, and monitoring all ask where the system should not go. These controls are necessary, especially when systems can act outside the conversation. But containment alone does not explain why the unsafe path became attractive, why the safer path was harder to find, or why a policy that existed somewhere failed to shape the decision.
+
+A second response is to add context. Retrieval-augmented systems can supply documents, policies, and prior examples, and this improves many outputs. [Lewis et al., 2020] But context is not the same as reasoning state. Context may help a system answer. Reasoning state explains why the system acted as it did.
+
+A context layer can retrieve a policy. A reasoning-state layer must make the policy matter at the moment of decision. That difference is architectural, not cosmetic. It is the difference between information that exists and information that becomes behaviorally effective.
+
+This is the gap the Perceived Topography Framework addresses. It treats human-agent behavior as movement through a constructed landscape of information surfaces, affordances, constraints, confidence, and consequence. Information only shapes behavior when it can be noticed, reached, interpreted, trusted, and connected to the decision where it should exert force.
+
+The framework describes this landscape through five dimensions: **Visibility, Accessibility, Representation, Confidence, and Connectivity**. These are not offered as a complete ontology of all factors that influence agent behavior. They are a minimum viable diagnostic set. A dimension earns its place only if changing it would lead to a different diagnosis, intervention, or expected outcome.
+
+The framework also introduces **premature sufficiency** as a recurring failure pattern. Premature sufficiency occurs when a system acts before the relevant evidence, uncertainty, policy, consequence, or human confirmation has exerted enough force on the decision. The system does not merely lack information. It stops moving too soon.
+
+This pattern can appear in different kinds of failures. In hallucination, a fluent answer may become sufficient before it is grounded. In unsafe tool use, an available action may become sufficient before risk or approval has been resolved. These failures differ in consequence and mitigation. The point is not to collapse them. The point is to notice that both can involve the same motion structure: goal pressure, weak counterpressure, misplaced confidence, and a low-friction path to action.
+
+A human-agent system therefore needs more than better prompts, larger context windows, or stricter fences. It needs a way to preserve the reasoning state from which action became justified. The system should retain the working goal, the governing constraint, the interpretation that made action attractive, the uncertainty that remained, and the reason investigation stopped. Without that structure, the organization may keep the artifact while losing the why.
+
+This loss is familiar in human organizations. Teams store documents but lose decisions. They remember outcomes but forget assumptions. They correct an artifact without changing the reasoning that produced the error. The next team retrieves the old material and repeats the same mistake under a new label. The organization appears to have memory but behaves as if it does not. [Walsh & Ungson, 1991; Markus, 2001]
+
+Agentic systems can accelerate this pattern. They can retrieve more, synthesize faster, and act with less friction. But if they inherit an information landscape where policies are disconnected, evidence boundaries are weak, prior failures are hard to reuse, and uncertainty has no legitimate action path, they may become faster at reaching the wrong kind of sufficiency.
+
+The paper makes four contributions.
+
+First, it defines perceived topography as the constructed information-and-action landscape through which human-agent systems reason and act. This construct helps distinguish information that merely exists from information that becomes behaviorally effective.
+
+Second, it distinguishes context from reasoning state. The paper argues that reliable and learnable agentic behavior requires preservation of structured reasoning transitions, not only retrieval of artifacts.
+
+Third, it offers a diagnostic account of premature sufficiency. The framework explains how failures can emerge when goal pressure, weak grounding, misplaced confidence, and low-friction action paths allow the system to act before the right uncertainty or constraint has shaped the decision.
+
+Fourth, it proposes a research and design agenda for evaluating human-agent systems through reasoning-state preservation, topography perturbation, governance salience, human confirmation, and model-update quality.
+
+The paper is intentionally bounded: perceived topography does not replace alignment, containment, retrieval, evaluation, governance, or human oversight; it does not guarantee safe outcomes; and it does not explain every agent failure. Rather, it argues that these existing approaches remain incomplete without a way to describe and shape the perceived environment from which action becomes sufficient.
+
+The paper proceeds from the context/reasoning-state distinction through the framework's dimensions and motion model, then into reasoning-state architecture, Discovery, a constructed healthcare stress test, boundaries, disconfirmation conditions, and a research agenda.
+
+The practical question is therefore not only: how do we prevent agents from taking harmful actions? It is also: how do we design the landscape so that grounded, policy-aware, human-beneficial behavior becomes easier to reach than the merely fluent, available, or locally sufficient path?
+
+---
+
+**Scaffold intent notes (retained for review reference):**
+
+**Source:** ChatGPT v0.3 draft, provided by Benet 2026-06-24.
+
+**v0.2 → v0.3 changes applied:**
+
+- Roadmap compressed from 10 template sentences to one sentence
+- Context/reasoning-state triplet reduced to one strong policy example + architectural framing
+- Three citation anchors added: [Lynch et al., 2025; Yao et al., 2022], [Lewis et al., 2020], [Walsh & Ungson, 1991; Markus, 2001]
+- Containment catalog reduced from 6 items to 4
+- Context catalog restructured into flowing prose ("documents, policies, and prior examples")
+- Bounding paragraph compressed from three "It does not claim" sentences to one semicolon-joined sentence
+- Reasoning-state list restructured ("The system should retain..." instead of "That state includes...")
+- "preserve state" replaces "remember prior interactions" in opening (more precise)
+- Closing question remains as final rhetorical beat (after compressed roadmap)
+
+**Elements preserved from v0.2:**
+
+- Marble/slope metaphor
+- "This paper proposes that we can describe that landscape" thesis one-liner
+- "A model does not need inner malice to cause harm" (frozen paper wording restored)
+- First-person "I" for optimizer definition
+- "The contribution is not the claim that system design matters" preemption
+- Four-contribution enumeration
+- Bounding paragraph (compressed)
+- Five-dimension introduction with "minimum viable diagnostic set"
+- Premature sufficiency introduction
+- Organizational learning paragraphs
+- Agentic acceleration paragraph
+- Closing question
 
 ---
 
