@@ -143,77 +143,85 @@ The practical question is therefore not only: how do we prevent agents from taki
 
 ## 2. Related Work and Theoretical Positioning
 
-**Status:** Draft Candidate — ChatGPT v0.1
-**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Required reviewers:** AI Agents Literature Reviewer, HCI Reviewer, AI Safety/Governance Reviewer, Organizational Learning Reviewer, Citation Auditor
+**Status:** Draft Candidate — ChatGPT v0.2 (revised per v0.1 review guidance)
+**Review status:** Pending re-review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
+**Prior version:** v0.1 reviewed 2026-06-24. Verdict: Minor revision. Voice 3/5, 8 AI flags. Full review: `SECTION_2_REVIEW_v0.1_2026-06-24.md`.
 
 ---
 
-The Perceived Topography Framework sits at the intersection of several research traditions that are often discussed separately: LLM-based agents, retrieval-augmented generation, human-computer interaction, organizational learning, and AI safety. The paper does not claim to originate the idea that environments shape behavior, that context matters, or that human oversight is necessary. Its claim is narrower: human-agent systems need a vocabulary for the constructed information-and-action landscape through which reasoning becomes sufficient for action.
+The claim developed here is not that environments shape behavior, that context matters, or that human oversight is useful. Those claims already belong to several mature traditions. The narrower claim is that human-agent systems need a diagnostic vocabulary for the constructed information-and-action landscape through which reasoning becomes sufficient for action.
 
-This section positions that claim against the literature.
+That places the framework between fields that are usually treated separately: language-model agents, retrieval-augmented generation, human-computer interaction, organizational learning, and AI safety. Each explains part of the problem. None, by itself, gives designers a compact way to ask why a particular path became visible, trusted, connected, and sufficient before action occurred.
 
 ### 2.1 LLM Agents: From Response Generation to Situated Action
 
-Recent work on LLM-based agents has moved language models away from isolated text generation and toward systems that reason, act, use tools, maintain state, and interact with external environments. ReAct showed that reasoning traces and task-specific actions can be interleaved, allowing a model to update its plan by acting in an environment rather than merely generating an answer. Toolformer explored how language models can learn to call external APIs, including search, calculation, translation, and calendar tools. Generative Agents demonstrated architectures in which memory, reflection, and planning support coherent behavior over time. [Yao et al., 2022; Schick et al., 2023; Park et al., 2023]
+The unit of analysis has moved from the answer to the trajectory. Once a language model can reason, act, call tools, and update its behavior across steps, reliability cannot be judged only by the final response. The intermediate path matters: what the system noticed, what it retrieved, what it ignored, when it stopped searching, and why one action became preferable to another.
 
-These lines of work matter because they move the unit of analysis from the answer to the trajectory. Once a model acts through tools or environments, reliability can no longer be judged only by whether a final response is correct. The system's intermediate path matters: what it noticed, what it retrieved, what it trusted, when it stopped searching, and why it selected one action rather than another.
+ReAct formalized this shift by interleaving reasoning traces with task-specific actions, allowing a model to update its plan through interaction with an environment. Toolformer showed that language models could learn to call external APIs for functions such as search, calculation, and translation. Generative Agents brought memory, reflection, and planning into an architecture for believable behavior over time. [Yao et al., 2022; Schick et al., 2023; Park et al., 2023]
 
-Much of the agent literature describes components: memory, planning, reflection, tool use, environment interaction, orchestration, and evaluation. Those components are necessary, but component lists do not by themselves explain how an agent's operating world is constructed at the moment of decision. A memory module may store prior experience. A retrieval module may supply documents. A tool interface may expose possible actions. But the system still needs some perceived landscape in which certain memories, documents, constraints, and tools become more salient than others.
+Reflection-oriented systems sharpen the issue further. Reflexion uses verbal feedback and episodic memory to improve an agent across trials. Self-Refine uses iterative self-feedback to improve an initial output without additional training. These systems show that language agents can benefit from explicit critique and revision loops. [Shinn et al., 2023; Madaan et al., 2023]
 
-The Perceived Topography Framework addresses that intermediate layer. It asks not only what components the agent has, but what those components make visible, reachable, trusted, and connected when action becomes sufficient.
+The account developed here is adjacent but not identical. Reflection systems typically improve behavior within a task trajectory or across repeated trials for the agent. A reasoning-state architecture is aimed at something broader: preserving reasoning across cycles, across agents, and across organizational contexts. The problem is not only whether an agent can improve its next attempt. It is whether a future human-agent workflow can inherit the goal, premise, evidence boundary, uncertainty, and model update that made the prior action succeed or fail.
+
+Agent architecture work describes important components: memory, planning, reflection, tools, and environment interaction. The missing layer is how those components construct the perceived operating world at the moment of decision. A memory module may store prior experience. A tool interface may expose possible actions. A retrieval system may supply documents. The design question remains: what did the system actually experience as visible, reachable, trusted, connected, and sufficient?
 
 ### 2.2 Agent Evaluation and Realistic Task Environments
 
-A second body of work evaluates agents in increasingly realistic environments. AgentBench evaluates LLMs as agents across multiple interactive settings. WebArena provides a realistic web environment with functional websites and long-horizon tasks. SWE-bench evaluates language models on real GitHub issues requiring codebase understanding and edits. OSWorld evaluates multimodal agents in real computer environments. TheAgentCompany simulates professional digital work in a software-company-like environment. [Liu et al., 2023; Zhou et al., 2023; Jimenez et al., 2023; Xie et al., 2024; Xu et al., 2024]
+Realistic agent benchmarks make the same shift visible from the evaluation side. AgentBench evaluates language models as agents across interactive environments. WebArena provides functional web environments with long-horizon tasks. SWE-bench tests whether models can resolve real GitHub issues by understanding and editing codebases. OSWorld evaluates multimodal agents in real computer environments. TheAgentCompany simulates consequential digital work inside a software-company-like setting. [Liu et al., 2023; Zhou et al., 2023; Jimenez et al., 2023; Xie et al., 2024; Xu et al., 2024]
 
-These benchmarks are important because they expose the limits of response-only evaluation. They show that real tasks are not merely harder prompts. They require persistent state, tool use, interface navigation, recovery from errors, and coordination across artifacts. They also make failure more consequential: a wrong action can affect the environment, not merely produce a wrong sentence.
+These benchmarks show that real tasks are not merely harder prompts. They require state, tool use, interface navigation, recovery from errors, and coordination across artifacts. A wrong move can change the environment rather than merely produce an incorrect sentence.
 
-The Perceived Topography Framework is complementary to this benchmark tradition. Benchmarks ask whether an agent completes a task. PTF asks what landscape made that path available and sufficient. A benchmark may show that an agent failed to resolve a software issue, navigate a web workflow, or complete a workplace task. PTF offers a diagnostic vocabulary for asking whether the failure involved missing visibility, poor accessibility, misleading representation, misplaced confidence, weak connectivity, or premature sufficiency.
+Task success tells us whether the system arrived. Perceived topography helps ask why it moved the way it did.
 
-This is not a substitute for benchmark evaluation. It is a proposed layer of explanation beneath it. Task success tells us whether the system arrived. Perceived topography helps ask why it moved the way it did.
+That distinction matters because a benchmark failure can hide different causes. The agent may not have seen the relevant signal. It may have seen it but failed to connect it to the current goal. It may have over-trusted a weak source, misread a tool affordance, or treated a partial answer as sufficient. These are not the same failure. They imply different interventions.
+
+The framework is therefore complementary to benchmark evaluation. It does not replace task-based measurement. It adds a diagnostic layer beneath it.
 
 ### 2.3 Retrieval, Context, and the Limits of Availability
 
-Retrieval-augmented generation responds to a real weakness in language models: their limited ability to access, update, and ground knowledge. RAG systems combine parametric model knowledge with explicit non-parametric memory, making external information available during generation. This remains one of the central practical responses to hallucination and stale model knowledge. [Lewis et al., 2020]
+Language models cannot reliably access, update, or ground external knowledge on their own. Retrieval-augmented generation addresses that weakness by combining parametric model knowledge with explicit non-parametric memory, making external information available during generation. [Lewis et al., 2020]
 
-PTF accepts the importance of retrieval but rejects a common design shortcut: treating information availability as equivalent to reasoning relevance. A document can be retrieved and still fail to govern action. A policy can be present in context and still remain disconnected from the claim being generated. A postmortem can be available and still fail to update the next decision.
+That response is necessary. It is also easy to overextend. Availability is not the same as reasoning relevance.
+
+A document can be retrieved and still fail to govern action. A policy can sit in context while the agent drafts a claim the policy should have constrained. A postmortem can be available while its lesson fails to alter the next decision. The issue is not whether the information exists. The issue is whether it becomes behaviorally effective.
 
 This is the difference between context and reasoning state.
 
-Context answers the question: what information can the system access?
+Context asks what information the system can access. Reasoning state asks what the system is trying to do, which constraints govern the action, what interpretation is active, what evidence would be sufficient, and what should change when the outcome contradicts the expectation.
 
-Reasoning state asks: what is the system trying to do, which constraints govern the action, what interpretation is active, what evidence is sufficient, and what should change when the outcome contradicts the expectation?
+That distinction reframes retrieval. The system does not only need relevant chunks. It needs reasoning-relevant surfaces: information made salient at the right moment, expressed in a usable form, calibrated for confidence, and connected to the goal, policy, premise, or decision where it should matter.
 
-This distinction reframes retrieval as a necessary but incomplete condition for reliable agent behavior. The system does not only need relevant chunks. It needs reasoning-relevant surfaces: information made visible at the right moment, represented in a usable form, calibrated for confidence, and connected to the goal, policy, premise, or decision where it should matter.
+### 2.4 Affordances, Situation Awareness, and Human-Agent Interaction
 
-### 2.4 Affordances, Interaction, and Human-Agent Systems
+Systems act through environments that make some actions easier to perceive and execute than others. Gibson's affordance theory described action possibilities available in an environment. Norman translated affordances, constraints, signifiers, and feedback into design language for human interaction with artifacts. [Gibson, 1979; Norman, 1988]
 
-PTF also draws from human-computer interaction and affordance theory. Gibson's ecological account of perception emphasized action possibilities available in an environment. Norman's design work translated affordances, signifiers, constraints, and feedback into practical design language for human interaction with artifacts. [Gibson, 1979; Norman, 1988]
+Human-agent systems inherit this problem at machine speed. A tool panel can make an action feel close. A ranked source can make one document feel authoritative. A missing escalation path can make uncertainty difficult to express. A policy buried in a general document may exist without shaping the current action.
 
-This tradition matters because agent behavior is not only a matter of internal capability. Interfaces shape what actions appear possible. Tool panels shape what actions feel reachable. Ranking systems shape what information appears salient. Approval gates, uncertainty displays, and escalation paths shape what kinds of stopping behavior are available.
+Situation awareness is also close to the problem addressed here. Endsley describes situation awareness as the operator's perception and comprehension of environmental elements, including their projection into future status. [Endsley, 1995] The overlap is real, and the distinction matters. Situation awareness is primarily a descriptive account of how an operator understands a dynamic environment. Perceived topography is a design-theoretic account of how the environment is shaped so that certain information, constraints, and action paths become behaviorally effective.
 
-Human-automation research adds a related concern: people do not rely on automated systems in a purely rational or complete-information way. Trust, uncertainty, complexity, and interface design shape when humans over-rely, under-rely, or intervene. [Parasuraman and Riley, 1997; Lee and See, 2004]
+Mixed-initiative interaction adds the human side of the problem. Horvitz argued for systems that couple automated services with direct manipulation rather than forcing a simple choice between automation and human control. [Horvitz, 1999] Human-automation research similarly shows that trust, uncertainty, and interface design shape when humans over-rely, under-rely, or intervene. [Parasuraman and Riley, 1997; Lee and See, 2004]
 
-PTF extends these concerns into human-agent systems by treating the agent and the human as participants in a shared reasoning landscape. Human oversight is not merely a final approval step. It is part of how the landscape is shaped. A human confirmation path can make uncertainty legitimate. An escalation path can make non-action a successful action. A review requirement can connect policy to tool use before harm occurs.
+This matters because human oversight is not merely a final approval step. It is part of the landscape. A confirmation path can make uncertainty legitimate. An escalation path can make non-action a successful action. A review requirement can connect policy to tool use before harm occurs.
 
-This is why the framework later introduces Discovery as an infer-confirm process. The agent should not silently infer human intent and convert that inference into preserved reasoning state. It should propose its interpretation, expose uncertainty, and ask for confirmation where the interpretation will govern future action.
+That is why this paper later treats Discovery as an infer-confirm process. The agent should not silently convert inferred human intent into preserved reasoning state. It should expose the interpretation, name uncertainty where it matters, and ask for confirmation before that interpretation governs future action.
 
 ### 2.5 Organizational Learning and Knowledge Reuse
 
-The framework also inherits from organizational learning and knowledge management. Organizations often store artifacts without preserving the reasoning that produced them. They retain documents, dashboards, tickets, meeting notes, and postmortems, but lose the assumptions, confidence levels, and decision logic that made prior action seem reasonable. [Walsh and Ungson, 1991; Alavi and Leidner, 2001; Markus, 2001]
+Organizations store artifacts without preserving the reasoning that produced them. They retain documents, dashboards, tickets, meeting notes, and postmortems, but lose the assumptions and decision logic that made prior action seem reasonable. [Walsh and Ungson, 1991; Alavi and Leidner, 2001; Markus, 2001]
 
-This matters for agentic systems because agents can accelerate organizational amnesia. A future agent may retrieve a prior campaign, policy, or postmortem and still fail to know what lesson should transfer. It may reuse the artifact while missing the reasoning transition. The organization appears to remember because the document exists, but it behaves as if it has forgotten because the decision logic is not reusable.
+This problem becomes sharper when agents enter the workflow. A future agent may retrieve a prior campaign, policy, or postmortem and still fail to know what lesson should transfer. It may reuse the artifact while missing the reasoning transition. The organization appears to remember because the document exists, but it behaves as if it has forgotten because the decision logic is not reusable.
 
-Argyris and Schon's distinction between correction and learning is especially relevant. A system can correct an artifact without changing the reasoning that produced the error. Learning requires a model update: a change in future expectations, investigation, sufficiency, or action. [Argyris and Schon, 1978]
+Argyris and Schon's distinction between correction and learning is especially important here. A system can correct an artifact without changing the reasoning that produced the error. Learning requires a model update: a change in future expectations, investigation, sufficiency, or action. [Argyris and Schon, 1978]
 
-PTF uses this distinction to define reasoning-state preservation. A reasoning-state transition captures the movement from goal and interpretation to action, outcome, contradiction, investigation, and model update. The point is not to preserve every detail. The point is to preserve the minimum structure necessary for future action to begin from better conditions.
+The framework uses this distinction to define reasoning-state preservation. A reasoning-state transition captures the movement from goal and interpretation to action, outcome, contradiction, investigation, and model update. The point is not to preserve every detail. The point is to preserve the minimum structure necessary for future action to begin from better conditions.
 
-### 2.6 AI Safety, Governance, and Agentic Risk
+### 2.6 AI Safety, Alignment, and Agentic Risk
 
-AI safety and governance literature increasingly treats agentic systems as qualitatively different from static chat systems. Tool use, memory, autonomy, multi-step planning, and external action create risks that do not appear in the same way when a model only produces text. Recent work on agentic misalignment and autonomy-induced risks highlights concerns such as tool misuse, memory poisoning, reward hacking, deceptive behavior, irreversible action chains, and failures of human oversight. [Lynch et al., 2025; Deng et al., 2024; Su et al., 2025]
+Safety work gives this framework its stakes. As models become more capable, alignment research asks how systems can be made to follow human intentions and values. Reinforcement learning from human feedback and instruction tuning are major responses to this problem. Constitutional AI explores how models can critique and revise outputs using a set of principles and AI feedback. Broader alignment surveys organize the field around robustness, interpretability, controllability, and ethicality. [Christiano et al., 2017; Ouyang et al., 2022; Bai et al., 2022; Ji et al., 2023]
 
-PTF does not replace alignment, control, red-teaming, interpretability, policy enforcement, or sandboxing. Those approaches remain necessary. The framework instead adds a design question that sits beneath many of them: did the relevant constraint become behaviorally effective before action became sufficient?
+Those traditions matter, but agentic systems expose a further design problem. Tool use, memory, planning, and external action create risks that do not appear in the same way when a model only produces text. Recent work on autonomy-induced security risks identifies problems such as memory poisoning, tool misuse, reward hacking, irreversible action chains, and failures across perception, cognition, memory, and action. [Su et al., 2025]
+
+The account developed here does not replace alignment, interpretability, red-teaming, policy enforcement, or sandboxing. It asks a question that must be answered inside those efforts: did the relevant constraint become behaviorally effective before action became sufficient?
 
 A policy document does not govern an agent merely by existing. A human approval rule does not matter if the system does not recognize that the current action triggers it. A memory of prior failure does not reduce risk if it is not connected to the new decision. An uncertainty signal does not prevent harm if the interface offers no legitimate path for pausing, escalating, or asking.
 
@@ -221,37 +229,57 @@ This is where premature sufficiency connects to governance. Many unsafe actions 
 
 ### 2.7 Contribution Relative to Prior Work
 
-The Perceived Topography Framework therefore does not compete directly with agent architectures, RAG methods, benchmark environments, affordance theory, organizational learning, or AI safety controls. It connects them through a specific design claim.
+The framework is built from familiar materials, but the contribution is the blend rather than the grapes.
 
-Agent architectures describe what components an agent may have.
+Agent research shows how language models can reason, act, use tools, reflect, and operate in environments. Retrieval research shows how external information can be made available. Benchmarks show how brittle current agents remain when tasks require long-horizon interaction with realistic systems. HCI and affordance theory show that action is shaped by environments, interfaces, and available paths. Organizational learning explains why stored knowledge does not automatically become changed behavior. Safety and alignment research explain why tool-using, memory-bearing, goal-directed systems need more than fluent completion.
 
-Retrieval systems describe how external information can be made available.
-
-Benchmarks describe whether agents succeed in realistic tasks.
-
-Affordance and HCI work describe how environments and interfaces shape action.
-
-Organizational learning explains why stored knowledge does not automatically become changed behavior.
-
-AI safety and governance describe risks and controls around autonomous action.
-
-PTF asks a different but adjacent question:
+The account developed here joins these threads around a specific diagnostic question:
 
 What perceived landscape made this action look available, justified, safe, or sufficient?
 
-The framework's contribution is the vocabulary for answering that question. Visibility, Accessibility, Representation, Confidence, and Connectivity describe how information becomes behaviorally effective. Gradients describe why one path pulls harder than another. Premature sufficiency describes how action can occur before reasoning warrants it. Reasoning-state preservation describes what must survive if the next cycle is to begin from improved conditions.
+Simon's bounded rationality is useful here because agents, like humans and organizations, do not deliberate from unlimited information under unlimited time. They act from bounded representations of the situation. [Simon, 1955] The framework gives that bounded representation a design vocabulary. Visibility, Accessibility, Representation, Confidence, and Connectivity describe how information becomes behaviorally effective. Gradients describe why one path pulls harder than another. Premature sufficiency describes how action can occur before reasoning warrants it. Reasoning-state preservation describes what must survive if the next cycle is to begin from improved conditions.
 
-The paper is therefore best understood as a bridge framework. It does not replace existing traditions. It gives them a shared diagnostic surface for human-agent systems: a way to describe where the agent was acting from, what the landscape made easy, what it made hard, and why a particular path became sufficient.
+The result is not a replacement for existing traditions. It is a shared diagnostic surface for human-agent systems: a way to describe where the system was acting from, what the landscape made easy, what it made hard, and why a particular path became sufficient.
 
 ---
 
 **Scaffold intent notes:**
 
-**Source:** ChatGPT v0.1 draft, provided by Benet 2026-06-24.
+**Source:** ChatGPT v0.2 draft, provided by Benet 2026-06-24. Revised from v0.1 per Section 2 Review.
 
-**Structural change from frozen paper:** This section combines and formalizes material from frozen paper Section 10 ("The Blend Has Roots") and distributes it across seven subsections against specific literatures. The frozen paper placed related work near the end (Section 10). The academic version moves it to Section 2 per standard academic convention.
+**v0.1 → v0.2 changes applied:**
 
-**New citations introduced (not in frozen paper bibliography):**
+- Opening rewritten: claim-first instead of field-mapping
+- "This section positions that claim against the literature" cut
+- Reflection/self-critique engagement added (Reflexion, Self-Refine) with PTF distinction (cross-cycle vs. within-trajectory)
+- Horvitz (1999) added to 2.4 (mixed-initiative interaction)
+- Endsley (1995) added to 2.4 with PTF/SA distinction (design-theoretic vs. descriptive)
+- Section 2.4 retitled to "Affordances, Situation Awareness, and Human-Agent Interaction"
+- Safety subsection retitled to "AI Safety, Alignment, and Agentic Risk"
+- RLHF citations added (Christiano 2017, Ouyang 2022)
+- Constitutional AI added (Bai et al. 2022)
+- Ji et al. 2023 (alignment survey) added
+- Deng et al. 2024 removed (unresolvable reference)
+- Su et al. 2025 retained (autonomy-induced security risks)
+- Simon (1955) added to 2.7 with bounded rationality framing
+- 2.7 rewritten: "the contribution is the blend rather than the grapes" restored from frozen paper voice
+- 2.7 patterned six-sentence list replaced with flowing prose
+- Subsection openings revised to lead with claims (2.1, 2.3, 2.4, 2.5)
+- "PTF also draws from..." and "The framework also inherits from..." patterns eliminated
+- "This matters for agentic systems because..." pattern eliminated
+
+**New citations in v0.2 (not in v0.1):**
+- Shinn et al., 2023 (Reflexion)
+- Madaan et al., 2023 (Self-Refine)
+- Endsley, 1995 (already in frozen bibliography)
+- Horvitz, 1999 (already in frozen bibliography)
+- Christiano et al., 2017
+- Ouyang et al., 2022
+- Bai et al., 2022
+- Ji et al., 2023 (already in frozen bibliography)
+- Simon, 1955 (already in frozen bibliography)
+
+**Citations needing full reference entries (not in frozen bibliography):**
 - Schick et al., 2023 (Toolformer)
 - Park et al., 2023 (Generative Agents)
 - Liu et al., 2023 (AgentBench)
@@ -259,17 +287,12 @@ The paper is therefore best understood as a bridge framework. It does not replac
 - Jimenez et al., 2023 (SWE-bench)
 - Xie et al., 2024 (OSWorld)
 - Xu et al., 2024 (TheAgentCompany)
-- Deng et al., 2024 [CITE NEEDED — full reference TBD]
-- Su et al., 2025 [CITE NEEDED — full reference TBD]
-
-**Citations carried from frozen paper bibliography:**
-- Yao et al., 2022 (ReAct) — already cited in S1
-- Lewis et al., 2020 (RAG) — already cited in S1
-- Gibson, 1979; Norman, 1988 — in bibliography
-- Parasuraman and Riley, 1997; Lee and See, 2004 — in bibliography
-- Walsh and Ungson, 1991; Alavi and Leidner, 2001; Markus, 2001 — in bibliography, cited in S1
-- Argyris and Schon, 1978 — in bibliography
-- Lynch et al., 2025 — in bibliography, cited in S1
+- Shinn et al., 2023 (Reflexion)
+- Madaan et al., 2023 (Self-Refine)
+- Christiano et al., 2017 (RLHF)
+- Ouyang et al., 2022 (InstructGPT)
+- Bai et al., 2022 (Constitutional AI)
+- Su et al., 2025 (autonomy-induced security risks)
 
 ---
 
