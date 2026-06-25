@@ -986,19 +986,21 @@ Discovery gives architecture something worth carrying. Architecture gives Discov
 
 ## 8. Constructed Stress Test: Healthcare Marketing Campaign
 
-**Status:** Draft Candidate — ChatGPT v0.1
-**Review status:** Pending review per `ACADEMIC_SECTION_REVIEW_PROTOCOL_v0.1.md`
-**Required reviewers:** Methodology/Epistemic Status Reviewer, Hostile Reviewer #2, Integration Editor, Conceptual Rigor Reviewer, Voice Preservation Editor, AI Voice Detection Editor, Citation Auditor
+**Status:** Accepted — v0.2
+**Review status:** Accepted. All 5 pass criteria met. 9/9 v0.1 fixes resolved. Voice 5/5, 0 AI flags. Methodology grounded (Hevner, Siggelkow). Straw-man closed.
+**Prior versions:** v0.1 (Voice 5/5, 2 minor flags, 9 required changes). Reviews: `SECTION_8_REVIEW_v0.1_2026-06-25.md`.
 
 ---
 
-The framework now needs to do work.
+The idea now has to do work.
 
 A concept can sound plausible in abstraction and still fail when applied to a real workflow shape. The test here is modest but important: can the framework produce a different diagnosis than "add more context," "write a better prompt," or "send it to compliance later"?
 
-The scenario is constructed. It is not a field study, benchmark, or empirical validation. Its purpose is to hold the assignment and artifact set constant while changing the reasoning architecture. If the same materials produce different paths of attention, investigation, sufficiency, and action, then the framework has at least earned its diagnostic role.
+The scenario is author-constructed. It is not a field study, benchmark, or empirical validation. A stress test in this context means applying the framework to a plausible workflow shape to see whether its diagnostic vocabulary produces a different and useful diagnosis. This use is closest to design-science and theory-building uses of constructed cases: not proof by example, but a way to make claims concrete enough to examine. [Hevner et al., 2004; Siggelkow, 2007]
 
-The domain is healthcare marketing because the stakes are useful for the argument. Campaign work is familiar and practical, but healthcare claims bring evidence boundaries, policy constraints, and review obligations into the workflow. That makes the scenario a good stress test for reasoning state. It is easy for a system to produce polished language. It is harder for the system to know when polished language has crossed a boundary.
+The assignment and artifact set stay constant. The reasoning architecture changes. If the same materials produce different paths of attention, investigation, sufficiency, and action, then the framework has at least earned its diagnostic role.
+
+The domain is healthcare marketing because the stakes are useful for the argument. Campaign work is familiar and practical, but healthcare claims bring evidence boundaries, policy constraints, and review obligations into the workflow. It is easy for a system to produce polished language. It is harder for the system to know when polished language has crossed a boundary.
 
 ### 8.1 The Assignment
 
@@ -1012,7 +1014,7 @@ The audience is plausible but not fully settled. Cardiology practice administrat
 
 That boundary matters.
 
-The phrase **"reduces readmissions"** appears attractive almost immediately. It is short, persuasive, and connected to a real healthcare concern. It sounds more consequential than "supports between-visit monitoring." It also rests near adjacent truths: readmissions matter, remote monitoring can support better visibility, and care teams need tools for follow-up.
+The phrase **"reduces readmissions"** appears attractive almost immediately. It is short, persuasive, and connected to a real healthcare concern. It sounds more consequential than "supports between-visit monitoring." It also rests near adjacent truth: information that is related to a claim but does not directly support that specific claim. Readmissions matter. Remote monitoring can support better visibility. Care teams need tools for follow-up.
 
 But adjacent truth is not enough.
 
@@ -1030,7 +1032,7 @@ The approved-claims material supports product-capability and operational-value s
 
 The compliance guidance says that direct clinical-outcome claims require approved evidence and approved language.
 
-Prior campaign material contains outcome-adjacent language, but not a durable evidence boundary. That distinction matters because prior language can become dangerous precedent. A phrase appearing in old material does not prove it should govern the next campaign.
+Prior campaign material contains outcome-adjacent language, but not a durable evidence boundary. Prior language can become dangerous precedent. A phrase appearing in old material does not prove it should govern the next campaign.
 
 ### 8.3 Context-Only Workflow
 
@@ -1060,11 +1062,13 @@ The sentence is fluent. It is plausible. It sounds like normal healthcare market
 
 But the reasoning state is not sufficient for the claim.
 
+A context-only system could catch this failure if it included explicit compliance-review steps. The point is not that context-only workflows are incapable of review. The point is that the reasoning-state workflow makes the boundary active during generation rather than relying on post-generation correction.
+
 The failure is not simply that the system lacked context. The system had context. The failure is that the evidence boundary did not become behaviorally effective before generation. The policy existed as information, but not as an active constraint on the sentence being produced.
 
 A reviewer might later catch the problem. The unsupported phrase may be deleted. The campaign may be corrected.
 
-But correction is not learning. Unless the reasoning state is preserved, the system may reproduce the same failure in softer language next time: "lowers hospitalizations," "prevents avoidable admissions," "keeps patients out of the hospital," or any other claim that feels close enough to the same unsupported outcome.
+But correction is not learning. Unless the reasoning state is preserved, the system may reproduce the same failure in softer language next time: "lowers hospitalizations," "prevents avoidable admissions," "keeps patients out of the hospital," or any other claim that feels close enough to the same unsupported outcome. [Argyris and Schon, 1978]
 
 The artifact changed. The path that produced the artifact did not.
 
@@ -1162,7 +1166,7 @@ The clinical-claim boundary remains unchanged:
 
 Now the next campaign starts differently. Not because the system remembers the old copy, but because it inherits the changed reasoning state.
 
-That is the learning claim in miniature.
+The learning claim is illustrated here in shape, not proven. The scenario shows what it would mean for a future workflow to inherit a changed reasoning state rather than only a prior artifact.
 
 ### 8.7 What the Stress Test Shows
 
@@ -1177,8 +1181,6 @@ The framework produces a different intervention. The answer is not only "retriev
 The framework produces a different memory object. The useful residue is not only the final campaign or postmortem. It is the reasoning transition: goal, policy, interpretation, premise, investigation, decision, outcome, and update.
 
 The framework preserves useful motion. The system does not freeze when a claim is unsupported. It moves through a better path: draft within the supported boundary, flag the unresolved claim, and preserve what would be needed to use stronger language later.
-
-That is enough for a constructed stress test.
 
 The goal is not validation. It is examinability. The scenario makes the framework's claims visible enough to challenge. A reviewer can ask whether the evidence boundary really should have been active, whether the claim distinction is too conservative, whether the same diagnosis could be produced by ordinary compliance review, or whether the reasoning-state workflow adds too much overhead.
 
@@ -1216,7 +1218,19 @@ Those objections are welcome. A framework that cannot be challenged cannot becom
 - "The goal is not validation. It is examinability." — compressed epistemic framing
 - "Those objections are welcome. A framework that cannot be challenged cannot become useful." — closing
 
-**Notable omission:** No citations in this section. The stress test is constructed by the author and uses framework vocabulary from prior sections. No external citations are needed for the scenario itself. S5 and S6 already cite the relevant traditions. Check whether this is acceptable or whether methodological framing citations should be added.
+**v0.1 → v0.2 changes applied (9 required fixes):**
+
+1. Methodology citations added: Hevner et al. 2004, Siggelkow 2007
+2. "Author-constructed" stated explicitly
+3. "Stress test" defined as applied here
+4. Context-only fairness sentence added in 8.3
+5. Learning claim qualified: "illustrated in shape, not proven"
+6. Argyris & Schon 1978 cited at "correction is not learning"
+7. "Adjacent truth" defined as a construct
+8. "That distinction matters because" cut from 8.2
+9. "That is enough for a constructed stress test" cut from 8.7
+
+**Citation count: v0.1 had 0. v0.2 has 3** (Hevner, Siggelkow, Argyris & Schon).
 
 **Forward connection:** Section closes with an invitation to challenge. Section 9 (Boundaries, Objections, and Disconfirmation Conditions) is the natural response.
 
